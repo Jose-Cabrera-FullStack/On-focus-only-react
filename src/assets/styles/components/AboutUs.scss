@@ -1,0 +1,80 @@
+/* <-------ABOUT US-------> */
+.about__us {
+    margin: 100px 200px 0 193px;
+  }
+  .about__us__title {
+    width: 351px;
+    font-family: 'Mont-Heavy', Roboto;
+    font-weight: 800;
+    font-size: 25px;
+    color: #03002b;
+    margin: 0 0 40px 0;
+  }
+  
+  .about__us__box {
+    width: 326px;
+    height: 484px;
+    background: linear-gradient(
+      180deg,
+      #cecece -87.93%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    margin: 0px 8px 0px 0;
+  }
+  
+  .about__us__arrows {
+    position: relative;
+    top: 200px;
+    right: -10px;
+    width: 30px;
+  }
+  
+  .about__us__arrows img {
+    margin: 0 0 10px 0px;
+    width: 30px;
+  }
+  
+  
+  .about__us__box__inside {
+    padding: 29px 0 0 32px;
+  }
+  
+  .about__us__box__inside i {
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .about__us__box__inside__name {
+    font-family: 'Mont-Heavy', Roboto;
+    font-size: 19px;
+    margin: 0;
+  }
+  .about__us__box__inside__text {
+    font-family: Judson;
+    font-style: normal;
+    font-weight: normal;
+    width: 275px;
+    font-size: 17px;
+    line-height: 152.3%;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+  
+  .about__us__box__inside__profesion {
+    color: #4f4f4f;
+  }
+  @media screen and (max-width: 1325px) {
+    .none {
+      display: none;
+    }
+  }
+  /* <-------ANIMATION-------> */
+  .about__us__arrow:hover {
+    filter: invert(0.5) sepia(9);
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+  }
+  /* <-------ANIMATION-------> */
+  /* <-------ABOUT US-------> */
+  

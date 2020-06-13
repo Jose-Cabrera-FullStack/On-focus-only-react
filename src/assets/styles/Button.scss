@@ -1,0 +1,96 @@
+/* <-------BUTTON-------> */
+.btn__primary {
+    color: #f2f2f2;
+    font-size: 16px;
+    font-family: 'Mont-Light', Roboto;
+    padding: 13px 25px;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+    text-align: center;
+    background-color: #56fffb05;
+  }
+  
+  .btn__primary--fix {
+    margin: 0px 0px 8% 193px;
+    font-family: 'Mont-Bold';
+    height: 40px;
+    padding: 0px 35px 0px 35px;
+    border: 2px solid #f2f2f2;
+  }
+  .btn__primary--login {
+    font-size: 12px;
+    width: 114px;
+    padding: 4px 0 3px 0px;
+    position: relative;
+    bottom: 2px;
+  }
+  .btn__primary--register-width {
+    width: 95px;
+  }
+  
+  .btn__secundary {
+    color: #f2f2f2;
+    font-size: 16px;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #b38a58;
+    cursor: pointer;
+    text-align: center;
+    background-color: #b38a58;
+    margin: 0 20px 4px 0px;
+    position: relative;
+    bottom: 5px;
+    font-family: 'Mont-Light', Roboto;
+  }
+
+  .btn__secundary--buy {
+    width: 199px;
+    font-family: 'Mont-Heavy', Roboto;
+    height: 38px;
+    background-color: initial;
+    color: #b38a58;
+    border: 2.5px solid #b38a58;
+    margin: 0px 10px 24px 0;
+  }
+  
+  .btn__secundary--register {
+    margin: 0;
+  }
+
+  .btn__arrow__buy {
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+  
+  .btn__arrow__buy img {
+    margin: 0px 5px 0px 0px;
+  }
+  
+  .btn__arrow__buy p {
+    font-family: 'Mont-Bold';
+  }
+  
+  button {
+    outline: none;
+  }
+  /* <-------ANIMATION-------> */
+  
+  .btn__primary--fix:hover {
+    background-color: #b38a58;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #b38a58;
+  }
+  .btn__primary:hover {
+    background-color: #b38a58;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #b38a58;
+  }
+  .btn__secundary--buy:hover {
+    background-color: #b38a58;
+    color: #ffffff;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+  }
+  /* <-------ANIMATION-------> */
+  /* <-------BUTTON-------> */

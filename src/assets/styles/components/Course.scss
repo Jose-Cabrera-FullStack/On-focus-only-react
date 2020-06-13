@@ -1,0 +1,245 @@
+.course{
+    margin: 40px 0 0 200px;
+}
+
+.course__section{
+    font-size: 30px;
+}
+.course__section__tech{
+    margin: 0px 0 0 -35px;
+}
+
+.discovery__box__info--course{
+    width: 351px;
+    height: 343px;
+    margin: 0;
+}
+
+.course__img{
+    margin: 0px 28px 0 0px;
+}
+
+.course__information h1{
+    width: 302px;
+    font-family: 'Mont-Heavy';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #03002B;
+}
+.course__information p{
+    width: 154px;
+    font-family: 'Mont-Light';
+    font-weight: 600;
+    font-size: 15px;
+    margin: 20px;
+}
+.discovery__box__info__inside{
+    margin: 50px 0 0 33px;
+}
+
+.discovery__box__info__inside__title{
+    font-family: 'Mont-Heavy';
+    font-size: 20px;
+}
+
+.discovery__box__info__inside__text{
+    width: 243px;
+    height: 49px;
+    left: 922px;
+    top: 703px;
+    font-family: Judson;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 133.3%;
+    color: #000000;
+}
+
+.discovery__box__info__inside__price{
+    font-family: 'Mont-Heavy';
+    font-size: 20px;
+    margin:0;
+}
+
+.discovery__box__info__inside__save{
+    width: 217px;
+    font-family: "Mont-Heavy";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #FF3F31;
+    margin: 2px 0 0 10px;
+}
+
+.discovery__box__info__inside__before{
+    font-family: 'Mont-Light';
+    font-style: normal;
+    width: 106px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #828282;
+}
+
+.discovery__box__info__inside__percentage{
+    font-family: 'Mont-Light';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #03002b;
+}
+
+.discovery__box__info__inside__shopping{
+    position: relative;
+    top: 8px;
+}
+
+.couse__about h1{
+    font-family:'Mont-Heavy';
+}
+.couse__about p{
+    width: 661px;
+font-family: Buenard;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 151.3%;
+color: #4F4F4F;
+margin: 28px 0 30px 0px;
+}
+.couse__about img{
+    width: 574px;
+    height: 290px;
+}
+
+.course__inclusive{
+    height: 342px;
+    background:#E0E0E0 ;
+}
+
+.course__inclusive__inside{
+    margin: 40px 0 0 200px;
+    padding: 9px 0 0 0;
+}
+
+.course__inclusive__inside h1{
+
+font-family: 'Mont-Heavy';
+font-style: normal;
+font-weight: 800;
+font-size: 26px;
+line-height: 135.3%;
+letter-spacing: -0.02em;
+color: #03002B;
+}
+
+.course__inclusive__inside li{
+    margin: 4px 0 0 0;
+}
+.course__inclusive__inside h2{
+    font-family: 'Mont-Heavy';
+}
+.course__inclusive__inside p{
+    width: 479px;
+}
+
+.course__for__me{
+    margin: 52px 0 0 200px;
+}
+
+.course__for__me h2{
+    font-family: 'Mont-Heavy';
+    margin: 50px 0 41px 0;
+}
+.course__for__me li{
+    margin: 5px 0 0 0;
+}
+
+.course__module li{
+    list-style: none;
+    width: 659px;
+height: 55px;
+background: #F2F2F2;
+}
+.course__module li strong{
+    font-family: "Mont-Heavy";
+    margin: 29px;
+    font-size: 12px;
+}
+.course__module__time{
+    margin: 0px 0px 0 30px;
+}
+.course__module__time p{
+    font-size: 12px;
+    margin: 0 0px 0px 5px;
+}
+.course__module__reloj{
+    width: 15px;
+}
+
+.course__module__arrow{
+    padding: 0px 0 0 0;
+    position: relative;
+    left: 350px;
+    top: 13px;
+}
+
+.course__recomendation{
+background: #03002B;
+margin: 92px 0 50px 0;
+padding: 0;
+color: #ffff;
+}
+
+.course__recomendation__inside{
+    padding: 44px 200px 0px 200px;
+    
+}
+
+.course__recomendation__inside__box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px 1px;
+}
+.course__recomendation__inside__title{
+    font-family: 'Mont-Heavy';
+font-style: normal;
+font-weight: 800;
+font-size: 26px;
+line-height: 135.3%;
+margin: 0 0 40px 0px;
+letter-spacing: -0.02em;
+/* Dorado */
+color: #B38A58;
+}
+
+.course__recomendation__inside__profile{
+    margin: 0;
+}
+
+.course__recomendation__inside__name{
+    margin: 0 0 0 20px;
+}
+
+.course__recomendation__inside__text{
+    width: 360px;
+    border-bottom: 1px solid;
+    padding: 50px 0 40px 0px;
+}
+
+.course__recomendation__arrows{
+    margin: 0px 0 0px 45%;
+    padding: 10px 0 28px 0;
+}
+
+.course__teach h3{
+    font-family: 'Mont-Heavy';
+}

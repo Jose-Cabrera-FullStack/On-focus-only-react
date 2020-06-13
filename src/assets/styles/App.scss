@@ -1,0 +1,30 @@
+@import "./Fonts.scss";
+@import "./Vars.scss";
+@import "./Media.scss";
+@import "./Button.scss";
+@import "./Grid.scss";
+
+body {
+  margin: 0;
+  font-family: 'Mont-Regular', Roboto;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid-1 {
+  grid-column: 1;
+}
+
+.grid-2 {
+  grid-column: 2;
+}
+
+.grid-3 {
+  grid-column: 4;
+}
+
+.grid-4 {
+  grid-column: 5;
+}
