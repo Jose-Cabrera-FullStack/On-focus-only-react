@@ -63,14 +63,16 @@ const Discovery = () => (
                     <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
                   <div>
+                    <Link to='/curso'>
                     <button
                       class="btn__secundary btn__secundary--buy discovery__box__position"
-                    >
+                      >
                       <div class="flex btn__arrow__buy">
                         <img src={Arrow} alt="" />
                         <p>Comprarlo ahora</p>
                       </div>
                     </button>
+                      </Link>
                     <img
                       class="discovery__box__info__shopping__card"
                       src={Shopping}
@@ -117,14 +119,16 @@ const Discovery = () => (
                     <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
                   <div>
+                  <Link to='/curso'>
                     <button
-                      class="btn__secundary btn__secundary--buy discovery__box__position "
-                    >
+                      class="btn__secundary btn__secundary--buy discovery__box__position"
+                      >
                       <div class="flex btn__arrow__buy">
                         <img src={Arrow} alt="" />
-                        <p>Comprarlo Ahora</p>
+                        <p>Comprarlo ahora</p>
                       </div>
                     </button>
+                      </Link>
                     <img
                       class="discovery__box__info__shopping__card"
                       src={Shopping}
@@ -172,14 +176,16 @@ const Discovery = () => (
                     <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
                   <div>
+                  <Link to='/curso'>
                     <button
                       class="btn__secundary btn__secundary--buy discovery__box__position"
-                    >
+                      >
                       <div class="flex btn__arrow__buy">
                         <img src={Arrow} alt="" />
-                        <p>Comprarlo Ahora</p>
+                        <p>Comprarlo ahora</p>
                       </div>
                     </button>
+                      </Link>
                     <img
                       class="discovery__box__info__shopping__card"
                       src={Shopping}
@@ -227,14 +233,16 @@ const Discovery = () => (
                     <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
                   <div>
+                  <Link to='/curso'>
                     <button
                       class="btn__secundary btn__secundary--buy discovery__box__position"
-                    >
+                      >
                       <div class="flex btn__arrow__buy">
                         <img src={Arrow} alt="" />
-                        <p>Comprarlo Ahora</p>
+                        <p>Comprarlo ahora</p>
                       </div>
                     </button>
+                      </Link>
                     <img
                       class="discovery__box__info__shopping__card"
                       src={Shopping}

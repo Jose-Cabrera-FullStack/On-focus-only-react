@@ -10,12 +10,13 @@ import Human4 from '../../assets/static/images/img/human-happy-4.png'
 import Human5 from '../../assets/static/images/img/human-happy-5.png'
 import Human6 from '../../assets/static/images/img/human-happy-6.png'
 
-const HowWeTeach = () => (
+const HowWeTeach = (props) =>{
+    return (
     <section class="how__we__tech">
       <h1 class="how__we__tech__title">
         Ut wisi enim ad minim exerci tation ullamcorper.
       </h1>
-      <div class="how__we__tech__container">
+      <div class={"how__we__tech__container" + ' '+ props.grid}>
         <div class="how__we__tech__info">
           <figure>
             <img
@@ -99,5 +100,5 @@ const HowWeTeach = () => (
         </div>
       </div>
     </section>
-)
+)}
 export default HowWeTeach;

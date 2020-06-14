@@ -1,5 +1,5 @@
 import React from 'react';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 // import {connect} from 'react-redux';
 // import { logoutRequest } from '../actions';
 import Logo from '../assets/static/images/svg/logo-small.svg'
@@ -21,18 +21,22 @@ const Header = props => {
   
     <header>
       <nav class="navbar">
-        <figure class="grid-1">
-          <img class="navbar__img" src={Logo} alt="" />
-        </figure>
+        <Link to="/">
+          <figure class="grid-1">
+            <img class="navbar__img" src={Logo} alt="" />
+          </figure>
+        </Link>
         <div class="grid-2 navbar__justify__self">
           <ol class="navbar__element__list">
-            <li class="navbar__menu"><a href="#">Descubrir cursos</a></li>
+            <Link to="/cursos" className="text-decoration">
+              <li class="navbar__menu"><a href="#">Descubrir cursos</a></li>
+            </Link>
             <li class="navbar__menu"><a href="#">About On Focus</a></li>
             <li class="navbar__menu navbar__menu--fix">
               <img
                 src={Shopping}
                 class="navbar__menu__shopping__cart"
-                alt=""
+                alt="Carrito de compras"
               />
             </li>
             <li class="navbar__menu ">

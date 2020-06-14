@@ -1,5 +1,5 @@
 .course{
-    margin: 40px 0 0 200px;
+    margin: 40px 200px 0px 200px;
 }
 
 .course__section{
@@ -126,10 +126,15 @@ margin: 28px 0 30px 0px;
 }
 
 .course__inclusive__inside{
-    margin: 40px 0 0 200px;
+    margin: 0px 0 0 200px;
     padding: 9px 0 0 0;
 }
 
+.course__inclusive__diploma{
+    width: 276px;
+    height: 230px;
+    margin: 50px 0 0px 25%;
+}
 .course__inclusive__inside h1{
 
 font-family: 'Mont-Heavy';
@@ -163,11 +168,20 @@ color: #03002B;
     margin: 5px 0 0 0;
 }
 
+.course__module{
+    margin: 50px 0 0 200px;
+}
+
+.course__module h2{
+    font-family: "Mont-Heavy";
+}
+
 .course__module li{
     list-style: none;
     width: 659px;
-height: 55px;
-background: #F2F2F2;
+    margin: 5px 0 0 0;
+    height: 55px;
+    background: #F2F2F2;
 }
 .course__module li strong{
     font-family: "Mont-Heavy";
@@ -242,4 +256,15 @@ color: #B38A58;
 
 .course__teach h3{
     font-family: 'Mont-Heavy';
+}
+.course__teach__info{
+    width: 637px;
+    height: 238px;
+    font-family: Judson;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 152.3%;
+    color: #000000;
+    margin: 20px 100px 0px 0px;
 }

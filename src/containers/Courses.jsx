@@ -3,12 +3,11 @@ import {connect} from 'react-redux';
 
 import Hero from '../components/Course/Hero';
 import Discovery from '../components/Principal/Discovery';
-import HowWeTeach from '../components/Principal/HowWeTeach';
 import AboutUs from '../components/Principal/AboutUs';
 
 import '../assets/styles/App.scss';
 
-const Home = () => {
+const Courses = () => {
   return(
     <div className="App">
 
@@ -21,4 +20,4 @@ const Home = () => {
   );
 }
 
-export default connect(null,null)(Home);
+export default connect(null,null)(Courses);

@@ -1,0 +1,107 @@
+.hero__view--courses__plus{
+    width: auto;
+    height: 402px;
+    background-image: linear-gradient(to bottom, #1c1b5200, #03002bd6),
+      url(../../static/images/img/ui-design-course-hero.png);
+    background-size: cover;
+    margin: 0;
+  }
+
+.hero__title__view--couse__plus{
+    padding: 95px 0 0 200px;
+  }
+
+.hero__view--courses__plus__left{
+    margin: 0;
+  }
+
+.hero__view--courses__plus__text{
+    width: 485px;
+
+    font-family: Judson;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 133.3%;
+    color: #F2F2F2;
+    padding: 0px 0 0 200px;
+}
+
+.hero__view__promo{
+    width: 479px;
+height: 377px;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
+}
+.hero__view__promo__margin{
+    margin: -20px 0 0 0;
+}
+.hero__view__promo__img{
+    height: 81px;
+    margin: 29px 10px 0 44px;
+}
+
+.hero__view__promo__title{
+    font-family: "Mont-Heavy";
+    font-size: 19px;
+    margin: 40px 0 0 0;
+}
+
+.hero__view__promo__price{
+    font-family: "Mont-Heavy";
+    font-size: 24px;
+    color:#b38a58;
+    margin: 10px 20px 0px 0;
+}
+
+.hero__view__promo__price__before{
+    font-style: inherit;
+    text-decoration: line-through;
+    color: #828282;
+    font-weight: 700;
+}
+
+.hero__view__promo__price__delete{
+    font-family: "Mont-Heavy";
+    font-weight: 800;
+font-size: 12px;
+line-height: 135.3%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: #03002B;
+margin: 20px;
+}
+
+.hero__view__promo__total{
+    margin: 20px 0px 0 40px;
+    width: 370px;
+    border-top: 1px solid #0D0056;
+}
+.hero__view__promo__total h2{
+    font-family: "Mont-Heavy";
+    font-size: 17px;
+}
+
+.hero__view__promo__total__ar{
+    margin: 20px 0 0 150px;
+}
+
+.btn__secundary--promo{
+    margin: 10px 0 0 40px;
+    width: 142px;
+    height: 38px;
+    font-family: "Mont-Heavy";
+}
+
+.btn__primary--promo{
+    width: 157px;
+    height: 38px;
+    padding: 0;
+    color: #03002B;
+    border: 2px solid #03002B;
+    font-family: "Mont-Heavy";
+    margin: 0 0 0 16px;
+    position: relative;
+    bottom: 5px;
+}
