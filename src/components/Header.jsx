@@ -33,11 +33,13 @@ const Header = props => {
             </Link>
             <li class="navbar__menu"><a href="#">About On Focus</a></li>
             <li class="navbar__menu navbar__menu--fix">
+              <Link to="/carrito">
               <img
                 src={Shopping}
                 class="navbar__menu__shopping__cart"
                 alt="Carrito de compras"
-              />
+                />
+                </Link>
             </li>
             <li class="navbar__menu ">
               <button

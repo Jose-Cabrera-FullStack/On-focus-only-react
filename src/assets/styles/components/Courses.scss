@@ -2,6 +2,7 @@
 
 .discovery__container {
     margin: 0 200px 0 200px;
+    transition: all 0.2s ease-in-out;
   }
   
   .change {
@@ -28,6 +29,7 @@
     .discovery__course {
       grid-template-rows: 1fr 1fr;
       gap: 15px 60px;
+      transition: all 0.2s ease-in-out;
     }
   
     .discovery__diploma {
@@ -36,6 +38,7 @@
   
     .discovery__container {
       margin: 0px 200px 0 150px;
+      transition: all 0.2s ease-in-out;
     }
   }
   

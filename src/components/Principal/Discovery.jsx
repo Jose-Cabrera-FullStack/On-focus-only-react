@@ -16,15 +16,16 @@ import Star from '../../assets/static/images/svg/star.svg'
 import Diploma from '../../assets/static/images/img/diploma.png'
 
 
-const Discovery = () => (
+const Discovery = (props) => {
+  return(
     <section class="discovery">
       <div class="discovery__container">
         <h2 class="discovery__title">
-          Descubre la plataforma lider en negocios y emprendimiento.
+          {props.info ? props.info : 'Descubre la plataforma lider en negocios y emprendimiento.'}
         </h2>
 
         <div class=" flex">
-          <div class="discovery__course">
+          <div class={"discovery__course" + " " + props.column}>
             <div class="discovery__box">
               <div class="discovery__box__img">
                 <div>
@@ -139,7 +140,7 @@ const Discovery = () => (
               </div>
             </div>
             <br />
-            <div class="discovery__box">
+            <div class={"discovery__box" + " " + props.none}>
               <div class="discovery__box__img">
                 <div>
                   <img
@@ -196,7 +197,7 @@ const Discovery = () => (
               </div>
             </div>
 
-            <div class="discovery__box">
+            <div class={"discovery__box" + " " + props.display}>
               <div class="discovery__box__img">
                 <div>
                   <img
@@ -254,8 +255,7 @@ const Discovery = () => (
             </div>
             </div>
 
-          {/*ACA ESTA BIEN */}
-          <div class="discovery__diploma">
+          <div class={"discovery__diploma"+ " " + props.display}>
             <img
               class="discovery__diploma__star"
               src={Star}
@@ -275,5 +275,5 @@ const Discovery = () => (
           </div>
       </div>
     </section>
-)
+)}
 export default Discovery;

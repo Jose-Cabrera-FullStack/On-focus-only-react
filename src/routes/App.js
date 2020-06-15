@@ -4,6 +4,7 @@ import Home from '../containers/Home';
 import Courses from '../containers/Courses';
 import Course from '../containers/Course';
 import Visualization from '../containers/Visualization';
+import ShoppingCar from '../containers/ShoppingCar';
 import Login from '../containers/Login';
 import Register from '../containers/Register';
 import NotFound from '../containers/NotFound';
@@ -20,6 +21,7 @@ const App = () => (
                 <Route exact path="/cursos" component={Courses} />
                 <Route exact path="/curso" component={Course} />
                 <Route exact path="/curso/:id" component={Visualization} />
+                <Route exact path="/carrito" component={ShoppingCar} />
             </Switch>
         <Footer/>
         

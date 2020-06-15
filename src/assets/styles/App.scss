@@ -9,6 +9,10 @@ body {
   font-family: 'Mont-Regular', Roboto;
 }
 
+.display-none{
+  display: none;
+}
+
 .flex {
   display: flex;
 }
@@ -31,6 +35,12 @@ body {
 .grid-column-2{
   grid-template-columns: 1fr 1fr;
   margin: 0 0 60px 0;
+}
+.grid-column-3{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. . . .';
+  margin: 0px 0 70px 0px;
 }
 
 .text-decoration{
