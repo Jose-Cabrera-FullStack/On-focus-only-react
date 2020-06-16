@@ -1,0 +1,22 @@
+
+.utils__hero{
+    height: 252px;
+    background-image: url(../../static/images/img/hero-course.png);
+    background-size: cover;
+}
+
+.utils__hero__title{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 39px;
+    line-height: 113.3%;
+    color: #F2F2F2;
+    margin: 0;
+
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}

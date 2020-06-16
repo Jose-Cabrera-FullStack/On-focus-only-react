@@ -1,21 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import Breadcrumbs from '../Utils/Breadcrumbs'
 import '../../assets/styles/components/ShoppingCar.scss';
 
 import UI from '../../assets/static/images/img/ui-design.png';
 import Arrow from '../../assets/static/images/svg/arrow-right.svg'
 
-
-import ArrowLeft from '../../assets/static/images/svg/arrow-visualization-black.svg'
-
-
 const ShoppingCar = () => (
     <section class="shopping__car">
-        <div className="flex">
-            <img src={ArrowLeft} alt="Fecha a la izquierda"/>
-            <h5>Volver a los cursos</h5>
-        </div>
+        <Breadcrumbs/>
         <h1>Tu carrito de compras está listo.</h1>
         <div className="flex">
             <div>
