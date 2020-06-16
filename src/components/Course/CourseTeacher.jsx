@@ -7,6 +7,7 @@ import Facebook from '../../assets/static/images/svg/facebook-black.svg';
 import Linkedin from '../../assets/static/images/svg/linkedin-black.svg';
 import Twitter from '../../assets/static/images/svg/twitter-black.svg';
 import Youtube from '../../assets/static/images/svg/youtube-black.svg';
+import ShoppingCar from '../../assets/static/images/svg/shopping-car-squad.svg';
 
 
 
@@ -58,7 +59,7 @@ const CourseTeacher = () => (
                             <div>
                                 <button class="btn__secundary btn__secundary--buy"> Comprarlo ahora</button>
                                 <img 
-                                src="../static/svg/shopping-car-squad.svg"
+                                src={ShoppingCar}
                                 alt="shopping-car"
                                 class="discovery__box__info__inside__shopping"
                                 />

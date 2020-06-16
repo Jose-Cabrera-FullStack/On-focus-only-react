@@ -43,7 +43,9 @@ const Pay = () => (
                     <img className="way-to-master" src={MasterCard} alt="Mastercard"/>
                 </div>
             </div>
-        <button class="btn__secundary btn__secundary--buy btn__secundary--way-to-pay"> Comprarlo ahora</button>
+            <Link to="/adquirido">
+                <button class="btn__secundary btn__secundary--buy btn__secundary--way-to-pay"> Comprarlo ahora</button>
+            </Link>
         </div>
     </form>
 )
