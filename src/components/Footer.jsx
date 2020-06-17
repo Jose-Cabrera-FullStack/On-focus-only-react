@@ -36,11 +36,21 @@ const Footer = () => {
         <div>
           <ol class="footer__container__left">
             <li><h5>Accesos</h5></li>
-            <li>Home</li>
-            <li>About On Focus</li>
-            <li>Cursos</li>
-            <li>Contacto</li>
-            <li>Quiero dar un curso</li>
+            <Link to="/home">
+              <li>Home</li>
+            </Link>
+            <Link to="/sobre-nosotros">
+              <li>About On Focus</li>
+            </Link>
+            <Link to="/cursos">
+              <li>Cursos</li>
+            </Link>
+            <Link to="/contactanos">
+              <li>Contacto</li>
+            </Link>
+            <Link to="dar-clases">
+              <li>Quiero dar un curso</li>
+            </Link>
           </ol>
           <ol class="footer__container__left--fix">
             <li>
@@ -82,12 +92,18 @@ const Footer = () => {
             <div>
               <ol>
                 <li><h5>Legales</h5></li>
-                <li>Politicas de Cookie</li>
-                <li>Centro de Ayuda</li>
-                <li>
+                <Link to="/politicas">
+                  <li>Politicas de Cookie</li>
+                </Link>
+                <Link to="/centro-de-ayuda">
+                  <li>Centro de Ayuda</li>
+                </Link>
+                <Link>
+                <li to="terminos-y-condiciones">
                   Términos y <br />
                   condiciones
                 </li>
+                </Link>
               </ol>
               <div class="footer__help">
                 <img src={Message} alt="Mensaje" />

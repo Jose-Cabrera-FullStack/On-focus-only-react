@@ -1,0 +1,97 @@
+.teacher__hero{
+    height: 350px;
+    background-image: linear-gradient(to bottom, #1c1b5200, #03002bd6),
+      url(../../static/images/img/hero-teacher.png);
+    background-size: cover;
+    margin: 0;
+}
+
+.teacher__hero__title{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 111.3%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #F2F2F2;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -160%);    
+}
+
+.btn__primary--teacher{
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-330%, 130%);  
+}
+
+.teacher__points{
+    margin: 50px 310px 0 310px;
+}
+
+.teacher__faq{
+    margin: 0 200px 0 200px;
+}
+
+.teacher__faq ul{
+padding: 0;
+}
+
+.teacher__faq__box__right{
+    margin: 0 0 0 30px;
+}
+
+.teacher__faq__box{
+    width: 506px;
+    height: 43px;
+    background: #F2F2F2;
+    list-style: none;
+    margin: 20px 0 20px 0;
+}
+
+.teacher__course{
+    margin: 0 200px 0 200px;
+    width: 1040px;
+    height: 305px;
+    left: 200px;
+    top: 1452px;
+    background: linear-gradient(180deg, #E5E5E5 -49.6%, rgba(255, 255, 255, 0) 100%);
+}
+
+.teacher__faq__box p{
+    width: 320px;
+    height: 35px;
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 148.3%;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin: 15px 110px 0px 30px;
+}
+
+.teacher__course h1{
+    width: 376px;
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 123.3%;
+    letter-spacing: -0.03em;
+    color: #03002B;
+    position: relative;
+    top: 60px;
+}
+
+.btn__secundary--teacher{
+    width: 243px;
+    position: relative;
+    top: 120px;
+    left: 50px;
+}

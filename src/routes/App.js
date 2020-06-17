@@ -11,7 +11,8 @@ import CourseBuyed from '../containers/CourseBuyed';
 import MyCourse from '../containers/MyCourse';
 import MyProfile from '../containers/MyProfile';
 import ContactUs from '../containers/ContactUs';
-import Login from '../containers/Login';
+import Politicy from '../containers/Politicy';
+import Teacher from '../containers/Teacher'; 
 import Register from '../containers/Register';
 import NotFound from '../containers/NotFound';
 import Header from '../components/Header'
@@ -34,6 +35,9 @@ const App = () => (
                 <Route exact path="/mi-curso" component={MyCourse} />
                 <Route exact path="/mi-perfil" component={MyProfile} />
                 <Route exact path="/contactanos" component={ContactUs} />
+                <Route exact path="/politicas" component={Politicy} />
+                <Route exact path="/enseña" component={Teacher} />
+                <Route exact path="/log-in" component={Register} />
             </Switch>
         <Footer/>
         

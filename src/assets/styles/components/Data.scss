@@ -94,3 +94,24 @@
     letter-spacing: -0.03em;
     color: #000000;
 }
+
+.btn__secundary--politicy{
+    width: 321px;
+    height: 37px;
+    margin: 0;
+    color: black;
+    border: 2px solid black
+}
+.btn__secundary--politicy:hover{
+    border: 2px solid #b38a58
+}
+
+.btn__secundary--politicy__text{
+    position: relative;
+    bottom: 10px;
+    font-family: 'Mont-Light';
+}
+
+.politicy__inside__left{
+    margin: -25px 0px 0px 65px;
+}

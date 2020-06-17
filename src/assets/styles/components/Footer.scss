@@ -112,6 +112,11 @@
   color: #f2f2f2;
   letter-spacing: 0.08em;
 }
+
+.footer a{
+  text-decoration: none;
+  color: #BDBDBD;
+}
 /* <-------MEDIA-QUERY-------> */
 @media screen and (max-width: 1325px) {
   .footer__container__left--fix {
