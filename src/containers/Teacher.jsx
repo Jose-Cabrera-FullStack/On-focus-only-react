@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import Hero from '../components/Teacher/Hero';
 import Points from '../components/Teacher/Points';
 import TeacherFAQ from '../components/Teacher/FAQ';
-import TeacherCourse from '../components/Teacher/TeacherCourse';
+import HeroDown from '../components/Teacher/HeroDown';
 
 import '../assets/styles/App.scss';
 
@@ -16,7 +16,7 @@ const Teacher = () => {
         <Hero/>
         <Points grid={grid}/>
         <TeacherFAQ/>
-        <TeacherCourse/>
+        <HeroDown/>
     </div>
 
   );

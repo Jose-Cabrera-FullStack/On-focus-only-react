@@ -1,30 +1,42 @@
-import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { loginRequest } from '../actions';
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { registerRequest } from '../actions'
+import moment from "moment"
 
 import Logo from '../assets/static/images/img/logo-log-in.png'
 import Human from '../assets/static/images/svg/human-hello.svg'
 import Arrow from '../assets/static/images/svg/arrow-right.svg'
 import '../assets/styles/components/Register.scss';
 
+const EMAIL_REGEX = new RegExp(
+  /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+)
+
+const handleInput = event => {
+  handleValidation(event.target)
+
+  setValues({
+    ...form,
+    [event.target.name]: event.target.value
+  })
+}
+
+const handleSubmit = event => {
+  event.preventDefault()
+  props.registerUser(form, '/login')
+}
+
 const Register = (props) => {
   const [form, setValues] = useState({
     email: '',
-  });
-
-  const handleInput = (event) => {
-    setValues({
-      ...form,
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.loginRequest(form);
-    props.history.push('/')
-  };
+    name: '',
+    password: '',
+    birthday: '',
+    server: 'LAS',
+    verified: false,
+    created_at: moment().format()
+  })
 
   return (
       <section className="register">
@@ -34,7 +46,7 @@ const Register = (props) => {
               <img className="register__box__inside__img" src={Human} alt=""/>
               <h1>Hola</h1>
               <h2>Lorem ipsum dolor sit amet.</h2>
-              <form action="">
+              <form action="" >
                 <div>
                   <h5>O registrate con tu correo electrónico</h5>
                   <input type="text" placeholder="tucorreo@gmail.com"/>
@@ -61,7 +73,7 @@ const Register = (props) => {
 };
 
 const mapDispatchToProps = {
-  loginRequest,
+  registerRequest,
 };
 
 export default connect(null, mapDispatchToProps)(Register);

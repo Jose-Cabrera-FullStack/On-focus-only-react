@@ -73,6 +73,9 @@
   border: 1px solid #BDBDBD;
   box-sizing: border-box;
 }
+.register__box__inside input::placeholder{
+  padding: 20px;
+}
 
 .btn__secundary--register{
   width: 169px;

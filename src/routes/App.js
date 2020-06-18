@@ -14,6 +14,8 @@ import ContactUs from '../containers/ContactUs';
 import Politicy from '../containers/Politicy';
 import Teacher from '../containers/Teacher'; 
 import Register from '../containers/Register';
+import Login from '../containers/Login';
+import AboutUs from '../containers/AboutUs';
 import NotFound from '../containers/NotFound';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -37,7 +39,9 @@ const App = () => (
                 <Route exact path="/contactanos" component={ContactUs} />
                 <Route exact path="/politicas" component={Politicy} />
                 <Route exact path="/enseña" component={Teacher} />
-                <Route exact path="/log-in" component={Register} />
+                <Route exact path="/registrarse" component={Register} />
+                <Route exact path="/iniciar-sesion" component={Login} />
+                <Route exact path="/sobre-nosotros" component={AboutUs} />
             </Switch>
         <Footer/>
         

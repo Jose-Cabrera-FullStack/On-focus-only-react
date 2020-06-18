@@ -49,10 +49,11 @@ const Header = props => {
               </button>
             </li>
             <li class="navbar__menu">
-
+              <Link to="/registrarse">
               <button class="btn__primary btn__primary--login">
                 Registrarse
               </button>
+              </Link>
             </li>
           </ol>
         </div>
