@@ -16,6 +16,7 @@ import Teacher from '../containers/Teacher';
 import Register from '../containers/Register';
 import Login from '../containers/Login';
 import AboutUs from '../containers/AboutUs';
+import Podcast from '../containers/Podcast';
 import NotFound from '../containers/NotFound';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -42,6 +43,7 @@ const App = () => (
                 <Route exact path="/registrarse" component={Register} />
                 <Route exact path="/iniciar-sesion" component={Login} />
                 <Route exact path="/sobre-nosotros" component={AboutUs} />
+                <Route exact path="/podcast" component={Podcast} />
             </Switch>
         <Footer/>
         
