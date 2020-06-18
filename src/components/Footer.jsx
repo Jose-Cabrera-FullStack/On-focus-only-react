@@ -48,7 +48,7 @@ const Footer = () => {
             <Link to="/contactanos">
               <li>Contacto</li>
             </Link>
-            <Link to="dar-clases">
+            <Link to="/enseña">
               <li>Quiero dar un curso</li>
             </Link>
           </ol>
@@ -95,10 +95,10 @@ const Footer = () => {
                 <Link to="/politicas">
                   <li>Politicas de Cookie</li>
                 </Link>
-                <Link to="/centro-de-ayuda">
+                <Link to="/politicas">
                   <li>Centro de Ayuda</li>
                 </Link>
-                <Link>
+                <Link to="/politicas">
                 <li to="terminos-y-condiciones">
                   Términos y <br />
                   condiciones
