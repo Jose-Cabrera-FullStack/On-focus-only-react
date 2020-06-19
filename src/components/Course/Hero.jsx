@@ -8,8 +8,7 @@ const Hero = () => (
     <section class="hero__view">
 
       <h1 class="hero__title__view">
-        En la misión de empoderar 100 millones de personas a través del
-        conocimiento.
+        Ut wisi enim ad minim veniam, quis nostrud excerci tatation ullamcoper.
       </h1>
       
     </section>

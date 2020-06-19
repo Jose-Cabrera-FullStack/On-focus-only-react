@@ -14,7 +14,7 @@
   height: 33px;
   position: relative;
   right: 22px;
-  bottom: 10px;
+  bottom: 15px;
 }
 
 @media screen and (max-width: 900px) {
@@ -47,6 +47,8 @@
 
 .navbar__menu:hover {
   color: #b38a58;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
 }
 .navbar__menu a {
   color: #f2f2f2;

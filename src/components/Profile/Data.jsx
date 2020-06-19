@@ -10,9 +10,9 @@ const Data = () => {
         <h4>Gestioná tus datos.</h4>
         <h5>cambiar contraseña.</h5>
         <form action="">
-            <input type="text" placeholder="Contraseña actual"/> <br/>
-            <input type="text" placeholder="Nueva Contraseña"/><br/>
-            <input type="text" placeholder="Confirmar Nueva Contraseña"/><br/>
+            <input className="data__input__text" type="text" placeholder="Contraseña actual"/> <br/>
+            <input className="data__input__text" type="text" placeholder="Nueva Contraseña"/><br/>
+            <input className="data__input__text" type="text" placeholder="Confirmar Nueva Contraseña"/><br/>
             <button
                 class="btn__secundary btn__secundary--buy discovery__box__position btn__secundary--data"
                 >

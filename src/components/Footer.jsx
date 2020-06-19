@@ -35,7 +35,7 @@ const Footer = () => {
       <div class="footer__container">
         <div>
           <ol class="footer__container__left">
-            <li><h5>Accesos</h5></li>
+            <h5>Accesos</h5>
             <Link to="/home">
               <li>Home</li>
             </Link>
@@ -91,7 +91,7 @@ const Footer = () => {
           <div class="flex">
             <div>
               <ol>
-                <li><h5>Legales</h5></li>
+                <h5>Legales</h5>
                 <Link to="/politicas">
                   <li>Politicas de Cookie</li>
                 </Link>

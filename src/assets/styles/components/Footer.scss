@@ -14,9 +14,13 @@
 .footer__container div ol li:hover {
   color: #b38a58;
   cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
 }
 .footer__container div ol li h5:hover {
   cursor: context-menu;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
 }
 
 .footer__container__left {
