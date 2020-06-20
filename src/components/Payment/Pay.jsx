@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 import '../../assets/styles/components/ShoppingCar.scss';
 import Checkbox from '../Utils/Checkbox';
+import ButtonArrowRight from '../Utils/ButtonArrowRight';
 
 import CreditCard from '../../assets/static/images/svg/credit-card-color.svg'
 import MercadoPago from '../../assets/static/images/svg/mercadopago-logo-grey.svg'
@@ -46,7 +47,7 @@ const Pay = () => (
             </div>
             </div>
             <Link to="/adquirido">
-                <button class="btn__secundary btn__secundary--buy btn__secundary--way-to-pay"> Comprarlo ahora</button>
+                <ButtonArrowRight background={'btn__secundary--way-to-pay'} />
             </Link>
         </div>
     </form>

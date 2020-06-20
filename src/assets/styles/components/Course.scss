@@ -41,7 +41,7 @@
     letter-spacing: -0.02em;
     color: #03002B;
 }
-.course__information p{
+.course__information__text{
     width: 154px;
     font-family: 'Mont-Light';
     font-weight: 600;
@@ -49,9 +49,16 @@
     margin: 20px;
 }
 
+.course__information__text__width{
+    width: 300px;
+}
+
 .course__information__students{
-    position: relative;
-    top: 10px;
+    margin: 30px 20px 0px 10px;
+}
+
+.course__information__students--fix{
+    margin: 20px 20px 0px 10px;
 }
 
 .discovery__box__info__inside{
@@ -164,14 +171,14 @@
     margin: 40px 0 27px 0;
 }
 
-.couse__about p{
+.course__about p{
     width: 661px;
 font-family: Buenard;
 font-style: normal;
 font-weight: normal;
 font-size: 17px;
 line-height: 151.3%;
-color: #4F4F4F;
+color: #000000;
 margin: 28px 0 30px 0px;
 }
 .couse__about img{
@@ -385,6 +392,7 @@ color: #B38A58;
     width: 819px;
     height: 311px;
     background: #F2F2F2;
+    margin: 0px 0 72px 0;
 }
 
 .course__certificate__img{

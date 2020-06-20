@@ -3,9 +3,6 @@ import {Link} from 'react-router-dom';
 
 import '../assets/styles/components/Footer.scss';
 
-import Youtube from '../assets/static/images/svg/youtube.svg'
-import Facebook from '../assets/static/images/svg/facebook.svg'
-import Instagram from '../assets/static/images/svg/instagram.svg'
 import Logo from '../assets/static/images/svg/logo.svg'
 import Message from '../assets/static/images/svg/message.svg'
 import Arrow from '../assets/static/images/svg/arrow-up.svg'

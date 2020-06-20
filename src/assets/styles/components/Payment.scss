@@ -207,8 +207,7 @@
 }
 
 .details__inside__detail p{
-    margin: 0 20px 0 0px;
-    margin: 0 15px 0 0px;
+    margin: 0 10px 0 0px;
     font-family: Mont-Regular;
     font-size: 16px;
 }
@@ -265,9 +264,25 @@
 .congratulation{
     height: 100vh;
     width: 100vw;
-    background: #ffffffed;
+    background: #ffffffc9;
     position: absolute;
     z-index: 1;
+    top: 100px;
+}
+
+.congratulation__exit{
+    cursor: pointer;
+    display: block;
+    width: 14px;
+    height: 16px;
+    position: relative;
+    right: -520px;
+    top: 20px;
+    background-size: cover;
+    background-image: url(../../static/images/svg/icon-x.svg);
+}
+.congratulation__exit:hover{
+    filter: sepia(181);
 }
 
 .congratulation__box{
@@ -278,22 +293,39 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    top: 80px;
+
 }
 
 .congratulation__box__inside{
-    padding: 70px 0 0 150px;
+    padding: 50px 0 0 150px;
 }
 
 .congratulation__box__inside h1{
     font-family: 'Mont-Bold';
-    margin: 0;
+    margin: 0px 0px 0px 30px;
     color: #b38a58;
 }
 .congratulation__box__inside h4{
-    font-family: 'Mont-Regular';
-    margin: 20px 0 30px 0;
+    font-family: Mont-Semi-Bold;
     position: relative;
-    right: 20px;
+    right: 80px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 140.3%;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #0D0056;
+    bottom: 20px;
+}
+
+.btn__secundary--congratulation{
+    margin: 0;
+    position: relative;
+    right: -30px;
+    top: -10px;
 }
 
 .payment__footer{
@@ -324,5 +356,6 @@
     cursor: pointer;
 }
 .payment__footer li:hover{
-    color:#b38a58
+    color:#b38a58;
+    transition: all 0.2s ease-in-out;
 }

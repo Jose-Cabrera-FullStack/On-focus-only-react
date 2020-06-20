@@ -24,26 +24,27 @@ import Footer from '../components/Footer'
 const App = () => (
     // Arreglar para produccion las rutas
     <Router>
-            <Switch>
-                <Redirect exact from="/" to="/home" component={Home} />
-                <Route exact path="/home" component={Home} />
-                <Route exact path="/cursos" component={Courses} />
-                <Route exact path="/curso" component={Course} />
-                <Route exact path="/curso/:id" component={Visualization} />
-                <Route exact path="/carrito" component={ShoppingCar} />
-                <Route exact path="/pago" component={Pay} />
-                <Route exact path="/adquirido" component={PayCongratulation} />
-                <Route exact path="/curso-comprado" component={CourseBuyed} />
-                <Route exact path="/mi-curso" component={MyCourse} />
-                <Route exact path="/mi-perfil" component={MyProfile} />
-                <Route exact path="/contactanos" component={ContactUs} />
-                <Route exact path="/politicas" component={Politicy} />
-                <Route exact path="/enseña" component={Teacher} />
-                <Route exact path="/registrarse" component={Register} />
-                <Route exact path="/iniciar-sesion" component={Login} />
-                <Route exact path="/sobre-nosotros" component={AboutUs} />
-                <Route exact path="/podcast" component={Podcast} />
-            </Switch>
+        <Switch>
+            <Redirect exact from="/" to="/home" component={Home} />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/cursos" component={Courses} />
+            <Route exact path="/curso" component={Course} />
+            <Route exact path="/curso/:id" component={Visualization} />
+            <Route exact path="/carrito" component={ShoppingCar} />
+            <Route exact path="/pago" component={Pay} />
+            <Route exact path="/adquirido" component={PayCongratulation} />
+            <Route exact path="/curso-comprado" component={CourseBuyed} />
+            <Route exact path="/mi-curso" component={MyCourse} />
+            <Route exact path="/mi-perfil" component={MyProfile} />
+            <Route exact path="/contactanos" component={ContactUs} />
+            <Route exact path="/politicas" component={Politicy} />
+            <Route exact path="/enseña" component={Teacher} />
+            <Route exact path="/registrarse" component={Register} />
+            <Route exact path="/iniciar-sesion" component={Login} />
+            <Route exact path="/sobre-nosotros" component={AboutUs} />
+            <Route exact path="/podcast" component={Podcast} />
+            <Route component={NotFound} />
+        </Switch>
     </Router>
 )
 

@@ -6,7 +6,7 @@ import CourseProgress from '../components/Course/CourseProgress';
 import CourseInfoOnlyInfo from '../components/Course/CourseInfoOnlyInfo';
 import CourseAbout from '../components/Course/CourseAbout';
 import CourseCertificate from '../components/Course/CourseCertificate';
-import CourseTeacherInfo from '../components/Course/CourseTeacherInfo';
+import CourseTeacherInfoVariant from '../components/Course/CourseTeacherInfoVariant';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -22,14 +22,20 @@ const CourseBuyed = () => {
  
         <Breadcrumbs/>
         <CourseProgress/>
-        <div className="flex">
+        <div className="buyed__bar flex">
             <p>Sobre este curso</p>
             <p>Clases del curso</p>
         </div>
-        <CourseInfoOnlyInfo/>
-        <CourseAbout title={title}/>
+        <hr className="buyed__bar__bottom"/>
+        <CourseInfoOnlyInfo width={'course__information__text__width'}/>
+        <p className="buyed__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Duis autem vel eum iriure dolor in hendrerit in vulate velit esse molestie consequat.</p>
+        <CourseAbout title={title} font={'buyed__font'}/>
+        <p className="buyed_see__more">Ver más+</p>
         <CourseCertificate/>
-        <CourseTeacherInfo/>
+
+        <p className="buyed__teacher__tittle">Sobre el profesor</p>
+
+        <CourseTeacherInfoVariant/>
 
         </div>
         <Footer/>
