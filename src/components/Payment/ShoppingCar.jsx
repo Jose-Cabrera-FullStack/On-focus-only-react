@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import Breadcrumbs from '../Utils/Breadcrumbs'
+import ButtonArrowRight from '../Utils/ButtonArrowRight'
 import '../../assets/styles/components/ShoppingCar.scss';
 
 import UI from '../../assets/static/images/img/ui-design.png';
@@ -54,13 +55,9 @@ const ShoppingCar = () => (
                         <h4 className="shopping__car__box__inside__total">Tu total es de</h4>
                         <h4 className="shopping__car__box__inside__total shopping__car__box__inside__total--price">AR$ 980</h4>
                     </div>
-                    <button class="btn__secundary btn__secundary--buy discovery__box__position shopping__car--position"
-                      >
-                      <div class="flex btn__arrow__buy">
-                        <img src={Arrow} alt="" />
-                        <p>Comprarlo ahora</p>
-                      </div>
-                    </button>
+                    <div className="shopping__car__box__inside__button">     
+                        <ButtonArrowRight/>
+                    </div>
                     </div>
             </div>
 

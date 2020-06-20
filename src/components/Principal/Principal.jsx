@@ -7,23 +7,23 @@ import Logo from '../../assets/static/images/svg/logo.svg'
 
 const Principal = () => (
     <section class="home__view ">
-      <figure class=" home__view__figure slide-in-bottom-1">
+      <figure class=" home__view__figure">
         <img class="home__view__img" src={Logo} alt="Logo de On Focus" />
       </figure>
       <div class="home__view__title">
-        <h1 class="slide-in-bottom-2">En la misión de empoderar 100</h1>
-        <h1 class="slide-in-bottom-3">millones de personas a través del</h1>
-        <h1 class="slide-in-bottom-4">conocimiento.</h1>
+        <h1 class="slide-in-bottom-3">En la misión de empoderar 100</h1>
+        <h1 class="slide-in-bottom-4">millones de personas a través del</h1>
+        <h1 class="slide-in-bottom-5">conocimiento.</h1>
       </div>
       <div class="home__view__subtitle">
-        <h3 class="slide-in-bottom-5">
+        <h3 class="slide-in-bottom-6">
           Bienvenido a On Focus Education, la plataforma que viene
         </h3>
-        <h3 class="slide-in-bottom-6">
+        <h3 class="slide-in-bottom-7">
           a cambiar la manera de aprender en linea
         </h3>
       </div>
-      <button class="btn__primary btn__primary--fix slide-in-bottom-7">Descubrí más</button>
+      <button class="btn__primary btn__primary--fix">Descubrí más</button>
     </section>
 )
 export default Principal;

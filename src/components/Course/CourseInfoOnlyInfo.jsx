@@ -15,7 +15,7 @@ const CourseInfoOnlyInfo = () => (
 
             <div class="flex">
                 <img src={Perfil} alt="perfil"/>
-                <p>150 alumnos.</p>
+                <p className="course__information__students">150 alumnos.</p>
             </div>
             <div class="flex">
                 <img src={Reloj} alt="perfil"/>

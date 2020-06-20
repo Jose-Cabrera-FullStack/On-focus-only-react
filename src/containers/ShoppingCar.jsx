@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import ShoppingCar from '../components/Payment/ShoppingCar';
 import Discovery from '../components/Principal/Discovery';
+import Header from '../components/Header'
 
 import '../assets/styles/App.scss';
 
@@ -15,6 +16,7 @@ const Course = () => {
   return(
     <div className="App">
 
+        <Header/>
         <ShoppingCar/>
         <Discovery display={display} column={column} none={none} info={info}/>
     

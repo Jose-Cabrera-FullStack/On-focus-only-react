@@ -9,6 +9,11 @@ body {
   font-family: 'Mont-Regular', Roboto;
 }
 
+input[type="text"]{
+  padding: 20px;
+  
+}
+
 .display-none{
   display: none;
 }
@@ -32,9 +37,13 @@ body {
 .grid-4 {
   grid-column: 5;
 }
+.grid-column-2--fix{
+  grid-template-columns: 1fr 1.7fr;
+  margin: 0 0 100px 0;
+}
 .grid-column-2{
   grid-template-columns: 1fr 1fr;
-  margin: 0 0 60px 0;
+  margin: 0 0 100px 0;
 }
 .grid-column-3{
   grid-template-columns: 1fr;

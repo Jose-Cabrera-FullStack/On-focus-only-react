@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 import '../../assets/styles/components/Course.scss';
 import '../../assets/styles/components/Courses.scss';
+import Shopping from '../Utils/ShoppingCarSquare';
 
 import Promo from '../../assets/static/images/svg/rectangle-promo.svg'
 import Class1 from '../../assets/static/images/img/ui-design.png'
@@ -10,7 +11,6 @@ import Class2 from '../../assets/static/images/img/ui-design-1.png'
 import Class3 from '../../assets/static/images/img/ui-design-2.png'
 import Class4 from '../../assets/static/images/img/ui-design-3.png'
 import User from '../../assets/static/images/svg/user.svg'
-import Shopping from '../../assets/static/images/svg/shopping-car-squad.svg'
 import Arrow from '../../assets/static/images/svg/arrow-right.svg'
 import Star from '../../assets/static/images/svg/star.svg'
 import Diploma from '../../assets/static/images/img/diploma.png'
@@ -63,22 +63,18 @@ const Discovery = (props) => {
                     <h2 class="discovery__box__info__price">AR$ 490</h2>
                     <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
-                  <div>
-                    <Link to='/curso'>
+                  <div className="flex">
+                  <Link to='/curso'>
                     <button
                       class="btn__secundary btn__secundary--buy discovery__box__position"
                       >
                       <div class="flex btn__arrow__buy">
-                        <img src={Arrow} alt="" />
+                      <span className="icon btn__arrow__buy__img" alt="Ícono de flecha a la derecha"></span>
                         <p>Comprarlo ahora</p>
                       </div>
                     </button>
                       </Link>
-                    <img
-                      class="discovery__box__info__shopping__card"
-                      src={Shopping}
-                      alt="shopping-car"
-                    />
+                    <Shopping/>
                   </div>
                 </div>
               </div>
@@ -119,23 +115,19 @@ const Discovery = (props) => {
                     <h2 class="discovery__box__info__price">AR$ 490</h2>
                     <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
-                  <div>
+                  <div className="flex">
                   <Link to='/curso'>
                     <button
                       class="btn__secundary btn__secundary--buy discovery__box__position"
                       >
                       <div class="flex btn__arrow__buy">
-                        <img src={Arrow} alt="" />
+                      <span className="icon btn__arrow__buy__img" alt="Ícono de flecha a la derecha"></span>
                         <p>Comprarlo ahora</p>
                       </div>
                     </button>
                       </Link>
-                    <img
-                      class="discovery__box__info__shopping__card"
-                      src={Shopping}
-                      alt="shopping-car"
-                    />
-                  </div>
+                <Shopping/>                  
+                </div>
                 </div>
               </div>
             </div>
@@ -176,23 +168,19 @@ const Discovery = (props) => {
                     <h2 class="discovery__box__info__price">AR$ 490</h2>
                     <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
-                  <div>
+                  <div className="flex">
                   <Link to='/curso'>
                     <button
                       class="btn__secundary btn__secundary--buy discovery__box__position"
                       >
                       <div class="flex btn__arrow__buy">
-                        <img src={Arrow} alt="" />
+                      <span className="icon btn__arrow__buy__img" alt="Ícono de flecha a la derecha"></span>
                         <p>Comprarlo ahora</p>
                       </div>
                     </button>
                       </Link>
-                    <img
-                      class="discovery__box__info__shopping__card"
-                      src={Shopping}
-                      alt="shopping-car"
-                    />
-                  </div>
+                  <Shopping/>                  
+                </div>
                 </div>
               </div>
             </div>
@@ -233,23 +221,19 @@ const Discovery = (props) => {
                     <h2 class="discovery__box__info__price">AR$ 490</h2>
                     <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
-                  <div>
+                  <div className="flex">
                   <Link to='/curso'>
                     <button
                       class="btn__secundary btn__secundary--buy discovery__box__position"
                       >
                       <div class="flex btn__arrow__buy">
-                        <img src={Arrow} alt="" />
+                      <span className="icon btn__arrow__buy__img" alt="Ícono de flecha a la derecha"></span>
                         <p>Comprarlo ahora</p>
                       </div>
                     </button>
                       </Link>
-                    <img
-                      class="discovery__box__info__shopping__card"
-                      src={Shopping}
-                      alt="shopping-car"
-                    />
-                  </div>
+                <Shopping/>                  
+                </div>
                 </div>
               </div>
             </div>

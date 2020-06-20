@@ -7,6 +7,8 @@ import CourseInfoOnlyInfo from '../components/Course/CourseInfoOnlyInfo';
 import CourseAbout from '../components/Course/CourseAbout';
 import CourseCertificate from '../components/Course/CourseCertificate';
 import CourseTeacherInfo from '../components/Course/CourseTeacherInfo';
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import '../assets/styles/App.scss';
 import '../assets/styles/components/Buyed.scss';
@@ -15,6 +17,7 @@ const CourseBuyed = () => {
   const title = "¿Qué incluye este curso?"
   return(
     <div className="App">
+        <Header/>
         <div className="buyed">
  
         <Breadcrumbs/>
@@ -29,6 +32,7 @@ const CourseBuyed = () => {
         <CourseTeacherInfo/>
 
         </div>
+        <Footer/>
     </div>
 
   );

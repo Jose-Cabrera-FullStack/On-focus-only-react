@@ -142,12 +142,14 @@
     text-decoration: line-through;
     font-family: Mont-light;
   }
-  
-  .discovery__box__info__shopping__card {
-    margin: 0px;
-    position: relative;
-    top: 10.5px;
-    right: 5px;
+
+  .discovery__box__info__icon{
+    display: block;
+    width: 45px;
+    height: 38px;
+    background-size: cover;
+    margin: 7px 0px 30px 0px;
+    background-image: url(../../static/images/svg/shopping-car-squad.svg);
   }
   
   .discovery__box__position {
@@ -211,6 +213,7 @@
     background-size: cover;
     margin: 0;
   }
+  
   .hero__title__view {
     width: 620px;
     font-family: 'Mont-Bold', Roboto;
@@ -226,13 +229,26 @@
     transform: translate(-50%, -50%);    
     line-height: 118.3%;
   }
+
+  .hero__view--courses__plus__title{
+    width: 435px;
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 41px;
+    line-height: 117.3%;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 90px 0px 0px 200px;
+  }
   /* <-------COURSE-------> */
   
   /* <-------ANIMATION-------> */
-  .discovery__box__info__shopping__card:hover {
+  .discovery__box__info__icon:hover {
     cursor: pointer;
-    transform: scale(1.2);
     transition: all 0.2s ease-in-out;
+    background-image: url(../../static/images/svg/shopping-car-squad-black.svg);
   }
  
   

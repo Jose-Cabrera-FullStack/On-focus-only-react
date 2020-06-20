@@ -54,25 +54,13 @@ const Footer = () => {
           </ol>
           <ol class="footer__container__left--fix">
             <li>
-              <img
-                class="footer__socials footer__socials--youtube"
-                src={Youtube}
-                alt="youtube"
-              />
+            <span className="footer__socials--youtube" alt="Youtube"></span>
             </li>
             <li>
-              <img
-                class="footer__socials footer__socials--facebook"
-                src={Facebook}
-                alt="facebook"
-              />
+            <span className="footer__socials--facebook" alt="Facebook"></span>
             </li>
             <li>
-              <img
-                class="footer__socials footer__socials--instagram"
-                src={Instagram}
-                alt="instagram"
-              />
+            <span className="footer__socials--instagram" alt="Instagram"></span>
             </li>
           </ol>
         </div>

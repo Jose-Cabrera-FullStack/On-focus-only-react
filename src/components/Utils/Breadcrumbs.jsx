@@ -6,7 +6,7 @@ import ArrowLeft from '../../assets/static/images/svg/arrow-visualization-black.
 
 
 const Beadcrumbs = () => (
-        <div className="flex">
+        <div className="beadcrumbs flex">
             <img src={ArrowLeft} alt="Fecha a la izquierda"/>
             <h5>Volver a los cursos</h5>
         </div>

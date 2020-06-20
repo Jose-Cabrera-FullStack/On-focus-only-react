@@ -2,11 +2,23 @@
     margin: 40px 200px 0px 200px;
 }
 
-.course__section{
+.course__section__title{
     font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #03002B;
+    padding: 0 0 32px 0;
 }
+
+.course__section__name{
+    margin: 16px 0 25px 0;
+}
+
 .course__section__tech{
-    margin: 0px 0 0 -35px;
+    margin: 0 0 0px -30px;
 }
 
 .discovery__box__info--course{
@@ -36,6 +48,12 @@
     font-size: 15px;
     margin: 20px;
 }
+
+.course__information__students{
+    position: relative;
+    top: 10px;
+}
+
 .discovery__box__info__inside{
     margin: 50px 0 0 33px;
 }
@@ -66,8 +84,14 @@
 
 .discovery__box__info__inside__price{
     font-family: 'Mont-Bold';
-    font-size: 20px;
-    margin:0;
+    width: 110px;
+    margin: 0;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #03002B;
 }
 
 .discovery__box__info__inside__save{
@@ -79,7 +103,7 @@
     line-height: 135.3%;
     letter-spacing: -0.02em;
     color: #FF3F31;
-    margin: 2px 0 0 10px;
+    margin: 10px 0 0 10px;
 }
 
 .discovery__box__info__inside__before{
@@ -91,25 +115,42 @@
     line-height: 135.3%;
     letter-spacing: -0.03em;
     color: #828282;
+    margin: 10px 0 0 0;
+}
+
+.discovery__box__info__inside__before i{
+    text-decoration: line-through;
+    font-style: normal;
 }
 
 .discovery__box__info__inside__percentage{
-    font-family: 'Mont-Light';
+    font-family: 'Mont-Regular';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 900;
     font-size: 15px;
     line-height: 135.3%;
     letter-spacing: -0.03em;
     color: #03002b;
+    margin: 10px 0 0 0;
 }
 
 .discovery__box__info__inside__shopping{
     position: relative;
-    top: 8px;
+    top: 9px;
+}
+
+.discovery__box__info__inside__buttons{
+    margin: 15px 0 0 0;
 }
 
 .couse__about h1{
     font-family:'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #03002B;
 }
 
 .course__info__title{
@@ -148,6 +189,10 @@ margin: 28px 0 30px 0px;
     padding: 9px 0 0 0;
 }
 
+.course__inclusive__certificate{
+    color: #b38a58;
+}
+
 .course__inclusive__diploma{
     width: 276px;
     height: 230px;
@@ -171,33 +216,50 @@ color: #03002B;
     font-family: 'Mont-Bold';
 }
 .course__inclusive__inside p{
-    width: 479px;
+    width: 429px;
+    font-family: Judson;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
 }
 
 .course__for__me{
     margin: 52px 0 0 200px;
 }
 
+.course__for__me ul{
+    padding: 0 0 0 20px;
+}
+
 .course__for__me h2{
     font-family: 'Mont-Bold';
-    margin: 50px 0 41px 0;
+    margin: 52px 0 34px 0;
 }
 .course__for__me li{
     margin: 5px 0 0 0;
+    font-family: Judson;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
 }
 
 .course__module{
-    margin: 50px 0 0 200px;
+    margin: 100px 0 0 200px;
+}
+
+.course__module ul{
+    padding: 0;
 }
 
 .course__module h2{
     font-family: "Mont-Bold";
+    margin: 0 0 50px 0px;
 }
 
 .course__module li{
     list-style: none;
     width: 659px;
-    margin: 5px 0 0 0;
+    margin: 10px 0 0 0;
     height: 55px;
     background: #F2F2F2;
 }
@@ -212,16 +274,18 @@ color: #03002B;
 .course__module__time p{
     font-size: 12px;
     margin: 0 0px 0px 5px;
+    color: #4F4F4F;
 }
 .course__module__reloj{
     width: 15px;
+    filter: contrast(0.2);
 }
 
 .course__module__arrow{
     padding: 0px 0 0 0;
     position: relative;
     left: 350px;
-    top: 13px;
+    top: 15px;
 }
 
 .course__recomendation{
@@ -258,33 +322,63 @@ color: #B38A58;
 }
 
 .course__recomendation__inside__name{
-    margin: 0 0 0 20px;
+    margin: 8px 0 0 20px;
 }
 
 .course__recomendation__inside__text{
     width: 360px;
     border-bottom: 1px solid;
-    padding: 50px 0 40px 0px;
+    padding: 0px 0 40px 0px;
 }
 
 .course__recomendation__arrows{
-    margin: 0px 0 0px 45%;
-    padding: 10px 0 28px 0;
+    margin: 20px 0px 0px 43%;
+    padding: 10px 0 32px 0;
+}
+
+.course__recomendation__arrows__numb{
+    margin: 0 35px 0 35px;
 }
 
 .course__teach h3{
     font-family: 'Mont-Bold';
+    margin: 70px 0 0px 22px;
+
 }
+
+.course__teach p{
+    margin: 0px 20px 10px 20px;
+}
+.course__teach strong{
+    margin: 10px 20px 10px 20px;
+    font-family: 'Mont-Heavy';
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #000000;
+}
+
+.course__teach__socials{
+    margin: 0px 0 0 0px;
+    position: relative;
+    top: -2px;
+    left: -20px;
+}
+
+.course__teach__socials img {
+    margin: 0px 0px 0px 10px;
+}
+
 .course__teach__info{
     width: 637px;
-    height: 238px;
     font-family: Judson;
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
     line-height: 152.3%;
     color: #000000;
-    margin: 20px 100px 0px 0px;
+    margin: 40px 100px 0px 0px;
 }
 
 .course__certificate{

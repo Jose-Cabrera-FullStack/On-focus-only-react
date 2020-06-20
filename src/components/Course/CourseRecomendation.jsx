@@ -40,7 +40,7 @@ const CourseRecomendation = () => (
     </div>
             <div class="flex course__recomendation__arrows">
                 <img src={ArrowLeft} alt="Flecha a la derecha"/>
-                <p>3/12</p>
+                <p className="course__recomendation__arrows__numb">3/12</p>
                 <img src={ArrowRight} alt="Flecha a la izquierda"/>
             </div>
     </section>

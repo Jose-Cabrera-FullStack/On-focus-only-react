@@ -14,7 +14,7 @@ import HowWeTeach from '../components/Principal/HowWeTeach';
 import '../assets/styles/App.scss';
 
 const Course = () => {
-  let grid = 'grid-column-2'
+  let grid = 'grid-column-2--fix'
   return(
     <div className="App">
 

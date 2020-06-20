@@ -85,9 +85,9 @@ border: 1px solid #000000;
 }
 
 .shopping__car__line{
-    width: 40vw;
+    width: 37vw;
     border: 1px solid #BDBDBD;
-    margin: 30px 0 30px 0px;
+    margin: 30px 0px 30px 40px;
 }
 
 .shopping__car__box__inside__total{
@@ -126,6 +126,12 @@ border: 1px solid #000000;
     letter-spacing: -0.03em;
     color: #4F4F4F;
     margin: 0;
+}
+
+.shopping__car__box__inside__button{
+    position: relative;
+    top: -15px;
+    left: 40px;
 }
 
 .hero__view__promo__price__delete--shopping__car{

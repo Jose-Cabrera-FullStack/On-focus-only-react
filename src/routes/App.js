@@ -24,7 +24,6 @@ import Footer from '../components/Footer'
 const App = () => (
     // Arreglar para produccion las rutas
     <Router>
-        <Header/>
             <Switch>
                 <Redirect exact from="/" to="/home" component={Home} />
                 <Route exact path="/home" component={Home} />
@@ -45,8 +44,6 @@ const App = () => (
                 <Route exact path="/sobre-nosotros" component={AboutUs} />
                 <Route exact path="/podcast" component={Podcast} />
             </Switch>
-        <Footer/>
-        
     </Router>
 )
 

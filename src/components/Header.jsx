@@ -45,7 +45,7 @@ const Header = props => {
             </li>
             <li class="navbar__menu ">
               <button
-                class="btn__primary btn__primary--login btn__primary--login-width"
+                class="btn__primary btn__primary--login btn__primary--login"
               >
                 Iniciar Sesion
               </button>
