@@ -4,6 +4,14 @@
     background-size: cover;
 }
 
+.podcast__hero--youtube{
+    background-image:linear-gradient(to bottom, #1c1b5200, #03002bd6), url(../../static/images/img/hero-youtube.png);
+}
+
+.podcast__spotify img{
+    margin: -40px 200px 0 200px;
+}
+
 .podcast__hero__inside{
     margin: 0;
     padding: 140px 0 0 200px;
@@ -43,8 +51,16 @@
     margin: 46px 20px 0 20vw;
 }
 
-.podcast__hero img{
+.podcast__hero__text__song--youtube{
+    margin: 70px 0px 0 30vw;
+}
+
+.podcast__hero__img{
     margin: 0 0 0 10px;
+}
+
+.podcast__hero__img--youtube{
+    margin: 50px 0 0 -20px;
 }
 
 .podcast__information{
@@ -105,4 +121,10 @@
     line-height: 135.3%;
     letter-spacing: -0.03em;
     color: #4F4F4F;
+}
+
+.youtube__video img{
+    width: 1040px;
+    height: 546px;
+    margin: -30px 200px 10px 200px;
 }

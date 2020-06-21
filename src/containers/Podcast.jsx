@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Hero from '../components/Podcast/Hero'
+import Spotify from '../components/Podcast/Spotify'
 import Information from '../components/Podcast/Information'
 import '../assets/styles/App.scss';
 
@@ -13,6 +14,7 @@ const Podcast = () => {
     <div className="App">
         <Header/>
         <Hero/>
+        <Spotify/>
         <Information/>
         <Footer/>
 

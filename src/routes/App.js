@@ -18,8 +18,7 @@ import Login from '../containers/Login';
 import AboutUs from '../containers/AboutUs';
 import Podcast from '../containers/Podcast';
 import NotFound from '../containers/NotFound';
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Youtube from '../containers/Youtube';
 
 const App = () => (
     // Arreglar para produccion las rutas
@@ -43,6 +42,7 @@ const App = () => (
             <Route exact path="/iniciar-sesion" component={Login} />
             <Route exact path="/sobre-nosotros" component={AboutUs} />
             <Route exact path="/podcast" component={Podcast} />
+            <Route exact path="/youtube" component={Youtube} />
             <Route component={NotFound} />
         </Switch>
     </Router>

@@ -14,8 +14,8 @@ const Hero = () => (
                 <p className="podcast__hero__text">Lorem ipsum dolor sit amet, consectse diam nonummy nibh euismod tincidunt.</p>
                 <div className="flex">
                     <p className="podcast__hero__text__song">Escuchalo en</p>
-                    <img src={Spotify} alt="ícono de Spotify"/>
-                    <img src={Music} alt="ïcono de Música"/>
+                    <img className="podcast__hero__img" src={Spotify} alt="ícono de Spotify"/>
+                    <img className="podcast__hero__img" src={Music} alt="ïcono de Música"/>
                 </div>
             </div>
             </div>

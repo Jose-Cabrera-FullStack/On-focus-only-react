@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Hero from '../components/AboutUs/Hero';
 import Future from '../components/AboutUs/Future';
 import Map from '../components/AboutUs/Map';
@@ -14,6 +16,7 @@ import '../assets/styles/App.scss';
 const AboutUs = () => {
   return(
     <div className="App">
+        <Header/> 
         <Hero title={'Contacto'}/> 
         <Future/> 
         <Map/> 
@@ -21,6 +24,7 @@ const AboutUs = () => {
         <Tweets/> 
         <Phrase/> 
         <HeroDown/> 
+        <Footer/> 
 
     </div>
 
