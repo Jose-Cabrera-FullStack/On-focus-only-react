@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import Hero from '../components/Teacher/Hero';
 import Points from '../components/Teacher/Points';
 import TeacherFAQ from '../components/Teacher/FAQ';
@@ -13,10 +15,12 @@ const Teacher = () => {
 
   return(
     <div className="App">
+        <Header/>
         <Hero/>
         <Points grid={grid}/>
         <TeacherFAQ/>
         <HeroDown/>
+        <Footer/>
     </div>
 
   );

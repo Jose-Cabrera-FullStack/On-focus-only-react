@@ -46,7 +46,7 @@ const Register = (props) => {
           <div className="register__box">
             <div className="register__box__inside">
               <img className="register__box__inside__img" src={Human} alt=""/>
-              <h1>Hola</h1>
+              <h1>Hola!</h1>
               <h2>Lorem ipsum dolor sit amet.</h2>
               <form action="" >
                 <div>
