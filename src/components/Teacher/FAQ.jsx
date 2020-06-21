@@ -3,8 +3,6 @@ import {Link} from 'react-router-dom';
 
 import '../../assets/styles/components/Course.scss';
 import ArrowDown from '../../assets/static/images/svg/arrow-down.svg';
-import Reloj from '../../assets/static/images/svg/reloj.svg';
-
 
 const TeacherFAQ = () => (
     <section class="teacher__faq">

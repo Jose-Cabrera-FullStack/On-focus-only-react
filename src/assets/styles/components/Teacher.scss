@@ -31,11 +31,47 @@
 }
 
 .teacher__points{
-    margin: 50px 310px 0 310px;
+    margin: 50px 270px 0 400px;
+}
+
+.teacher__points__img--1{
+    width: 257px;
+    height: 204px;
+}
+
+.teacher__points__img--2{
+    width: 190px;
+    height: 210px;
+}
+
+.teacher__points__img--3{
+    width: 205px;
+    height: 198px;
+}
+
+.teacher__points__img--4{
+    width: 244px;
+    height: 200px;
+}
+
+.teacher__points__text{
+    margin: 10px 0 0 0;
+    width: 330px;
+    font-size: 14px;
 }
 
 .teacher__faq{
-    margin: 0 200px 0 200px;
+    margin: 0 200px 74px 200px;
+}
+
+.teacher__faq h1{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #03002B;
 }
 
 .teacher__faq ul{
@@ -51,7 +87,7 @@ padding: 0;
     height: 43px;
     background: #F2F2F2;
     list-style: none;
-    margin: 20px 0 20px 0;
+    margin: 10px 0 10px 0;
 }
 
 .teacher__course{

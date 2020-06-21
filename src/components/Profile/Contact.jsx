@@ -1,11 +1,9 @@
 import React from 'react';
 
 import '../../assets/styles/components/Data.scss';
-import Arrow from '../../assets/static/images/svg/arrow-right.svg'
-import Facebook from '../../assets/static/images/svg/facebook-border.svg'
-import Instagram from '../../assets/static/images/svg/instagram-border.svg'
-import LinkedIn from '../../assets/static/images/svg/linkedin-border.svg'
-import Youtube from '../../assets/static/images/svg/youtube-border.svg'
+import Button from  '../../components/Utils/ButtonArrowRight';
+import Message from  '../../assets/static/images/svg/send-message.svg';
+
 
 
 const Data = () => {
@@ -19,29 +17,35 @@ const Data = () => {
         <div className="flex">
             <div>
                 <form action="">
-
                 <input className="data__input__text" type="text" placeholder="Nombre Completo"/> <br/>
                 <input className="data__input__text" type="text" placeholder="E-mail"/> <br/>
                 <input className="data__input__text" type="text" placeholder="Teléfono"/> <br/>
-                <input className="data__input__text data__input__text__area" type="text" placeholder="¿Cuál es el motivo por el cuál nos contactás?"/> <br/>
-                <button
-                class="btn__secundary btn__secundary--buy discovery__box__position btn__secundary--data"
-                >
-                <div class="flex btn__arrow__buy">
-                <img src={Arrow} alt="" />
-                <p>Enviar</p>
-                </div>
-            </button>
+                <textarea className="data__input__text data__input__text__area"  name="" id="" cols="30" rows="10" placeholder="¿Cuál es el motivo por el cuál nos contactás?"></textarea> <br/>
+                <Button margin={'btn__secundary--data'} text={'Enviar'}/>
                 </form>
+                <div className="contact__check__message flex">
+                    <img src={Message} alt=""/>
+                    <p>Su mensaje ha sido enviado. Gracias! </p>
+                </div>
             </div>
             <div className="data__right">
-                <strong className="data__right__title">Oficina de contacto</strong>
+                <strong className="data__right__title">Oficina de contacto.</strong>
                 <p>El Salvador 5218,C1414BPV Buenos Aires, Argentina.</p>
                 <div className="flex">
-                    <img src={Facebook} alt="Red Social"/>
-                    <img src={Youtube} alt="Red Social"/>
-                    <img src={Instagram} alt="Red Social"/>
-                    <img src={LinkedIn} alt="Red Social"/>
+                <ol class="footer__container__left--fix">
+                <li>
+                <span className="contact__socials--youtube" alt="Youtube"></span>
+                </li>
+                <li>
+                <span className="contact__socials--facebook" alt="Facebook"></span>
+                </li>
+                <li>
+                <span className="contact__socials--instagram" alt="Instagram"></span>
+                </li>
+                <li>
+                <span className="contact__socials--linkedin" alt="Instagram"></span>
+                </li>
+                </ol>
                 </div>
             </div>
         </div>

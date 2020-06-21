@@ -2,7 +2,7 @@
   background-image: linear-gradient(to bottom,#03002B,#03002b80),url(../../static/images/img/log-in.png);
   background-size: cover;
   margin: 0;
-  height: 150vh;
+  height: 140vh;
 }
 
 .register__img{
@@ -10,7 +10,7 @@
   float: left;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -320%);
+  transform: translate(-50%, -310%);
 }
 
 .register__box{
@@ -53,17 +53,17 @@
   text-align: center;
   letter-spacing: -0.02em;
   color: #03002B;
-  margin: 20px 0 20px 0px;
+  margin: 10px 0 20px 0px;
 }
 .register__box__inside h5{
-  font-family: 'Mont-Regular';
+  font-family: 'Mont-Semi-Bold';
   font-style: normal;
   font-weight: 800;
   font-size: 15px;
   line-height: 135.3%;
   letter-spacing: -0.02em;
   color: #03002B;
-  margin: 10px 0px 10px 0px;
+  margin: 16px 0px 10px 0px;
 }
 
 .register__box__inside input{
@@ -73,12 +73,9 @@
   border: 1px solid #BDBDBD;
   box-sizing: border-box;
 }
-.register__box__inside input::placeholder{
-  padding: 20px;
-}
 
 .btn__secundary--register{
   width: 169px;
-  margin: 50px 0 0 100px;
+  margin: 30px 0 0 100px;
 
 }

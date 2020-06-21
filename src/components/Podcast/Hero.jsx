@@ -3,6 +3,7 @@ import React from 'react';
 import '../../assets/styles/components/Podcast.scss';
 
 import Spotify from '../../assets/static/images/svg/spotify.svg'
+import Music from '../../assets/static/images/svg/icon-music.svg'
 
 
 const Hero = () => (
@@ -14,7 +15,7 @@ const Hero = () => (
                 <div className="flex">
                     <p className="podcast__hero__text__song">Escuchalo en</p>
                     <img src={Spotify} alt="ícono de Spotify"/>
-                    <img src={Spotify} alt="ïcono de Música"/>
+                    <img src={Music} alt="ïcono de Música"/>
                 </div>
             </div>
             </div>

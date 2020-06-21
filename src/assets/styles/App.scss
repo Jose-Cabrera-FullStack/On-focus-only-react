@@ -10,8 +10,17 @@ body {
 }
 
 input[type="text"]{
-  padding: 20px;
-  
+  padding: 0px 0px 0 10px;
+  font-family: Mont-Regular;
+  font-size: 12px;
+}
+
+input:focus{
+  outline: solid 1px #b38a58;
+}
+
+textarea:focus{
+  outline: solid 1px #b38a58;
 }
 
 .display-none{

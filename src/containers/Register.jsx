@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { registerRequest } from '../actions'
 import moment from "moment"
 
+import Button from '../components/Utils/ButtonArrowRight'
+
 import Logo from '../assets/static/images/img/logo-log-in.png'
 import Human from '../assets/static/images/svg/human-hello.svg'
 import Arrow from '../assets/static/images/svg/arrow-right.svg'
@@ -55,15 +57,7 @@ const Register = (props) => {
                   <h5>Contraseña</h5>
                   <input type="text" placeholder="Contraseña"/>
                 </div>
-
-                <button
-                  class="btn__secundary btn__secundary--buy btn__secundary--register"
-                  >
-                  <div class="flex btn__arrow__buy">
-                  <img src={Arrow} alt="" />
-                  <p>Registrarme</p>
-                  </div>
-              </button>
+                <Button margin={'btn__secundary--register'} text={'Registrarme'}/>
               </form>
             </div>
 

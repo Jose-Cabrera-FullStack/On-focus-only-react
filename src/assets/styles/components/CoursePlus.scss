@@ -108,6 +108,13 @@ margin: 20px;
     margin: 0px 30px 40px 0;
 }
 
+.my-course__menu:hover{
+    font-family: Mont-Bold;
+    color:#b38a58;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
 .my-course__individual{
     display: grid;
     grid-template-rows: 1fr;
@@ -121,4 +128,17 @@ margin: 20px;
 
 .btn__secundary--my-course{
     width: 149px;
+}
+
+.course__plus__title{
+    margin: 10px 0 0 0;
+}
+
+.course__plus__sub__title{
+    margin: 0 0 10px 0;
+    font-family: 'Mont-Regular';
+}
+
+.course__plus__progress{
+    margin: 10px 0 10px 0;
 }

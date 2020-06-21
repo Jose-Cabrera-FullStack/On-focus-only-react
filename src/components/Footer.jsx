@@ -49,17 +49,19 @@ const Footer = () => {
               <li>Quiero dar un curso</li>
             </Link>
           </ol>
-          <ol class="footer__container__left--fix">
-            <li>
-            <span className="footer__socials--youtube" alt="Youtube"></span>
-            </li>
-            <li>
-            <span className="footer__socials--facebook" alt="Facebook"></span>
-            </li>
-            <li>
-            <span className="footer__socials--instagram" alt="Instagram"></span>
-            </li>
-          </ol>
+          <div className="footer__socials__network">
+            <ol class="footer__container__left--fix">
+              <li>
+              <span className="footer__socials--youtube" alt="Youtube"></span>
+              </li>
+              <li>
+              <span className="footer__socials--facebook" alt="Facebook"></span>
+              </li>
+              <li>
+              <span className="footer__socials--instagram" alt="Instagram"></span>
+              </li>
+            </ol>
+          </div>
         </div>
 
         <div>

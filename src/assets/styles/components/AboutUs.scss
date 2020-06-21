@@ -94,6 +94,7 @@
   }
 
   .about__us__focus__future__text{
+    width: 815px;
     font-family: Judson;
     font-style: normal;
     font-weight: normal;
@@ -270,7 +271,7 @@
   }
   
   .about__us__focus__phrase{
-    margin: 50px 200px 50px 200px;
+    margin: 50px 200px 100px 200px;
   }
 
   .about__us__focus__phrase__title{
@@ -295,14 +296,15 @@
   }
 
   .about__us__focus__phrase__sub{
-    margin: 0 0 20px 250px;
+    margin: 30px 0 0px 240px;
     font-family: 'Mont-Bold';
-    font-size: 18px;
+    font-size: 20px;
+    color: #03002B;
   }
 
   .about__us__focus__phrase__author{
     margin: 0px 0px 0px 235px;
-    font-family: 'Mont-Light';
+    font-family: 'Mont-Regular';
     font-size: 16px;
     line-height: 113.3%;
     font-style: normal;
@@ -310,7 +312,6 @@
     letter-spacing: -0.02em;
     color: #03002B;
   }
-
 
   @media screen and (max-width: 1325px) {
     .none {

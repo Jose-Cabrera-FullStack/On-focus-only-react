@@ -72,10 +72,14 @@
   }
 
   .btn__arrow__buy__img{
+    width: 19px;
+    height: 19px;
     background-image: url(../static/images/svg/arrow-right.svg);
   }
   
   .btn__play__img{
+    width: 19px;
+    height: 19px;
     background-image: url(../static/images/svg/icon-play.svg);
   }
   
@@ -103,6 +107,13 @@
     line-height: 135.3%;
     letter-spacing: -0.03em;
     color: #000000;
+  }
+
+  .btn__secundary--about__us{
+    width: 150px;
+    position: relative;
+    top: 120px;
+    left: 120px;
   }
 
   .checkbox__container input {

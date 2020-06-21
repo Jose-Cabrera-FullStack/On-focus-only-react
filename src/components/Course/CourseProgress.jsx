@@ -18,7 +18,7 @@ const CourseProgress = () => (
                 <img src={Progress} alt="Progreso del curso"/>
                 <br/>
                 <br/>
-                <Button icon={"icon btn__play__img"} text={"Ver Ahora"}/>
+                <Button icon={"icon btn__play__img"} text={"Ver Lorem ipsum"}/>
             </div>
             <div>
                 <img className="buyed__progress__img" src={UI} alt="Foto del Curso Comprado"/>
