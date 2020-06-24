@@ -3,11 +3,9 @@ import {Link} from 'react-router-dom';
 
 import '../../assets/styles/components/CoursePlus.scss';
 
-import UI from '../../assets/static/images/img/ui-design.png';
-
 
 const HeroCoursePlus = () => (
-    <section class="hero__view--courses__plus">
+    <section class="hero__view--courses__plus display__course__screen__desktop">
         <h1 class="hero__view--courses__plus__title">
         Lorem ipsum dolor sit amet sed diam nonummy.
         </h1>

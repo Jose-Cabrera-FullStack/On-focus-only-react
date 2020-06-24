@@ -10,7 +10,7 @@ const CourseTeacher = () => (
                 Sobre el profesor.
               </h2> 
               <div class="flex">
-                  <CourseTeacherInfo/>
+                  <CourseTeacherInfo onlyMobile={'display__screen__mobile__without__flex'}/>
                   <CourseSaveMoney/>                    
             </div>
         </section>

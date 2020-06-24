@@ -5,29 +5,21 @@ import CourseInfoOnlyInfo from './CourseInfoOnlyInfo'
 import CourseAbout from './CourseAbout'
 import CourseSaveMoney from './CourseSaveMoney'
 
+import Information from '../Course/InformationCourse/Information'
+import SmallVideo from '../Visualization/SmallVideo'
+
 import '../../assets/styles/components/CoursePlus.scss';
-import Video from '../../assets/static/images/img/video.png';
 
-const CourseInfo = () => (
+const CourseInfo = (props) => (
     <section class="course">
-    <h2 class="discovery__box__info__title course__section">
-        Aprendé a ser mejor lider.
-      </h2> 
-      <div class="course__section__name flex">
-        <p class="discovery__box__info__name">Marketing</p>
-        <i class="discovery__box__info__teach course__section__tech">- Por Juan Pablo Laco</i>
-      </div>
-
-      <div class="flex">
-          <figure class="course__img">
-              <img src={Video} alt="Video del Curso"/>
-            </figure>
+        <Information OnlyDesktop={"display__screen__desktop"}/>      
+        <div class="flex">
+            <SmallVideo OnlyDesktop={"display__screen__desktop"}/>      
             <CourseSaveMoney/>      
         </div>
     <h1 className="course__info__title">Informacion</h1>
-    <CourseInfoOnlyInfo/>   
+    <CourseInfoOnlyInfo onlyMobile={'display__screen__mobile__without__flex'} width={'course__information__text__width'} logoMobile={'course__logo__mobile'} margin={'course__logo__mobile__margin'}/>   
     <CourseAbout/>   
-    
 </section>
 )
 export default CourseInfo;

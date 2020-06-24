@@ -35,6 +35,10 @@ textarea:focus{
   display: flex;
 }
 
+.display__util__screen__mobile{
+  display: none;
+}
+
 .grid-1 {
   grid-column: 1;
 }
@@ -67,4 +71,29 @@ textarea:focus{
 
 .text-decoration{
   text-decoration: none;
+}
+.display__screen__mobile__flex{
+  display: none;
+}
+
+.display__screen__mobile{
+  display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  
+  .display__screen__mobile{
+    display: block;
+  }
+  
+  .display__screen__mobile__flex{
+    display: flex;
+  }
+  .display__screen__desktop{
+    display: none;
+  }
+  .display__screen__mobile__without__flex{
+    display: block;
+  }
 }

@@ -6,7 +6,7 @@ import '../../assets/styles/components/Course.scss';
 import Human from '../../assets/static/images/img/human-diploma.png'
 
 const CourseInclusive = () => (
-    <section class="course__inclusive">
+    <section class="course__inclusive none-second">
         <div class="flex">
         <div class="course__inclusive__inside">
             <h1>¿Qué incluye este curso?</h1>
