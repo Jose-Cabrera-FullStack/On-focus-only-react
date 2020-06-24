@@ -4,7 +4,6 @@
   }
   
   .how__we__tech__title {
-    width: 414px;
     font-style: normal;
     font-weight: 800;
     font-family: 'Mont-Bold', Roboto;
@@ -18,14 +17,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1px 1px;
-  }
-  @media screen and (max-width: 1325px) {
-    .how__we__tech__container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 1px 140px;
-    }
   }
   
   .how__we__tech__info {
@@ -41,7 +32,6 @@
   }
   
   .how__we__tech__info__title {
-    width: 320px;
     font-family: 'Mont-Bold', Roboto;
     font-style: normal;
     font-weight: 800;
@@ -51,12 +41,36 @@
   }
   
   .how__we__tech__info__text {
-    width: 350px;
     font-family: 'Mont-Light';
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
     margin: 0 20px 0 0px;
   }
-  /* <-------HOW WE TEACH-------> */
+  /* <-------MEDIA-------> */
   
+  @media screen and (max-width: 1325px) {
+    .how__we__tech__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1px 100px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .how__we__tech__container {
+      gap: 1px 40px;
+    }
+    .how__we__tech {
+      margin: 0px 0px 0 10%;
+  }
+  }
+
+  @media screen and (max-width: 917px) {
+    .how__we__tech__container {
+      display: block;
+    }
+  }
+
+  /* <-------MEDIA-------> */

@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-// import {connect} from 'react-redux';
-// import { logoutRequest } from '../actions';
+import {connect} from 'react-redux';
+import { logoutRequest } from '../actions';
 import Logo from '../assets/static/images/svg/logo-small.svg'
+import Hamburguer from '../assets/static/images/svg/icon-hamburguer.svg'
 import Shopping from '../assets/static/images/svg/shopping-car.svg'
 
 
@@ -26,7 +27,11 @@ const Header = props => {
             <img class="navbar__img" src={Logo} alt="" />
           </figure>
         </Link>
-        <div class="grid-2 navbar__justify__self">
+        <img className="navbar__hamburguer" src={Hamburguer} alt=""/>
+        <img className="navbar__hamburguer__shopping" src={Shopping} alt=""/>
+        <div class="grid-2 navbar__justify__self navbar__query">
+          <div className="navbar__query">
+          </div>
           <ol class="navbar__element__list">
             <Link to="/cursos" className="text-decoration">
               <li class="navbar__menu">Descubrir cursos</li>

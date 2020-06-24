@@ -313,11 +313,6 @@
     color: #03002B;
   }
 
-  @media screen and (max-width: 1325px) {
-    .none {
-      display: none;
-    }
-  }
   /* <-------ANIMATION-------> */
   .about__us__arrow:hover {
     filter: invert(0.5) sepia(9);
@@ -325,5 +320,18 @@
     transition: all 0.2s ease-in-out;
   }
   /* <-------ANIMATION-------> */
-  /* <-------ABOUT US-------> */
+
+  /* <-------MEDIA-------> */
+  @media screen and (max-width: 1325px) {
+    .none {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .none-second {
+      display: none;
+    }
+  }
+  /* <-------MEDIA-------> */
   

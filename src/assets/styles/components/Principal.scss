@@ -1,9 +1,9 @@
 /* <-------PRINCIPAL-------> */
 
 .home__view {
-    width: auto;
+      width: auto;
       background-image: linear-gradient(to bottom,#1c1b5200,#03002bd6),url(../../static/images/img/principal-image.png);
-      background-size: 100%;
+      background-size: cover;
       margin: 0;
   }
   
@@ -17,7 +17,6 @@
   }
   
   .home__view h1 {
-    width: 900px;
     font-family: 'Mont-Bold', Roboto;
     font-size: 35px;
     padding: 0px 0 0 192px;
@@ -30,7 +29,6 @@
     margin: -0.6% 0 2% 0;
   }
   .home__view h3 {
-    width: 860px;
     font-size: 20px;
     padding: 0px 0 0 192px;
     letter-spacing: -0.02em;
@@ -38,6 +36,10 @@
     font-weight: 300;
     line-height: 118.3%;
     margin: 0;
+  }
+  
+  .display__screen__mobile{
+    display: none;
   }
   /* <-------ANIMATION-------> */
   
@@ -78,5 +80,36 @@
     }
   }
   /* <-------ANIMATION-------> */
-  /* <-------PRINCIPAL-------> */
+  /* <-------MEDIA-------> */
+  @media screen and (max-width: 1024px) {
+
+    .display__screen__desktop{
+      display: none;
+    }
+
+    .display__screen__mobile{
+      display: block;
+    }
+
+    .home__view__img {
+      width: 219px;
+      height: 219px;
+    }
+
+    .home__view h1 {
+      font-size: 20px;
+      padding: 0px 0 0 43px;
+    }
+
+    .home__view h3 {
+      font-size: 16px;
+      padding: 0px 0 0 43px;
+    }
+
+    .home__view__figure {
+      margin: 0;
+      padding: 2% 0 0 10%;
+    }
+  }
+  /* <-------MEDIA-------> */
   

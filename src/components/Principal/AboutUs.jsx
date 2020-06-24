@@ -9,7 +9,7 @@ import ArrowRight from '../../assets/static/images/svg/arrow-right-black.svg'
 import ArrowLeft from '../../assets/static/images/svg/arrow-left-black.svg'
 
 const AboutUs = () => (
-    <section class="about__us">
+    <section class="about__us none-second">
     <h1 class="about__us__title">
       Ut wisi enim ad minim exerci tation ullamcorper.
     </h1>
@@ -29,7 +29,7 @@ const AboutUs = () => (
           </p>
         </div>
       </div>
-      <div class="about__us__box">
+      <div class="about__us__box none-second">
         <div class="about__us__box__inside">
           <img src={Perfil} alt="perfil" />
           <h2 class="about__us__box__inside__name">Fernando Lorem Ipsum</h2>

@@ -17,13 +17,6 @@
   bottom: 5px;
 }
 
-@media screen and (max-width: 900px) {
-  nav {
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-gap: 1em;
-  }
-}
 .navbar__menu__shopping__cart {
   width: 30px;
   position: relative;
@@ -76,6 +69,20 @@
   justify-self: end;
   margin: 0 40px 0px 0px;
 }
+
+.navbar__hamburguer__shopping{
+  display: none;
+  position: absolute;
+  right: 100px;
+  top: 10px;
+}
+
+.navbar__hamburguer{
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
 /* <-------ANIMATION-------> */
 
 .navLinks:hover {
@@ -102,4 +109,23 @@
   }
   /* <-------ANIMATION-------> */
   
-  /* <-------NAVBAR-------> */
+  /* <-------MEDIA-------> */
+  @media screen and (max-width: 1024px) {
+    .navbar__query {
+      display: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .navbar__hamburguer{
+      display: block;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .navbar__hamburguer__shopping{
+      display: block;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+  }
+  /* <-------MEDIA-------> */

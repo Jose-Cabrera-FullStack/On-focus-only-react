@@ -8,28 +8,22 @@ import Message from '../assets/static/images/svg/message.svg'
 import Arrow from '../assets/static/images/svg/arrow-up.svg'
 
 const Footer = () => {
-  var mybutton = document.getElementById("footer__arrow");
       
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function() {scrollFunction()};
-  
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-  
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
   return(
     <>
 <footer class="footer">
       <div class="footer__container">
+        
+      <div className="display__screen__mobile">
+          <figure>
+            <img
+              class="footer__logo"
+              src={Logo}
+              alt="on focus"
+            />
+          </figure>
+        </div>
+        
         <div>
           <ol class="footer__container__left">
             <h5>Accesos</h5>
@@ -64,10 +58,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div>
+        <div className="display__screen__desktop">
           <figure>
             <img
-              class="footer__logo"
+              class="footer__logo__mobile"
               src={Logo}
               alt="on focus"
             />
@@ -98,7 +92,6 @@ const Footer = () => {
               </div>
             </div>
             <img
-            onclick={topFunction()}
             id="footer__arrow"
             class="footer__arrow"
             src={Arrow}

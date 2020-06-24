@@ -11,7 +11,6 @@ import Class2 from '../../assets/static/images/img/ui-design-1.png'
 import Class3 from '../../assets/static/images/img/ui-design-2.png'
 import Class4 from '../../assets/static/images/img/ui-design-3.png'
 import User from '../../assets/static/images/svg/user.svg'
-import Arrow from '../../assets/static/images/svg/arrow-right.svg'
 import Star from '../../assets/static/images/svg/star.svg'
 import Diploma from '../../assets/static/images/img/diploma.png'
 

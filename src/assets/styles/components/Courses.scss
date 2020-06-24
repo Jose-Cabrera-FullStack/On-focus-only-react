@@ -9,7 +9,6 @@
     margin: 0px 0px 0px 200px;
   }
   .discovery__title {
-    width: 447px;
     font-family: 'Mont-Bold', Roboto;
     font-style: normal;
     font-weight: 800;
@@ -25,36 +24,25 @@
     gap: 17px 24px;
     grid-template-areas: '. . .';
   }
-  @media screen and (max-width: 1325px) {
-    .discovery__course {
-      grid-template-rows: 1fr 1fr;
-      gap: 15px 60px;
-      transition: all 0.2s ease-in-out;
-    }
   
-    .discovery__diploma {
-      display: none;
-    }
-  
-    .discovery__container {
-      margin: 0px 200px 0 150px;
-      transition: all 0.2s ease-in-out;
-    }
+  .discovery__diploma {
+    display: none;
   }
-  
-  .discovery__box {
-    width: 350px;
-  }
-  .discovery__box__price__off {
-    position: absolute;
-    margin: 30px 0px 0px -4px;
-  }
-  
-  .discovery__box__price__off__letter {
-    color: #ffffff;
-    font-family: 'Mont-Bold', Roboto;
-    position: absolute;
-  }
+
+
+.discovery__box {
+  width: 350px;
+}
+.discovery__box__price__off {
+  position: absolute;
+  margin: 30px 0px 0px -4px;
+}
+
+.discovery__box__price__off__letter {
+  color: #ffffff;
+  font-family: 'Mont-Bold', Roboto;
+  position: absolute;
+}
   .discovery__box__price__off__letter p {
     position: relative;
     top: 17px;
@@ -142,7 +130,7 @@
     text-decoration: line-through;
     font-family: Mont-light;
   }
-
+  
   .discovery__box__info__icon{
     display: block;
     width: 45px;
@@ -229,7 +217,7 @@
     transform: translate(-50%, -50%);    
     line-height: 118.3%;
   }
-
+  
   .hero__view--courses__plus__title{
     width: 435px;
     font-family: 'Mont-Bold';
@@ -250,6 +238,31 @@
     transition: all 0.2s ease-in-out;
     background-image: url(../../static/images/svg/shopping-car-squad-black.svg);
   }
- 
+  
   
   /* <-------ANIMATION-------> */
+  
+  /* <-------MEDIA-------> */
+  @media screen and (max-width: 1024px) {
+    .discovery__course {
+      display: block;
+    }
+
+  .discovery__container {
+    margin: 0px 0px 0 10%;
+    transition: all 0.2s ease-in-out;
+  }
+  }
+
+  @media screen and (max-width: 400px) {
+    .discovery__course {
+      display: block;
+    }
+
+  .discovery__container {
+    margin: 0px 0px 0 2%;
+    transition: all 0.2s ease-in-out;
+  }
+  }
+  
+  /* <-------MEDIA-------> */

@@ -184,4 +184,10 @@
     border: 1px solid #b38a58;
   }
   /* <-------ANIMATION-------> */
-  /* <-------BUTTON-------> */
+  /* <-------MEDIA-------> */
+  @media screen and (max-width: 1024px) {
+    .btn__primary--media{
+      margin: 0px 0px 8% 43px;
+    }
+  }
+  /* <-------MEDIA-------> */
