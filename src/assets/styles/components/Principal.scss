@@ -83,6 +83,10 @@
   /* <-------MEDIA-------> */
   @media screen and (max-width: 1024px) {
 
+    .home__view{
+      background-position: -20px;
+    }
+
     .display__screen__desktop{
       display: none;
     }
@@ -94,16 +98,17 @@
     .home__view__img {
       width: 219px;
       height: 219px;
+      margin: 20px 0px 8% 13%;
     }
 
     .home__view h1 {
       font-size: 20px;
-      padding: 0px 0 0 43px;
+      padding: 0px 0 0 23%;
     }
 
     .home__view h3 {
       font-size: 16px;
-      padding: 0px 0 0 43px;
+      padding: 0px 0 0 23%;
     }
 
     .home__view__figure {
