@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import '../../assets/styles/components/Payment.scss';
-const Details = () => (
-    <section className="payment__footer">
+const Details = (props) => (
+    <section className={"payment__footer"+" " + props.onlyDesktop}>
         <div className="flex">
             <h5>
             @OnFocus2019 - All Rights Reserved

@@ -13,10 +13,12 @@ import MasterCard from '../../assets/static/images/img/mastercard.png'
 import AmeticaExpress from '../../assets/static/images/img/american-express.png'
 
 
-const Pay = () => (
+const Pay = (props) => (
     <form action="submit" className="way-to-pay">
+        <div className={props.onlyDesktop}>
         <p className="way-to-pay__text">Ingresá tu correo electrónico.</p>
         <input type="text" placeholder="E-mail" className="way-to-pay__input way-to-pay__input--email"/>
+        </div>
         <div className="way-to-pay__box">
             <div className="flex">
                 <div className="way-to-pay__box__card">

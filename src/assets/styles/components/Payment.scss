@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 1px 1px;
+    gap: 1px 30px;
     grid-template-areas: ". . . .";
     margin: 50px 200px 0 200px
 }
@@ -75,7 +75,7 @@
 }
 
 .way-to-pay__box{
-    border: 1px solid #F2F2F2;
+    border: 2px solid #F2F2F2;
     box-sizing: border-box;
     width: 550px;
     height: 482px;
@@ -358,4 +358,90 @@
 .payment__footer li:hover{
     color:#b38a58;
     transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1230px) {
+    .payment{
+        margin: 50px 200px 0 0px
+    }
+}
+@media screen and (max-width: 1024px) {
+    .payment{
+        margin: 50px 200px 0 0px
+    }
+
+    .way-to-pay__box{
+        border: none;
+    }
+    
+    .details{
+        width: 100vw;
+    }
+
+    .way-to-pay__box{
+        padding: 15px 0 0 10%;
+    }
+
+    .way-to-pay__box{
+        width: auto;
+    }
+
+    .way-to-visa{
+        margin: 0px 10px 10px 20px;
+    }
+    .details__inside__title__edit {
+        position: absolute;
+        margin:20px 0 0 0;
+        top: 150px;
+        left: 80%;
+    }
+    .details__inside__title__edit p {
+        margin: 0px 10px 0 0px;
+    }
+    .secure__pay{
+        margin: 0px 0px 50px 60px;
+    }
+    .secure__pay__inside p{
+        width: 315px;
+    }
+
+}
+
+@media screen and (max-width: 445px) {
+    .way-to-pay__box{
+        padding: 15px 0 0px 10px;
+    }
+    .details__inside {
+        margin: 30px 0px 0px 10px;
+    }
+
+    .way-to-pay__box__card{
+        width: 133.38px;
+        width: 102px;
+        height: 52px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 9px rgba(6, 0, 37, 0.2);
+        display: inline-block;
+        margin: 14px 10px 33px 0px;
+    }
+
+    .way-to-pay__box__card__img{
+        width: 82px;
+        height: 41px;
+    }
+
+    .way-to-pay__input--MM{
+        width: 136px;
+    }
+
+    .details__inside__title__edit {
+        left: 70%;
+    }
+
+    .secure__pay{
+        margin: 0px 0px 50px 10px;
+    }
+    .secure__pay__inside p{
+        width: auto;
+    }
 }

@@ -17,20 +17,20 @@ const Payment = () => {
     <div className="App">
         <Header/>
         <div className="payment">
-            <div className="grid-1">
+          <div className="display__screen__mobile">
+                <Details/>
+                <Pay onlyDesktop={'display__screen__desktop'}/>
+          </div>
+            <div className="grid-1 display__screen__desktop">
                 <Pay/>
             </div>
-            <div className="payment__right grid-2">
+            <div className="payment__right grid-2 display__screen__desktop">
                 <Details/>
                 <WhatIsBuying/>
             </div>
-
         </div>
-        <div>
-                <SecurePay/>
-        </div>
-
-        <FooterPayment/>
+        <SecurePay/>
+        <FooterPayment onlyDesktop={'display__screen__desktop'}/>
     </div>
 
   );
