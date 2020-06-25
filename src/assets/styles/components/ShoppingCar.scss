@@ -148,3 +148,65 @@ border: 1px solid #000000;
         margin: 0px 150px 0px 150px;
     }
   }
+
+@media screen and (max-width: 1024px) {
+    .shopping__car {
+        margin: 0px 5% 0px 5%;
+    }
+
+    .shopping__car__box{
+        width: auto;
+        height: auto;
+        position: revert;
+    }
+
+    .hero__view__promo__price__delete--shopping__car{
+        position: relative;
+        margin: 0;
+        left: 0;
+    }
+
+    .hero__view__promo__price__delete{
+        margin: 0;
+    }
+
+    .shopping__car__line{
+        width: 85vw;
+        margin: 30px 0px 30px 0px;
+    }
+    
+    .shopping__car__box__inside{
+        margin: 50px 0 0 0;
+        padding: 13px 25% 0 15%;
+    }
+
+    .shopping__car__box__inside__total{
+        margin: 10px 0 10px 0;
+        bottom: 0;
+        width: auto;
+    }
+
+    .shopping__car__box__inside__total{
+        font-family: 'Mont-Light';
+    }
+
+    .shopping__car__box__inside__total--price{
+        font-family: 'Mont-Bold';
+        left: 20%;
+    }
+
+    .btn__secundary--buy{
+        margin: 30px 0px 24px 0px;
+    }
+
+    .shopping__car__box__inside__text{
+        margin: 0px 15% 10px 0;
+    }
+
+    .shopping__car__box__inside__mobile{
+        margin: 20px 0 10px 0;
+    }
+
+    
+    
+  }

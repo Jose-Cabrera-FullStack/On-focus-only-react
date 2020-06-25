@@ -17,7 +17,7 @@ const Course = () => {
     <div className="App">
 
         <Header/>
-        <ShoppingCar/>
+        <ShoppingCar onlyMobile={'display__screen__mobile__without__flex'}/>
         <Discovery display={display} column={column} none={none} info={info}/>
     
     </div>

@@ -27,9 +27,9 @@ const App = () => (
             <Redirect exact from="/" to="/home" component={Home} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/cursos" component={Courses} />
+            <Route exact path="/carrito" component={ShoppingCar} />
             <Route exact path="/curso" component={Course} />
             <Route exact path="/curso/:id" component={Visualization} />
-            <Route exact path="/carrito" component={ShoppingCar} />
             <Route exact path="/pago" component={Pay} />
             <Route exact path="/adquirido" component={PayCongratulation} />
             <Route exact path="/curso-comprado" component={CourseBuyed} />

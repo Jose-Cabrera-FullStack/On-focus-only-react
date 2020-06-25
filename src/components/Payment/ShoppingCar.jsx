@@ -2,64 +2,25 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import Breadcrumbs from '../Utils/Breadcrumbs'
-import ButtonArrowRight from '../Utils/ButtonArrowRight'
+
+import ShoppingBox from '../Payment/Box/ShoppingBox'
+import Course from './Course/Course'
+
 import '../../assets/styles/components/ShoppingCar.scss';
 
 import UI from '../../assets/static/images/img/ui-design.png';
-import Arrow from '../../assets/static/images/svg/arrow-right.svg'
 
-const ShoppingCar = () => (
+const ShoppingCar = (props) => (
     <section class="shopping__car">
         <Breadcrumbs/>
         <h1>Tu carrito de compras está listo.</h1>
-        <div className="flex">
+        <div className={"flex" + " " + props.onlyMobile}>
             <div>
-                    <div class="flex"> 
-                        <img class="hero__view__promo__img" src={UI} alt="Imagen del curso"/>
-                        <div>
-                            <h3 class="hero__view__promo__title hero__view__promo__title--shopping__car">Aprende a ser mejor lider.</h3>
-                            <p class="hero__view__promo__teacher--shopping">Por Juan Pablo Laco</p>
-                            <div class="flex">
-                                <h2 class="hero__view__promo__price hero__view__promo__price--shopping__car">AR$ 490</h2>
-                                <p class="hero__view__promo__price__before hero__view__promo__price__before--shopping__car">AR$ 699</p>
-                                <p class="hero__view__promo__price__delete hero__view__promo__price__delete--shopping__car">Eliminar</p>
-                            </div>
-                        </div>
-                    </div>
-                    <hr className="shopping__car__line"/>
-                    <div class="flex hero__view__promo__margin"> 
-                        <img class="hero__view__promo__img" src={UI} alt="Imagen del curso"/>
-                        <div>
-                            <h3 class="hero__view__promo__title hero__view__promo__title--shopping__car">Aprende a ser mejor lider.</h3>
-                            <p class="hero__view__promo__teacher--shopping">Por Juan Pablo Laco</p>
-                            <div class="flex">
-                                <h2 class="hero__view__promo__price hero__view__promo__price--shopping__car">AR$ 490</h2>
-                                <p class="hero__view__promo__price__before hero__view__promo__price__before--shopping__car">AR$ 699</p>
-                                <p class="hero__view__promo__price__delete hero__view__promo__price__delete--shopping__car">Eliminar</p>
-                            </div>
-                        </div>
-                    </div>
+                <Course onlyMobile={'display__screen__desktop'} onlyDesktop={'display__screen__mobile'}/>
+                <hr className="shopping__car__line"/>
+                <Course margin={"hero__view__promo__margin"} onlyMobile={'display__screen__desktop'} onlyDesktop={'display__screen__mobile'}/>
             </div>
-            <div className="shopping__car__box">
-                <div className="shopping__car__box__inside">
-                    <div className="flex">
-                        <p className="shopping__car__box__inside__text">Total en el carrito</p>
-                        <strong>AR$ 1500</strong>
-                    </div>
-                    <div className="flex">
-                        <p className="shopping__car__box__inside__text shopping__car__box__inside__text--red"><i className="shopping__car__box__inside__discounts">Dcto. 30%</i><br/> Estás ahorrando </p>
-                        <i className="shopping__car__box__inside__promo shopping__car__box__inside__promo--red">AR$ 478</i>
-                    </div>
-                    <hr className="shopping__car__box__inside__line"/>
-                    <div className="flex">
-                        <h4 className="shopping__car__box__inside__total">Tu total es de</h4>
-                        <h4 className="shopping__car__box__inside__total shopping__car__box__inside__total--price">AR$ 980</h4>
-                    </div>
-                    <div className="shopping__car__box__inside__button">     
-                        <ButtonArrowRight/>
-                    </div>
-                    </div>
-            </div>
+            <ShoppingBox onlyDesktop={'display__screen__desktop'} onlyMobile={'display__screen__mobile'}/>
 
         </div>
     </section>
