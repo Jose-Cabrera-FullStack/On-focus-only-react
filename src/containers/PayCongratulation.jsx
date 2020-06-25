@@ -5,32 +5,34 @@ import Pay from '../components/Payment/Pay';
 import Details from '../components/Payment/Details';
 import WhatIsBuying from '../components/Payment/WhatIsBuying';
 import SecurePay from '../components/Payment/SecurePay';
-import Congratulation from '../components/Payment/Congratulation';
 import Header from '../components/Header'
+import FooterPayment from '../components/Payment/Footer'
+import Congratulation from '../components/Payment/Congratulation';
 
 import '../assets/styles/App.scss';
 import '../assets/styles/components/Payment.scss';
 
 const Payment = () => {
-
+  
   return(
     <div className="App">
-
         <Header/>
         <Congratulation/>
         <div className="payment">
-            <div className="grid-1">
+          <div className="display__screen__mobile">
+                <Details/>
+                <Pay onlyDesktop={'display__screen__desktop'}/>
+          </div>
+            <div className="grid-1 display__screen__desktop">
                 <Pay/>
             </div>
-            <div className="payment__right grid-2">
+            <div className="payment__right grid-2 display__screen__desktop">
                 <Details/>
                 <WhatIsBuying/>
             </div>
-
         </div>
-        <div>
-                <SecurePay/>
-        </div>
+        <SecurePay/>
+        <FooterPayment onlyDesktop={'display__screen__desktop'}/>
     </div>
 
   );

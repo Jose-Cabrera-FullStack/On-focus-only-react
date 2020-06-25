@@ -4,10 +4,11 @@
 }
 
 .visualization__navbar{
-    padding: 25px;
+    padding: 5px 0 20px 70px;
+    margin: 0;
     border-bottom: 1px solid;
 }
-.visualization__navbar h2{
+.visualization__navbar h5{
     height: 20px;
     font-family: 'Mont-Regular';
     font-style: normal;
@@ -16,7 +17,6 @@
     line-height: 135.3%;
     letter-spacing: -0.02em;
     color: #F2F2F2;
-    margin: 0 0 0 15px;
 }
 
 .visualization__grid{
@@ -28,6 +28,10 @@
 .visualization__sidebar{
     margin: 25px;
     height: 644.5px;
+}
+
+.visualization__sidebar ol {
+    padding: 0;
 }
 
 .visualization__sidebar__list{
@@ -72,10 +76,36 @@
     background-image: linear-gradient(to bottom, #1c1b5200, #03002bd6),
       url(../../static/images/img/video.png);
     background-size: cover;
-    height: 609px;
+    height: 80vh;
 }
 
 .visualization__mobile{
     width: 100vw;
     margin: 20px 0 20px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .visualization__grid{
+        display: block;
+    }
+
+    .visualization__sidebar {
+        margin: 25px 25px 0 0px;
+        height: auto;
+        padding: 0px 0 10px 0;
+    }
+
+    .visualization__sidebar__arrow{
+        position: absolute;
+        right: 50px;
+    }
+    .visualization__sidebar ol {
+        padding: 0 0 0 20px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .visualization__navbar {
+        padding: 5px 0 20px 10px;
+    }
 }

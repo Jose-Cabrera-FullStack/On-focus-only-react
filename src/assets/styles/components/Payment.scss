@@ -262,7 +262,7 @@
 }
 
 .congratulation{
-    height: 100vh;
+    height: 140vh;
     width: 100vw;
     background: #ffffffc9;
     position: absolute;
@@ -403,6 +403,14 @@
     }
     .secure__pay__inside p{
         width: 315px;
+    }
+    .congratulation__box {
+     background: #ffffff65;
+     box-shadow: none;
+    }
+
+    .congratulation__exit{
+        display: none;
     }
 
 }
