@@ -15,8 +15,8 @@ const ContactUs = () => {
         <Header/> 
 
         <Hero title={'Contacto'}/> 
-        <Contact/> 
-        <Footer/> 
+        <Contact onlyMobile={'display__screen__mobile__without__flex'}/> 
+        <Footer onlyDesktop={'display__screen__desktop'}/> 
 
     </div>
 

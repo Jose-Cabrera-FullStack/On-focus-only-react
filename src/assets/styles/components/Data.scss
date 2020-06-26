@@ -225,7 +225,7 @@
 }
 
 .contact__check__message{
-    margin: 30px 200px 0 0 ;
+    margin: 30px 0px 0 0 ;
 }
 
 .contact__check__message p{
@@ -241,7 +241,15 @@
 @media screen and (max-width: 1024px) {
     .data {
         margin: 42px 100px 50px 100px;
-        height: 680px;
+        height: auto;
+    }
+
+    .data__text{
+        width: auto;
+    }
+    
+    .data__right{
+        margin: 30px 0 0 0;
     }
     
   }
@@ -249,7 +257,6 @@
 @media screen and (max-width: 740px) {
     .data {
         margin: 42px 25px 50px 25px;
-        height: 680px;
     }
 
     .data__input__text {
@@ -259,5 +266,5 @@
     .contact__check__message {
         margin: 30px 0px 0 0;
     }
-    
+
   }
