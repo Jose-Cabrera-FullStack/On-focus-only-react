@@ -25,7 +25,6 @@
     line-height: 113.3%;
     color: #F2F2F2;
     margin: 0;
-
     position: relative;
     float: left;
     top: 50%;
@@ -60,4 +59,16 @@
     color: #b38a58;
     cursor: pointer;
     font-family: 'Mont-Bold';
+}
+
+@media screen and (max-width: 1024px) {
+    .utils__hero__profile{
+        background-position: -240px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .utils__hero__profile{
+        background-position: -540px;
+    }
 }

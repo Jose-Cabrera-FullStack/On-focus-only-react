@@ -237,3 +237,27 @@
     letter-spacing: -0.03em;
     color: #000000;
 }
+
+@media screen and (max-width: 1024px) {
+    .data {
+        margin: 42px 100px 50px 100px;
+        height: 680px;
+    }
+    
+  }
+
+@media screen and (max-width: 740px) {
+    .data {
+        margin: 42px 25px 50px 25px;
+        height: 680px;
+    }
+
+    .data__input__text {
+        width: 90%;
+    }
+
+    .contact__check__message {
+        margin: 30px 0px 0 0;
+    }
+    
+  }

@@ -17,7 +17,7 @@ const MyProfile = () => {
             <Header/> 
             <Hero/> 
             <Data/>
-            <Footer/>
+            <Footer onlyDesktop={'display__screen__desktop'}/>
 
     </div>
 
