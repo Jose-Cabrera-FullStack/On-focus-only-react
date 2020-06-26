@@ -11,8 +11,8 @@ import Youtube from '../../assets/static/images/svg/youtube-black.svg';
 
 
 
-const CourseTeacher = () => (
-    <div className="buyed__teacher">
+const CourseTeacher = (props) => (
+    <div className={"buyed__teacher"+ " " + props.onlyDesktop}>
         <div class="flex">
             <img className="buyed__teacher__photo" src={Teacher} alt="Foto del profesor"/>
             <div className="buyed__teacher__inside">

@@ -318,6 +318,7 @@
     text-align: center;
     letter-spacing: -0.03em;
     color: #0D0056;
+    width: 400px;
     bottom: 20px;
 }
 
@@ -407,10 +408,15 @@
     .congratulation__box {
      background: #ffffff65;
      box-shadow: none;
+     width: auto;
     }
 
     .congratulation__exit{
         display: none;
+    }
+    
+    .congratulation__box__inside{
+        padding: 50px 0 0 25%;
     }
 
 }
@@ -451,5 +457,9 @@
     }
     .secure__pay__inside p{
         width: auto;
+    }
+
+    .congratulation__box__inside{
+        padding: 50px 0 0 50px;
     }
 }

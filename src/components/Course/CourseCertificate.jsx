@@ -8,8 +8,8 @@ import Star from '../../assets/static/images/svg/star-black.svg';
 
 
 
-const CourseCertificate = () => (
-    <div className="course__certificate flex">
+const CourseCertificate = (props) => (
+    <div className={"course__certificate flex" + " " + props.onlyDesktop}>
         <img className="course__certificate__img" src={Human} alt="Estudiante con su certificado"/>
         <div className="course__certificate__left">
             <img src={Star} alt=""/>

@@ -11,7 +11,7 @@ import Calendary from '../../assets/static/images/svg/calendary.svg';
 
 
 const CourseInfoOnlyInfo = (props) => (
- <div className="course__information">
+ <div className={"course__information" + " " + props.onlyDesktop}>
 
         <div className={"flex" + " " + props.onlyMobile}>
 

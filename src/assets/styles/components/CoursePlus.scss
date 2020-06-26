@@ -143,8 +143,31 @@ margin: 20px;
     margin: 10px 0 10px 0;
 }
 
+@media screen and (max-width: 1300px) { 
+
+    .my-course__individual{
+        grid-template-areas: '. .';
+    }
+}
 @media screen and (max-width: 1024px) {
     .hero__view__promo__img{
         margin: 29px 10px 0 0px;
+    }
+
+    .my-course__individual{
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 17px 24px;
+        grid-template-areas: '.';
+    }
+
+    .my-course {
+        margin: 50px 100px 50px 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .my-course {
+        margin: 50px 10px 50px 10px;
     }
 }

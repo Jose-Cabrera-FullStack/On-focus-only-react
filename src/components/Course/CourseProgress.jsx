@@ -5,11 +5,10 @@ import '../../assets/styles/components/Course.scss';
 import Button from '../../components/Utils/ButtonArrowRight';
 
 import Progress from '../../assets/static/images/svg/progress-bar.svg';
-import Media from '../../assets/static/images/svg/media.svg';
 import UI from '../../assets/static/images/img/buyed-image.png';
 
 
-const CourseProgress = () => (
+const CourseProgress = (props) => (
     <section class="buyed__progress">
         <div className="flex">
             <div>
@@ -21,7 +20,7 @@ const CourseProgress = () => (
                 <Button icon={"icon btn__play__img"} text={"Ver Lorem ipsum"}/>
             </div>
             <div>
-                <img className="buyed__progress__img" src={UI} alt="Foto del Curso Comprado"/>
+                <img className={"buyed__progress__img"+ " " + props.onlyDesktop} src={UI} alt="Foto del Curso Comprado"/>
             </div>
         </div>
     </section>

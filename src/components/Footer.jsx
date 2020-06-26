@@ -7,11 +7,11 @@ import Logo from '../assets/static/images/svg/logo.svg'
 import Message from '../assets/static/images/svg/message.svg'
 import Arrow from '../assets/static/images/svg/arrow-up.svg'
 
-const Footer = () => {
+const Footer = (props) => {
       
   return(
     <>
-<footer class="footer">
+<footer class={"footer"+ " " + props.onlyDesktop}>
       <div class="footer__container">
         
       <div className="display__screen__mobile">
@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-    <div class="footer__reserved">
+    <div class={"footer__reserved"+ " " + props.onlyDesktop}>
       <p>All Rights Reserved 2019.</p>
     </div>
     </>

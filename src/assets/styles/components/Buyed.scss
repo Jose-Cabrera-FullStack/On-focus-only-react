@@ -194,3 +194,82 @@
 .buyed__course__variant__text li{
     margin: 10px 0 0 0;
 }
+
+.buyed__teacher__mobile{
+    height: 78px;
+    background: #F2F2F2;
+    margin: 0 0 20px 0;
+}
+
+.buyed__teacher__mobile__left{
+    width: 42px;
+    height: 78px;
+    background: #03002B;
+}
+
+.buyed__teacher__mobile__center{
+    margin: 0px 0px 0 10px;
+}
+.buyed__teacher__mobile__center h5{
+    margin: 25px 0px 0 10px;
+    font-family: 'Mont-Bold';
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.buyed__teacher__mobile__center p{
+    margin: 0px 0px 0 10px;
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.buyed__teacher__mobile__right{
+    position: absolute;
+    right: 30px;
+    margin: 20px 0 0 0;
+}
+
+.buyed__teacher__mobile__right {
+    position: absolute;
+    right: 130px;
+    margin: 30px 0 0 0;
+}
+
+.buyed__teacher__mobile__img{
+    margin: 28px 0px 0 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .buyed{
+        margin: 15px 100px 40px 100px;
+    }
+
+    .buyed__progress__img{
+        width: 100vw;
+        margin: 0px 0 0 0;
+    }
+    .buyed__progress{
+        margin: 10px 0 20px 0;
+    }
+    .buyed__progress h4 {
+        margin: 5px 0 10px 0px;
+    }
+    
+}
+@media screen and (max-width: 562px) {
+    .buyed{
+        margin: 15px 10px 40px 10px;
+    }
+    .buyed__teacher__mobile__right {
+        position: absolute;
+        right: 40px;
+        margin: 30px 0 0 0;
+    }
+}
