@@ -82,7 +82,6 @@
   }
 
   .about__us__focus__future__title{
-    width: 733px;
     font-family: 'Mont-Bold';
     font-style: normal;
     font-weight: 800;
@@ -94,7 +93,6 @@
   }
 
   .about__us__focus__future__text{
-    width: 815px;
     font-family: Judson;
     font-style: normal;
     font-weight: normal;
@@ -124,7 +122,6 @@
     line-height: 114.3%;
     letter-spacing: -0.02em;
     color: #03002B;
-    width: 533px;
   }
 
   .about__us__focus__map__inside__number{
@@ -148,6 +145,11 @@
 
   .about__us__focus__map__inside__data__text{
     margin: 0 0 0 10px;
+  }
+  
+  .about__us__focus__map__inside__data__geo{
+    position: relative;
+    right: 100px;
   }
 
   .about__us__focus__knowledge{
@@ -175,7 +177,7 @@
     margin: 50px 200px 50px 200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1px 1px;
+    gap: 1px 20px;
   }
 
   .about__us__focus__tweets__box{
@@ -186,7 +188,6 @@
     border-radius: 7px;
     padding: 0;
     margin: 50px 0 50px 0px;
-
   }
 
   .about__us__focus__tweets__box__inside{
@@ -275,7 +276,6 @@
   }
 
   .about__us__focus__phrase__title{
-    width: 678px;
     font-family: 'Mont-Bold';
     font-style: normal;
     font-weight: 800;
@@ -313,6 +313,11 @@
     color: #03002B;
   }
 
+  .about__us__focus__map__inside__data__geo__img{
+    width: 400px;
+    height: 483px;
+  }
+  
   /* <-------ANIMATION-------> */
   .about__us__arrow:hover {
     filter: invert(0.5) sepia(9);
@@ -320,7 +325,7 @@
     transition: all 0.2s ease-in-out;
   }
   /* <-------ANIMATION-------> */
-
+  
   /* <-------MEDIA-------> */
   @media screen and (max-width: 1325px) {
     .none {
@@ -328,10 +333,130 @@
     }
   }
 
+  @media screen and (max-width: 1184px) {
+    .about__us__focus__tweets {
+      grid-template-columns: 1fr 1fr;
+  }
+  .about__us__focus__tweets__box{
+    margin: 10px 0 36px 0px;
+  }
+  .about__us__focus__phrase__inside {
+    margin: 0 0 0 0vw;
+  }
+  .about__us__focus__phrase__img {
+    margin: 0 0 0 20%;
+  }
+  .about__us__focus__phrase {
+    margin: 50px 100px 100px 100px;
+  }
+  }
+  
   @media screen and (max-width: 1024px) {
     .none-second {
       display: none;
     }
+
+    .about__us__focus__map__inside__box__mobile{
+      position: relative;
+      top: 210px;
+    }
+
+    .about__us__focus__future{
+      margin: 50px 100px 50px 100px;
+    }
+
+    .about__us__focus__future__title{
+      font-size: 25px;
+    }
+
+    .about__us__focus__future__text {
+      font-size: 20px;
+    }
+    .about__us__focus__map{
+      background: none;
+    }
+
+    .about__us__focus__map__inside {
+      margin: 0px 100px 10px 100px;
+    }
+
+    .about__us__focus__map__inside__img {
+      margin: 40px 0 31px 0;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, -10%);
+    }
+    .about__us__focus__map__inside__data__geo {
+      bottom: 200px;
+      }
+
+    .about__us__focus__knowledge{
+      margin: 0;
+      background: linear-gradient(180deg, #CECECE -87.93%, rgba(255, 255, 255, 0) 100%);
+      position: relative;
+      bottom: 100px;
+    }
+
+    .about__us__focus__knowledge img{
+      margin: 60px 0 31px 0;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, -10%);
+    }
+    .about__us__focus__knowledge__text {
+      margin: 0 100px 0px 100px;
+      width: auto;
+      font-size: 25px;
   }
+  .about__us__focus__tweets {
+    margin: 0px 100px 0px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about__us__focus__phrase__title{
+    width: auto;
+  }
+  .about__us__focus__phrase__sub {
+    margin: 30px 0 0px 35%;
+    }
+  .about__us__focus__phrase__author{
+    margin: 30px 0 0px 34%;
+    }
+  }
+    @media screen and (max-width: 870px) {
+      .about__us__focus__tweets {
+        margin: 0px 50px 0px 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    }
+
+    @media screen and (max-width: 500px) {
+    .about__us__focus__future{
+      margin: 50px 10px 50px 10px;
+    }
+
+    .about__us__focus__map__inside {
+      margin: 0px 10px 10px 10px;
+    }
+
+    .about__us__focus__map__inside__data__geo__img{
+      width: 350px;
+    }
+
+    .about__us__focus__knowledge__text {
+      margin: 0 10px 0px 10px;
+      width: auto;
+      font-size: 25px;
+  }
+  .about__us__focus__phrase__sub {
+    margin: 30px 0 0px 10%;
+    font-size: 18px;
+    }
+  .about__us__focus__phrase__author{
+    margin: 30px 0 0px 8%;
+    font-size: 15px;
+    }
+    }
   /* <-------MEDIA-------> */
   

@@ -11,13 +11,13 @@ const Footer = (props) => {
       
   return(
     <>
-<footer class={"footer"+ " " + props.onlyDesktop}>
-      <div class="footer__container">
+<footer className={"footer"+ " " + props.onlyDesktop}>
+      <div className="footer__container">
         
       <div className="display__screen__mobile">
           <figure>
             <img
-              class="footer__logo"
+              className="footer__logo"
               src={Logo}
               alt="on focus"
             />
@@ -25,7 +25,7 @@ const Footer = (props) => {
         </div>
         
         <div>
-          <ol class="footer__container__left">
+          <ol className="footer__container__left">
             <h5>Accesos</h5>
             <Link to="/home">
               <li>Home</li>
@@ -44,7 +44,7 @@ const Footer = (props) => {
             </Link>
           </ol>
           <div className="footer__socials__network">
-            <ol class="footer__container__left--fix">
+            <ol className="footer__container__left--fix">
               <li>
               <span className="footer__socials--youtube" alt="Youtube"></span>
               </li>
@@ -61,15 +61,15 @@ const Footer = (props) => {
         <div className="display__screen__desktop">
           <figure>
             <img
-              class="footer__logo__mobile"
+              className="footer__logo__mobile"
               src={Logo}
               alt="on focus"
             />
           </figure>
         </div>
 
-        <div class="footer__container__right">
-          <div class="flex">
+        <div className="footer__container__right">
+          <div className="flex">
             <div>
               <ol>
                 <h5>Legales</h5>
@@ -86,14 +86,14 @@ const Footer = (props) => {
                 </li>
                 </Link>
               </ol>
-              <div class="footer__help">
+              <div className="footer__help">
                 <img src={Message} alt="Mensaje" />
                 <p>ayuda@onfocus.com</p>
               </div>
             </div>
             <img
             id="footer__arrow"
-            class="footer__arrow"
+            className="footer__arrow"
             src={Arrow}
             alt="Flecha hacia arriba"
             />
@@ -101,7 +101,7 @@ const Footer = (props) => {
         </div>
       </div>
     </footer>
-    <div class={"footer__reserved"+ " " + props.onlyDesktop}>
+    <div className={"footer__reserved"+ " " + props.onlyDesktop}>
       <p>All Rights Reserved 2019.</p>
     </div>
     </>

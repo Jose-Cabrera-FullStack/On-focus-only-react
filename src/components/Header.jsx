@@ -21,43 +21,43 @@ const Header = props => {
   return(
   
     <header>
-      <nav class="navbar">
+      <nav className="navbar">
         <Link to="/">
-          <figure class="grid-1">
-            <img class="navbar__img" src={Logo} alt="" />
+          <figure className="grid-1">
+            <img className="navbar__img" src={Logo} alt="" />
           </figure>
         </Link>
         <img className="navbar__hamburguer" src={Hamburguer} alt=""/>
         <img className="navbar__hamburguer__shopping" src={Shopping} alt=""/>
-        <div class="grid-2 navbar__justify__self navbar__query">
+        <div className="grid-2 navbar__justify__self navbar__query">
           <div className="navbar__query">
           </div>
-          <ol class="navbar__element__list">
+          <ol className="navbar__element__list">
             <Link to="/cursos" className="text-decoration">
-              <li class="navbar__menu">Descubrir cursos</li>
+              <li className="navbar__menu">Descubrir cursos</li>
             </Link>
             <Link to="/sobre-nosotros" className="text-decoration">
-              <li class="navbar__menu">About On Focus</li>
+              <li className="navbar__menu">About On Focus</li>
             </Link>
-            <li class="navbar__menu navbar__menu--fix">
+            <li className="navbar__menu navbar__menu--fix">
               <Link to="/carrito">
               <img
                 src={Shopping}
-                class="navbar__menu__shopping__cart"
+                className="navbar__menu__shopping__cart"
                 alt="Carrito de compras"
                 />
                 </Link>
             </li>
-            <li class="navbar__menu ">
+            <li className="navbar__menu ">
               <button
-                class="btn__primary btn__primary--login btn__primary--login"
+                className="btn__primary btn__primary--login btn__primary--login"
               >
                 Iniciar Sesion
               </button>
             </li>
-            <li class="navbar__menu">
+            <li className="navbar__menu">
               <Link to="/registrarse">
-              <button class="btn__primary btn__primary--login">
+              <button className="btn__primary btn__primary--login">
                 Registrarse
               </button>
               </Link>

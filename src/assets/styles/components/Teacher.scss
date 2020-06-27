@@ -92,8 +92,6 @@ padding: 0;
 
 .teacher__course{
     margin: 0 200px 20px 200px;
-    width: 1040px;
-    height: 305px;
     left: 200px;
     top: 1452px;
     background: linear-gradient(180deg, #E5E5E5 -49.6%, rgba(255, 255, 255, 0) 100%);
@@ -130,4 +128,28 @@ padding: 0;
     position: relative;
     top: 120px;
     left: 50px;
+}
+
+@media screen and (max-width: 1260px) {
+    .teacher__course{
+        margin: 0 50px 20px 50px;
+      }
+}
+@media screen and (max-width: 1024px) {
+    .teacher__course{
+        margin: 0;
+    }
+
+    .teacher__course h1{
+        position: relative;
+        top: 30px;
+        width: auto;
+        font-size: 20px;
+        margin: 30px 0 100px 0;
+    }
+
+    .teacher__course__mobile{
+        position: relative;
+        right: 50px;
+    }
 }

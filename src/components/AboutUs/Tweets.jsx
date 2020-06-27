@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../../assets/styles/components/Teacher.scss';
 import Photo from '../../assets/static/images/img/profile-twitter.png'
-import Logo from '../../assets/static/images/svg/logo-twitter.svg'
+import Logo from '../../assets/static/images/svg/icon-twitter.svg'
 import Arrow from '../../assets/static/images/svg/arrow-left-twitter.svg'
 
 const Tweets = () => (

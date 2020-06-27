@@ -17,57 +17,57 @@ import Diploma from '../../assets/static/images/img/diploma.png'
 
 const Discovery = (props) => {
   return(
-    <section class="discovery">
-      <div class="discovery__container">
-        <h2 class="discovery__title">
+    <section className="discovery">
+      <div className="discovery__container">
+        <h2 className="discovery__title">
           {props.info ? props.info : 'Descubre la plataforma lider en negocios y emprendimiento.'}
         </h2>
 
-        <div class=" flex">
-          <div class={"discovery__course" + " " + props.column}>
-            <div class="discovery__box">
-              <div class="discovery__box__img">
+        <div className=" flex">
+          <div className={"discovery__course" + " " + props.column}>
+            <div className="discovery__box">
+              <div className="discovery__box__img">
                 <div>
                   <img
-                    class="discovery__box__price__off"
+                    className="discovery__box__price__off"
                     src={Promo}
                     alt="Precio"
                   />
-                  <div class="discovery__box__price__off__letter">
+                  <div className="discovery__box__price__off__letter">
                     <p>30% OFF</p>
                   </div>
                 </div>
 
                 <img
                   src={Class1}
-                  class="discovery__box__img__class"
+                  className="discovery__box__img__class"
                   alt="Imagen del Curso"
                 />
               </div>
 
-              <div class="discovery__box__info">
-                <div class="discovery__box__info__padding">
-                  <h2 class="discovery__box__info__title">
+              <div className="discovery__box__info">
+                <div className="discovery__box__info__padding">
+                  <h2 className="discovery__box__info__title">
                     Aprendé a ser mejor lider.
                   </h2>
-                  <div class="flex">
-                    <p class="discovery__box__info__name">Marketing</p>
-                    <i class="discovery__box__info__teach">Por Juan Pablo Laco</i>
+                  <div className="flex">
+                    <p className="discovery__box__info__name">Marketing</p>
+                    <i className="discovery__box__info__teach">Por Juan Pablo Laco</i>
                   </div>
-                  <div class="flex discovery__box__info--fix">
+                  <div className="flex discovery__box__info--fix">
                     <img src={User} alt="user" />
-                    <p class="discovery__box__info__student">150 alumnos</p>
+                    <p className="discovery__box__info__student">150 alumnos</p>
                   </div>
-                  <div class="flex">
-                    <h2 class="discovery__box__info__price">AR$ 490</h2>
-                    <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
+                  <div className="flex">
+                    <h2 className="discovery__box__info__price">AR$ 490</h2>
+                    <i className="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
                   <div className="flex">
                   <Link to='/curso'>
                     <button
-                      class="btn__secundary btn__secundary--buy discovery__box__position"
+                      className="btn__secundary btn__secundary--buy discovery__box__position"
                       >
-                      <div class="flex btn__arrow__buy">
+                      <div className="flex btn__arrow__buy">
                       <span className="icon btn__arrow__buy__img" alt="Ícono de flecha a la derecha"></span>
                         <p>Comprarlo ahora</p>
                       </div>
@@ -78,48 +78,48 @@ const Discovery = (props) => {
                 </div>
               </div>
             </div>
-            <div class="discovery__box">
-              <div class="discovery__box__img">
+            <div className="discovery__box">
+              <div className="discovery__box__img">
                 <div>
                   <img
-                    class="discovery__box__price__off"
+                    className="discovery__box__price__off"
                     src={Promo}
                     alt="Precio"
                   />
-                  <div class="discovery__box__price__off__letter">
+                  <div className="discovery__box__price__off__letter">
                     <p>30% OFF</p>
                   </div>
                 </div>
                 <img
                   src={Class2}
-                  class="discovery__box__img__class"
+                  className="discovery__box__img__class"
                   alt="Imagen del Curso"
                 />
               </div>
 
-              <div class="discovery__box__info">
-                <div class="discovery__box__info__padding">
-                  <h2 class="discovery__box__info__title">
+              <div className="discovery__box__info">
+                <div className="discovery__box__info__padding">
+                  <h2 className="discovery__box__info__title">
                     Aprendé a ser mejor lider.
                   </h2>
-                  <div class="flex">
-                    <p class="discovery__box__info__name">Marketing</p>
-                    <i class="discovery__box__info__teach">Por Juan Pablo Laco</i>
+                  <div className="flex">
+                    <p className="discovery__box__info__name">Marketing</p>
+                    <i className="discovery__box__info__teach">Por Juan Pablo Laco</i>
                   </div>
-                  <div class="flex discovery__box__info--fix">
+                  <div className="flex discovery__box__info--fix">
                     <img src={User} alt="user" />
-                    <p class="discovery__box__info__student">150 alumnos</p>
+                    <p className="discovery__box__info__student">150 alumnos</p>
                   </div>
-                  <div class="flex">
-                    <h2 class="discovery__box__info__price">AR$ 490</h2>
-                    <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
+                  <div className="flex">
+                    <h2 className="discovery__box__info__price">AR$ 490</h2>
+                    <i className="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
                   <div className="flex">
                   <Link to='/curso'>
                     <button
-                      class="btn__secundary btn__secundary--buy discovery__box__position"
+                      className="btn__secundary btn__secundary--buy discovery__box__position"
                       >
-                      <div class="flex btn__arrow__buy">
+                      <div className="flex btn__arrow__buy">
                       <span className="icon btn__arrow__buy__img" alt="Ícono de flecha a la derecha"></span>
                         <p>Comprarlo ahora</p>
                       </div>
@@ -131,48 +131,48 @@ const Discovery = (props) => {
               </div>
             </div>
             <br />
-            <div class={"discovery__box" + " " + props.none}>
-              <div class="discovery__box__img">
+            <div className={"discovery__box" + " " + props.none}>
+              <div className="discovery__box__img">
                 <div>
                   <img
-                    class="discovery__box__price__off"
+                    className="discovery__box__price__off"
                     src={Promo}
                     alt="Precio"
                   />
-                  <div class="discovery__box__price__off__letter">
+                  <div className="discovery__box__price__off__letter">
                     <p>30% OFF</p>
                   </div>
                 </div>
                 <img
                   src={Class3}
-                  class="discovery__box__img__class"
+                  className="discovery__box__img__class"
                   alt="Imagen del Curso"
                 />
               </div>
 
-              <div class="discovery__box__info">
-                <div class="discovery__box__info__padding">
-                  <h2 class="discovery__box__info__title">
+              <div className="discovery__box__info">
+                <div className="discovery__box__info__padding">
+                  <h2 className="discovery__box__info__title">
                     Aprendé a ser mejor lider.
                   </h2>
-                  <div class="flex">
-                    <p class="discovery__box__info__name">Marketing</p>
-                    <i class="discovery__box__info__teach">Por Juan Pablo Laco</i>
+                  <div className="flex">
+                    <p className="discovery__box__info__name">Marketing</p>
+                    <i className="discovery__box__info__teach">Por Juan Pablo Laco</i>
                   </div>
-                  <div class="flex discovery__box__info--fix">
+                  <div className="flex discovery__box__info--fix">
                     <img src={User} alt="user" />
-                    <p class="discovery__box__info__student">150 alumnos</p>
+                    <p className="discovery__box__info__student">150 alumnos</p>
                   </div>
-                  <div class="flex">
-                    <h2 class="discovery__box__info__price">AR$ 490</h2>
-                    <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
+                  <div className="flex">
+                    <h2 className="discovery__box__info__price">AR$ 490</h2>
+                    <i className="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
                   <div className="flex">
                   <Link to='/curso'>
                     <button
-                      class="btn__secundary btn__secundary--buy discovery__box__position"
+                      className="btn__secundary btn__secundary--buy discovery__box__position"
                       >
-                      <div class="flex btn__arrow__buy">
+                      <div className="flex btn__arrow__buy">
                       <span className="icon btn__arrow__buy__img" alt="Ícono de flecha a la derecha"></span>
                         <p>Comprarlo ahora</p>
                       </div>
@@ -184,48 +184,48 @@ const Discovery = (props) => {
               </div>
             </div>
 
-            <div class={"discovery__box" + " " + props.display}>
-              <div class="discovery__box__img">
+            <div className={"discovery__box" + " " + props.display}>
+              <div className="discovery__box__img">
                 <div>
                   <img
-                    class="discovery__box__price__off"
+                    className="discovery__box__price__off"
                     src={Promo}
                     alt="Precio"
                   />
-                  <div class="discovery__box__price__off__letter">
+                  <div className="discovery__box__price__off__letter">
                     <p>30% OFF</p>
                   </div>
                 </div>
                 <img
                   src={Class4}
-                  class="discovery__box__img__class"
+                  className="discovery__box__img__class"
                   alt="Imagen del Curso"
                 />
               </div>
 
-              <div class="discovery__box__info">
-                <div class="discovery__box__info__padding">
-                  <h2 class="discovery__box__info__title">
+              <div className="discovery__box__info">
+                <div className="discovery__box__info__padding">
+                  <h2 className="discovery__box__info__title">
                     Aprendé a ser mejor lider.
                   </h2>
-                  <div class="flex">
-                    <p class="discovery__box__info__name">Marketing</p>
-                    <i class="discovery__box__info__teach">Por Juan Pablo Laco</i>
+                  <div className="flex">
+                    <p className="discovery__box__info__name">Marketing</p>
+                    <i className="discovery__box__info__teach">Por Juan Pablo Laco</i>
                   </div>
-                  <div class="flex discovery__box__info--fix">
+                  <div className="flex discovery__box__info--fix">
                     <img src={User} alt="user" />
-                    <p class="discovery__box__info__student">150 alumnos</p>
+                    <p className="discovery__box__info__student">150 alumnos</p>
                   </div>
-                  <div class="flex">
-                    <h2 class="discovery__box__info__price">AR$ 490</h2>
-                    <i class="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
+                  <div className="flex">
+                    <h2 className="discovery__box__info__price">AR$ 490</h2>
+                    <i className="discovery__box__info__price__before">Antes <strong>AR$ 699</strong></i>
                   </div>
                   <div className="flex">
                   <Link to='/curso'>
                     <button
-                      class="btn__secundary btn__secundary--buy discovery__box__position"
+                      className="btn__secundary btn__secundary--buy discovery__box__position"
                       >
-                      <div class="flex btn__arrow__buy">
+                      <div className="flex btn__arrow__buy">
                       <span className="icon btn__arrow__buy__img" alt="Ícono de flecha a la derecha"></span>
                         <p>Comprarlo ahora</p>
                       </div>
@@ -238,19 +238,19 @@ const Discovery = (props) => {
             </div>
             </div>
 
-          <div class={"discovery__diploma"+ " " + props.display}>
+          <div className={"discovery__diploma"+ " " + props.display}>
             <img
-              class="discovery__diploma__star"
+              className="discovery__diploma__star"
               src={Star}
               alt="star"
             />
-            <h2 class="discovery__diploma__title">Obten tu diploma.</h2>
-            <p class="discovery__diploma__text">
+            <h2 className="discovery__diploma__title">Obten tu diploma.</h2>
+            <p className="discovery__diploma__text">
               Al terminar un curso obtendrás un certificado digital que
               certifica el curso.
             </p>
             <img
-              class="discovery__diploma__img"
+              className="discovery__diploma__img"
               src={Diploma}
               alt="diploma"
             />

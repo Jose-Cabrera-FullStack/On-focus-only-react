@@ -9,64 +9,64 @@ import ArrowRight from '../../assets/static/images/svg/arrow-right-black.svg'
 import ArrowLeft from '../../assets/static/images/svg/arrow-left-black.svg'
 
 const AboutUs = () => (
-    <section class="about__us none-second">
-    <h1 class="about__us__title">
+    <section className="about__us none-second">
+    <h1 className="about__us__title">
       Ut wisi enim ad minim exerci tation ullamcorper.
     </h1>
-    <div class="flex">
-      <div class="about__us__box">
-        <div class="about__us__box__inside">
+    <div className="flex">
+      <div className="about__us__box">
+        <div className="about__us__box__inside">
           <img src={Perfil} alt="perfil" />
-          <h2 class="about__us__box__inside__name">Fernando Lorem Ipsum</h2>
-          <i class="about__us__box__inside__profesion">Emprendedor</i>
+          <h2 className="about__us__box__inside__name">Fernando Lorem Ipsum</h2>
+          <i className="about__us__box__inside__profesion">Emprendedor</i>
           <br />
           <br />
           <img src={Comillas} alt="comillas" />
-          <p class="about__us__box__inside__text">
+          <p className="about__us__box__inside__text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
             erat volutpat. Ut wisi enim ad minim veniam.
           </p>
         </div>
       </div>
-      <div class="about__us__box none-second">
-        <div class="about__us__box__inside">
+      <div className="about__us__box none-second">
+        <div className="about__us__box__inside">
           <img src={Perfil} alt="perfil" />
-          <h2 class="about__us__box__inside__name">Fernando Lorem Ipsum</h2>
+          <h2 className="about__us__box__inside__name">Fernando Lorem Ipsum</h2>
           <i>Emprendedor</i>
           <br />
           <br />
           <img src={Comillas} alt="comillas" />
-          <p class="about__us__box__inside__text">
+          <p className="about__us__box__inside__text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
             erat volutpat. Ut wisi enim ad minim veniam.
           </p>
         </div>
       </div>
-      <div class="about__us__box none">
-        <div class="about__us__box__inside">
+      <div className="about__us__box none">
+        <div className="about__us__box__inside">
           <img src={Perfil} alt="perfil" />
-          <h2 class="about__us__box__inside__name">Fernando Lorem Ipsum</h2>
+          <h2 className="about__us__box__inside__name">Fernando Lorem Ipsum</h2>
           <i>Emprendedor</i>
           <br />
           <br />
           <img src={Comillas} alt="comillas" />
-          <p class="about__us__box__inside__text">
+          <p className="about__us__box__inside__text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
             erat volutpat. Ut wisi enim ad minim veniam.
           </p>
         </div>
       </div>
-      <div class="about__us__arrows none">
+      <div className="about__us__arrows none">
         <img
-          class="about__us__arrow"
+          className="about__us__arrow"
           src={ArrowRight}
           alt=""
         />
         <img
-          class="about__us__arrow"
+          className="about__us__arrow"
           src={ArrowLeft}
           alt=""
         />

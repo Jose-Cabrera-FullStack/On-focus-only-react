@@ -5,9 +5,9 @@ import '../../assets/styles/components/Utils.scss';
 
 const Hero = (props) => {
   return (
-    <section class="utils__hero__contact">
+    <section className="utils__hero__contact">
 
-      <h1 class="utils__hero__title">
+      <h1 className="utils__hero__title">
         {props.title ? props.title:'Mis Cursos'}
       </h1>
       

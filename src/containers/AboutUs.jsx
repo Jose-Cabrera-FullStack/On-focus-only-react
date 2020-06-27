@@ -11,14 +11,16 @@ import Tweets from '../components/AboutUs/Tweets';
 import Phrase from '../components/AboutUs/Phrase';
 import HeroDown from '../components/Teacher/HeroDown';
 
+import Logo from '../assets/static/images/svg/logo-black-circule.svg';
+
 import '../assets/styles/App.scss';
 
 const AboutUs = () => {
   return(
     <div className="App">
         <Header/> 
-        <Hero title={'Contacto'}/> 
-        <Future/> 
+        <Hero/> 
+        <Future icon={Logo}/> 
         <Map/> 
         <Knowledge/> 
         <Tweets/> 
