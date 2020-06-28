@@ -128,3 +128,72 @@
     height: 546px;
     margin: -30px 200px 10px 200px;
 }
+@media screen and (max-width: 1450px) {
+    .podcast__spotify img{
+        margin: -40px 50px 0 50px;
+    }
+    .youtube__video img{
+        margin: -30px 50px 10px 50px;
+    }
+}
+@media screen and (max-width: 1140px) {
+    .podcast__spotify img{
+        margin: -40px 0px 0 0px;
+    }
+    .youtube__video img{
+        margin: 0px 0px 10px 0px;
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .podcast__hero__inside {
+        margin: 0;
+        padding: 140px 0 0 100px;
+    } 
+    .podcast__spotify img {
+        margin: 0;
+        width: 100%;
+    }
+    .youtube__video img{
+        width: 100%;
+    }
+    .podcast__information h1{
+        width: auto;
+    }
+    .podcast__information__text{
+        width: auto;
+    }
+    .podcast__information h2{
+        width: auto;
+    }
+    .podcast__information {
+        margin: 50px 100px 50px 100px;
+    }
+    .podcast__hero__text__song{
+        margin: 10px 0 0 0;
+    }
+    .podcast__hero__img--youtube {
+        margin: 7px 0 0 -20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .podcast__hero__title{
+        width: auto;
+        font-size: 25px;
+    }
+    .podcast__hero__text {
+        width: auto;
+        font-size: 19px;
+    }
+    .podcast__hero__inside {
+        padding: 140px 0 0 25px;
+    } 
+
+    .podcast__information {
+        margin: 50px 10px 50px 10px;
+    }
+    .podcast__information__img{
+        width: 100%;
+    }
+}
