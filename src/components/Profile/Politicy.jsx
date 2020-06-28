@@ -4,18 +4,18 @@ import '../../assets/styles/components/Data.scss';
 
 const Politicy = () => {
   return (
-    <section class="data"> 
-    <div className="flex">
+    <section className="data"> 
+    <div className="flex display__screen__mobile__without__flex">
         <div>
-            <button class="btn__secundary btn__secundary--buy btn__secundary--politicy">
+            <button className="btn__secundary btn__secundary--buy btn__secundary--politicy">
                     <p className="btn__secundary--politicy__text">Politica de Cookie</p>
             </button>
             <br/>
-            <button class="btn__secundary btn__secundary--buy btn__secundary--politicy">
+            <button className="btn__secundary btn__secundary--buy btn__secundary--politicy">
                     <p className="btn__secundary--politicy__text">Términos y Condiciones</p>
             </button>
             <br/>
-            <button class="btn__secundary btn__secundary--buy btn__secundary--politicy">
+            <button className="btn__secundary btn__secundary--buy btn__secundary--politicy">
                     <p className="btn__secundary--politicy__text">Centro de ayuda</p>
             </button>
         </div>

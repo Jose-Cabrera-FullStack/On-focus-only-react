@@ -7,7 +7,7 @@ import ArrowDown from '../../assets/static/images/svg/arrow-down.svg';
 const TeacherFAQ = () => (
     <section class="teacher__faq">
         <h1>Preguntas Frecuentes</h1>
-        <div className="flex">
+        <div className="flex display__screen__mobile__without__flex--FAQ__teacher">
             <div >   
                 <ul>
                 <li className="teacher__faq__box">

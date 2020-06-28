@@ -10,7 +10,7 @@
   float: left;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -310%);
+  transform: translate(-50%, -280%);
 }
 
 .register__box{
@@ -22,7 +22,7 @@
   float: left;
   top: 50%;
   left: 50%;
-  transform: translate(-80%, -45%);
+  transform: translate(-80%, -35%);
 }
 
 .register__box__inside{
@@ -78,4 +78,38 @@
   width: 169px;
   margin: 30px 0 0 100px;
 
+}
+
+@media screen and (max-width: 686px) {
+  .register__box{
+    top: 30%;
+    left: 79%;
+  }
+}
+@media screen and (max-width: 518px) {
+  .register__box__inside {
+    margin: 25px 35px 50px 45px;
+}
+  .register__box{
+    width: 360px;
+  }
+
+  .register__box__inside__img{
+    margin: 0 0 0 30px;
+  }
+  .register__box__inside input{
+    width: 255px;
+  }
+  .register__box__inside h1{
+    font-size: 23px;
+  }
+
+  .register__box__inside h2 {
+    font-size: 18px;
+  }
+  .btn__secundary--register{
+    width: 169px;
+    margin: 30px 0 0 50px;
+  
+  }
 }

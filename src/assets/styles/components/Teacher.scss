@@ -133,7 +133,23 @@ padding: 0;
 @media screen and (max-width: 1260px) {
     .teacher__course{
         margin: 0 50px 20px 50px;
-      }
+    }
+    .teacher__points{
+        margin: 50px 170px 0 200px;
+    }
+    .teacher__faq{
+        margin: 0 100px 74px 100px;
+    }
+    
+    .display__screen__mobile__without__flex--FAQ__teacher{
+        display: block;
+    }
+
+    .teacher__faq__box__right {
+        margin: 0 0 0 0px;
+    }
+
+
 }
 @media screen and (max-width: 1024px) {
     .teacher__course{
@@ -151,5 +167,29 @@ padding: 0;
     .teacher__course__mobile{
         position: relative;
         right: 50px;
+    }
+    .teacher__points {
+        margin: 50px 170px 0 100px;
+    }
+}
+@media screen and (max-width: 974px) {
+    
+    .btn__primary--teacher {
+        transform: translate(-120%, -100%);
+    }
+}
+@media screen and (max-width: 615px) {
+    .teacher__faq {
+        margin: 0 10px 74px 10px;
+    }
+    .teacher__faq__box {
+        width: 360px;
+    }
+
+    .teacher__faq__box p{
+        margin: 15px -30px 0px 30px;
+    }
+    .teacher__points {
+        margin: 50px 10px 0 30px;
     }
 }
