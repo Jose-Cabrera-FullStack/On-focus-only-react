@@ -8,7 +8,7 @@ import ArrowLeft from '../../../assets/static/images/svg/arrow-left-black.svg'
 
 const Arrows = (props) => {
     return(
-        <div className="about__us__arrows none">
+        <div className="about__us__arrows none-second">
             <img
             className="about__us__arrow"
             src={ArrowRight}

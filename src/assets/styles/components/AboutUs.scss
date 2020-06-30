@@ -10,13 +10,6 @@
     color: #03002b;
     margin: 0 0 40px 0;
   }
-
-  .about__us__title__slide{
-    position: relative;
-    border: 1px solid blue;
-
-    transition: 0.5s;
-  }
   
   .about__us__box {
     width: 326px;
@@ -323,6 +316,14 @@
   .about__us__focus__map__inside__data__geo__img{
     width: 400px;
     height: 483px;
+  }
+
+  .slide{
+    width: 84%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  1fr 1fr;
   }
   
   /* <-------ANIMATION-------> */

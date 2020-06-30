@@ -24,11 +24,6 @@
     gap: 17px 24px;
     grid-template-areas: '. . .';
   }
-  
-  .discovery__diploma {
-    display: none;
-  }
-
 
 .discovery__box {
   width: 350px;
@@ -246,6 +241,12 @@
   /* <-------ANIMATION-------> */
   
   /* <-------MEDIA-------> */
+  @media screen and (max-width: 1315px) {
+  .discovery__diploma {
+    display: none;
+  }
+
+  }
   @media screen and (max-width: 1024px) {
     .discovery__course {
       display: block;
