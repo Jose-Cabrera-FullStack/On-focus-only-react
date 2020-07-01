@@ -12,22 +12,22 @@ const AboutUs = () => {
 
   const [ValueX,setX] = useState(0)
   
-  const goRight = () =>{
+  const goLeft = () =>{
     ValueX === 0 ? setX(-100* (sliderArr.length - 3)) : setX(ValueX+100);
     // setX(ValueX - 100)
   }
   
-  const goLeft = () =>{
+  const goRight = () =>{
     ValueX === -100 * (sliderArr.length - 3) ? setX(0) : setX(ValueX-100)
     // setX(ValueX + 100)
   }
   
   let sliderArr = [
-    <Teacher name={"Jose"}   text={text} profession={'Emprendedor'} ValueX={ValueX}/>,
-    <Teacher name={"Maria"}  text={text} profession={'Profesora'} ValueX={ValueX}/>,
-    <Teacher name={"Juan"}   text={text} profession={'Desarrollador'} ValueX={ValueX}/>,
-    <Teacher name={"Pedro"}  text={text} profession={'Técnico'} ValueX={ValueX}/>,
-    <Teacher name={"Camilo"} text={text} profession={'Físico'} ValueX={ValueX}/>
+    <Teacher name={"Jose"}   src={''} text={text} profession={'Emprendedor'} ValueX={ValueX}/>,
+    <Teacher name={"Maria"}  src={''} text={text} profession={'Profesora'} ValueX={ValueX}/>,
+    <Teacher name={"Juan"}   src={''} text={text} profession={'Desarrollador'} ValueX={ValueX}/>,
+    <Teacher name={"Pedro"}  src={''} text={text} profession={'Técnico'} ValueX={ValueX}/>,
+    <Teacher name={"Camilo"} src={''} text={text} profession={'Físico'} ValueX={ValueX}/>
   ]
 
   // https://www.youtube.com/watch?v=Tdpq-9XYoNM

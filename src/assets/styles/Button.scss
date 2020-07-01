@@ -52,6 +52,10 @@
     border: 2.5px solid #b38a58;
     margin: 0px 10px 24px 0;
   }
+
+  .btn__secundary--emergent {
+    width: 135px;
+  }
   
   .btn__secundary--register {
     margin: 0;
@@ -75,6 +79,12 @@
     width: 19px;
     height: 19px;
     background-image: url(../static/images/svg/arrow-right.svg);
+  }
+
+  .btn__arrow__buy__shopping{
+    width: 19px;
+    height: 19px;
+    background-image: url(../static/images/svg/shopping-car-black.svg);
   }
   
   .btn__play__img{
@@ -124,7 +134,6 @@
     width: 0;
   }
   
-
   .checkmark {
     position: absolute;
     top: 0;

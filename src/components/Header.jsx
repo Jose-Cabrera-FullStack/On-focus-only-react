@@ -1,7 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
+
 import { logoutRequest } from '../actions';
+
+import EmergentMenu from './Utils/EmergentMenu'
+
 import Logo from '../assets/static/images/svg/logo-small.svg'
 import Hamburguer from '../assets/static/images/svg/icon-hamburguer.svg'
 import Shopping from '../assets/static/images/svg/shopping-car.svg'
@@ -10,6 +14,10 @@ import Shopping from '../assets/static/images/svg/shopping-car.svg'
 import '../assets/styles/components/Header.scss';
 
 const Header = props => {
+
+  const [isToggled, setToggled] = useState(false);
+
+  const toggleTrueFalse = () => setToggled(!isToggled);
   
   // const { user= {} } = props;
   // const hasUser = Object.keys(user).length  >  0;
@@ -39,15 +47,15 @@ const Header = props => {
             <Link to="/sobre-nosotros" className="text-decoration">
               <li className="navbar__menu">About On Focus</li>
             </Link>
-            <li className="navbar__menu navbar__menu--fix">
-              <Link to="/carrito">
+
+            <li className="navbar__menu navbar__menu--fix" onClick={toggleTrueFalse}>
               <img
                 src={Shopping}
                 className="navbar__menu__shopping__cart"
                 alt="Carrito de compras"
                 />
-                </Link>
             </li>
+            <EmergentMenu toggle={isToggled}/>
             <li className="navbar__menu ">
               <button
                 className="btn__primary btn__primary--login btn__primary--login"

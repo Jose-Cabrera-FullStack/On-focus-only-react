@@ -31,6 +31,9 @@
     height: 377px;
     background: #FFFFFF;
     box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 50px;
+    z-index: 1;
 }
 .hero__view__promo__margin{
     margin: -20px 0 0 0;
@@ -40,10 +43,17 @@
     margin: 29px 10px 0 44px;
 }
 
+.hero__view__promo__traingle{
+    position: relative;
+    bottom: 64px;
+    left: 325px;
+}
+
 .hero__view__promo__title{
     font-family: "Mont-Bold";
     font-size: 19px;
     margin: 40px 0 0 0;
+    color: #03002B;
 }
 
 .hero__view__promo__price{
@@ -79,10 +89,11 @@ margin: 20px;
 .hero__view__promo__total h2{
     font-family: "Mont-Bold";
     font-size: 17px;
+    color: #03002B;
 }
 
 .hero__view__promo__total__ar{
-    margin: 20px 0 0 150px;
+    margin: 15px 0 0 150px;
 }
 
 .btn__secundary--promo{
