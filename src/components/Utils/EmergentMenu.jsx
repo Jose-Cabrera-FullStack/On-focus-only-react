@@ -12,7 +12,7 @@ const EmergentMenu = ({toggle, total}) => {
         <div class={toggle ? "hero__view__promo":"display-none"}>
             <Course
                 src={""}
-                title={"Marketing en redes sociales"}
+                title={"Marketing en redes sociales."}
                 price={"890"}
                 priceBefore={"1200"}
             />
@@ -26,10 +26,9 @@ const EmergentMenu = ({toggle, total}) => {
                 </div>
             </div>
             <div>
-                <ButtonArrowRight text="Comprar" width={"btn__secundary--emergent"}/>
-                <ButtonArrowRight text="Ir al carrito" icon={"btn__arrow__buy__shopping"} width={"btn__secundary--emergent"}/>
-                <button class="btn__primary btn__primary--promo">Ir al carrito</button>
-            </div>
+                <ButtonArrowRight text="Comprar" icon={"btn__arrow__black"}  width={"btn__secundary--emergent"}/>            
+                <ButtonArrowRight text="Ir al carrito"  icon={"btn__arrow__buy__shopping"} width={"btn__secundary--emergent__shopping"}/>            
+                </div>
         </div>
 )}
 export default EmergentMenu;

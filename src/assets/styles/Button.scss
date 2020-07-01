@@ -55,6 +55,14 @@
 
   .btn__secundary--emergent {
     width: 135px;
+    color: black;
+    border: 2px solid black;
+  }
+
+  .btn__secundary--emergent__shopping {
+    width: 157px;
+    color: black;
+    border: 2px solid black;
   }
   
   .btn__secundary--register {
@@ -81,10 +89,20 @@
     background-image: url(../static/images/svg/arrow-right.svg);
   }
 
+  .btn__arrow__black {
+    width: 24px;
+    height: 24px;
+    background-image: url(../static/images/svg/arrow-right-black.svg);
+    position: relative;
+    top: 15px;
+}
+
   .btn__arrow__buy__shopping{
-    width: 19px;
-    height: 19px;
+    width: 24px;
+    height: 25px;
     background-image: url(../static/images/svg/shopping-car-black.svg);
+    position: relative;
+    top: 13px;
   }
   
   .btn__play__img{
@@ -191,6 +209,12 @@
 
   .btn__primary--login:hover{
     border: 1px solid #b38a58;
+  }
+  .btn__secundary--emergent:hover {
+    border: 2px solid #b38a58
+  }
+  .btn__secundary--emergent__shopping:hover {
+    border: 2px solid #b38a58
   }
   /* <-------ANIMATION-------> */
   /* <-------MEDIA-------> */
