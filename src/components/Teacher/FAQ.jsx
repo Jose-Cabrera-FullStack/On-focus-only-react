@@ -5,7 +5,7 @@ import '../../assets/styles/components/Course.scss';
 import ArrowDown from '../../assets/static/images/svg/arrow-down.svg';
 
 const TeacherFAQ = () => (
-    <section class="teacher__faq">
+    <section className="teacher__faq">
         <h1>Preguntas Frecuentes</h1>
         <div className="flex display__screen__mobile__without__flex--FAQ__teacher">
             <div >   

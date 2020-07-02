@@ -5,9 +5,9 @@ import '../../assets/styles/components/Utils.scss';
 
 const Checkbox = (props) => {
   return (
-        <label class="checkbox__container">Guardar mi tarjeta
+        <label className="checkbox__container">Guardar mi tarjeta
             <input type="checkbox" /> 
-        <span class="checkmark"></span>
+        <span className="checkmark"></span>
         </label>
     
 )}

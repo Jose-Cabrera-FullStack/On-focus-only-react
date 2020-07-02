@@ -11,9 +11,9 @@ import SmallVideo from '../Visualization/SmallVideo'
 import '../../assets/styles/components/CoursePlus.scss';
 
 const CourseInfo = (props) => (
-    <section class="course">
+    <section className="course">
         <Information OnlyDesktop={"display__screen__desktop"}/>      
-        <div class="flex">
+        <div className="flex">
             <SmallVideo OnlyDesktop={"display__screen__desktop"}/>      
             <CourseSaveMoney/>      
         </div>

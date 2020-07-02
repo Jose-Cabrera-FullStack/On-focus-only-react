@@ -5,9 +5,9 @@ import '../../assets/styles/components/Utils.scss';
 
 const Hero = () => {
   return (
-    <section class="utils__hero__profile">
+    <section className="utils__hero__profile">
 
-      <h1 class="utils__hero__title">
+      <h1 className="utils__hero__title">
         Mi Perfil
       </h1>
       

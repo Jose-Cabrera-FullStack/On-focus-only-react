@@ -9,14 +9,14 @@ import Youtube from '../../assets/static/images/svg/youtube-black.svg';
 
 const CourseTeacher = (props) => (
     <div>
-        <div class={"flex" + " " + props.onlyMobile}>
+        <div className={"flex" + " " + props.onlyMobile}>
             <img src={Teacher} alt="Foto del profesor"/>
-            <div class="course__teach">
+            <div className="course__teach">
                 <h3>Juan Pablo Laco</h3>
                 <p>Lic. Lorem ipsum - Lorem ipsum</p>
-                <div class="flex">
+                <div className="flex">
                     <strong>Seguir:</strong>
-                    <div class="flex course__teach__socials">
+                    <div className="flex course__teach__socials">
                     <img src={Linkedin} alt="Instagram"/>
                     <img src={Facebook} alt="Twitter"/>
                     <img src={Twitter} alt="Facebook"/>

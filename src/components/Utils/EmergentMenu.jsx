@@ -9,7 +9,7 @@ import ButtonArrowRight from './ButtonArrowRight'
 
 const EmergentMenu = ({toggle, total}) => {
     return(
-        <div class={toggle ? "hero__view__promo":"display-none"}>
+        <div className={toggle ? "hero__view__promo":"display-none"}>
             <Course
                 src={""}
                 title={"Marketing en redes sociales."}
@@ -19,10 +19,10 @@ const EmergentMenu = ({toggle, total}) => {
 
             <Course margin={'hero__view__promo__margin'}/>
 
-            <div class="hero__view__promo__total">
-                <div class="flex">
+            <div className="hero__view__promo__total">
+                <div className="flex">
                     <h2>Tu total es de:</h2>
-                    <h2 class="hero__view__promo__total__ar">AR$ {total ? total : "987"}</h2>
+                    <h2 className="hero__view__promo__total__ar">AR$ {total ? total : "987"}</h2>
                 </div>
             </div>
             <div>

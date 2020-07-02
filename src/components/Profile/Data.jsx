@@ -9,7 +9,7 @@ import Message from  '../../assets/static/images/svg/send-message.svg';
 
 const Data = () => {
   return (
-    <section class="data">
+    <section className="data">
         <h4>Gestioná tus datos.</h4>
         <h5>Cambiar contraseña.</h5>
         <form action="">

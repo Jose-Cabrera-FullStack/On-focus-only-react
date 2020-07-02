@@ -5,7 +5,7 @@ import '../../assets/styles/components/Course.scss';
 
 
 const CourseForMe = () => (
-    <section class="course__for__me">
+    <section className="course__for__me">
         <div>
             <h2>¿Este Curso es para mi?</h2>
             <ul>

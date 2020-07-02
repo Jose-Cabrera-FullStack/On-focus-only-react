@@ -1,48 +1,53 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom';
 
 import '../../assets/styles/components/Course.scss';
-import Perfil from '../../assets/static/images/img/perfil-recomendation.png';
-import ArrowLeft from '../../assets/static/images/svg/arrow-left.svg';
-import ArrowRight from '../../assets/static/images/svg/arrow-right.svg';
+import '../../assets/styles/components/AboutUs.scss';
 
+import Recomendation from './Recomendation/Recomendation'
+import Arrows from './Recomendation/Arrows'
 
-const CourseRecomendation = () => (
-    <section class="course__recomendation">
-        <div class="course__recomendation__inside">
-            <h5 class="course__recomendation__inside__title">Recomendaciones</h5>
-            <div class="course__recomendation__inside__box">
-                <div>
-                    <div class="flex">
-                        <img class="course__recomendation__inside__profile" src={Perfil} alt="Perfil"/><h4 class="course__recomendation__inside__name">Fernando Lorem Ipsum</h4>
+const CourseRecomendation = () => {
+
+    const text = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.'
+
+    const [ValueX,setX] = useState(0)
+  
+    const goLeft = () =>{
+      ValueX === 0 ? setX(-100* (sliderArr.length - 3)) : setX(ValueX+100);
+    }
+    
+    const goRight = () =>{
+      ValueX === -100 * (sliderArr.length - 3) ? setX(0) : setX(ValueX-100)
+    }
+
+    let sliderArr = [
+                <Recomendation text={text} ValueX={ValueX}/>,
+                <Recomendation text={text} ValueX={ValueX}/>,
+                <Recomendation text={text} ValueX={ValueX}/>,
+                <Recomendation text={text} ValueX={ValueX}/>,
+                <Recomendation text={text} ValueX={ValueX}/>,
+                <Recomendation text={text} ValueX={ValueX}/>,
+                <Recomendation text={text} ValueX={ValueX}/>,
+                <Recomendation text={text} ValueX={ValueX}/>,
+                <Recomendation text={text} ValueX={ValueX}/>,
+      ]
+
+    return(
+    <section className="course__recomendation">
+        <div className="course__recomendation__inside">
+            <h5 className="course__recomendation__inside__title">Recomendaciones</h5>
+            <div className="course__recomendation__inside__box slide slide--course">
+            {sliderArr.map((item,index)=>{
+                return(
+                    <div key={index} className="slider">
+                    {item}
                     </div>
-                    <p class="course__recomendation__inside__text">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
-                    </p>
-                </div>
-                <div>
-                    <div class="flex">
-                        <img class="course__recomendation__inside__profile" src={Perfil} alt="Perfil"/><h4 class="course__recomendation__inside__name">Fernando Lorem Ipsum</h4>
-                    </div>
-                    <p class="course__recomendation__inside__text">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
-                    </p>
-                </div>
-                <div>
-                    <div class="flex">
-                        <img class="course__recomendation__inside__profile" src={Perfil} alt="Perfil"/><h4 class="course__recomendation__inside__name">Fernando Lorem Ipsum</h4>
-                    </div>
-                    <p class="course__recomendation__inside__text">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
-                    </p>
-                </div>
+                )
+            })}
         </div>
     </div>
-            <div class="flex course__recomendation__arrows">
-                <img src={ArrowLeft} alt="Flecha a la derecha"/>
-                <p className="course__recomendation__arrows__numb">3/12</p>
-                <img src={ArrowRight} alt="Flecha a la izquierda"/>
-            </div>
+        <Arrows total={sliderArr.length - 2} goRight={goRight} goLeft={goLeft} ValueX={ValueX}/>
     </section>
-)
+)}
 export default CourseRecomendation;

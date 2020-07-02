@@ -11,7 +11,7 @@ import '../../assets/styles/components/ShoppingCar.scss';
 import UI from '../../assets/static/images/img/ui-design.png';
 
 const ShoppingCar = (props) => (
-    <section class="shopping__car">
+    <section className="shopping__car">
         <Breadcrumbs/>
         <h1>Tu carrito de compras está listo.</h1>
         <div className={"flex" + " " + props.onlyMobile}>

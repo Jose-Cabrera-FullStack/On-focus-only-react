@@ -8,7 +8,7 @@ import Message from  '../../assets/static/images/svg/send-message.svg';
 
 const Data = (props) => {
   return (
-    <section class="data">
+    <section className="data">
         <p className="data__text">Si tienes alguna consulta o simplemente quieres realizar un contacto con nosotros, la mejor manera de hacerlo es via mail a hola@onfocus.com</p>
         <p className="data__text">Respondemos todos los correos en un lapso menor a 24 horas, si es fin de semana, ten en cuenta que la respuesta pueda demorar un poco más.</p>
         <p className="data__text">De todas maneras, se cual sea la consulta, vamos a encontrarle una solución a tu caso.</p>
@@ -32,7 +32,7 @@ const Data = (props) => {
                 <strong className="data__right__title">Oficina de contacto.</strong>
                 <p>El Salvador 5218,C1414BPV Buenos Aires, Argentina.</p>
                 <div className="flex">
-                <ol class="footer__container__left--fix footer__container__left--fix__contact__us">
+                <ol className="footer__container__left--fix footer__container__left--fix__contact__us">
                 <li>
                 <span className="contact__socials--youtube" alt="Youtube"></span>
                 </li>

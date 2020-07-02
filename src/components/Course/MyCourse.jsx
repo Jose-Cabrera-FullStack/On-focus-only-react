@@ -9,7 +9,7 @@ import ProgressBar from '../../assets/static/images/svg/progress-bar.svg'
 
 
 const MyCourse = () => (
-    <section class="my-course">
+    <section className="my-course">
         <div className="flex">
             <p className="my-course__menu">Todos</p>
             <p className="my-course__menu">En curso</p>
@@ -18,21 +18,21 @@ const MyCourse = () => (
 
         <div className="my-course__individual">
             
-        <div class="discovery__box">
-              <div class="discovery__box__img">
+        <div className="discovery__box">
+              <div className="discovery__box__img">
                 <img
                   src={Class1}
-                  class="discovery__box__img__class"
+                  className="discovery__box__img__class"
                   alt="Imagen del Curso"
                 />
               </div>
-              <div class="discovery__box__info">
-                <div class="discovery__box__info__padding">
-                  <h2 class="discovery__box__info__title course__plus__title">
+              <div className="discovery__box__info">
+                <div className="discovery__box__info__padding">
+                  <h2 className="discovery__box__info__title course__plus__title">
                     Aprendé a ser mejor lider.
                   </h2>
-                  <div class="flex">
-                    <p class="discovery__box__info__name course__plus__sub__title">Marketing</p>
+                  <div className="flex">
+                    <p className="discovery__box__info__name course__plus__sub__title">Marketing</p>
                   </div>
                   <div className="course__plus__progress">
                       <img src={ProgressBar} alt=""/>
@@ -45,21 +45,21 @@ const MyCourse = () => (
                 </div>
               </div> 
             </div>
-        <div class="discovery__box">
-              <div class="discovery__box__img">
+        <div className="discovery__box">
+              <div className="discovery__box__img">
                 <img
                   src={Class1}
-                  class="discovery__box__img__class"
+                  className="discovery__box__img__class"
                   alt="Imagen del Curso"
                 />
               </div>
-              <div class="discovery__box__info">
-                <div class="discovery__box__info__padding">
-                  <h2 class="discovery__box__info__title course__plus__title">
+              <div className="discovery__box__info">
+                <div className="discovery__box__info__padding">
+                  <h2 className="discovery__box__info__title course__plus__title">
                     Aprendé a ser mejor lider.
                   </h2>
-                  <div class="flex">
-                    <p class="discovery__box__info__name course__plus__sub__title">Marketing</p>
+                  <div className="flex">
+                    <p className="discovery__box__info__name course__plus__sub__title">Marketing</p>
                   </div>
                   <div className="course__plus__progress">
                       <img src={ProgressBar} alt=""/>
@@ -72,21 +72,21 @@ const MyCourse = () => (
                 </div>
               </div> 
             </div>
-        <div class="discovery__box">
-              <div class="discovery__box__img">
+        <div className="discovery__box">
+              <div className="discovery__box__img">
                 <img
                   src={Class1}
-                  class="discovery__box__img__class"
+                  className="discovery__box__img__class"
                   alt="Imagen del Curso"
                 />
               </div>
-              <div class="discovery__box__info">
-                <div class="discovery__box__info__padding">
-                  <h2 class="discovery__box__info__title course__plus__title">
+              <div className="discovery__box__info">
+                <div className="discovery__box__info__padding">
+                  <h2 className="discovery__box__info__title course__plus__title">
                     Aprendé a ser mejor lider.
                   </h2>
-                  <div class="flex">
-                    <p class="discovery__box__info__name course__plus__sub__title">Marketing</p>
+                  <div className="flex">
+                    <p className="discovery__box__info__name course__plus__sub__title">Marketing</p>
                   </div>
                   <div className="course__plus__progress">
                       <img src={ProgressBar} alt=""/>

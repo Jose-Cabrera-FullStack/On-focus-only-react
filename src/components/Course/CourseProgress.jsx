@@ -9,7 +9,7 @@ import UI from '../../assets/static/images/img/buyed-image.png';
 
 
 const CourseProgress = (props) => (
-    <section class="buyed__progress">
+    <section className="buyed__progress">
         <div className="flex">
             <div>
                 <h1>Aprendé a ser mejor lider.</h1>

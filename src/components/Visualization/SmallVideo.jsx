@@ -7,7 +7,7 @@ import Video from '../../assets/static/images/img/video.png';
 
 
 const SmallVideo = (props) => (
-    <figure class={"course__img"+ " " + props.OnlyDesktop}>
+    <figure className={"course__img"+ " " + props.OnlyDesktop}>
         <img className={props.onlyMobile} src={Video} alt="Video del Curso"/>
     </figure>
 )

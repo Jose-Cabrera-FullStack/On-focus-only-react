@@ -83,7 +83,6 @@
   right: 40px;
   top: 20px;
 }
-/* <-------ANIMATION-------> */
 
 .navLinks:hover {
   color: white;
@@ -93,21 +92,21 @@
 }
 
 
-// .navbar__menu a:hover {
-  //   color: #b38a58;
-  // }
-  .navbar__menu img:hover {
-    color: #b38a58;
-    filter: invert(0.5) sepia(9);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-  .navbar__img:hover {
-    filter: invert(0.5) sepia(9);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-  /* <-------ANIMATION-------> */
+.navbar__menu img {
+  z-index: 2;
+}
+
+.navbar__menu img:hover {
+  color: #b38a58;
+  filter: invert(0.5) sepia(9);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.navbar__img:hover {
+  filter: invert(0.5) sepia(9);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
   
   /* <-------MEDIA-------> */
   @media screen and (max-width: 1024px) {

@@ -10,7 +10,7 @@ import CoursesList from '../Visualization/Course/CoursesList';
 import ArrowLeft from '../../assets/static/images/svg/arrow-visualization.svg'
 
 const VisualizationCourse = () => (
-    <section class="visualization">
+    <section className="visualization">
         <Breadcrumbs icon={ArrowLeft} onlyMobile={"visualization__navbar"}/>
 
         <div className="visualization__video display__screen__mobile"></div>
