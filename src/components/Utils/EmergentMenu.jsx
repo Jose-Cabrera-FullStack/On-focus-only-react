@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../../assets/styles/components/ShoppingCar.scss';
+import Triangle from '../../assets/static/images/svg/triangle-emergent.svg';
 
 import Course from './EmergentMenuBox/Course'
 
@@ -25,10 +26,10 @@ const EmergentMenu = ({toggle, total}) => {
                     <h2 className="hero__view__promo__total__ar">AR$ {total ? total : "987"}</h2>
                 </div>
             </div>
-            <div>
+            <div className="hero__view__promo__margin__btn">
                 <ButtonArrowRight text="Comprar" icon={"btn__arrow__black"}  width={"btn__secundary--emergent"}/>            
                 <ButtonArrowRight text="Ir al carrito"  icon={"btn__arrow__buy__shopping"} width={"btn__secundary--emergent__shopping"}/>            
-                </div>
+            </div>
         </div>
 )}
 export default EmergentMenu;

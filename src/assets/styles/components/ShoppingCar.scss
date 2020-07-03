@@ -139,6 +139,34 @@ border: 1px solid #000000;
     left: 47vw;
 }
 
+.hero__view__promo__img--shopping__car{
+    width: 81px;
+    height: 81px;
+    margin: 0px 0 20px 0;
+}
+
+.hero__view__promo__title--shopping__car{
+    margin: 0 0 0 10px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #03002B;
+    font-family: 'Mont-Bold';
+}
+
+.hero__view__promo__teacher--shopping__car{
+    margin: 0 0 0 10px;
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #4F4F4F;
+}
+
 
 @media screen and (max-width: 1325px) {
     .shopping-none {

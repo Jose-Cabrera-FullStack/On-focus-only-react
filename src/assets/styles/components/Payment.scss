@@ -160,12 +160,14 @@
 
 .details{
     width: 468px;
-    height: 193px;
     background: #F2F2F2;
+}
+.details hr{
+    margin: 0px 0 25px 0;
 }
 
 .details__inside{
-    margin: 30px 30px 0px 60px;
+    margin: 30px 30px 0px 43px;
 }
 
 .details__inside__title__edit{
@@ -225,6 +227,8 @@
     margin: 20px 0 0 0;
     font-family: 'Mont-Light';
     font-size: 16px;
+    cursor: pointer;
+    padding: 0px 0 20px 0;
 }
 
 .details__inside__detail p{
