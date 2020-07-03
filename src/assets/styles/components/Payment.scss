@@ -102,6 +102,27 @@
     box-shadow: 0px 0px 9px rgba(6, 0, 37, 0.2);
     display: inline-block;
     margin: 24px 14px 33px 0px;
+    cursor: pointer;
+}
+
+.way-to-pay__box__card--mercado__pago__text{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 135.3%;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #000000;
+    width: 304px;
+}
+
+.way-to-pay__box__card--mercado__pago__text__btn{
+    margin: 45px;
+}
+
+.way-to-pay__box__card--mercado__pago__text__btn:hover{
+    background-color: #03002b;
 }
 
 .way-to-pay__box__card__img{

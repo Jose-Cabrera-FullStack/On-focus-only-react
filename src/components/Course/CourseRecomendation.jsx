@@ -31,7 +31,7 @@ const CourseRecomendation = () => {
                 <Recomendation text={text} ValueX={ValueX}/>,
                 <Recomendation text={text} ValueX={ValueX}/>,
                 <Recomendation text={text} ValueX={ValueX}/>,
-      ]
+    ]
 
     return(
     <section className="course__recomendation">
