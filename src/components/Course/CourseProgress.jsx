@@ -6,19 +6,18 @@ import Button from '../../components/Utils/ButtonArrowRight';
 
 import UI from '../../assets/static/images/img/buyed-image.png';
 
+import ProgressBar from '../Utils/ProgressBar';
+
 
 const CourseProgress = (props) => {
-    const width = 40
-    
+
     return(
     <section className="buyed__progress">
         <div className="flex">
             <div>
                 <h1>Aprendé a ser mejor lider.</h1>
                 <h4>Por Juan Pablo Laco</h4>
-                <div className="buyed__progress__bar">
-                <div className="buyed__progress__bar__completed" style={{width:`${width}%`}}></div>
-                </div>
+                <ProgressBar progress={75}/>
                 <br/>
                 <br/>
                 <Button icon={"icon btn__play__img"} text={"Ver Lorem ipsum"}/>
