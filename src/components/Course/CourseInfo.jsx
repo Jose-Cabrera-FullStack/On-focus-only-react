@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import CourseInfoOnlyInfo from './CourseInfoOnlyInfo'
-import CourseAbout from './CourseAbout'
+import CourseAbout from './AboutCourse/CourseAbout'
 import CourseSaveMoney from './CourseSaveMoney'
 
 import Information from '../Course/InformationCourse/Information'

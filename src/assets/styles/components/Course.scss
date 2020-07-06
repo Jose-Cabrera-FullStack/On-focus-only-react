@@ -277,10 +277,58 @@ font-size: 17px;
     cursor: pointer;
     user-select: none; 
 }
+
+.course__module__element__title{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
 .course__module__element__inside{
     width: 659px;
     background: #E0E0E0;
 }
+
+.course__module__element__inside__icon{
+    margin: 0px 20px 0 35px;
+    position: relative;
+    bottom: 7px;
+}
+
+.course__module__element__inside__right{
+    margin: 10px 0 16px 0;
+}
+
+.course__module__element__inside__right h5{
+    font-family: 'Mont-Semi-Bold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin: 10px 0 -5px 0;
+}
+
+.course__module__element__inside__right i{
+    margin: 0px 0px 0px 0px;
+    font-family: Mont-Light;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: -0.02em;
+    color: #828282;
+}
+
+.course__module__element__inside{
+    margin: 3px 0 0 0;
+}
+
 .course__module__element__inside p{
     font-family: Judson;
     font-style: normal;
@@ -292,6 +340,20 @@ font-size: 17px;
     margin: 2px 0 20px 0;
     padding: 20px 80px 20px 30px;
     user-select: none; 
+}
+
+.course__module__sub__title{
+    font-family: 'Mont-Semi-Bold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    position: relative;
+    bottom: 13px;
+    left: 60px;
+    width: 330px;
 }
 
 .course__module li strong{
@@ -312,11 +374,21 @@ font-size: 17px;
     filter: contrast(0.2);
 }
 
+.course__module__play{
+    margin: 0px -15px 0 27px;
+    position: relative;
+    width: 23px;
+    top: 15px;
+}
+
 .course__module__arrow{
     padding: 0px 0 0 0;
     position: relative;
     left: 90%;
     top: 15px;
+}
+.course__module__arrow--buyed{
+    left: 85%;
 }
 
 .course__recomendation{

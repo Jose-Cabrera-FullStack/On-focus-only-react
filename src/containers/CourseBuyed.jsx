@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {connect} from 'react-redux';
 
 import Breadcrumbs from '../components/Utils/Breadcrumbs';
 
 import CourseProgress from '../components/Course/CourseProgress';
-import CourseInfoOnlyInfo from '../components/Course/CourseInfoOnlyInfo';
-import CourseAbout from '../components/Course/CourseAbout';
-import CourseCertificate from '../components/Course/CourseCertificate';
-import CourseTeacherInfoVariant from '../components/Course/CourseTeacherInfoVariant';
-import BuyedCourse from '../components/Course/Mobile/BuyedCourse';
+
+import CourseAboutCourse from '../components/Course/CourseAboutCourse';
+
+
+import AboutCourseAndClasses from '../components/Course/Select/AboutCourseAndClasses';
+import Module from '../components/Course/Module/Module'
+
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -20,6 +22,27 @@ import UI from '../assets/static/images/img/buyed-image.png';
 
 const CourseBuyed = () => {
   const title = "¿Qué incluye este curso?"
+
+  const [isSwitch, setSwitch] = useState("");
+    
+  const AboutThisCourse = () => setSwitch("");
+  
+  const CourseClasses = () => setSwitch("Classes");
+  
+  
+  const PayMethod = (isSwitch) =>{
+      switch(isSwitch) {
+  
+          case "Classes":  return (
+            <div>
+              <Module buyed id={'2'} text={'hola'} duration={'45 min'}/>
+              <Module buyed id={'2'} text={'hola'} duration={'45 min'}/>
+              <Module buyed id={'2'} text={'hola'} duration={'45 min'}/>
+            </div>)
+          default :  return <CourseAboutCourse/>;
+          }
+      }
+  
   return(
     <div className="App">
         <Header/>
@@ -28,24 +51,14 @@ const CourseBuyed = () => {
         <div className="buyed">
         <Breadcrumbs onlyDesktop={"display__screen__desktop"}/>
         <CourseProgress onlyDesktop={"display__screen__desktop"}/>
-        <div className="buyed__bar flex display__screen__desktop">
-            <p>Sobre este curso</p>
-            <p>Clases del curso</p>
-        </div>
-        <hr className="buyed__bar__bottom display__screen__desktop"/>
-        <CourseInfoOnlyInfo width={'course__information__text__width'} onlyDesktop={"display__screen__desktop"}/>
-        <p className="buyed__text display__screen__desktop">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Duis autem vel eum iriure dolor in hendrerit in vulate velit esse molestie consequat.</p>
-        <CourseAbout title={title} font={'buyed__font'} onlyDesktop={"display__screen__desktop"}/>
-        <p className="buyed_see__more display__screen__desktop">Ver más+</p>
-        <CourseCertificate onlyDesktop={"display__screen__desktop"}/>
+        
+        <AboutCourseAndClasses isSwitch={isSwitch} methodAbout={AboutThisCourse} methodClasses={CourseClasses}/>
 
-        <p className="buyed__teacher__tittle display__screen__desktop">Sobre el profesor</p>
-        
-        <BuyedCourse onlyMobile={"display__screen__mobile"}/>
-        
-        <BuyedCourse onlyMobile={"display__screen__mobile"}/>
-        
-        <CourseTeacherInfoVariant onlyDesktop={"display__screen__desktop"}/>
+        <hr className="buyed__bar__line display__screen__desktop"/>
+
+        {PayMethod(isSwitch)}
+
+
 
         </div>
         <Footer onlyDesktop={"display__screen__desktop"}/>

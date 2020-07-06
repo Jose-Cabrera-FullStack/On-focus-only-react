@@ -1,7 +1,7 @@
 import React from 'react';
 
-import '../../assets/styles/components/CoursePlus.scss';
-import Course from '../../assets/static/images/img/about-this-course.png';
+import '../../../assets/styles/components/CoursePlus.scss';
+import Course from '../../../assets/static/images/img/about-this-course.png';
 
 
 const CourseAbout = (props) => {

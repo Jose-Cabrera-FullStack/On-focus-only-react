@@ -17,7 +17,7 @@ const CourseProgress = (props) => {
                 <h1>Aprendé a ser mejor lider.</h1>
                 <h4>Por Juan Pablo Laco</h4>
                 <div className="buyed__progress__bar">
-                <div className="buyed__progress__bar__completed" style={{width:`${width}%`}}><p>{width}</p></div>
+                <div className="buyed__progress__bar__completed" style={{width:`${width}%`}}></div>
                 </div>
                 <br/>
                 <br/>

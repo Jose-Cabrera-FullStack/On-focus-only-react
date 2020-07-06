@@ -2,9 +2,9 @@ import React from 'react';
 
 
 
-import '../../assets/styles/components/Course.scss';
-import Human from '../../assets/static/images/img/human-diploma.png';
-import Star from '../../assets/static/images/svg/star-black.svg';
+import '../../../assets/styles/components/Course.scss';
+import Human from '../../../assets/static/images/img/human-diploma.png';
+import Star from '../../../assets/static/images/svg/star-black.svg';
 
 
 

@@ -2,12 +2,12 @@ import React from 'react';
 
 
 
-import '../../assets/styles/components/Course.scss';
-import Teacher from '../../assets/static/images/img/profile-teach.png';
-import Facebook from '../../assets/static/images/svg/facebook-black.svg';
-import Linkedin from '../../assets/static/images/svg/linkedin-black.svg';
-import Twitter from '../../assets/static/images/svg/twitter-black.svg';
-import Youtube from '../../assets/static/images/svg/youtube-black.svg';
+import '../../../assets/styles/components/Course.scss';
+import Teacher from '../../../assets/static/images/img/profile-teach.png';
+import Facebook from '../../../assets/static/images/svg/facebook-black.svg';
+import Linkedin from '../../../assets/static/images/svg/linkedin-black.svg';
+import Twitter from '../../../assets/static/images/svg/twitter-black.svg';
+import Youtube from '../../../assets/static/images/svg/youtube-black.svg';
 
 
 
