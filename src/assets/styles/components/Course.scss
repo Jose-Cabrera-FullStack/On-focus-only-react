@@ -278,6 +278,11 @@ font-size: 17px;
     user-select: none; 
 }
 
+.course__module__element--teacher{
+    width: 506px;
+    height: 47px;
+}
+
 .course__module__element__title{
     font-family: 'Mont-Bold';
     font-style: normal;
@@ -298,11 +303,18 @@ font-size: 17px;
     color: #000000;
     padding: 20px 0px 0px 30px;
 }
+.course__module__element__title--teacher{
+    padding: 15px 0px 0px 30px;
+}
 
 .course__module__element__inside{
     width: 659px;
     background: #E0E0E0;
     margin: 3px 0 0 0;
+}
+
+.course__module__element__inside--teacher{
+    width: auto;
 }
 
 .course__module__element__inside--help__center{
