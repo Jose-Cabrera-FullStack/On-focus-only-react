@@ -6,19 +6,16 @@ import Footer from '../components/Footer';
 import Hero from '../components/Profile/Hero';
 import Data from '../components/Profile/Data';
 
-
-
 import '../assets/styles/App.scss';
 import '../assets/styles/components/Data.scss';
 
 const MyProfile = () => {
   return(
     <div className="App"> 
-            <Header/> 
-            <Hero/> 
-            <Data/>
-            <Footer onlyDesktop={'display__screen__desktop'}/>
-
+      <Header/> 
+      <Hero/> 
+      <Data/>
+      <Footer onlyDesktop={'display__screen__desktop'}/>
     </div>
 
   );

@@ -6,7 +6,6 @@ import Check from '../../assets/static/images/svg/icon-check.svg'
 
 import Success from '../Utils/SuccessMessage'
 
-
 const Data = (props) => {
 
     const [isForm, SetIsForm]= useState({
@@ -58,39 +57,38 @@ const Data = (props) => {
         <h5>Cambiar contraseña.</h5>
         <form action="">
             <input 
-            name="actualPassword" 
-            required 
-            onChange={handleChange} 
-            className="data__input__text" 
-            type="password" 
-            placeholder="Contraseña actual"/>
+                name="actualPassword" 
+                required 
+                onChange={handleChange} 
+                className="data__input__text" 
+                type="password" 
+                placeholder="Contraseña actual"/>
             {isFormValidate.actualPasswordValidate ? <img className="data__input__check" src={Check} alt=""/>:"" }
-            
-            
+
             <br/>
 
             <input name="newPassword" 
-            required 
-            onChange={handleChange} 
-            className="data__input__text" 
-            type="password" 
-            placeholder="Nueva Contraseña"/>
-            <img className="data__input__check" src={Check} alt=""/>
+                required 
+                onChange={handleChange} 
+                className="data__input__text" 
+                type="password" 
+                placeholder="Nueva Contraseña"/>
+            {/* <img className="data__input__check" src={Check} alt=""/> */}
 
             <br/>
 
             <input name="newPasswordConfirmation"
-            required onChange={handleChange} 
-            className="data__input__text" 
-            type="password" 
-            placeholder="Confirmar Nueva Contraseña"/>
-            <img className="data__input__check" src={Check} alt=""/>
+                required onChange={handleChange} 
+                className="data__input__text" 
+                type="password" 
+                placeholder="Confirmar Nueva Contraseña"/>
+            {/* <img className="data__input__check" src={Check} alt=""/> */}
             
             <br/>
 
             <Button text={"Guardar"} margin={"discovery__box__position btn__secundary--data"}/>
 
-           <Success/>
+            <Success/>
 
         </form>
     </section>

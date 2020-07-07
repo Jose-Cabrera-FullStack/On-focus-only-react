@@ -1,10 +1,9 @@
 import React from 'react';
 
 import '../../assets/styles/components/Data.scss';
-import Button from  '../../components/Utils/ButtonArrowRight';
 import Message from  '../../assets/static/images/svg/send-message.svg';
 
-
+import Form from './ContactUs/Form'
 
 const Data = (props) => {
   return (
@@ -16,13 +15,7 @@ const Data = (props) => {
 
         <div className={"flex" + " " + props.onlyMobile}>
             <div>
-                <form action="">
-                <input className="data__input__text" type="text" placeholder="Nombre Completo"/> <br/>
-                <input className="data__input__text" type="text" placeholder="E-mail"/> <br/>
-                <input className="data__input__text" type="text" placeholder="Teléfono"/> <br/>
-                <textarea className="data__input__text data__input__text__area"  name="" id="" cols="30" rows="10" placeholder="¿Cuál es el motivo por el cuál nos contactás?"></textarea> <br/>
-                <Button margin={'btn__secundary--data'} text={'Enviar'}/>
-                </form>
+                <Form/>
                 <div className="contact__check__message flex">
                     <img src={Message} alt=""/>
                     <p>Su mensaje ha sido enviado. Gracias! </p>
