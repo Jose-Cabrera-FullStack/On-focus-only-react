@@ -42,6 +42,7 @@
     bottom: 5px;
     font-family: 'Mont-Light', Roboto;
   }
+  
 
   .btn__secundary--buy {
     width: 199px;
@@ -52,6 +53,15 @@
     border: 2.5px solid #b38a58;
     margin: 0px 10px 24px 0;
   }
+
+  .btn__secundary--buy--select {
+    background-color: #b38a58;
+    color: #ffffff;
+  }
+
+  .btn__secundary--politicy--select {
+    border: 2px solid #b38a58;
+}
 
   .btn__secundary--emergent {
     width: 135px;
