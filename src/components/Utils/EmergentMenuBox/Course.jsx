@@ -16,7 +16,7 @@ const Course = ({margin, src, title, price, priceBefore,shoppingCar,teacher}) =>
                 <p className="hero__view__promo__price__before">AR$ {priceBefore ? priceBefore : "860"}</p>
                 <p className="hero__view__promo__price__delete">Eliminar</p>
             </div>
-            <p className="hero__view__promo__teacher--shopping__car">Por {teacher ? teacher : "Juan Pablo Laco"}</p>
+            {teacher ? <p className="hero__view__promo__teacher--shopping__car">Por {teacher ? teacher : "Juan Pablo Laco"}</p>: ""}
         </div>
 </div>
 )}

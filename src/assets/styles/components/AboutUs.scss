@@ -272,7 +272,7 @@
   }
   
   .about__us__focus__phrase{
-    margin: 50px 200px 100px 200px;
+    margin: 80px 200px 150px 100px;
   }
 
   .about__us__focus__phrase__title{
@@ -288,22 +288,27 @@
   }
 
   .about__us__focus__phrase__inside{
-    margin: 0 0 0 17vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-45%, -10%);
   }
 
   .about__us__focus__phrase__img{
-    margin: 0 0 0 300px;
+    position: relative;
+    left: 50%;
+    transform: translate(-45%, -10%);
   }
 
   .about__us__focus__phrase__sub{
-    margin: 30px 0 0px 240px;
     font-family: 'Mont-Bold';
     font-size: 20px;
     color: #03002B;
+    position: relative;
+    text-align: center;
+    transform: translate(0%, 0%);
   }
 
   .about__us__focus__phrase__author{
-    margin: 0px 0px 0px 235px;
     font-family: 'Mont-Regular';
     font-size: 16px;
     line-height: 113.3%;
@@ -352,15 +357,16 @@
   }
   .about__us__focus__tweets__box{
     margin: 10px 0 36px 0px;
+    position: relative;
+    left: 50%;
+    transform: translate(-45%, -10%);
   }
   .about__us__focus__phrase__inside {
     margin: 0 0 0 0vw;
   }
-  .about__us__focus__phrase__img {
-    margin: 0 0 0 20%;
-  }
+  
   .about__us__focus__phrase {
-    margin: 50px 100px 100px 100px;
+    margin: 50px 100px 100px 50px;
   }
   }
   
@@ -429,12 +435,6 @@
   .about__us__focus__phrase__title{
     width: auto;
   }
-  .about__us__focus__phrase__sub {
-    margin: 30px 0 0px 35%;
-    }
-  .about__us__focus__phrase__author{
-    margin: 30px 0 0px 34%;
-    }
 
     .slide--course{
       width: 85%;
@@ -442,7 +442,7 @@
   }
     @media screen and (max-width: 870px) {
       .about__us__focus__tweets {
-        margin: 0px 50px 0px 50px;
+        margin: 0px 50px 0px 0px;
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -466,14 +466,6 @@
       width: auto;
       font-size: 25px;
   }
-  .about__us__focus__phrase__sub {
-    margin: 30px 0 0px 10%;
-    font-size: 18px;
-    }
-  .about__us__focus__phrase__author{
-    margin: 30px 0 0px 8%;
-    font-size: 15px;
-    }
     }
   /* <-------MEDIA-------> */
   

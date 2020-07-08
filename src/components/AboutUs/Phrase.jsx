@@ -9,8 +9,9 @@ const Phrase = () => (
         <div className="about__us__focus__phrase__inside">
             <img className="about__us__focus__phrase__img" src={Comillas} alt=""/>
             <h1 className="about__us__focus__phrase__title">Dolor in hendrerit in asaea vulputate velit ser tum esse molestie consequat.</h1>
-            <h5 className="about__us__focus__phrase__sub">Juan Pablo Laco</h5>
-            <i className="about__us__focus__phrase__author">Director de Focus Mind</i>
+            <h1 className="about__us__focus__phrase__sub">Juan Pablo Laco</h1>
+            <br/>
+            <h1 className="about__us__focus__phrase__author">Director de Focus Mind</h1>
         </div>
     </section>
 )

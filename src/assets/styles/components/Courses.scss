@@ -20,9 +20,9 @@
   
   .discovery__course {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 17px 24px;
-    grid-template-areas: '. . .';
+    grid-template-areas: '. .';
   }
 
 .discovery__box {
@@ -54,6 +54,10 @@
   }
   
   .discovery__box__info {
+    background-image: linear-gradient(to top, #dad9d99e, #f2f2f2);
+    margin: -4px 0 0 0;
+  }
+  .discovery__box__info__course {
     background-image: linear-gradient(to top, #dad9d99e, #f2f2f2);
     margin: -4px 0 0 0;
   }
@@ -271,6 +275,9 @@
 
   .display__course__screen__mobile{
     display: block;
+  }
+  .discovery__box{
+    margin: 10px 0 0 0;
   }
 }
 
