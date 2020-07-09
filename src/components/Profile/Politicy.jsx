@@ -6,7 +6,7 @@ import PoliticyTerm from './Politicy/PoliticyTerm'
 import TermAndCondition from './Politicy/TermAndCondition'
 import HelpCenter from './Politicy/HelpCenter'
 
-const Politicy = () => {
+const Politicy = (props) => {
 
     const [isSwitch, setSwitch] = useState("");
     
@@ -25,6 +25,8 @@ const Politicy = () => {
             
             }
         }
+
+        console.log(props.location)
   return (
     <section className="data"> 
     <div className="flex display__screen__mobile__without__flex">

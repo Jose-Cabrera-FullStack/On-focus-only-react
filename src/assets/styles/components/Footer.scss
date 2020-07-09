@@ -29,7 +29,7 @@
 .footer__container__left li {
   list-style: none;
   margin: 4px 0 0px 0px;
-  font-family: Mont-regular;
+  font-family: Mont-Light;
   font-weight: 700;
   font-size: 15px;
 }
@@ -63,9 +63,10 @@
 .footer__container__right li {
   list-style: none;
   margin: 2px 0 0px 0px;
-  font-family: Mont-regular;
+  font-family: Mont-Light;
   font-weight: 700;
   font-size: 15px;
+  margin-top: 10px;
 }
 
 .footer__container__right h5 {
@@ -80,15 +81,15 @@
   margin: 0;
   color: #f2f2f2;
   height: 40px;
+  border-top: 1px solid;
 }
 
 
 .footer__reserved p {
   margin: 0;
   font-size: 12px;
-  padding: 14px 0px 0px 30px;
+  padding: 13px 0px 0px 30px;
   font-weight: 500;
-  border-top: 1px solid;
   color: #bdbdbd;
 }
 
@@ -154,8 +155,6 @@
   display: none;
 }
 
-
-/* <-------ANIMATION-------> */
 .footer__arrow:hover {
   filter: invert(0.5) sepia(9);
   cursor: pointer;
@@ -188,7 +187,6 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-/* <-------ANIMATION-------> */
 
 /* <-------MEDIA-------> */
 @media screen and (max-width: 1325px) {
@@ -231,7 +229,7 @@
   }
   
 }
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 1024px) {
 
   .footer__flex__mobile{
     display: flex;
@@ -239,7 +237,7 @@
 
   .footer__container__left {
     list-style: none;
-    margin: 81px 0 0 20px;
+    margin: 50px 0 0 0px;
 }
   .footer{
     height: 504px;
@@ -262,8 +260,62 @@
 
   .footer__arrow{
     margin-left: auto;
-    top: -570px;
+    top: -400px;
     right: 40px;
+  }
+
+  .footer__container__right--mobile{
+    height: 0;
+    position: absolute;
+    right: 10px;
+  }
+
+  .footer__container__left--fix{
+    position: absolute;
+    right: 40px;
+  }
+
+  .footer__socials__network {
+    position: relative;
+    top: 10px;
+  }
+
+  .footer__container__right--fix{
+    position: relative;
+    top: -240px;
+  }
+
+  .footer__reserved p {
+    position: absolute;
+    right: 30px;
+  }
+
+  .footer__help{
+    margin: 0;
+  }
+
+  .footer__help--mobile{
+    position: relative;
+    top: 15px;
+    width: 0;
+    left: 30px;
+  }
+
+  .footer__help img {
+    margin: -6px 0px 0px 0px;
+  }
+
+  .footer__reserved p {
+    padding: 13px 0px 0px 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer__arrow {
+    right: 10px;
+  }
+  .footer__container__left {
+    padding: 0 0 0 10px;
   }
 }
 

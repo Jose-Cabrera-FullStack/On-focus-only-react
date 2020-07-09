@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom';
 
 import '../assets/styles/components/Footer.scss';
@@ -69,8 +69,8 @@ const Footer = (props) => {
         </div>
 
         <div className="footer__container__right">
-          <div className="flex">
-            <div>
+          <div className="footer__container__right--mobile flex">
+            <div className="footer__container__right--fix">
               <ol>
                 <h5>Legales</h5>
                 <Link to="/politicas">
@@ -86,12 +86,13 @@ const Footer = (props) => {
                 </li>
                 </Link>
               </ol>
-              <div className="footer__help">
+              <div className="footer__help display__screen__desktop">
                 <img src={Message} alt="Mensaje" />
                 <p>ayuda@onfocus.com</p>
               </div>
             </div>
             <img
+            onClick={""}
             id="footer__arrow"
             className="footer__arrow"
             src={Arrow}
@@ -103,6 +104,10 @@ const Footer = (props) => {
     </footer>
     <div className={"footer__reserved"+ " " + props.onlyDesktop}>
       <p>All Rights Reserved 2019.</p>
+      <div className="footer__help footer__help--mobile display__screen__mobile">
+                <img src={Message} alt="Mensaje" />
+                <p>ayuda@onfocus.com</p>
+              </div>
     </div>
     </>
 )};
