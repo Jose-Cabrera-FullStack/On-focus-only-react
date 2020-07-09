@@ -5,7 +5,8 @@ import '../assets/styles/components/Footer.scss';
 
 import Logo from '../assets/static/images/svg/logo.svg'
 import Message from '../assets/static/images/svg/message.svg'
-import Arrow from '../assets/static/images/svg/arrow-up.svg'
+
+import ScrollArrowUp from './Utils/ScrollArrowUp'
 
 const Footer = (props) => {
       
@@ -91,13 +92,7 @@ const Footer = (props) => {
                 <p>ayuda@onfocus.com</p>
               </div>
             </div>
-            <img
-            onClick={""}
-            id="footer__arrow"
-            className="footer__arrow"
-            src={Arrow}
-            alt="Flecha hacia arriba"
-            />
+            <ScrollArrowUp/>
           </div>
         </div>
       </div>

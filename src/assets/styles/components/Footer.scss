@@ -260,7 +260,7 @@
 
   .footer__arrow{
     margin-left: auto;
-    top: -400px;
+    top: -440px;
     right: 40px;
   }
 
@@ -313,6 +313,8 @@
 @media screen and (max-width: 450px) {
   .footer__arrow {
     right: 10px;
+    width: 28px;
+    height: 28px;
   }
   .footer__container__left {
     padding: 0 0 0 10px;
