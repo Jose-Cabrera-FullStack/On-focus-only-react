@@ -1,5 +1,6 @@
 import React from 'react';
-import {BrowserRouter,Switch,HashRouter as Router,Route,Redirect} from 'react-router-dom';
+import { BrowserRouter, Switch, HashRouter as Router, Route, Redirect } from 'react-router-dom';
+
 import Home from '../containers/Home';
 import Courses from '../containers/Courses';
 import Course from '../containers/Course';
@@ -22,7 +23,7 @@ import Youtube from '../containers/Youtube';
 
 const App = () => (
     // Arreglar para produccion las rutas
-    <Router>
+    <Router location="history">
         <Switch>
             <Redirect exact from="/" to="/home" component={Home} />
             <Route exact path="/home" component={Home} />

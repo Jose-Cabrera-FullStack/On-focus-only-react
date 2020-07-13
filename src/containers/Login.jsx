@@ -6,11 +6,17 @@ import { loginUser } from '../actions'
 
 import '../assets/styles/components/Login.scss'
 
+import Facebook from '../assets/static/images/svg/facebook-icon-button.svg'
+import Google from '../assets/static/images/svg/google-icon-button.svg'
+
+import Button from '../components/Utils/ButtonArrowRight'
+
+
 const Login = props => {
   const [form, setValues] = useState({
     email: ''
   })
-
+  
   const handleInput = event => {
     setValues({
       ...form,
@@ -23,62 +29,36 @@ const Login = props => {
     props.loginUser(form, '/perfil')
   }
 
+  // getModalStyle is not a pure function, we roll the style only on the first render
   return (
     <>
-      <section className='login'>
-        <div className='register__container'>
-          <div className='register__container__inside'>
-            <h2 className='register__container__title register__container__title--login'>
-              ENTRAR
-            </h2>
-            <hr className='register__input__line register__input __line--fix' />
-            <form className='register__container--form' onSubmit={handleSubmit}>
-              <p>INGRESA TU EMAIL</p>
-              <input
-                name='email'
-                className='register__input'
-                type='text'
-                placeholder='ingresa su email aquí'
-                onChange={handleInput}
-                required
-              />
-              <hr className='register__input__line' />
-              <p>INGRESA TU CONTRASEÑA</p>
-              <input
-                name='password'
-                className='register__input'
-                type='password'
-                placeholder='Contraseña'
-                onChange={handleInput}
-                required
-              />
-              <hr className='register__input__line' />
+      <section className="login">
+        <div className="login__inside">
+        <span onClick={props.handleClose} className="congratulation__exit--login" alt="Ícono para salir"></span>
+         <h1 className="login__inside__title">Hola <br/>
+          Lorem ipsum dolor sit amet.
+        </h1>
 
-              <button
-                className='btn btn__secondary btn__register '
-                type='submit'
-              >
-                ¡VAMOS A ENTRENAR!
-              </button>
-            </form>
+         <button className="facebook__button">
+          <img className="facebook__button__img" src={Facebook} alt="Logo de Facebook"/>
+          Continuá con Facebook</button>
 
-            <div className='links__display'>
-              <div>
-                <Link to='/register'>
-                  <strong className='links__hover'>
-                    ¿Aún no tienes una cuenta? Registrate
-                  </strong>
-                </Link>
-              </div>
+         <button className="google__button">
+          <img className="google__button__img" src={Google} alt="Logo de Google"/>
+          Continuá con Google</button>
 
-            </div>
-          </div>
-        </div>
-        <div className='slogan'>
-          <h1>¿Estas preparado para dejar de ser un Espectador?</h1>
-          <h2>
-            Entra para comenzar a entrenar y estar mas cerca de tus sueños
-          </h2>
+        <form action="" className="login__inside__form">
+
+            <label className="login__inside__form__label">O iniciá sesión con tu correo electrónico</label>
+            <input className="login__inside__form__input" type="text" name="" placeholder="Correo"/>
+
+            <label className="login__inside__form__label">Contraseña</label>
+            <input className="login__inside__form__input" type="password" name="" placeholder="Contraseña"/>
+
+            <Button text={"Iniciar Sesión"} width={"btn__secundary--login__modal"}/>
+
+        </form>
+            <p className="login__inside__text">¿No eres miembro? Registrate</p>
         </div>
       </section>
     </>

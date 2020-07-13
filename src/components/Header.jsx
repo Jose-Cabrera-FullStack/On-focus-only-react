@@ -1,10 +1,14 @@
 import React,{useState} from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import { logoutRequest } from '../actions';
 
 import EmergentMenu from './Utils/EmergentMenu'
+import ModalLogin from './Utils/Modal'
+
+import Login from '../containers/Login'
+
 
 import Logo from '../assets/static/images/svg/logo-small.svg'
 import Hamburguer from '../assets/static/images/svg/icon-hamburguer.svg'
@@ -25,6 +29,17 @@ const Header = props => {
   // const handleLogout = () => {
   //   props.logoutRequest({});
   // };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
 
   return(
   
@@ -59,9 +74,12 @@ const Header = props => {
             <li className="navbar__menu ">
               <button
                 className="btn__primary btn__primary--login btn__primary--login"
+                onClick={handleOpen}
+                type="button"
               >
                 Iniciar Sesion
               </button>
+              <ModalLogin open={open} handleClose={handleClose} body={<Login handleClose={handleClose}/>}/>
             </li>
             <li className="navbar__menu">
               <Link to="/registrarse">
