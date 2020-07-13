@@ -13,7 +13,7 @@ import AmeticaExpress from '../../../assets/static/images/img/american-express.p
 
 
 const CreditCard = (props) => (
-    <div className="way-to-pay__input__box">
+    <form action="submit" className="way-to-pay__input__box">
         <p className="way-to-pay__input__box__title">Ingresá los datos de tu tarjeta</p>
         <input className="way-to-pay__input way-to-pay__input--card" type="text" placeholder="Número de la tarjeta"/>
         <div className="flex">
@@ -29,9 +29,7 @@ const CreditCard = (props) => (
                 <img className="way-to-master" src={MasterCard} alt="Mastercard"/>
             </div>
         </div>
-        <Link to="/adquirido">
             <ButtonArrowRight background={'btn__secundary--way-to-pay'} />
-        </Link>
-    </div>
+    </form>
 )
 export default CreditCard;

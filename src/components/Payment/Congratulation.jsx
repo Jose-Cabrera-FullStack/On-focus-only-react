@@ -6,12 +6,11 @@ import '../../assets/styles/components/Payment.scss';
 
 import Human from '../../assets/static/images/img/human-congratulation.png'
 
-const Pay = () => (
+const Pay = ({handleClose}) => (
     <section className="congratulation">
         <div className="congratulation__box">
-        <span className="congratulation__exit" alt="Ícono para salir"></span>
+            <span onClick={handleClose} className="congratulation__exit" alt="Ícono para salir"></span>
             <div className="congratulation__box__inside">
-
             <img src={Human} alt="Felicidades"/>
             <h1>¡Felicitaciones!</h1>
             <h4>Adquiriste tu curso con éxito.</h4>

@@ -7,7 +7,6 @@ import Course from '../containers/Course';
 import Visualization from '../containers/Visualization';
 import ShoppingCar from '../containers/ShoppingCar';
 import Pay from '../containers/Pay';
-import PayCongratulation from '../containers/PayCongratulation';
 import CourseBuyed from '../containers/CourseBuyed';
 import MyCourse from '../containers/MyCourse';
 import MyProfile from '../containers/MyProfile';
@@ -32,7 +31,6 @@ const App = () => (
             <Route exact path="/curso" component={Course} />
             <Route exact path="/curso/:id" component={Visualization} />
             <Route exact path="/pago" component={Pay} />
-            <Route exact path="/adquirido" component={PayCongratulation} />
             <Route exact path="/curso-comprado" component={CourseBuyed} />
             <Route exact path="/mis-cursos" component={MyCourse} />
             <Route exact path="/mi-perfil" component={MyProfile} />
