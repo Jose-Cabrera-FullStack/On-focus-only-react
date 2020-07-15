@@ -30,6 +30,18 @@ const CourseList = (props) => (
             <li className="visualization__sidebar__list">
             <Course/>
             </li>
+            <li className="visualization__sidebar__list">
+            <Course/>
+            </li>
+            <li className="visualization__sidebar__list">
+            <Course/>
+            </li>
+            <li className="visualization__sidebar__list">
+            <Course/>
+            </li>
+            <li className="visualization__sidebar__list">
+            <Course/>
+            </li>
           </ol>
         </div>
 )
