@@ -1,14 +1,30 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import Vimeo from '@u-wave/react-vimeo';
 
 import '../../assets/styles/components/Visualization.scss';
 import '../../assets/styles/components/Course.scss';
-import Video from '../../assets/static/images/img/video.png';
 
 
-const SmallVideo = (props) => (
-    <figure className={"course__img"+ " " + props.OnlyDesktop}>
-        <img className={props.onlyMobile} src={Video} alt="Video del Curso"/>
-    </figure>
-)
+const SmallVideo = ({ onlyMobile, OnlyDesktop, width}) => {
+
+    const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
+
+    const handleWindowResize = () => {
+        setScreenWidth(window.innerWidth);
+      };
+
+    useEffect(() => {
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    return(
+    <div className={screenWidth < 1024 ? "course__video__mobile"+ " " + OnlyDesktop + " " + onlyMobile : onlyMobile}>
+        <Vimeo
+        video="76979871"
+        width={screenWidth < 1024 ? "" : "661px"}
+        />
+
+    </div>
+)}
 export default SmallVideo;

@@ -28,7 +28,7 @@ const Course = () => {
 
         <Header/>
         <Breadcrumbs onlyMobile={'display__screen__mobile__flex'} margin={'beadcrumbs__course'}/>
-        <SmallVideo onlyMobile={'visualization__mobile display__screen__mobile__flex'}/>
+        <SmallVideo onlyMobile={'visualization__mobile display__screen__mobile'} width/>
         <HeroCoursePlus/>
         <CourseInfo/>
         <CourseInclusive/>
