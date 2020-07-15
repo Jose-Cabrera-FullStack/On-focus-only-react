@@ -16,7 +16,9 @@ const ModalLogin = ({ body, open , handleClose}) => {
     aria-describedby="simple-modal-description"
     BackdropProps={{ style: { backgroundColor: "#ffffffe0" } }}
     >
-    {body ? body : <p>Funciona</p>}
+      <>
+      {body ? body : <p>Funciona</p>}
+      </>
     </Modal>
 )}
 export default ModalLogin;

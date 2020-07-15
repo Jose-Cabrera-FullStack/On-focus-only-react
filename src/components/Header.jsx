@@ -9,11 +9,9 @@ import ModalLogin from './Utils/Modal'
 
 import Login from '../containers/Login'
 
-
 import Logo from '../assets/static/images/svg/logo-small.svg'
 import Hamburguer from '../assets/static/images/svg/icon-hamburguer.svg'
 import Shopping from '../assets/static/images/svg/shopping-car.svg'
-
 
 import '../assets/styles/components/Header.scss';
 
@@ -39,7 +37,6 @@ const Header = props => {
   const handleClose = () => {
     setOpen(false);
   };
-
 
   return(
   

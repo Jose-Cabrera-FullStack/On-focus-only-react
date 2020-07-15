@@ -10,9 +10,20 @@ import CreditCarForm from './Form/CreditCar'
 import MercadoPagoForm from './Form/MercadoPago'
 import PaypalForm from './Form/Paypal'
 
+import Modal from '../Utils/Modal'
+import Congratulation from '../../components/Payment/Congratulation';
 
 const Pay = (props) => {
     
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
     
     const [isSwitch, setSwitch] = useState("");
     
@@ -25,15 +36,15 @@ const Pay = (props) => {
     const PayMethod = (isSwitch) =>{
         switch(isSwitch) {
     
-            case "MercadoPago":  return <MercadoPagoForm/>;
-            case "Paypal":       return <PaypalForm/>;
-            default:             return <CreditCarForm/>
+            case "MercadoPago":  return <MercadoPagoForm onClick={handleOpen} modal={<Modal open={open} handleClose={handleClose} body={<Congratulation handleClose={handleClose}/>}/>}/>;
+            case "Paypal":       return <PaypalForm onClick={handleOpen} modal={<Modal open={open} handleClose={handleClose} body={<Congratulation handleClose={handleClose}/>}/>}/>;
+            default:             return <CreditCarForm modal={<Modal/>}/>
             
             }
         }
 
     return(
-    <form action="submit" className="way-to-pay">
+    <section className="way-to-pay">
         <div className={props.onlyDesktop}>
         <p className="way-to-pay__text">Ingresá tu correo electrónico.</p>
         <input type="text" placeholder="E-mail" className="way-to-pay__input way-to-pay__input--email"/>
@@ -47,6 +58,6 @@ const Pay = (props) => {
 
             {PayMethod(isSwitch)}
         </div>
-    </form>
+    </section>
 )}
 export default Pay;

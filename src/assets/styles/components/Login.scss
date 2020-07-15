@@ -7,7 +7,7 @@
     margin-right: auto;
     width: 558px;
     height: 631px;
-    margin-top: 20px ;
+    margin-top: 50px;
 }
 
 .login__inside{
@@ -58,6 +58,16 @@
     align-items: center;
     place-content: center;
     margin-top: 38px;
+}
+
+.login__inside__text a{
+    text-decoration: none;
+    margin-left: 5px;
+    color: #b38a58;
+}
+
+.login__inside__text a:hover{
+    color: #03002b;
 }
 
 .login__inside__form{

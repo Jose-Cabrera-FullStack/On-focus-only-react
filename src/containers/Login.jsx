@@ -58,7 +58,7 @@ const Login = props => {
             <Button text={"Iniciar Sesión"} width={"btn__secundary--login__modal"}/>
 
         </form>
-            <p className="login__inside__text">¿No eres miembro? Registrate</p>
+            <p className="login__inside__text">¿No eres miembro? <Link to="/registrarse">Registrate</Link></p>
         </div>
       </section>
     </>
