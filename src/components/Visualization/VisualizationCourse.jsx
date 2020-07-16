@@ -9,10 +9,15 @@ import CoursesList from '../Visualization/Course/CoursesList';
 import Video from './Video/Video';
 
 import ArrowLeft from '../../assets/static/images/svg/arrow-visualization.svg'
+import ArrowLeftHover from '../../assets/static/images/svg/arrow-visualization-black-hover.svg'
+
 
 const VisualizationCourse = () => (
     <section className="visualization">
-        <Breadcrumbs icon={ArrowLeft} onlyMobile={"visualization__navbar"}/>
+        <Breadcrumbs
+        icon={ArrowLeft} 
+        iconHover={ArrowLeftHover}
+        onlyMobile={"visualization__navbar"}/>
 
         <Video display={"display__screen__mobile"}/>
 
