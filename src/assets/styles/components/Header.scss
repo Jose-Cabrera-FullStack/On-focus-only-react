@@ -14,14 +14,33 @@
   height: 33px;
   position: relative;
   right: 22px;
-  bottom: 5px;
+  bottom: 12px;
 }
 
 .navbar__menu__shopping__cart {
   width: 30px;
   position: relative;
-  bottom: 5px;
+  bottom: 22px;
   margin: 0 0 0 10px;
+}
+
+.navbar__menu__shopping__cart__notification{
+  background: #B38A58;
+  position: relative;
+  left: 37px;
+  bottom: 10px;
+  z-index: 3;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+}
+
+.navbar__menu__shopping__cart__number{
+  color: #03002b;
+  font-family: 'Mont-Bold';
+  font-size: 12px;
+  position: relative;
+  bottom: 3px;
 }
 
 .navbar__element__list {

@@ -22,7 +22,7 @@ import Youtube from '../containers/Youtube';
 
 const App = () => (
     // Arreglar para produccion las rutas
-    <Router location="history">
+    <Router>
         <Switch>
             <Redirect exact from="/" to="/home" component={Home} />
             <Route exact path="/home" component={Home} />

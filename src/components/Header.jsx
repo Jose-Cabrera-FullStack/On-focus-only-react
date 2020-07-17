@@ -61,6 +61,9 @@ const Header = props => {
             </Link>
 
             <li className="navbar__menu navbar__menu--fix" onClick={toggleTrueFalse}>
+              <div className="navbar__menu__shopping__cart__notification">
+                <strong className="navbar__menu__shopping__cart__number">3</strong>
+              </div>
               <img
                 src={Shopping}
                 className="navbar__menu__shopping__cart"

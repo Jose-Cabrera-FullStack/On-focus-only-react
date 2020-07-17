@@ -57,6 +57,10 @@
     user-select: none;
 }
 
+.visualization__sidebar__list:hover{
+    background: #b38a58;
+}
+
 .visualization__sidebar__list__box{
     margin: 10px 0px 0px 65px;
 }
@@ -99,6 +103,10 @@
     width: 350px;
     cursor: pointer;
     user-select: none;
+}
+
+.visualization__sidebar__inside:hover{
+    background: #b38a58;
 }
 
 .visualization__sidebar__inside--watching{
