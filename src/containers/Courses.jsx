@@ -7,9 +7,12 @@ import AboutUs from '../components/Principal/AboutUs';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+import { getCourseCategory } from "../actions";
+
 import '../assets/styles/App.scss';
 
 const Courses = () => {
+
   return(
     <div className="App">
 
@@ -24,4 +27,14 @@ const Courses = () => {
   );
 }
 
-export default connect(null,null)(Courses);
+// const mapStateToProps = state => {
+//   return {
+//     course: state.course,
+//   };
+// };
+
+// const mapDispatchToProps = {
+//   getCourseCategory,
+// };
+
+export default connect( null, null )(Courses);

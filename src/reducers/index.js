@@ -1,14 +1,19 @@
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'GET_COURSE_CATEGORY':
+      return {
+        ...state,
+        category: state.course.find(item => item.category === action.payload) || {}
+      };
     case 'SET_FAVORITE':
       return {
         ...state,
-        myList: [...state.myList, action.payload],
+        course: [...state.course, action.payload],
       };
     case 'DELETE_FAVORITE':
       return {
         ...state,
-        myList: state.myList.filter(items => items.id !== action.payload),
+        course: state.course.filter(items => items.id !== action.payload),
       };
     case 'LOGIN_REQUEST':
       return {

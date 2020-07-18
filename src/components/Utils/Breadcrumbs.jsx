@@ -9,8 +9,6 @@ const Beadcrumbs = ({ onlyMobile, margin , onlyDesktop, icon, iconHover}) => {
     
     const [isHover, setIsHover] = useState(false);
 
-    console.log(isHover)
-
     return(
         <div 
         className={"beadcrumbs" + " " + onlyMobile + " " + margin + " "+ onlyDesktop}

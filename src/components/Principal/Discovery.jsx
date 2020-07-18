@@ -1,44 +1,61 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React from "react";
+import { connect } from "react-redux";
 
-import '../../assets/styles/components/Course.scss';
-import '../../assets/styles/components/Courses.scss';
+import "../../assets/styles/components/Course.scss";
+import "../../assets/styles/components/Courses.scss";
 
-import Course from './Course/Course';
+import Course from "./Course/Course";
+import Diploma from "./Diploma/Diploma";
 
-import Diploma from './Diploma/Diploma';
-
-import Class1 from '../../assets/static/images/img/ui-design.png'
-import Class2 from '../../assets/static/images/img/ui-design-1.png'
-import Class3 from '../../assets/static/images/img/ui-design-2.png'
-import Class4 from '../../assets/static/images/img/ui-design-3.png'
-
+import { getCourseCategory } from "../../actions";
 
 const Discovery = (props) => {
-  return(
+  let course = props.course;
+
+  return (
     <section className="discovery">
       <div className="discovery__container">
         <h2 className="discovery__title">
-          {props.info ? props.info : 'Descubre la plataforma lider en negocios y emprendimiento.'}
+          {props.info
+            ? props.info
+            : "Descubre la plataforma lider en negocios y emprendimiento."}
         </h2>
 
         <div className=" flex">
           <div className={"discovery__course" + " " + props.column}>
-
-            <Course img={Class1}/>
-
-            <Course img={Class2}/>
-
-            <Course img={Class3}/>
-
-            <Course img={Class4}/>
-    
+            {course.map((item) => {
+              return (
+                <div key={item.course_id}>
+                  <Course
+                    priceOff={item.course_id}
+                    category={item.category}
+                    title={item.name}
+                    teacher={item.teacher}
+                    students={item.students}
+                    price={item.price}
+                    img={item.featured_image}
+                  />
+                </div>
+              );
+            })}
           </div>
 
-            <Diploma/>
-
-          </div>
+          <Diploma />
+          
+        </div>
       </div>
     </section>
-)}
-export default Discovery;
+  );
+};
+
+const mapStateToProps = (state) => {
+  return {
+    course: state.course,
+  };
+};
+
+const mapDispatchToProps = {
+  getCourseCategory,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Discovery);

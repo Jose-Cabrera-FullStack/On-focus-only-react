@@ -8,7 +8,18 @@ import Shopping from '../../Utils/ShoppingCarSquare';
 import Promo from '../../../assets/static/images/svg/rectangle-promo.svg'
 import User from '../../../assets/static/images/svg/user.svg'
 
-const Course = ({img, priceOff, title, category, teacher, students, price, priceBefore}) => {
+const Course = ({
+  img, 
+  priceOff, 
+  title, 
+  category, 
+  teacher, 
+  students, 
+  price, 
+  }) => {
+
+    let priceBefore = price + (price * (priceOff/100))
+
     return(
         <div className="discovery__box">
         <div className="discovery__box__img">
@@ -19,7 +30,7 @@ const Course = ({img, priceOff, title, category, teacher, students, price, price
               alt="Precio"
             />
             <div className="discovery__box__price__off__letter">
-              <p>{priceOff ? priceOff : "30%" }OFF</p>
+              <p>{priceOff ? `${priceOff}%` : "30%" }OFF</p>
             </div>
           </div>
 
@@ -45,10 +56,10 @@ const Course = ({img, priceOff, title, category, teacher, students, price, price
             </div>
             <div className="flex">
               <h2 className="discovery__box__info__price">AR$ {price ? price:"490"}</h2>
-              <i className="discovery__box__info__price__before">Antes <strong>AR$ {priceBefore ? priceBefore : "699"}</strong></i>
+              <i className="discovery__box__info__price__before">Antes <strong>AR$ {priceBefore ? parseInt(priceBefore) : "699"}</strong></i>
             </div>
             <div className="flex">
-            <Link to='/curso'>
+            <Link to={`/cursos/${category}`}>
               <button
                 className="btn__secundary btn__secundary--buy discovery__box__position"
                 >

@@ -1,5 +1,10 @@
 import axios from 'axios';
 
+export const getCourseCategory = payload => ({
+  type: 'GET_COURSE_CATEGORY',
+  payload,
+});
+
 export const setFavorite = payload => ({
   type: 'SET_FAVORITE',
   payload,
