@@ -27,7 +27,7 @@ const Discovery = (props) => {
               return (
                 <div key={item.course_id}>
                   <Course
-                    priceOff={item.course_id}
+                    priceOff={item.discount}
                     category={item.category}
                     title={item.name}
                     teacher={item.teacher}
@@ -41,7 +41,6 @@ const Discovery = (props) => {
           </div>
 
           <Diploma />
-          
         </div>
       </div>
     </section>

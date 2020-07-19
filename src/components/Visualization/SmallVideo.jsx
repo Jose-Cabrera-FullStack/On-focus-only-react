@@ -5,7 +5,7 @@ import '../../assets/styles/components/Visualization.scss';
 import '../../assets/styles/components/Course.scss';
 
 
-const SmallVideo = ({ onlyMobile, OnlyDesktop }) => {
+const SmallVideo = ({ video_id, onlyMobile, OnlyDesktop }) => {
 
     const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
 
@@ -21,7 +21,7 @@ const SmallVideo = ({ onlyMobile, OnlyDesktop }) => {
     return(
     <div className={screenWidth < 1024 ? "course__video__mobile"+ " " + OnlyDesktop + " " + onlyMobile : onlyMobile}>
         <Vimeo
-        video="76979871"
+        video={video_id ? video_id : "76979871"}
         width={screenWidth < 1024 ? "" : "661px"}
         />
 

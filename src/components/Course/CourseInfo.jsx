@@ -11,12 +11,12 @@ import SmallVideo from '../Visualization/SmallVideo'
 
 import '../../assets/styles/components/CoursePlus.scss';
 
-const CourseInfo = ({ course }) => {
+const CourseInfo = ({ category }) => {
     return(
     <section className="course">
         <Information OnlyDesktop={"display__screen__desktop"}/>      
         <div className="flex">
-            <SmallVideo OnlyDesktop={"display__screen__desktop"}/>      
+            <SmallVideo OnlyDesktop={"display__screen__desktop"} video_id={category.video_intro}/>      
             <CourseSaveMoney />      
         </div>
     <h1 className="course__info__title">Informacion</h1>
@@ -24,4 +24,12 @@ const CourseInfo = ({ course }) => {
     <CourseAbout/>   
 </section>
 )}
-export default connect(null, null)(CourseInfo);
+
+const mapStateToProps = state => {
+    return {
+      category: state.category || {},
+    };
+  };
+
+
+export default connect(mapStateToProps, null)(CourseInfo);

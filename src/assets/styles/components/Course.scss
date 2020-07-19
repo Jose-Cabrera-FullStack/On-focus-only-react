@@ -66,7 +66,7 @@
 }
 
 .course__information__text__width{
-    width: auto;
+    width: 195px;
 }
 
 .course__information__students{
@@ -74,7 +74,7 @@
 }
 
 .course__information__students--fix{
-    margin: 20px 20px 0px 10px;
+    margin: 30px 20px 0px 10px;
 }
 
 .discovery__box__info__inside{
@@ -611,7 +611,7 @@ color: #B38A58;
 
 @media screen and (max-width: 1130px) {
     .course__inclusive__diploma{
-        right: 70px;
+        right: 30px;
     }
 }
 
@@ -711,6 +711,7 @@ color: #B38A58;
 
     .course__information__text__width{
         margin: 0 0 0 10px;
+        width: auto;
     }
 
     .course__information__students--fix{

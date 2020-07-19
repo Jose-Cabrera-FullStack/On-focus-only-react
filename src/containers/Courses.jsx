@@ -1,31 +1,25 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import Hero from '../components/Course/Hero';
-import Discovery from '../components/Principal/Discovery';
-import AboutUs from '../components/Principal/AboutUs';
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Hero from "../components/Course/Hero";
+import Discovery from "../components/Principal/Discovery";
+import AboutUs from "../components/Principal/AboutUs";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-import { getCourseCategory } from "../actions";
-
-import '../assets/styles/App.scss';
+import "../assets/styles/App.scss";
 
 const Courses = () => {
-
-  return(
+  return (
     <div className="App">
-
-        <Header/>
-        <Hero/>
-        <Discovery/>
-        <AboutUs/>
-        <Footer/>
-   
+      <Header />
+      <Hero />
+      <Discovery />
+      <AboutUs />
+      <Footer />
     </div>
-
   );
-}
+};
 
 // const mapStateToProps = state => {
 //   return {
@@ -37,4 +31,4 @@ const Courses = () => {
 //   getCourseCategory,
 // };
 
-export default connect( null, null )(Courses);
+export default connect(null, null)(Courses);
