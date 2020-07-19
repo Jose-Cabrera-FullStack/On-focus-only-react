@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -38,7 +38,7 @@ const Course = (props) => {
         <Breadcrumbs onlyMobile={'display__screen__mobile__flex'} margin={'beadcrumbs__course'}/>
         <SmallVideo onlyMobile={'visualization__mobile display__screen__mobile'} width/>
         <HeroCoursePlus/>
-        <CourseInfo/>
+        <CourseInfo course={props.category}/>
         <CourseInclusive/>
         <CourseForMe/>
         <CourseModule/>
