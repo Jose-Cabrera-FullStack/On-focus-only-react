@@ -17,8 +17,9 @@ const Course = ({
   teacher,
   students,
   price,
+  course,
 }) => {
-  let priceBefore = price * (priceOff / 100);
+  let priceBefore = price * ( priceOff / 100);
 
   return (
     <div className="discovery__box">
@@ -83,7 +84,7 @@ const Course = ({
                 </div>
               </button>
             </Link>
-            <Shopping />
+            <Shopping course={course}/>
           </div>
         </div>
       </div>

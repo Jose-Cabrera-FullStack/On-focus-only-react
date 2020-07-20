@@ -34,6 +34,7 @@ const Discovery = (props) => {
                     students={item.students}
                     price={item.price}
                     img={item.featured_image}
+                    course={item}
                   />
                 </div>
               );

@@ -14,7 +14,6 @@ const Details = ({total,totalBefore}) => {
     
     const changeisToggle = () => setToggle(!isToggle);
     
-    console.log(isToggle)
     return(
     <section className="details">
         <div className="details__inside">

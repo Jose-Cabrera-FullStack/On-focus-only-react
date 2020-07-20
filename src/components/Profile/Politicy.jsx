@@ -25,8 +25,7 @@ const Politicy = (props) => {
             
             }
         }
-
-        console.log(props.location)
+        
   return (
     <section className="data"> 
     <div className="flex display__screen__mobile__without__flex">

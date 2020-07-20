@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { connect } from "react-redux";;
 
 import '../../assets/styles/components/Utils.scss';
 import '../../assets/styles/components/Course.scss';
@@ -8,10 +8,18 @@ import ButtonArrowRight from '../Utils/ButtonArrowRight'
 import Shopping from '../Utils/ShoppingCarSquare';
 
 
-const ButtonShopping = () => (
+const ButtonShopping = (props) => {
+    return(
     <div className="discovery__box__info__inside__buttons flex">
         <ButtonArrowRight/>
-        <Shopping />
+        <Shopping course={props.category} />
     </div> 
-)
-export default ButtonShopping;
+)}
+
+const mapStateToProps = (state) => {
+    return {
+      category: state.category || {},
+    };
+  };
+
+export default connect( mapStateToProps, null)(ButtonShopping);

@@ -32,8 +32,8 @@ const [isForm, setForm] = useState({
   password: '',
 })
 
-console.log(isForm.email)
-console.log(isForm.password)
+// console.log(isForm.email)
+// console.log(isForm.password)
 
   return (
       <section className="register">

@@ -49,7 +49,7 @@ const Data = (props) => {
     }
 
 
-    console.log(isFormValidate.actualPasswordValidate)
+    // console.log(isFormValidate.actualPasswordValidate)
 
   return (
     <section className="data" onSubmit={handleSubmit}>

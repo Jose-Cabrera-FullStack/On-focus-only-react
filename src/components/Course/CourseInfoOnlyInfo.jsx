@@ -12,7 +12,6 @@ import Calendary from "../../assets/static/images/svg/calendary.svg";
 
 const CourseInfoOnlyInfo = (props) => {
     const category = props.category
-    console.log(formatHourMinute(props.category.duration))
     return(
         <div className={"course__information" + " " + props.onlyDesktop}>
             <div className={"flex" + " " + props.onlyMobile}>

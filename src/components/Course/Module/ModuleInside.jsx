@@ -5,7 +5,6 @@ import '../../../assets/styles/components/Buyed.scss';
 import Incomplete from '../../../assets/static/images/svg/icon-course-incomplete.svg'
 
 const ModuleInside = ({text, isToggled, buyed, helpCenter}) => {
-console.log()
     return(
         
         <div className={isToggled ? 

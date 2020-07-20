@@ -143,12 +143,10 @@
 }
 
 .discovery__box__info__icon {
-  display: block;
   width: 45px;
   height: 38px;
-  background-size: cover;
   margin: 7px 0px 30px 0px;
-  background-image: url(../../static/images/svg/shopping-car-squad.svg);
+  cursor: pointer;
 }
 
 .discovery__box__position {
@@ -245,15 +243,6 @@
   display: none;
 }
 /* <-------COURSE-------> */
-
-/* <-------ANIMATION-------> */
-.discovery__box__info__icon:hover {
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  background-image: url(../../static/images/svg/shopping-car-squad-black.svg);
-}
-
-/* <-------ANIMATION-------> */
 
 /* <-------MEDIA-------> */
 @media screen and (max-width: 1315px) {

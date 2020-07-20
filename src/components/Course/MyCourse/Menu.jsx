@@ -3,7 +3,7 @@ import React from 'react';
 import '../../../assets/styles/components/CoursePlus.scss';
 
 const Menu = ({isSwitch,All,Progress,Finish}) => {
-    console.log(isSwitch)
+
     return(
         <div className="flex">
             <p className="my-course__menu" onClick={All}>Todos</p>
