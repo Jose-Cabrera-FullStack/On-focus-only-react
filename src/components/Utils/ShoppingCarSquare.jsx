@@ -54,17 +54,29 @@ const ShoppingCarSquare = (props) => {
 
   const handleDeleteShopping = (course_id) => {
     setIsToggle(!isToggle);
-    props.deteleFavorite(course_id);
+    props.deleteFavorite(course_id);
   };
 
   return (
-    <div
-      onClick={isToggle ? handleShopping :() => handleDeleteShopping(course_id)}
-      className={" discovery__box__info__icon" + " " + props.class}
-      alt="Shopping Car"
-    >
-      <img src={isToggle ? ShoppingCarSelected : ShoppingCar} alt="" />
-    </div>
+    <>
+      {isToggle ? (
+        <div
+          onClick={() => handleDeleteShopping(course_id)}
+          className={" discovery__box__info__icon" + " " + props.class}
+          alt="Shopping Car"
+        >
+          <img src={ShoppingCarSelected} alt="" />
+        </div>
+      ) : (
+        <div
+          onClick={handleShopping}
+          className={" discovery__box__info__icon" + " " + props.class}
+          alt="Shopping Car"
+        >
+          <img src={ShoppingCar} alt="" />
+        </div>
+      )}
+    </>
   );
 };
 

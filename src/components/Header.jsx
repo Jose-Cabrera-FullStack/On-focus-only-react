@@ -1,26 +1,25 @@
-import React,{useState} from 'react';
-import { Link } from 'react-router-dom';
-import {connect} from 'react-redux';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-import { logoutRequest } from '../actions';
+import { logoutRequest } from "../actions";
 
-import EmergentMenu from './Utils/EmergentMenu'
-import ModalLogin from './Utils/Modal'
+import EmergentMenu from "./Utils/EmergentMenu";
+import ModalLogin from "./Utils/Modal";
 
-import Login from '../containers/Login'
+import Login from "../containers/Login";
 
-import Logo from '../assets/static/images/svg/logo-small.svg'
-import Hamburguer from '../assets/static/images/svg/icon-hamburguer.svg'
-import Shopping from '../assets/static/images/svg/shopping-car.svg'
+import Logo from "../assets/static/images/svg/logo-small.svg";
+import Hamburguer from "../assets/static/images/svg/icon-hamburguer.svg";
+import Shopping from "../assets/static/images/svg/shopping-car.svg";
 
-import '../assets/styles/components/Header.scss';
+import "../assets/styles/components/Header.scss";
 
-const Header = props => {
-
+const Header = (props) => {
   const [isToggled, setToggled] = useState(false);
 
   const toggleTrueFalse = () => setToggled(!isToggled);
-  
+
   // const { user= {} } = props;
   // const hasUser = Object.keys(user).length  >  0;
 
@@ -38,8 +37,11 @@ const Header = props => {
     setOpen(false);
   };
 
-  return(
-  
+  const shoppingcar = props.shoppingcar;
+
+  const notification = shoppingcar.length > 0;
+
+  return (
     <header>
       <nav className="navbar">
         <Link to="/">
@@ -47,11 +49,10 @@ const Header = props => {
             <img className="navbar__img" src={Logo} alt="" />
           </figure>
         </Link>
-        <img className="navbar__hamburguer" src={Hamburguer} alt=""/>
-        <img className="navbar__hamburguer__shopping" src={Shopping} alt=""/>
+        <img className="navbar__hamburguer" src={Hamburguer} alt="" />
+        <img className="navbar__hamburguer__shopping" src={Shopping} alt="" />
         <div className="grid-2 navbar__justify__self navbar__query">
-          <div className="navbar__query">
-          </div>
+          <div className="navbar__query"></div>
           <ol className="navbar__element__list">
             <Link to="/cursos" className="text-decoration">
               <li className="navbar__menu">Descubrir cursos</li>
@@ -60,17 +61,30 @@ const Header = props => {
               <li className="navbar__menu">About On Focus</li>
             </Link>
 
-            <li className="navbar__menu navbar__menu--fix" onClick={toggleTrueFalse}>
-              <div className="navbar__menu__shopping__cart__notification">
-                <strong className="navbar__menu__shopping__cart__number">3</strong>
-              </div>
+            <li
+              className="navbar__menu navbar__menu--fix"
+              onClick={toggleTrueFalse}
+            >
+              {notification ? (
+                <div className="navbar__menu__shopping__cart__notification">
+                  <strong className="navbar__menu__shopping__cart__number">
+                    {shoppingcar.length}
+                  </strong>
+                </div>
+              ) : (
+                ""
+              )}
               <img
                 src={Shopping}
-                className="navbar__menu__shopping__cart"
+                className={
+                  notification
+                    ? "navbar__menu__shopping__cart"
+                    : "navbar__menu__shopping__cart navbar__menu__shopping__cart--fix"
+                }
                 alt="Carrito de compras"
-                />
+              />
             </li>
-            <EmergentMenu toggle={isToggled}/>
+            <EmergentMenu toggle={isToggled} />
             <li className="navbar__menu ">
               <button
                 className="btn__primary btn__primary--login btn__primary--login"
@@ -79,13 +93,17 @@ const Header = props => {
               >
                 Iniciar Sesion
               </button>
-              <ModalLogin open={open} handleClose={handleClose} body={<Login handleClose={handleClose}/>}/>
+              <ModalLogin
+                open={open}
+                handleClose={handleClose}
+                body={<Login handleClose={handleClose} />}
+              />
             </li>
             <li className="navbar__menu">
               <Link to="/registrarse">
-              <button className="btn__primary btn__primary--login">
-                Registrarse
-              </button>
+                <button className="btn__primary btn__primary--login">
+                  Registrarse
+                </button>
               </Link>
             </li>
           </ol>
@@ -95,17 +113,14 @@ const Header = props => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    shoppingcar: state.shoppingcar || {},
+  };
+};
 
-// const mapStateToProps = (state) => {
-//   return {
-//     user: state.user,
-//   };
-// };
+const mapDispatchToProps = {
+  logoutRequest,
+};
 
-// const mapDispatchToProps = {
-//   logoutRequest,
-// };
-
-
-// export default connect(mapStateToProps,mapDispatchToProps)(Header);
+export default connect(mapStateToProps, null)(Header);
