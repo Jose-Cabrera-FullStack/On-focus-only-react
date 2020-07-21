@@ -1,9 +1,10 @@
 export default {
   shoppingcar:[],
+  total:0,
   course: [
     {
       course_id: 1,
-      teacher: "Juan Alvarez",
+      teacher: "Luis Alvarez",
       price: 700,
       students: 5,
       category: "diseño-web",
@@ -17,6 +18,7 @@ export default {
       featured_image: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
       status: "false",
       entity_status: "published",
+      inShopping: false,
       duration: 540,
       discount: 30
     },
@@ -26,6 +28,7 @@ export default {
       price: 930,
       students: 6,
       category: "marketing",
+      inShopping: false,
       name: "duis bibendum felis sed",
       description:
         "non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla",
@@ -54,6 +57,7 @@ export default {
       featured_image: "http://dummyimage.com/155x194.jpg/ff4444/ffffff",
       status: "true",
       duration: 800,
+      inShopping: false,
       entity_status: "published",
       discount: 25
     },
@@ -73,6 +77,7 @@ export default {
       featured_image: "http://dummyimage.com/174x193.png/ff4444/ffffff",
       status: "false",
       entity_status: "unpublished",
+      inShopping: false,
       discount: 20
     },
     {
@@ -92,6 +97,7 @@ export default {
       featured_image: "http://dummyimage.com/115x249.bmp/dddddd/000000",
       status: "true",
       entity_status: "unpublished",
+      inShopping: false,
       discount: 15
     },
     {
@@ -109,6 +115,7 @@ export default {
         "113185471",
       featured_image: "http://dummyimage.com/220x250.bmp/5fa2dd/ffffff",
       status: "true",
+      inShopping: false,
       entity_status: "published",
       discount: 10
     },
@@ -128,6 +135,7 @@ export default {
         "62467223",
       featured_image: "http://dummyimage.com/141x196.png/dddddd/000000",
       status: "false",
+      inShopping: false,
       entity_status: "unpublished",
       discount: 50
     },
@@ -147,6 +155,7 @@ export default {
         "19527537",
       featured_image: "http://dummyimage.com/161x225.jpg/dddddd/000000",
       status: "false",
+      inShopping: false,
       entity_status: "unpublished",
       discount: 75
     },
@@ -166,6 +175,7 @@ export default {
         "62512557",
       featured_image: "http://dummyimage.com/199x225.png/cc0000/ffffff",
       status: "true",
+      inShopping: false,
       entity_status: "unpublished",
       discount: 60
     },
@@ -185,6 +195,7 @@ export default {
         "38052137",
       featured_image: "http://dummyimage.com/104x158.jpg/cc0000/ffffff",
       status: "false",
+      inShopping: false,
       entity_status: "published",
       discount: 55
     },
@@ -204,6 +215,7 @@ export default {
         "24462920",
       featured_image: "http://dummyimage.com/158x118.jpg/5fa2dd/ffffff",
       status: "false",
+      inShopping: false,
       entity_status: "published",
       discount: 50
     },

@@ -7,9 +7,9 @@ import Star from '../../../assets/static/images/svg/star.svg'
 import DiplomaImg from '../../../assets/static/images/img/diploma.png'
 
 
-const Diploma = ({display}) => {
+const Diploma = ({display, none}) => {
     return(
-        <div className={"discovery__diploma"+ " " + display}>
+        <div className={"discovery__diploma"+ " " + display + " " + none}>
         <img
           className="discovery__diploma__star"
           src={Star}

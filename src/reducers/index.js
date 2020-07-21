@@ -8,12 +8,17 @@ const reducer = (state, action) => {
     case 'SET_FAVORITE':
       return {
         ...state,
-        shoppingcar: [...state.shoppingcar, action.payload],
+        shoppingcar: [...state.shoppingcar, action.payload]
       };
     case 'DELETE_FAVORITE':
       return {
         ...state, 
         shoppingcar: state.shoppingcar.filter(items => items.course_id !== action.payload),
+      };
+    case 'TOTAL_SHOPPING':
+      return {
+        ...state, 
+        total: action.payload,
       };
     case 'LOGIN_REQUEST':
       return {

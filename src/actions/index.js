@@ -15,6 +15,11 @@ export const deleteFavorite = payload => ({
   payload,
 });
 
+export const totalShopping = payload => ({
+  type: 'TOTAL_SHOPPING',
+  payload,
+});
+
 export const loginRequest = payload => ({
   type: 'LOGIN_REQUEST',
   payload,

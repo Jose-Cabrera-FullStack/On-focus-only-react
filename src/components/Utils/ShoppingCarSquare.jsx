@@ -57,6 +57,8 @@ const ShoppingCarSquare = (props) => {
     props.deleteFavorite(course_id);
   };
 
+  // console.log(props.shoppingcar)
+
   return (
     <>
       {isToggle ? (
@@ -65,7 +67,7 @@ const ShoppingCarSquare = (props) => {
           className={" discovery__box__info__icon" + " " + props.class}
           alt="Shopping Car"
         >
-          <img src={ShoppingCarSelected} alt="" />
+          <img src={ShoppingCarSelected} alt="Ícono de Carrito de compra seleccionado" />
         </div>
       ) : (
         <div
@@ -73,15 +75,21 @@ const ShoppingCarSquare = (props) => {
           className={" discovery__box__info__icon" + " " + props.class}
           alt="Shopping Car"
         >
-          <img src={ShoppingCar} alt="" />
+          <img src={ShoppingCar} alt="Ícono de Carrito de compra seleccionado" />
         </div>
       )}
     </>
   );
 };
 
+const mapStateToProps = (state) => {
+  return {
+    shoppingcar: state.shoppingcar || {},
+  };
+};
+
 const mapDispatchToProps = {
   setFavorite,
   deleteFavorite,
 };
-export default connect(null, mapDispatchToProps)(ShoppingCarSquare);
+export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCarSquare);

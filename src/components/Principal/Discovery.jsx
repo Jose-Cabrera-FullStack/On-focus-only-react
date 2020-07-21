@@ -23,25 +23,50 @@ const Discovery = (props) => {
 
         <div className=" flex">
           <div className={"discovery__course" + " " + props.column}>
-            {course.map((item) => {
-              return (
-                <div key={item.course_id}>
-                  <Course
-                    priceOff={item.discount}
-                    category={item.category}
-                    title={item.name}
-                    teacher={item.teacher}
-                    students={item.students}
-                    price={item.price}
-                    img={item.featured_image}
-                    course={item}
-                  />
-                </div>
-              );
-            })}
+            <>
+              {props.onlyThree ? (
+                <>
+                {course.slice(0,3).map((item) => {
+                    return (
+                      <div key={item.course_id}>
+                        <Course
+                          priceOff={item.discount}
+                          category={item.category}
+                          title={item.name}
+                          teacher={item.teacher}
+                          students={item.students}
+                          price={item.price}
+                          img={item.featured_image}
+                          course={item}
+                        />
+                      </div>
+                    );
+                  })}
+                </>
+              ) : (
+                <>
+                  {course.map((item) => {
+                    return (
+                      <div key={item.course_id}>
+                        <Course
+                          priceOff={item.discount}
+                          category={item.category}
+                          title={item.name}
+                          teacher={item.teacher}
+                          students={item.students}
+                          price={item.price}
+                          img={item.featured_image}
+                          course={item}
+                        />
+                      </div>
+                    );
+                  })}
+                </>
+              )}
+            </>
           </div>
 
-          <Diploma />
+          <Diploma none={props.none} />
         </div>
       </div>
     </section>

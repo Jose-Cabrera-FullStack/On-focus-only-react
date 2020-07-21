@@ -19,7 +19,7 @@ const Course = ({
   price,
   course,
 }) => {
-  let priceBefore = price * ( priceOff / 100);
+  let priceWithDiscount = price - (price * ( priceOff / 100));
 
   return (
     <div className="discovery__box">
@@ -65,11 +65,11 @@ const Course = ({
           </div>
           <div className="flex">
             <h2 className="discovery__box__info__price">
-              AR$ {price ? price : "490"}
+              AR$ {priceWithDiscount ? parseInt(priceWithDiscount) : "490"}
             </h2>
             <i className="discovery__box__info__price__before">
               Antes{" "}
-              <strong>AR$ {priceBefore ? parseInt(priceBefore) : "699"}</strong>
+              <strong>AR$ {price ? parseInt(price) : "699"}</strong>
             </i>
           </div>
           <div className="flex">

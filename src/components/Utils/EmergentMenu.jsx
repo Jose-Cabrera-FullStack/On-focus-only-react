@@ -8,7 +8,6 @@ import Course from "./EmergentMenuBox/Course";
 import ButtonArrowRight from "./ButtonArrowRight";
 
 const EmergentMenu = ({ toggle, total, shoppingcar }) => {
-
   return (
     <div className={toggle ? "hero__view__promo" : "display-none"}>
       {shoppingcar.length > 0 ? (
@@ -20,8 +19,9 @@ const EmergentMenu = ({ toggle, total, shoppingcar }) => {
                   course_id={item.course_id}
                   src={item.featured_image}
                   title={item.name}
-                  price={item.price}
+                  price={item.price - item.price * (item.discount / 100)}
                   priceBefore={item.price * (item.discount / 100)}
+                  inShopping={item.inShopping}
                 />
               </div>
             );
@@ -41,6 +41,7 @@ const EmergentMenu = ({ toggle, total, shoppingcar }) => {
               width={"btn__secundary--emergent"}
             />
             <ButtonArrowRight
+              link={"/carrito"}
               text="Ir al carrito"
               icon={"btn__arrow__buy__shopping"}
               width={"btn__secundary--emergent__shopping"}
@@ -59,6 +60,7 @@ const EmergentMenu = ({ toggle, total, shoppingcar }) => {
 const mapStateToProps = (state) => {
   return {
     shoppingcar: state.shoppingcar || {},
+    total:state.total
   };
 };
 
