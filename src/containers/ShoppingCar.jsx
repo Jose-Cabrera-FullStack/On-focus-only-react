@@ -8,7 +8,6 @@ import Header from "../components/Header";
 import "../assets/styles/App.scss";
 
 const Course = () => {
-  const display = "display-none";
   const column = "grid-column-3";
   const none = "display-none";
   const info = "Cursos recomendados.";

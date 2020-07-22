@@ -20,8 +20,7 @@ const EmergentMenu = ({ toggle, total, shoppingcar }) => {
                   src={item.featured_image}
                   title={item.name}
                   price={item.price - item.price * (item.discount / 100)}
-                  priceBefore={item.price * (item.discount / 100)}
-                  inShopping={item.inShopping}
+                  priceBefore={item.price}
                 />
               </div>
             );
@@ -52,7 +51,6 @@ const EmergentMenu = ({ toggle, total, shoppingcar }) => {
         <p>No hay elementos escogidos</p>
       )}
 
-      {/* <Course margin={"hero__view__promo__margin"} /> */}
     </div>
   );
 };

@@ -86,8 +86,7 @@
 }
 
 .hero__view__promo__total{
-    margin: 20px 0px 0 40px;
-    width: 370px;
+    margin: 20px 40px 0px 40px;
     border-top: 1px solid #0D0056;
 }
 .hero__view__promo__total h2{
@@ -97,7 +96,8 @@
 }
 
 .hero__view__promo__total__ar{
-    margin: 15px 0 0 150px;
+    position: absolute;
+    right: 50px;
 }
 
 .hero__view__promo__margin__btn{
