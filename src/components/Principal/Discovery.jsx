@@ -11,7 +11,7 @@ import { getCourseCategory } from "../../actions";
 
 const Discovery = (props) => {
   let course = props.course;
-
+  console.log(props)
   return (
     <section className="discovery">
       <div className="discovery__container">
@@ -26,7 +26,7 @@ const Discovery = (props) => {
             <>
               {props.onlyThree ? (
                 <>
-                {course.slice(0,3).map((item) => {
+                {course.slice(course.length - 3,course.length).map((item) => {
                     return (
                       <div key={item.course_id}>
                         <Course

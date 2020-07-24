@@ -33,8 +33,9 @@ const EmergentMenu = ({ toggle, total, shoppingcar }) => {
               </h2>
             </div>
           </div>
-          <div className="hero__view__promo__margin__btn">
+          <div className="hero__view__promo__margin__btn flex">
             <ButtonArrowRight
+              link={"/pago"}
               text="Comprar"
               icon={"btn__arrow__black"}
               width={"btn__secundary--emergent"}
@@ -48,9 +49,8 @@ const EmergentMenu = ({ toggle, total, shoppingcar }) => {
           </div>
         </>
       ) : (
-        <p>No hay elementos escogidos</p>
+        <p className="hero__view__promo__empty">No hay elementos escogidos</p>
       )}
-
     </div>
   );
 };
@@ -58,7 +58,7 @@ const EmergentMenu = ({ toggle, total, shoppingcar }) => {
 const mapStateToProps = (state) => {
   return {
     shoppingcar: state.shoppingcar || {},
-    total:state.total
+    total: state.total,
   };
 };
 

@@ -13,20 +13,19 @@ const Details = ({ total, totalBefore, shoppingcar }) => {
   const [isToggle, setToggle] = useState(false);
 
   const changeisToggle = () => setToggle(!isToggle);
-
+  
+  // <--------se debe refactorizar---------->
   let totalWithOutDiscount = 0;
   let totalDiscount = 0;
-
   const totalWithOutDiscountshoppingcar = shoppingcar.map(
     (item) => (totalWithOutDiscount += item.price)
-  );
-
-  const discount = shoppingcar.map(
-    (item) => (totalDiscount += item.discount / shoppingcar.length)
-  );
-
-  console.log(discount);
-
+    );
+    
+    const discount = shoppingcar.map(
+      (item) => (totalDiscount += item.discount / shoppingcar.length)
+      );
+  // <--------se debe refactorizar---------->
+      
   return (
     <section className="details">
       <div className="details__inside">
@@ -46,7 +45,7 @@ const Details = ({ total, totalBefore, shoppingcar }) => {
               <strong>AR$ {total ? total : "0"}</strong>
             </div>
             <i className="details__inside__total__before">
-              ARS {totalWithOutDiscount ? totalWithOutDiscountshoppingcar : "0"}
+              ARS {totalWithOutDiscount ? totalWithOutDiscount : "0"}
             </i>
           </div>
         </div>

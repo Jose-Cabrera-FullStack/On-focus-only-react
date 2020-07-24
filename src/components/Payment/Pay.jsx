@@ -84,7 +84,6 @@ const Pay = (props) => {
           />
           <Paypal isSwitch={isSwitch} method={PayMethodSwitchPaypal} />
         </div>
-
         {PayMethod(isSwitch)}
       </div>
     </section>

@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import '../../../assets/styles/components/Payment.scss';
 
 import ButtonArrowRight from '../../Utils/ButtonArrowRight';
+// import PaypalCheckoutButton from '../../Utils/PaypalCheckoutButton';
 
 const Paypal = ({ modal, onClick }) => (
     <div className="way-to-pay__input__box--variant way-to-pay__box__card--mercado__pago">

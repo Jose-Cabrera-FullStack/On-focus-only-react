@@ -80,7 +80,6 @@
   border: 2px solid #f2f2f2;
   box-sizing: border-box;
   width: 550px;
-  height: 482px;
   position: relative;
   padding: 15px 0 0 60px;
 }
@@ -127,6 +126,10 @@
   background-color: #03002b;
 }
 
+.way-to-pay__box__card--button__paypal {
+  margin: 50px 0px 50px 20px;
+}
+
 .way-to-pay__box__card__img {
   position: relative;
   left: 50%;
@@ -150,7 +153,7 @@
 }
 
 .btn__secundary--way-to-pay {
-  margin: 40px 0 0 97px;
+  margin: 40px 0px 50px 97px;
 }
 
 .btn__secundary--way-to-pay:hover {

@@ -1,6 +1,59 @@
 export default {
-  shoppingcar:[],
-  total:0,
+  shoppingcar: [],
+  myCourses: [],
+  total: 0,
+  courseVideo: [
+    {
+      course_id: 1,
+      category: "diseño-web",
+      name: "se-lider",
+      module: [
+        {
+          module_id: 1,
+          name: "Module 1",
+          video: {
+            video_id: 1,
+            url: "375203887",
+            status: false,
+          },
+        },
+        {
+          module_id: 2,
+          category: "diseño-web",
+          name: "Module 2",
+          video: {
+            video_id: 2,
+            url: "84351224",
+            status: false,
+          },
+        },
+      ],
+    },
+    {
+      course_id: 2,
+      name: "marketing-digital",
+      module: [
+        {
+          module_id: 1,
+          name: "Module 1",
+          video: {
+            video_id: 1,
+            url: "375203887",
+            status: false,
+          },
+        },
+        {
+          module_id: 2,
+          name: "Module 2",
+          video: {
+            video_id: 2,
+            url: "84351224",
+            status: false,
+          },
+        },
+      ],
+    },
+  ],
   course: [
     {
       course_id: 1,
@@ -13,14 +66,13 @@ export default {
         "pellentesque at nulla suspendisse potenti cras in purus eu magna",
       creation_date: "10/4/2019",
       module: 5,
-      video_intro:
-        "375203887",
+      video_intro: "375203887",
       featured_image: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
       status: "false",
       entity_status: "published",
       inShopping: false,
       duration: 540,
-      discount: 30
+      discount: 30,
     },
     {
       course_id: 2,
@@ -33,14 +85,13 @@ export default {
       description:
         "non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla",
       creation_date: "5/6/2020",
-      video_intro:
-        "201106279",
+      video_intro: "201106279",
       featured_image: "http://dummyimage.com/231x160.bmp/dddddd/000000",
       status: "true",
       module: 15,
       entity_status: "unpublished",
       duration: 6000,
-      discount: 35
+      discount: 35,
     },
     {
       course_id: 3,
@@ -52,14 +103,13 @@ export default {
       description: "felis eu sapien cursus vestibulum proin eu mi nulla ac",
       creation_date: "11/10/2019",
       module: 20,
-      video_intro:
-        "27745982",
+      video_intro: "27745982",
       featured_image: "http://dummyimage.com/155x194.jpg/ff4444/ffffff",
       status: "true",
       duration: 800,
       inShopping: false,
       entity_status: "published",
-      discount: 25
+      discount: 25,
     },
     {
       course_id: 4,
@@ -71,14 +121,13 @@ export default {
       name: "libero convallis ",
       description: "pede justo eu massa donec dapibus duis at velit eu",
       creation_date: "11/27/2019",
-      video_intro:
-        "84351224",
-        duration: 900,
+      video_intro: "84351224",
+      duration: 900,
       featured_image: "http://dummyimage.com/174x193.png/ff4444/ffffff",
       status: "false",
       entity_status: "unpublished",
       inShopping: false,
-      discount: 20
+      discount: 20,
     },
     {
       course_id: 5,
@@ -92,13 +141,12 @@ export default {
       description:
         "mi pede malesuada in imperdiet et commodo vulputate justo in",
       creation_date: "12/13/2019",
-      video_intro:
-        "117779833",
+      video_intro: "117779833",
       featured_image: "http://dummyimage.com/115x249.bmp/dddddd/000000",
       status: "true",
       entity_status: "unpublished",
       inShopping: false,
-      discount: 15
+      discount: 15,
     },
     {
       course_id: 6,
@@ -111,13 +159,12 @@ export default {
       name: "tempus sit amet sem",
       description: "est phasellus sit amet erat nulla tempus vivamus in felis",
       creation_date: "7/21/2019",
-      video_intro:
-        "113185471",
+      video_intro: "113185471",
       featured_image: "http://dummyimage.com/220x250.bmp/5fa2dd/ffffff",
       status: "true",
       inShopping: false,
       entity_status: "published",
-      discount: 10
+      discount: 10,
     },
     {
       course_id: 7,
@@ -131,13 +178,12 @@ export default {
       description:
         "ut nunc vestibulum ante ipsum primis in faucibus orci luctus",
       creation_date: "5/28/2020",
-      video_intro:
-        "62467223",
+      video_intro: "62467223",
       featured_image: "http://dummyimage.com/141x196.png/dddddd/000000",
       status: "false",
       inShopping: false,
       entity_status: "unpublished",
-      discount: 50
+      discount: 50,
     },
     {
       course_id: 8,
@@ -151,13 +197,12 @@ export default {
       description:
         "suspendisse potenti in eleifend quam a odio in hac habitasse",
       creation_date: "1/19/2020",
-      video_intro:
-        "19527537",
+      video_intro: "19527537",
       featured_image: "http://dummyimage.com/161x225.jpg/dddddd/000000",
       status: "false",
       inShopping: false,
       entity_status: "unpublished",
-      discount: 75
+      discount: 75,
     },
     {
       course_id: 9,
@@ -171,13 +216,12 @@ export default {
       description:
         "dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien",
       creation_date: "9/10/2019",
-      video_intro:
-        "62512557",
+      video_intro: "62512557",
       featured_image: "http://dummyimage.com/199x225.png/cc0000/ffffff",
       status: "true",
       inShopping: false,
       entity_status: "unpublished",
-      discount: 60
+      discount: 60,
     },
     {
       course_id: 10,
@@ -191,13 +235,12 @@ export default {
       description:
         "eleifend pede libero quis orci nullam molestie nibh in lectus",
       creation_date: "4/2/2020",
-      video_intro:
-        "38052137",
+      video_intro: "38052137",
       featured_image: "http://dummyimage.com/104x158.jpg/cc0000/ffffff",
       status: "false",
       inShopping: false,
       entity_status: "published",
-      discount: 55
+      discount: 55,
     },
     {
       course_id: 11,
@@ -211,13 +254,12 @@ export default {
       description:
         "eget orci vehicula condimentum curabitur in libero ut massa volutpat",
       creation_date: "12/11/2019",
-      video_intro:
-        "24462920",
+      video_intro: "24462920",
       featured_image: "http://dummyimage.com/158x118.jpg/5fa2dd/ffffff",
       status: "false",
       inShopping: false,
       entity_status: "published",
-      discount: 50
+      discount: 50,
     },
   ],
 };

@@ -1,36 +1,50 @@
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'GET_COURSE_CATEGORY':
+    case "GET_COURSE_VIDEO":
       return {
         ...state,
-        category: state.course.find(item => item.category === action.payload) || {}
+        myCourses:
+          state.courseVideo.find(
+            (item) =>
+              // item.module.video.video_id === action.payload.id &&
+              item.name === action.payload.slugname &&
+              item.category === action.payload.slugcategory
+          ) || {},
       };
-    case 'SET_FAVORITE':
+    case "GET_COURSE_CATEGORY":
       return {
         ...state,
-        shoppingcar: [...state.shoppingcar, action.payload]
+        category:
+          state.course.find((item) => item.category === action.payload) || {},
       };
-    case 'DELETE_FAVORITE':
+    case "SET_FAVORITE":
       return {
-        ...state, 
-        shoppingcar: state.shoppingcar.filter(items => items.course_id !== action.payload),
+        ...state,
+        shoppingcar: [...state.shoppingcar, action.payload],
       };
-    case 'TOTAL_SHOPPING':
+    case "DELETE_FAVORITE":
       return {
-        ...state, 
+        ...state,
+        shoppingcar: state.shoppingcar.filter(
+          (items) => items.course_id !== action.payload
+        ),
+      };
+    case "TOTAL_SHOPPING":
+      return {
+        ...state,
         total: action.payload,
       };
-    case 'LOGIN_REQUEST':
+    case "LOGIN_REQUEST":
       return {
         ...state,
         user: action.payload,
       };
-      case 'LOGOUT_REQUEST':
+    case "LOGOUT_REQUEST":
       return {
         ...state,
         user: action.payload,
       };
-      case 'REGISTER_REQUEST':
+    case "REGISTER_REQUEST":
       return {
         ...state,
         user: action.payload,
@@ -41,3 +55,11 @@ const reducer = (state, action) => {
 };
 
 export default reducer;
+
+// courseVideo:
+// state.courseVideo.find(
+//   (item) =>
+//     item.module.video === action.id &&
+//     item.name === action.slugname &&
+//     item.category === action.slugcategory
+// ) || {},

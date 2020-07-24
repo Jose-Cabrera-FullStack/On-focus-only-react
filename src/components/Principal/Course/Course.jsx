@@ -22,7 +22,7 @@ const Course = ({
   let priceWithDiscount = price - (price * ( priceOff / 100));
 
   return (
-    <div className="discovery__box">
+    <div className="discovery__box ">
       <div className="discovery__box__img">
         <div>
           <img
