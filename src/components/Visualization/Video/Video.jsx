@@ -4,7 +4,7 @@ import Vimeo from '@u-wave/react-vimeo';
 import '../../../assets/styles/components/Visualization.scss';
 import '../../../assets/styles/components/Course.scss';
 
-const Video = ({ display }) => {
+const Video = ({ display, video }) => {
     const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
 
     const handleWindowResize = () => {
@@ -19,7 +19,7 @@ const Video = ({ display }) => {
     return(
     <div className={"visualization__video" + " " + display}>
         <Vimeo
-        video="76979871"
+        video={video ? video : "76979871"}
         width={screenWidth < 1024 ? "" : "661px"}
         />
     </div>

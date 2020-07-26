@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const getCourseVideo = (slugcategory, slugname, id) => ({
+export const getCourseVideo = (slugcategory, slugname, video_id) => ({
   type: "GET_COURSE_VIDEO",
-  payload:{slugcategory, slugname, id},
+  payload:{slugcategory, slugname, video_id},
 });
 export const getCourseCategory = (payload) => ({
   type: "GET_COURSE_CATEGORY",

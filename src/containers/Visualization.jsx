@@ -8,10 +8,10 @@ import { getCourseVideo } from "../actions";
 import "../assets/styles/App.scss";
 
 const Visualization = (props) => {
-  const { id, slugcategory, slugname } = props.match.params;
-  // console.log(slugname);
+  const { video_id, slugcategory, slugname } = props.match.params;
+  console.log(video_id);
   useEffect(() => {
-    props.getCourseVideo(slugcategory, slugname, id);
+    props.getCourseVideo(slugcategory, slugname, video_id);
   }, []);
 
   const isCategory = Object.keys(props.myCourses).length > 0;
@@ -20,7 +20,7 @@ const Visualization = (props) => {
     <NotFound />
   ) : (
     <div className="App">
-      <VisualizationCourse />
+      <VisualizationCourse url={props.match} video={video_id}/>
     </div>
   );
 };

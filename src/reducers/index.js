@@ -5,8 +5,9 @@ const reducer = (state, action) => {
         ...state,
         myCourses:
           state.courseVideo.find(
-            (item) =>
-              // item.module.video.video_id === action.payload.id &&
+            (item, index) =>
+              item.module[index].videos[index].url ===
+                action.payload.video_id &&
               item.name === action.payload.slugname &&
               item.category === action.payload.slugcategory
           ) || {},

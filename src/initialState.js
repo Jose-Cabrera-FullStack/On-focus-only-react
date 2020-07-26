@@ -11,21 +11,69 @@ export default {
         {
           module_id: 1,
           name: "Module 1",
-          video: {
-            video_id: 1,
-            url: "375203887",
-            status: false,
-          },
+          text: "texto 1",
+          videos: [
+            {
+              video_id: 2,
+              name: "video2",
+              url: "54561111",
+              status: false,
+            },
+            {
+              video_id: 3,
+              name: "video3",
+              url: "7772458",
+              status: false,
+            },
+            {
+              video_id: 4,
+              name: "video4",
+              url: "5544234",
+              status: false,
+            },
+          ],
         },
         {
           module_id: 2,
+          text: "texto 2",
           category: "diseño-web",
           name: "Module 2",
-          video: {
-            video_id: 2,
-            url: "84351224",
-            status: false,
-          },
+          videos: [
+            {
+              video_id: 2,
+              name: "video2",
+              url: "84351224",
+              status: false,
+            },
+          ],
+        },
+        {
+          module_id: 3,
+          text: "texto 3",
+          category: "diseño-web",
+          name: "Module 3",
+          videos: [
+            {
+              video_id: 3,
+              name: "video3",
+              url: "5072667",
+              status: false,
+            },
+          ],
+        },
+        {
+          module_id: 4,
+          text: "texto 4",
+          category: "diseño-web",
+          name: "Module 4",
+          videos: [
+            {
+              video_id: 4,
+              name: "video4",
+              url: "327561148",
+              status: false,
+            },
+          ],
         },
       ],
     },
@@ -36,7 +84,7 @@ export default {
         {
           module_id: 1,
           name: "Module 1",
-          video: {
+          videos: {
             video_id: 1,
             url: "375203887",
             status: false,
@@ -45,7 +93,7 @@ export default {
         {
           module_id: 2,
           name: "Module 2",
-          video: {
+          videos: {
             video_id: 2,
             url: "84351224",
             status: false,
