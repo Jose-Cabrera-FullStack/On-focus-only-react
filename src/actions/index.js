@@ -8,6 +8,10 @@ export const getCourseCategory = (payload) => ({
   type: "GET_COURSE_CATEGORY",
   payload,
 });
+export const getStatusCourse = (payload) => ({
+  type: "GET_STATUS_COURSE",
+  payload,
+});
 
 export const setFavorite = (payload) => ({
   type: "SET_FAVORITE",

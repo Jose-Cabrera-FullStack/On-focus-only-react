@@ -8,13 +8,19 @@ import "../../../assets/styles/components/Course.scss";
 import Course from "./Course";
 
 const CourseList = (props) => {
-  const module = props.courseVideo.module;
+  const module = props.URLvideos.module;
   return (
     <div className="visualization__sidebar">
       <ol>
         {module.map((item, index) => {
           return (
-            <Course key={index} text={item.text} title={item.name} videos={item.videos} path={props.url}/>
+            <Course
+              key={index}
+              text={item.text}
+              title={item.name}
+              videos={item.videos}
+              path={props.url}
+            />
           );
         })}
       </ol>
@@ -24,7 +30,7 @@ const CourseList = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    courseVideo: state.myCourses,
+    URLvideos: state.URLvideos,
   };
 };
 

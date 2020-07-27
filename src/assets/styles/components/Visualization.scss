@@ -77,12 +77,16 @@
 }
 
 .visualization__sidebar__arrow{
-    margin: 5px 0 0 60px;
+    margin: 5px 0 0 0px;
+    position: relative;
+    left: 180px;
     width: 29px;
 }
 
 .visualization__sidebar__arrow--up{
-    margin: 6px 0 0 60px;
+    margin: 5px 0 0 0px;
+    position: relative;
+    left: 180px;
     width: 24px;
 }
 
@@ -98,11 +102,12 @@
 }
 
 .visualization__sidebar__inside{
-    margin: 0;
+    margin: 5px 0 5px 0;
     height: 62px;
-    width: 350px;
+    width: 352px;
     cursor: pointer;
     user-select: none;
+    text-decoration: none;
 }
 
 .visualization__sidebar__inside:hover{
@@ -111,28 +116,38 @@
 
 .visualization__sidebar__inside--watching{
     background: #5e5c75;
+    cursor: context-menu;
     margin: 0;
+}
+
+.visualization__sidebar__inside--watching:hover{
+    background: #5e5c75;
 }
 
 .visualization__sidebar__inside__title{
     width: 223px;
-    padding-top: 20px;
+    padding-top: 16px;
     font-family: 'Mont-Semi-Bold';
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14px;
     letter-spacing: -0.02em;
     color: #FFFFFF;
-    margin: 0 0 0 40px;
+    margin: 0 0 3px 60px;
 }
 
 .visualization__sidebar__inside__text{
-    font-family: 'Mont-Thin';
+    font-family: 'Mont-Regular';
     font-style: normal;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: -0.02em;
     color: #F2F2F2;
-    margin: 0px 0 20px 40px;
+    margin: 0px 0 20px 60px;
+}
+
+.visualization__sidebar__inside__text--watching{
+    color: #03002B;
+    font-size: 14px;
 }
 
 .visualization__video{

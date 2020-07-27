@@ -1,19 +1,18 @@
 export default {
   shoppingcar: [],
-  myCourses: [],
+  URLvideos: [],
   total: 0,
-  courseVideo: [
-    {
+  courseVideo: [{
       course_id: 1,
+      title:"Aprende a ser mejor lider",
       category: "diseño-web",
       name: "se-lider",
-      module: [
-        {
+      status: true,
+      module: [{
           module_id: 1,
           name: "Module 1",
           text: "texto 1",
-          videos: [
-            {
+          videos: [{
               video_id: 2,
               name: "video2",
               url: "54561111",
@@ -38,87 +37,83 @@ export default {
           text: "texto 2",
           category: "diseño-web",
           name: "Module 2",
-          videos: [
-            {
-              video_id: 2,
-              name: "video2",
-              url: "84351224",
-              status: false,
-            },
-          ],
+          videos: [{
+            video_id: 2,
+            name: "video2",
+            url: "84351224",
+            status: false,
+          }, ],
         },
         {
           module_id: 3,
           text: "texto 3",
           category: "diseño-web",
           name: "Module 3",
-          videos: [
-            {
-              video_id: 3,
-              name: "video3",
-              url: "5072667",
-              status: false,
-            },
-          ],
+          videos: [{
+            video_id: 3,
+            name: "video3",
+            url: "5072667",
+            status: false,
+          }, ],
         },
         {
           module_id: 4,
           text: "texto 4",
           category: "diseño-web",
           name: "Module 4",
-          videos: [
-            {
-              video_id: 4,
-              name: "video4",
-              url: "327561148",
-              status: false,
-            },
-          ],
+          videos: [{
+            video_id: 4,
+            name: "video4",
+            url: "327561148",
+            status: false,
+          }, ],
         },
       ],
     },
     {
       course_id: 2,
-      name: "marketing-digital",
-      module: [
-        {
+      title:"Curso básico de Marketing",
+      category: "marketing",
+      name: "marketing-basico",
+      status: false,
+      module: [{
           module_id: 1,
-          name: "Module 1",
-          videos: {
+          text: "texto 4",
+          category: "marketing",
+          name: "Module 4",
+          videos: [{
             video_id: 1,
+            name: "video4",
             url: "375203887",
             status: false,
-          },
+          }],
         },
         {
           module_id: 2,
           name: "Module 2",
-          videos: {
+          videos: [{
             video_id: 2,
             url: "84351224",
             status: false,
-          },
+          }],
         },
       ],
     },
   ],
-  course: [
-    {
+  course: [{
       course_id: 1,
       teacher: "Luis Alvarez",
       price: 700,
       students: 5,
       category: "diseño-web",
       name: "curabitur at ipsum",
-      description:
-        "pellentesque at nulla suspendisse potenti cras in purus eu magna",
+      description: "pellentesque at nulla suspendisse potenti cras in purus eu magna",
       creation_date: "10/4/2019",
       module: 5,
       video_intro: "375203887",
       featured_image: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
       status: "false",
       entity_status: "published",
-      inShopping: false,
       duration: 540,
       discount: 30,
     },
@@ -128,10 +123,8 @@ export default {
       price: 930,
       students: 6,
       category: "marketing",
-      inShopping: false,
       name: "duis bibendum felis sed",
-      description:
-        "non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla",
+      description: "non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla",
       creation_date: "5/6/2020",
       video_intro: "201106279",
       featured_image: "http://dummyimage.com/231x160.bmp/dddddd/000000",
@@ -155,7 +148,6 @@ export default {
       featured_image: "http://dummyimage.com/155x194.jpg/ff4444/ffffff",
       status: "true",
       duration: 800,
-      inShopping: false,
       entity_status: "published",
       discount: 25,
     },
@@ -174,7 +166,6 @@ export default {
       featured_image: "http://dummyimage.com/174x193.png/ff4444/ffffff",
       status: "false",
       entity_status: "unpublished",
-      inShopping: false,
       discount: 20,
     },
     {
@@ -186,14 +177,12 @@ export default {
       duration: 400,
       category: "ciecia",
       name: "maecenas tincidunt lacus",
-      description:
-        "mi pede malesuada in imperdiet et commodo vulputate justo in",
+      description: "mi pede malesuada in imperdiet et commodo vulputate justo in",
       creation_date: "12/13/2019",
       video_intro: "117779833",
       featured_image: "http://dummyimage.com/115x249.bmp/dddddd/000000",
       status: "true",
       entity_status: "unpublished",
-      inShopping: false,
       discount: 15,
     },
     {
@@ -210,7 +199,6 @@ export default {
       video_intro: "113185471",
       featured_image: "http://dummyimage.com/220x250.bmp/5fa2dd/ffffff",
       status: "true",
-      inShopping: false,
       entity_status: "published",
       discount: 10,
     },
@@ -223,13 +211,11 @@ export default {
       module: 27,
       category: "politica",
       name: "sit amet justo",
-      description:
-        "ut nunc vestibulum ante ipsum primis in faucibus orci luctus",
+      description: "ut nunc vestibulum ante ipsum primis in faucibus orci luctus",
       creation_date: "5/28/2020",
       video_intro: "62467223",
       featured_image: "http://dummyimage.com/141x196.png/dddddd/000000",
       status: "false",
-      inShopping: false,
       entity_status: "unpublished",
       discount: 50,
     },
@@ -242,13 +228,11 @@ export default {
       module: 23,
       category: "quimica",
       name: "semper rutrum nulla",
-      description:
-        "suspendisse potenti in eleifend quam a odio in hac habitasse",
+      description: "suspendisse potenti in eleifend quam a odio in hac habitasse",
       creation_date: "1/19/2020",
       video_intro: "19527537",
       featured_image: "http://dummyimage.com/161x225.jpg/dddddd/000000",
       status: "false",
-      inShopping: false,
       entity_status: "unpublished",
       discount: 75,
     },
@@ -261,13 +245,11 @@ export default {
       duration: 1000,
       category: "dibujo",
       name: "neque vestibulum eget",
-      description:
-        "dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien",
+      description: "dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien",
       creation_date: "9/10/2019",
       video_intro: "62512557",
       featured_image: "http://dummyimage.com/199x225.png/cc0000/ffffff",
       status: "true",
-      inShopping: false,
       entity_status: "unpublished",
       discount: 60,
     },
@@ -280,13 +262,11 @@ export default {
       duration: 880,
       category: "psicologia",
       name: "mauris vulputate",
-      description:
-        "eleifend pede libero quis orci nullam molestie nibh in lectus",
+      description: "eleifend pede libero quis orci nullam molestie nibh in lectus",
       creation_date: "4/2/2020",
       video_intro: "38052137",
       featured_image: "http://dummyimage.com/104x158.jpg/cc0000/ffffff",
       status: "false",
-      inShopping: false,
       entity_status: "published",
       discount: 55,
     },
@@ -299,13 +279,11 @@ export default {
       module: 3,
       category: "cosmetica",
       name: "id ornare imperdiet sapien",
-      description:
-        "eget orci vehicula condimentum curabitur in libero ut massa volutpat",
+      description: "eget orci vehicula condimentum curabitur in libero ut massa volutpat",
       creation_date: "12/11/2019",
       video_intro: "24462920",
       featured_image: "http://dummyimage.com/158x118.jpg/5fa2dd/ffffff",
       status: "false",
-      inShopping: false,
       entity_status: "published",
       discount: 50,
     },

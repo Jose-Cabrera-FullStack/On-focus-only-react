@@ -14,7 +14,7 @@ const Visualization = (props) => {
     props.getCourseVideo(slugcategory, slugname, video_id);
   }, []);
 
-  const isCategory = Object.keys(props.myCourses).length > 0;
+  const isCategory = Object.keys(props.URLvideos).length > 0;
 
   return !isCategory ? (
     <NotFound />
@@ -28,7 +28,7 @@ const Visualization = (props) => {
 const mapStateToProps = (state) => {
   return {
     courseVideo: state.courseVideo || {},
-    myCourses: state.myCourses || {},
+    URLvideos: state.URLvideos || {},
   };
 };
 const mapDispatchToProps = {

@@ -39,12 +39,10 @@ const Course = ({ title, text, videos, path }) => {
       </li>
       {isToggle ? (
         <>
-          {/* <CourseInside watching title={videos.name} status={videos.status} url={videos.url}/> */}
           {videos.map((item, index) => {
             return (
               <CourseInside
                 key={index}
-                // watching
                 title={item.name}
                 status={item.status}
                 url={item.url}
@@ -54,8 +52,8 @@ const Course = ({ title, text, videos, path }) => {
           })}
         </>
       ) : (
-        ""
-      )}
+          ""
+        )}
     </>
   );
 };

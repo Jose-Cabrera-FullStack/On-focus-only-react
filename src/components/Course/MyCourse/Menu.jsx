@@ -6,9 +6,9 @@ const Menu = ({isSwitch,All,Progress,Finish}) => {
 
     return(
         <div className="flex">
-            <p className="my-course__menu" onClick={All}>Todos</p>
-            <p className="my-course__menu" onClick={Progress}>En curso</p>
-            <p className="my-course__menu" onClick={Finish}>Finalizados</p>
+            <p className={isSwitch ? "my-course__menu my-course__menu--select" :"my-course__menu"} onClick={All}>Todos</p>
+            <p className={isSwitch ? "my-course__menu my-course__menu--select" :"my-course__menu"} onClick={Progress}>En curso</p>
+            <p className={isSwitch ? "my-course__menu my-course__menu--select" :"my-course__menu"} onClick={Finish}>Finalizados</p>
         </div>
 )}
 export default Menu;

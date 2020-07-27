@@ -16,7 +16,7 @@ const Login = props => {
   const [form, setValues] = useState({
     email: ''
   })
-  
+
   const handleInput = event => {
     setValues({
       ...form,
@@ -34,31 +34,32 @@ const Login = props => {
     <>
       <section className="login">
         <div className="login__inside">
-        <span onClick={props.handleClose} className="congratulation__exit--login" alt="Ícono para salir"></span>
-         <h1 className="login__inside__title">Hola <br/>
+          <span onClick={props.handleClose} className="congratulation__exit--login" alt="Ícono para salir"></span>
+          <h1 className="login__inside__title">Hola <br />
           Lorem ipsum dolor sit amet.
         </h1>
 
-         <button className="facebook__button">
-          <img className="facebook__button__img" src={Facebook} alt="Logo de Facebook"/>
+          <button className="facebook__button">
+            <img className="facebook__button__img" src={Facebook} alt="Logo de Facebook" />
           Continuá con Facebook</button>
 
-         <button className="google__button">
-          <img className="google__button__img" src={Google} alt="Logo de Google"/>
+          <button className="google__button">
+            <img className="google__button__img" src={Google} alt="Logo de Google" />
           Continuá con Google</button>
 
-        <form action="" className="login__inside__form">
+          <form action="" className="login__inside__form">
 
             <label className="login__inside__form__label">O iniciá sesión con tu correo electrónico</label>
-            <input className="login__inside__form__input" type="text" name="" placeholder="Correo"/>
+            <input className="login__inside__form__input" type="text" name="" placeholder="Correo" />
 
             <label className="login__inside__form__label">Contraseña</label>
-            <input className="login__inside__form__input" type="password" name="" placeholder="Contraseña"/>
+            <input className="login__inside__form__input" type="password" name="" placeholder="Contraseña" />
+            <Link to="/mis-cursos">
+              <Button text={"Iniciar Sesión"} width={"btn__secundary--login__modal"} />
+            </Link>
 
-            <Button text={"Iniciar Sesión"} width={"btn__secundary--login__modal"}/>
-
-        </form>
-            <p className="login__inside__text">¿No eres miembro? <Link to="/registrarse">Registrate</Link></p>
+          </form>
+          <p className="login__inside__text">¿No eres miembro? <Link to="/registrarse">Registrate</Link></p>
         </div>
       </section>
     </>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import capitalizeFirstLetter from "../../../Utils/capitalizeFirstLetter";
 
 import "../../../assets/styles/components/Course.scss";
 
@@ -9,7 +10,8 @@ import ProgressBar from "../../Utils/ProgressBar";
 
 import Button from "../../Utils/ButtonArrowRight";
 
-const MyCourse = ({ progress }) => {
+const MyCourse = ({ progress, title, category }) => {
+  console.log(title);
   return (
     <div className="discovery__box">
       <div className="discovery__box__img">
@@ -22,11 +24,11 @@ const MyCourse = ({ progress }) => {
       <div className="discovery__box__info--my__course">
         <div className="discovery__box__info__padding">
           <h2 className="discovery__box__info__title course__plus__title">
-            Aprendé a ser mejor lider.
+            {title ? title : " Aprendé a ser mejor lider."}
           </h2>
           <div className="flex">
             <p className="discovery__box__info__name course__plus__sub__title">
-              Marketing
+              {category ? capitalizeFirstLetter(category) : "Marketing"}
             </p>
           </div>
           <ProgressBar progress={progress} />

@@ -5,7 +5,7 @@ const reducer = (state, action) => {
     case "GET_COURSE_VIDEO":
       return {
         ...state,
-        myCourses:
+        URLvideos:
           state.courseVideo.find(
             (item, index) =>
               findAll(item,"videos", {url:action.payload.video_id}) &&
