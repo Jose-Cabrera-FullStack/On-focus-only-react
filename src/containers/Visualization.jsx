@@ -9,7 +9,7 @@ import "../assets/styles/App.scss";
 
 const Visualization = (props) => {
   const { video_id, slugcategory, slugname } = props.match.params;
-  console.log(video_id);
+
   useEffect(() => {
     props.getCourseVideo(slugcategory, slugname, video_id);
   }, []);

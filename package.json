@@ -43,6 +43,7 @@
     "mercadopago-pay": "^1.4.34",
     "moment": "^2.24.0",
     "nodemon": "^2.0.4",
+    "obj-traverse": "^1.0.0",
     "passport": "0.4.0",
     "passport-http": "0.3.0",
     "passport-oauth": "1.0.0",

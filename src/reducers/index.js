@@ -1,3 +1,5 @@
+import { findAll } from 'obj-traverse/lib/obj-traverse'
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "GET_COURSE_VIDEO":
@@ -6,8 +8,7 @@ const reducer = (state, action) => {
         myCourses:
           state.courseVideo.find(
             (item, index) =>
-              item.module[index].videos[index].url ===
-                action.payload.video_id &&
+              findAll(item,"videos", {url:action.payload.video_id}) &&
               item.name === action.payload.slugname &&
               item.category === action.payload.slugcategory
           ) || {},
