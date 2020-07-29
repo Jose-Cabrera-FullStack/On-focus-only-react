@@ -11,7 +11,6 @@ import { getCourseCategory } from "../../actions";
 
 const Discovery = (props) => {
   let course = props.course;
-  console.log(props)
   return (
     <section className="discovery">
       <div className="discovery__container">

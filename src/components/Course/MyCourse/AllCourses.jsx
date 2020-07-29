@@ -8,9 +8,25 @@ const AllCourse = ({ myCourses }) => {
   return (
     <>
       {myCourses.map((item, index) => {
-          return(
-              <Course key={index}/>
-          )
+        const videos = [];
+        const module = item.module.map((item) => item.videos);
+        module.forEach((item) => item.map((item) => videos.push(item.status)));
+
+        let videosFinish = 0;
+
+        videos.forEach((item) =>
+          item === true ? (videosFinish += 1) : "no se ha termiando"
+        );
+
+        return (
+          <Course
+            key={index}
+            progress={(videosFinish / videos.length) * 100}
+            title={item.title}
+            category={item.category}
+            src={item.featured_image}
+          />
+        );
       })}
     </>
   );

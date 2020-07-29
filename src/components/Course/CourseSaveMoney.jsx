@@ -8,7 +8,7 @@ import YouSave from "../Course/SaveMoney/YouSave";
 
 import ButtonShopping from "../Utils/ButtonShopping";
 
-const CourseSaveMoney = ({ course }) => {
+const CourseSaveMoney = ({ course, category }) => {
   return (
     <div className="discovery__box__info discovery__box__info--course display__course__screen__desktop">
       <div className="discovery__box__info__inside">
@@ -21,9 +21,16 @@ const CourseSaveMoney = ({ course }) => {
         </p>
         <YouSave course={course} />
         <Discount />
-        <ButtonShopping />
+        <ButtonShopping category={category} />
       </div>
     </div>
   );
 };
-export default connect(null, null)(CourseSaveMoney);
+
+const mapStateToProps = (state) => {
+  return {
+    category: state.category || {},
+  };
+};
+
+export default connect(mapStateToProps, null)(CourseSaveMoney);

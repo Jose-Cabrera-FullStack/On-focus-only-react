@@ -26,6 +26,7 @@
 }
 
 .discovery__box {
+  user-select: none;
   width: 350px;
 }
 .discovery__box__price__off {
@@ -158,6 +159,7 @@
 }
 
 .discovery__diploma {
+  user-select: none;
   width: 280px;
   height: 478px;
   background-image: linear-gradient(to bottom, #03002be0, #03002bed),

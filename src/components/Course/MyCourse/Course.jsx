@@ -10,13 +10,12 @@ import ProgressBar from "../../Utils/ProgressBar";
 
 import Button from "../../Utils/ButtonArrowRight";
 
-const MyCourse = ({ progress, title, category }) => {
-  console.log(title);
+const MyCourse = ({ progress, title, category, src, url }) => {
   return (
     <div className="discovery__box">
       <div className="discovery__box__img">
         <img
-          src={Class1}
+          src={src ? src : Class1}
           className="discovery__box__img__class"
           alt="Imagen del Curso"
         />
@@ -33,7 +32,7 @@ const MyCourse = ({ progress, title, category }) => {
           </div>
           <ProgressBar progress={progress} />
           <div>
-            <Link to="/curso">
+            <Link to={url ? url : "/cursos"}>
               <Button text={"Continuar"} margin={"btn__secundary--my-course"} />
             </Link>
           </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { findFirst } from "obj-traverse/lib/obj-traverse";
 
 import "../../../assets/styles/components/CoursePlus.scss";
 import Course from "./Course";
@@ -9,6 +10,21 @@ const Finish = ({ myCourses }) => {
     <>
       {myCourses.some((item) => item.status === true) ? (
         myCourses.map((item, index) => {
+          const videos = [];
+          const module = item.module.map((item) => item.videos);
+          let moduleNested = findFirst(item, "module", { module_id: index });
+          let videosNested = findFirst(moduleNested, "videos", {
+            status: true,
+          });
+          const url = `/cursos/${item.category}/${item.name}/${videosNested.url}`;
+
+          module.forEach((item) =>
+            item.map((item) => {
+              videos.push(item.status);
+            })
+          );
+          console.log(module);
+
           return item.status === false ? (
             ""
           ) : (
@@ -16,6 +32,7 @@ const Finish = ({ myCourses }) => {
               key={index}
               progress={100}
               title={item.title}
+              src={item.featured_image}
               category={item.category}
             />
           );

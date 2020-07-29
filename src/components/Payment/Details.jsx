@@ -9,23 +9,29 @@ import Course from "../Utils/EmergentMenuBox/Course";
 import arrowRight from "../../assets/static/images/svg/arrow-shopping-right.svg";
 import arrowDown from "../../assets/static/images/svg/arrow-shopping-down.svg";
 
-const Details = ({ total, totalBefore, shoppingcar }) => {
+const Details = ({ total, shoppingcar }) => {
+
   const [isToggle, setToggle] = useState(false);
 
   const changeisToggle = () => setToggle(!isToggle);
-  
+
   // <--------se debe refactorizar---------->
   let totalWithOutDiscount = 0;
   let totalDiscount = 0;
+  let totalIndivudual = 0;
   const totalWithOutDiscountshoppingcar = shoppingcar.map(
     (item) => (totalWithOutDiscount += item.price)
-    );
-    
-    const discount = shoppingcar.map(
-      (item) => (totalDiscount += item.discount / shoppingcar.length)
-      );
+  );
+
+  const discount = shoppingcar.map(
+    (item) => (totalDiscount += item.discount / shoppingcar.length)
+  );
+
+  const totalShopping = shoppingcar.map(
+    (item) => (totalIndivudual += item.total)
+  );
   // <--------se debe refactorizar---------->
-      
+
   return (
     <section className="details">
       <div className="details__inside">
@@ -42,7 +48,7 @@ const Details = ({ total, totalBefore, shoppingcar }) => {
           <div className="flex">
             <div className="details__inside__total">
               <p>Tu total es de</p>
-              <strong>AR$ {total ? total : "0"}</strong>
+              <strong>AR$ {total ? total : parseInt(totalIndivudual)}</strong>
             </div>
             <i className="details__inside__total__before">
               ARS {totalWithOutDiscount ? totalWithOutDiscount : "0"}
@@ -55,24 +61,25 @@ const Details = ({ total, totalBefore, shoppingcar }) => {
         </div>
         <div className={isToggle ? "" : "display-none"}>
           <hr />
-          {shoppingcar.length > 0 ? 
-          <>
-          {shoppingcar.map((item) => {
-            return (
-              <div key={item.course_id}>
-                <Course
-                shoppingCar
-                course_id={item.course_id}
-                src={item.featured_image}
-                teacher={item.teacher}
-                />
-              </div>
-            );
-          })}
-          </>
-          :
-          <p>No tienes items</p>}
-          
+          {shoppingcar.length > 0 ? (
+            <>
+              {shoppingcar.map((item) => {
+                return (
+                  <div key={item.course_id}>
+                    <Course
+                      shoppingCar
+                      course_id={item.course_id}
+                      src={item.featured_image}
+                      teacher={item.teacher}
+                    />
+                  </div>
+                );
+              })}
+            </>
+          ) : (
+            <p>No tienes items</p>
+          )}
+
           {/* <Course shoppingCar teacher={"David Guerra"} />
           <Course shoppingCar teacher={"David Guerra"} /> */}
         </div>

@@ -139,6 +139,7 @@
   color: #b38a58;
 }
 
+
 .my-course__menu:hover {
   font-family: Mont-Bold;
   color: #b38a58;
@@ -146,6 +147,9 @@
   transition: all 0.2s ease-in-out;
 }
 
+.my-course__menu--select:hover {
+  cursor: context-menu;
+}
 .my-course__individual {
   display: grid;
   grid-template-rows: 1fr;
