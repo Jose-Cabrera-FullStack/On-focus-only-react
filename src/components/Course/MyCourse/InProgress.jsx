@@ -7,6 +7,7 @@ import "../../../assets/styles/components/CoursePlus.scss";
 import Course from "./Course";
 
 const InProgress = ({ myCourses }) => {
+  // se debe refactorizar para la segunda instancia
   return (
     <>
       {myCourses.some((item) => item.status === true) ? (

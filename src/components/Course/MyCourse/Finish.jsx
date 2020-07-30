@@ -6,24 +6,22 @@ import "../../../assets/styles/components/CoursePlus.scss";
 import Course from "./Course";
 
 const Finish = ({ myCourses }) => {
+    // se debe refactorizar para la segunda instancia
   return (
     <>
       {myCourses.some((item) => item.status === true) ? (
         myCourses.map((item, index) => {
           const videos = [];
           const module = item.module.map((item) => item.videos);
-          let moduleNested = findFirst(item, "module", { module_id: index });
-          let videosNested = findFirst(moduleNested, "videos", {
-            status: true,
-          });
-          const url = `/cursos/${item.category}/${item.name}/${videosNested.url}`;
 
           module.forEach((item) =>
             item.map((item) => {
-              videos.push(item.status);
+              videos.push(item.url);
             })
           );
-          console.log(module);
+
+          videos.push(videos)
+          const url = `/cursos/${item.category}/${item.name}/${module[0][0].url}`;
 
           return item.status === false ? (
             ""
@@ -34,6 +32,7 @@ const Finish = ({ myCourses }) => {
               title={item.title}
               src={item.featured_image}
               category={item.category}
+              url={url}
             />
           );
         })

@@ -6,6 +6,7 @@ import "../../../assets/styles/components/Visualization.scss";
 import "../../../assets/styles/components/Course.scss";
 
 const CourseInside = ({ title, status, url, path }) => {
+  console.log(status)
   return (
     <>
       {path.params.video_id === url ? (
@@ -18,7 +19,7 @@ const CourseInside = ({ title, status, url, path }) => {
             {title ? title : "Video 1 - Lorem ipsum dolor sit amet."}
           </h5>
           <p className="visualization__sidebar__inside__text visualization__sidebar__inside__text--watching">
-            {status ? status : "Completa"}
+            {status === false ? "Falta por ver" : "Completa"}
           </p>
         </div>
       ) : (
@@ -30,7 +31,7 @@ const CourseInside = ({ title, status, url, path }) => {
                 {title ? title : "Video 1 - Lorem ipsum dolor sit amet."}
               </h5>
               <p className="visualization__sidebar__inside__text">
-                {status ? status : "Completa"}
+                {status === false ? "Falta por ver" : "Completa"}
               </p>
             </div>
           </Link>

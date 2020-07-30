@@ -13,7 +13,7 @@ const Course = ({ title, text, videos, path }) => {
   const [isToggle, setToggled] = useState(false);
 
   const changeToggle = () => setToggled(!isToggle);
-
+  console.log(videos)
   return (
     <>
       <li className="visualization__sidebar__list" onClick={changeToggle}>
