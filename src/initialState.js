@@ -1,6 +1,7 @@
 export default {
   shoppingcar: [],
   URLvideos: [],
+  user:{},
   total: 0,
   courseVideo: [
     {

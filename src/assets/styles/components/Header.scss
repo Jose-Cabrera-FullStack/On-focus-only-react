@@ -24,12 +24,12 @@
   margin: 0 0 0 10px;
 }
 
-.navbar__menu__shopping__cart--fix{
+.navbar__menu__shopping__cart--fix {
   bottom: 7px;
 }
 
-.navbar__menu__shopping__cart__notification{
-  background: #B38A58;
+.navbar__menu__shopping__cart__notification {
+  background: #b38a58;
   position: relative;
   left: 37px;
   bottom: 10px;
@@ -38,10 +38,20 @@
   height: 15px;
   width: 15px;
 }
+.navbar__menu__shopping__cart__notification--mobile {
+  background: #b38a58;
+    position: absolute;
+    right: 97px;
+    top: 10px;
+    z-index: 3;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+}
 
-.navbar__menu__shopping__cart__number{
+.navbar__menu__shopping__cart__number {
   color: #03002b;
-  font-family: 'Mont-Bold';
+  font-family: "Mont-Bold";
   font-size: 12px;
   position: relative;
   bottom: 3px;
@@ -94,14 +104,14 @@
   margin: 0 40px 0px 0px;
 }
 
-.navbar__hamburguer__shopping{
+.navbar__hamburguer__shopping {
   display: none;
   position: absolute;
   right: 100px;
   top: 10px;
 }
 
-.navbar__hamburguer{
+.navbar__hamburguer {
   display: none;
   position: absolute;
   right: 40px;
@@ -114,7 +124,6 @@
   border-right: 1px solid white;
   padding: 1em 1em;
 }
-
 
 .navbar__menu img {
   z-index: 2;
@@ -131,24 +140,61 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-  
-  /* <-------MEDIA-------> */
-  @media screen and (max-width: 1024px) {
-    .navbar__query {
-      display: none;
-      transition: all 0.2s ease-in-out;
-    }
 
-    .navbar__hamburguer{
-      display: block;
-      transition: all 0.2s ease-in-out;
-      cursor: pointer;
-    }
-
-    .navbar__hamburguer__shopping{
-      display: block;
-      transition: all 0.2s ease-in-out;
-      cursor: pointer;
-    }
+/* <-------MEDIA-------> */
+@media screen and (max-width: 1024px) {
+  .navbar__query {
+    display: none;
+    transition: all 0.2s ease-in-out;
   }
-  /* <-------MEDIA-------> */
+
+  .navbar__hamburguer {
+    display: block;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .navbar__hamburguer__shopping {
+    display: block;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .navbar__hamburguer__toggle {
+    background: #03002b;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 300;
+  }
+  .navbar__hamburguer__toggle__logo {
+    position: absolute;
+    left: 10px;
+    margin: 15px 0 0px 10px;
+  }
+  .navbar__hamburguer__toggle__arrow {
+    position: absolute;
+    right: 10px;
+    margin: 20px;
+  }
+  .navbar__hamburguer__toggle__menu {
+    list-style: none;
+    font-family: "Mont-Bold";
+    color: #fff;
+    font-size: 20px;
+    width: 350px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, 30%);
+    margin-bottom: 100px;
+  }
+  .navbar__hamburguer__toggle__menu__list li {
+    list-style: none;
+    font-family: "Mont-Bold";
+    font-size: 20px;
+    color: #fff;
+    margin: 20px 0 0 0;
+  }
+}
+/* <-------MEDIA-------> */

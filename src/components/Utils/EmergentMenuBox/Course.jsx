@@ -16,7 +16,8 @@ const Course = ({
   priceBefore,
   shoppingCar,
   teacher,
-  deleteFavorite
+  deleteFavorite,
+  mobile
 }) => {
   const handleDeleteShopping = (course_id) => {
     deleteFavorite(course_id);
@@ -28,7 +29,7 @@ const Course = ({
         className={
           shoppingCar
             ? "hero__view__promo__img--shopping__car"
-            : "hero__view__promo__img"
+            :mobile ? "hero__view__promo__img--mobile": "hero__view__promo__img"
         }
         src={src ? src : UI}
         alt="Imagen del curso"

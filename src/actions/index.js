@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getCourseVideo = (slugcategory, slugname, video_id) => ({
   type: "GET_COURSE_VIDEO",
-  payload:{slugcategory, slugname, video_id},
+  payload: { slugcategory, slugname, video_id },
 });
 export const getCourseCategory = (payload) => ({
   type: "GET_COURSE_CATEGORY",
@@ -43,25 +43,30 @@ export const registerRequest = (payload) => ({
   payload,
 });
 
-export const loginUser = ({ email, password }, redirectUrl) => {
-  return (dispatch) => {
-    axios({
-      url: "/auth/sign-in",
-      method: "post",
-      auth: {
-        username: email,
-        password,
-      },
-    })
-      .then(({ data }) => {
-        document.cookie = `email=${data.email}`;
-        document.cookie = `name=${data.name}`;
-        document.cookie = `id=${data.id}`;
-        dispatch(loginRequest(data));
-      })
-      .then(() => {
-        window.location.href = redirectUrl;
-      })
-      .catch((error) => dispatch(setError(error)));
-  };
-};
+export const loginUser = (payload,redirectUrl) => ({
+  type: "LOGIN_REQUEST",
+  payload,
+});
+
+// export const loginUser = ({ email, password }, redirectUrl) => {
+//   return (dispatch) => {
+//     axios({
+//       url: "/auth/sign-in",
+//       method: "post",
+//       auth: {
+//         username: email,
+//         password,
+//       },
+//     })
+//       .then(({ data }) => {
+//         document.cookie = `email=${data.email}`;
+//         document.cookie = `name=${data.name}`;
+//         document.cookie = `id=${data.id}`;
+//         dispatch(loginRequest(data));
+//       })
+//       .then(() => {
+//         window.location.href = redirectUrl;
+//       })
+//       .catch((error) => dispatch(setError(error)));
+//   };
+// };

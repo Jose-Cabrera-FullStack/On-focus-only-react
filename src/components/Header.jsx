@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { logoutRequest } from "../actions";
 
 import EmergentMenu from "./Utils/EmergentMenu";
+import HamburgerMenuMobile from "./Utils/HamburgerMenuMobile";
 import ModalLogin from "./Utils/Modal";
 
 import Login from "../containers/Login";
@@ -16,18 +17,20 @@ import Shopping from "../assets/static/images/svg/shopping-car.svg";
 import "../assets/styles/components/Header.scss";
 
 const Header = (props) => {
-  const [isToggled, setToggled] = useState(false);
-
-  const toggleTrueFalse = () => setToggled(!isToggled);
-
   // const { user= {} } = props;
   // const hasUser = Object.keys(user).length  >  0;
 
   // const handleLogout = () => {
   //   props.logoutRequest({});
   // };
+  const [isToggled, setToggled] = useState(false);
+  const toggleTrueFalse = () => setToggled(!isToggled);
 
-  const [open, setOpen] = React.useState(false);
+  const [isToggledMenuMobile, setToggledMenuMobile] = useState(false);
+  const toggleTrueFalseMenuMobile = () =>
+    setToggledMenuMobile(!isToggledMenuMobile);
+
+  const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -49,8 +52,46 @@ const Header = (props) => {
             <img className="navbar__img" src={Logo} alt="" />
           </figure>
         </Link>
-        <img className="navbar__hamburguer" src={Hamburguer} alt="" />
-        <img className="navbar__hamburguer__shopping" src={Shopping} alt="" />
+        <div className="display__screen__mobile">
+          <div className="" onClick={toggleTrueFalse}>
+            {notification ? (
+              <div className="navbar__menu__shopping__cart__notification--mobile">
+                <strong className="navbar__menu__shopping__cart__number">
+                  {shoppingcar.length}
+                </strong>
+              </div>
+            ) : (
+              ""
+            )}
+            <img
+              onClick={toggleTrueFalseMenuMobile}
+              className="navbar__hamburguer"
+              src={Hamburguer}
+              alt="Icono de Hamburguesa"
+            />
+          </div>
+          {isToggledMenuMobile ? (
+            <HamburgerMenuMobile
+              onClick={toggleTrueFalseMenuMobile}
+              handleOpen={handleOpen}
+              handleClose={handleClose}
+              open={open}
+            />
+          ) : (
+            ""
+          )}
+          <img
+          onClick={toggleTrueFalse}
+            className={
+              notification
+                ? "navbar__hamburguer__shopping"
+                : "navbar__hamburguer__shopping"
+            }
+            src={Shopping}
+            alt="Icono de Carrito de Compras"
+          />
+          <EmergentMenu toggle={isToggled} mobile/>
+        </div>
         <div className="grid-2 navbar__justify__self navbar__query">
           <div className="navbar__query"></div>
           <ol className="navbar__element__list">

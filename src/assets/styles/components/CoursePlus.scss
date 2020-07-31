@@ -188,6 +188,11 @@
   .hero__view__promo__img {
     margin: 29px 10px 0 0px;
   }
+  .hero__view__promo__img--mobile {
+    height: 100px;
+    margin: 29px 10px 0 44px;
+    width: 130px;
+  }
 
   .my-course__individual {
     display: grid;
@@ -199,6 +204,15 @@
   .my-course {
     margin: 50px 100px 50px 100px;
   }
+
+  .hero__view__promo {
+    width: 100vw;
+    background: #ffffff;
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+    right: 0;
+}
 }
 
 @media screen and (max-width: 500px) {
