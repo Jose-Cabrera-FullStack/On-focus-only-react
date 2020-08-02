@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { findFirst } from "obj-traverse/lib/obj-traverse";
 
 import "../../../assets/styles/components/CoursePlus.scss";
 import Course from "./Course";
@@ -28,8 +27,8 @@ const AllCourse = ({ myCourses }) => {
         );
 
         videos.length === videosFinish
-          ? (url = `/cursos/${item.category}/${item.name}/${module[0][0].url}`)
-          : (url = `/cursos/${item.category}/${item.name}/${urlStatusFalse[0]}`);
+          ? (url = `/mis-cursos/${item.name}`)
+          : (url = `/mis-cursos/${item.name}`);
 
         return (
           <Course
@@ -48,7 +47,7 @@ const AllCourse = ({ myCourses }) => {
 
 const mapStateToProps = (state) => {
   return {
-    myCourses: state.courseVideo,
+    myCourses: state.myCourses,
   };
 };
 

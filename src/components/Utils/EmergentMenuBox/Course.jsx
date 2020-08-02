@@ -17,7 +17,7 @@ const Course = ({
   shoppingCar,
   teacher,
   deleteFavorite,
-  mobile
+  mobile,
 }) => {
   const handleDeleteShopping = (course_id) => {
     deleteFavorite(course_id);
@@ -29,7 +29,9 @@ const Course = ({
         className={
           shoppingCar
             ? "hero__view__promo__img--shopping__car"
-            :mobile ? "hero__view__promo__img--mobile": "hero__view__promo__img"
+            : mobile
+            ? "hero__view__promo__img--mobile"
+            : "hero__view__promo__img"
         }
         src={src ? src : UI}
         alt="Imagen del curso"
@@ -71,7 +73,7 @@ const Course = ({
 };
 
 const mapDispatchToProps = {
-    deleteFavorite,
+  deleteFavorite,
 };
 
 export default connect(null, mapDispatchToProps)(Course);

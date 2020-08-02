@@ -1,28 +1,36 @@
-import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import '../../assets/styles/components/Utils.scss';
+import "../../assets/styles/components/Utils.scss";
 
-import ArrowLeft from '../../assets/static/images/svg/arrow-visualization-black.svg'
+import ArrowLeft from "../../assets/static/images/svg/arrow-visualization-black.svg";
 
-const Beadcrumbs = ({ onlyMobile, margin , onlyDesktop, icon, iconHover}) => {
-    
-    const [isHover, setIsHover] = useState(false);
+const Beadcrumbs = ({
+  onlyMobile,
+  margin,
+  onlyDesktop,
+  icon,
+  iconHover,
+  link,
+}) => {
+  const [isHover, setIsHover] = useState(false);
 
-    return(
-        <div 
-        className={"beadcrumbs" + " " + onlyMobile + " " + margin + " "+ onlyDesktop}
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
-        >
-            <Link to={"/cursos"} className="flex text-decoration">
-                <img src={icon ? 
-                isHover ? iconHover : icon
-                : 
-                ArrowLeft} 
-                alt="Fecha a la izquierda"/>
-                <h5 className="beadcrumbs__text">Volver a los cursos</h5>
-            </Link>
-            </div>
-)}
+  return (
+    <div
+      className={
+        "beadcrumbs" + " " + onlyMobile + " " + margin + " " + onlyDesktop
+      }
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+    >
+      <Link to={link ? link :"/cursos"} className="flex text-decoration">
+        <img
+          src={icon ? (isHover ? iconHover : icon) : ArrowLeft}
+          alt="Fecha a la izquierda"
+        />
+        <h5 className="beadcrumbs__text">Volver a los cursos</h5>
+      </Link>
+    </div>
+  );
+};
 export default Beadcrumbs;

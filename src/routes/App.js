@@ -31,8 +31,8 @@ const App = () => (
             <Route exact path="/cursos/:slugcategory/:slugname/:video_id" component={Visualization} />
             <Route exact path="/carrito" component={ShoppingCar} />
             <Route exact path="/pago" component={Pay} />
-            <Route exact path="/curso-comprado" component={CourseBuyed} />
             <Route exact path="/mis-cursos" component={MyCourse} />
+            <Route exact path="/mis-cursos/:slug" component={CourseBuyed} />
             <Route exact path="/mi-perfil" component={MyProfile} />
             <Route exact path="/contactanos" component={ContactUs} />
             <Route exact path="/politicas" component={Politicy} />

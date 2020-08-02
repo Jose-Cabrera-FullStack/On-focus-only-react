@@ -1,9 +1,9 @@
 export default {
   shoppingcar: [],
   URLvideos: [],
-  user:{},
+  user: {},
   total: 0,
-  courseVideo: [
+  myCourses: [
     {
       course_id: 1,
       title: "Aprende a ser mejor lider",
@@ -11,6 +11,22 @@ export default {
       name: "se-lider",
       featured_image: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
       status: true,
+      teacher: {
+        name: "Luis Alvarez",
+        profesion: "Profesor",
+        photo:"http://dummyimage.com/222x221.bmp/cc0000/ffffff",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        linkedin: "http://linkedin.com",
+        facebook: "http://facebook.com",
+        twitter: "http://twitter.com",
+        youtube: "http://youtube.com",
+      },
+      students: 5,
+      duration: 5400,
+      featured_image: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
+      description:
+        "pellentesque at nulla suspendisse potenti cras in purus eu magna",
       module: [
         {
           module_id: 1,
@@ -100,6 +116,22 @@ export default {
       featured_image: "http://dummyimage.com/115x249.bmp/dddddd/000000",
       name: "marketing-basico",
       status: false,
+      teacher: {
+        name: "José Silvarez",
+        photo:"http://dummyimage.com/222x221.bmp/cc0000/ffffff",
+        profesion: "Profesor",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        linkedin: "http://linkedin.com",
+        facebook: "http://facebook.com",
+        twitter: "http://twitter.com",
+        youtube: "http://youtube.com",
+      },
+      students: 57,
+      duration: 5400,
+      featured_image: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
+      description:
+        "pellentesque at nulla suspendisse potenti cras in purus eu magna",
       module: [
         {
           module_id: 1,
@@ -111,7 +143,7 @@ export default {
               video_id: 1,
               name: "video4",
               url: "375203887",
-              status: false,
+              status: true,
             },
             {
               video_id: 2,
@@ -148,19 +180,19 @@ export default {
     {
       course_id: 1,
       teacher: "Luis Alvarez",
-      price: 700,
       students: 5,
-      category: "diseño-web",
-      name: "curabitur at ipsum",
+      duration: 540,
+      status: "false",
+      featured_image: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
+      module: 5,
       description:
         "pellentesque at nulla suspendisse potenti cras in purus eu magna",
+      price: 700,
+      name: "curabitur at ipsum",
+      category: "diseño-web",
       creation_date: "10/4/2019",
-      module: 5,
       video_intro: "375203887",
-      featured_image: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
-      status: "false",
       entity_status: "published",
-      duration: 540,
       discount: 30,
     },
     {

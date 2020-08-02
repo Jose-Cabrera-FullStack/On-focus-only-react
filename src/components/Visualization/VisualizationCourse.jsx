@@ -19,6 +19,7 @@ const VisualizationCourse = (props) => {
       icon={ArrowLeft}
       iconHover={ArrowLeftHover}
       onlyMobile={"visualization__navbar"}
+      link={"/mis-cursos"}
     />
 
     <Video video={props.video} display={"display__screen__mobile"} />

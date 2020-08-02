@@ -1,4 +1,4 @@
-import { findAll } from 'obj-traverse/lib/obj-traverse'
+import { findAll } from "obj-traverse/lib/obj-traverse";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -6,11 +6,19 @@ const reducer = (state, action) => {
       return {
         ...state,
         URLvideos:
-          state.courseVideo.find(
-            (item, index) =>
-              findAll(item,"videos", {url:action.payload.video_id}) &&
+          state.myCourses.find(
+            (item) =>
+              findAll(item, "videos", { url: action.payload.video_id }) &&
               item.name === action.payload.slugname &&
               item.category === action.payload.slugcategory
+          ) || {},
+      };
+    case "GET_MY_COURSE":
+      return {
+        ...state,
+        myCourse:
+          state.myCourses.find((item) =>
+            item.name === action.payload
           ) || {},
       };
     case "GET_COURSE_CATEGORY":

@@ -5,7 +5,6 @@ export default function formatHourMinute(durationInSeconds) {
     let dateObj = new Date(given_seconds * 1000); 
     let hours = dateObj.getUTCHours(); 
     let minutes = dateObj.getUTCMinutes(); 
-    let seconds = dateObj.getSeconds(); 
 
     return (
         timeString = hours.toString().padStart(1, '0') 

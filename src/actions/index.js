@@ -8,6 +8,10 @@ export const getCourseCategory = (payload) => ({
   type: "GET_COURSE_CATEGORY",
   payload,
 });
+export const getMyCategory = (payload) => ({
+  type: "GET_MY_COURSE",
+  payload,
+});
 export const getStatusCourse = (payload) => ({
   type: "GET_STATUS_COURSE",
   payload,

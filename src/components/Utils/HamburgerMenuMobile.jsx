@@ -11,7 +11,9 @@ import Login from "../../containers/Login";
 
 import ModalLogin from "./Modal";
 
-const HamburgerMenuMobile = ({ onClick, handleOpen, handleClose, open }) => {
+const HamburgerMenuMobile = ({ onClick, handleOpen, handleClose, open, user }) => {
+  
+  const hasUser = Object.keys(user).length > 0;
   return (
     <>
       <div className="navbar__hamburguer__toggle">
@@ -38,27 +40,33 @@ const HamburgerMenuMobile = ({ onClick, handleOpen, handleClose, open }) => {
             <Link to="/sobre-nosotros" className="text-decoration">
               <li>About On Focus</li>
             </Link>
-            <li className="navbar__menu ">
-              <button
-                className="btn__primary btn__primary--login btn__primary--login"
-                onClick={handleOpen}
-                type="button"
-              >
-                Iniciar Sesion
-              </button>
-              <ModalLogin
-                open={open}
-                handleClose={handleClose}
-                body={<Login handleClose={handleClose} />}
-              />
-            </li>
-            <li>
-              <Link to="/registrarse">
-                <button className="btn__primary btn__primary--login">
-                  Registrarse
-                </button>
-              </Link>
-            </li>
+            {hasUser ? (
+              ""
+            ) : (
+              <>
+                <li className="navbar__menu ">
+                  <button
+                    className="btn__primary btn__primary--login btn__primary--login"
+                    onClick={handleOpen}
+                    type="button"
+                  >
+                    Iniciar Sesion
+                  </button>
+                  <ModalLogin
+                    open={open}
+                    handleClose={handleClose}
+                    body={<Login handleClose={handleClose} />}
+                  />
+                </li>
+                <li>
+                  <Link to="/registrarse">
+                    <button className="btn__primary btn__primary--login">
+                      Registrarse
+                    </button>
+                  </Link>
+                </li>
+              </>
+            )}
           </ol>
         </div>
       </div>
@@ -66,4 +74,10 @@ const HamburgerMenuMobile = ({ onClick, handleOpen, handleClose, open }) => {
   );
 };
 
-export default connect(null, null)(HamburgerMenuMobile);
+const mapStateToProps = (state) => {
+  return {
+    user: state.user || {},
+  };
+};
+
+export default connect(mapStateToProps, null)(HamburgerMenuMobile);

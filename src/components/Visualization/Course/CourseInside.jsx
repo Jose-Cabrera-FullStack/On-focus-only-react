@@ -6,7 +6,6 @@ import "../../../assets/styles/components/Visualization.scss";
 import "../../../assets/styles/components/Course.scss";
 
 const CourseInside = ({ title, status, url, path }) => {
-  console.log(status)
   return (
     <>
       {path.params.video_id === url ? (

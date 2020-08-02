@@ -18,7 +18,7 @@ const InProgress = ({ myCourses }) => {
           let videosNested = findFirst(moduleNested, "videos", {
             status: false,
           });
-          const url = `/cursos/${item.category}/${item.name}/${videosNested.url}`;
+          const url = `/mis-cursos/${item.name}`;
           module.forEach((item) =>
             item.map((item) => {
               videos.push(item.status);
@@ -53,7 +53,7 @@ const InProgress = ({ myCourses }) => {
 
 const mapStateToProps = (state) => {
   return {
-    myCourses: state.courseVideo,
+    myCourses: state.myCourses,
   };
 };
 

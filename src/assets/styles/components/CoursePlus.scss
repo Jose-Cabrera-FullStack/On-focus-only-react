@@ -36,7 +36,7 @@
   user-select: none;
 }
 
-.hero__view__promo__empty{
+.hero__view__promo__empty {
   color: black;
   margin: 20px;
 }
@@ -134,11 +134,10 @@
   margin: 0px 30px 40px 0;
 }
 
-.my-course__menu--select{
+.my-course__menu--select {
   font-family: Mont-Bold;
   color: #b38a58;
 }
-
 
 .my-course__menu:hover {
   font-family: Mont-Bold;
@@ -212,11 +211,20 @@
     top: 50px;
     z-index: 2;
     right: 0;
-}
+  }
 }
 
 @media screen and (max-width: 500px) {
   .my-course {
     margin: 50px 10px 50px 10px;
+  }
+  .hero__view__promo__img--mobile {
+    margin: 29px 10px 0 5px;
+  }
+  .hero__view__promo__total {
+    margin: 20px 5px 0px 5px;
+  }
+  .hero__view__promo__margin__btn {
+    margin: 0px 5px 10px 5px;
   }
 }

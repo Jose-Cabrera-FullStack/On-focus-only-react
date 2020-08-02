@@ -1,758 +1,751 @@
-.course{
-    margin: 40px 200px 0px 200px;
+.course {
+  margin: 40px 200px 0px 200px;
 }
 
-.course__section__title{
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 135.3%;
-    letter-spacing: -0.02em;
-    color: #03002B;
-    padding: 0 0 32px 0;
+.course__section__title {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #03002b;
+  padding: 0 0 32px 0;
 }
 
-.course__section__name{
-    margin: 16px 0 25px 0;
+.course__section__name {
+  margin: 16px 0 25px 0;
 }
 
-.course__section__tech{
-    margin: 0 0 0px -30px;
+.course__section__tech {
+  margin: 0 0 0px -30px;
 }
 
-.discovery__box__info--course{
-    width: 351px;
-    height: 343px;
-    margin: 0;
+.discovery__box__info--course {
+  width: 351px;
+  height: 343px;
+  margin: 0;
 }
 
-.course__video{
-    margin: 0px 28px 0 0px;
-    width: 661px;
+.course__video {
+  margin: 0px 28px 0 0px;
+  width: 661px;
 }
 
-.course__video__mobile{
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 0;
-    height: 0;
-    overflow: hidden;
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-}
-
-.course__information h1{
-    width: 302px;
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 135.3%;
-    letter-spacing: -0.02em;
-    color: #03002B;
-}
-.course__information__text{
-    width: 154px;
-    font-family: 'Mont-Light';
-    font-weight: 600;
-    font-size: 15px;
-    margin: 20px;
-}
-
-.course__information__text__width{
-    width: 195px;
-}
-
-.course__information__students{
-    margin: 30px 20px 0px 10px;
-}
-
-.course__information__students--fix{
-    margin: 30px 20px 0px 10px;
-}
-
-.discovery__box__info__inside{
-    margin: 50px 0 0 33px;
-}
-
-.discovery__box__info__inside__title{
-    font-family: 'Mont-Bold';
-    width: 266px;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 117.3%;
-    letter-spacing: -0.02em;
-    color: #03002B;
-}
-
-.discovery__box__info__inside__text{
-    width: 243px;
-    height: 49px;
-    left: 922px;
-    top: 703px;
-    font-family: Judson;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 133.3%;
-    color: #000000;
-}
-
-.discovery__box__info__inside__price{
-    font-family: 'Mont-Bold';
-    margin: 0;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 27px;
-    line-height: 135.3%;
-    letter-spacing: -0.02em;
-    color: #03002B;
-}
-
-.discovery__box__info__inside__save{
-    font-family: "Mont-Bold";
-    font-style: normal;
-    font-weight: 800;
-    font-size: 17px;
-    line-height: 135.3%;
-    letter-spacing: -0.02em;
-    color: #FF3F31;
-    margin: 10px 0 0 10px;
-}
-
-.discovery__box__info__inside__before{
-    font-family: 'Mont-Light';
-    font-style: normal;
-    width: 106px;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 135.3%;
-    letter-spacing: -0.03em;
-    color: #828282;
-    margin: 10px 0 0 0;
-}
-
-.discovery__box__info__inside__before i{
-    text-decoration: line-through;
-    font-style: normal;
-}
-
-.discovery__box__info__inside__percentage{
-    font-family: 'Mont-Regular';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 15px;
-    line-height: 135.3%;
-    letter-spacing: -0.03em;
-    color: #03002b;
-    margin: 10px 0 0 0;
-}
-
-.discovery__box__info__inside__shopping{
-    position: relative;
-    top: 9px;
-}
-
-.discovery__box__info__inside__buttons{
-    margin: 15px 0 0 0;
-}
-
-.couse__about h1{
-    font-family:'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 135.3%;
-    letter-spacing: -0.02em;
-    color: #03002B;
-}
-
-.course__info__title{
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 135.3%;  
-    letter-spacing: -0.02em;
-    color: #03002B;
-    margin: 40px 0 27px 0;
-}
-
-.course__about p{
-    width: 661px;
-font-family: Buenard;
-font-style: normal;
-font-weight: normal;
-font-size: 17px;
-line-height: 151.3%;
-color: #000000;
-margin: 28px 0 30px 0px;
-}
-.couse__about img{
-    width: 574px;
-    height: 290px;
-}
-
-.course__inclusive{
-    height: 342px;
-    background:#E0E0E0 ;
-}
-
-.course__inclusive__inside{
-    margin: 0px 0 0 200px;
-    padding: 9px 0 0 0;
-}
-
-.course__inclusive__certificate{
-    color: #b38a58;
-}
-
-.course__inclusive__diploma{
-    width: 276px;
-    height: 230px;
-    margin: 50px 0 0px 0;
+.course__video__mobile {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+  iframe {
     position: absolute;
-    right: 240px;
-}
-.course__inclusive__inside h1{
-
-font-family: 'Mont-Bold';
-font-style: normal;
-font-weight: 800;
-font-size: 26px;
-line-height: 135.3%;
-letter-spacing: -0.02em;
-color: #03002B;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.course__inclusive__inside li{
-    margin: 4px 0 0 0;
+.course__information h1 {
+  width: 302px;
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #03002b;
 }
-.course__inclusive__inside h2{
-    font-family: 'Mont-Bold';
-}
-.course__inclusive__inside p{
-    width: 429px;
-    font-family: Judson;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-}
-
-.course__for__me{
-    margin: 52px 0 0 200px;
-}
-
-.course__for__me ul{
-    padding: 0 0 0 20px;
+.course__information__text {
+  width: 154px;
+  font-family: "Mont-Light";
+  font-weight: 600;
+  font-size: 15px;
+  margin: 20px;
 }
 
-.course__for__me h2{
-    font-family: 'Mont-Bold';
-    margin: 52px 0 34px 0;
-}
-.course__for__me li{
-    margin: 5px 0 0 0;
-    font-family: Judson;
-font-style: normal;
-font-weight: normal;
-font-size: 17px;
+.course__information__text__width {
+  width: 195px;
 }
 
-.course__module{
-    margin: 100px 0 0 200px;
+.course__information__students {
+  margin: 30px 20px 0px 10px;
 }
 
-.course__module ul{
-    padding: 0;
+.course__information__students--fix {
+  margin: 30px 20px 0px 10px;
 }
 
-.course__module h2{
-    font-family: "Mont-Bold";
-    margin: 0 0 50px 0px;
+.discovery__box__info__inside {
+  margin: 50px 0 0 33px;
 }
 
-.course__module li{
-    list-style: none;
+.discovery__box__info__inside__title {
+  font-family: "Mont-Bold";
+  width: 266px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 117.3%;
+  letter-spacing: -0.02em;
+  color: #03002b;
 }
 
-.course__module__element{
-    width: 659px;
-    margin: 10px 0 0 0;
-    height: 55px;
-    background: #F2F2F2;
-    cursor: pointer;
-    user-select: none; 
+.discovery__box__info__inside__text {
+  width: 243px;
+  height: 49px;
+  left: 922px;
+  top: 703px;
+  font-family: Judson;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 133.3%;
+  color: #000000;
 }
 
-.course__module__element--teacher{
-    width: 506px;
-    height: 47px;
+.discovery__box__info__inside__price {
+  font-family: "Mont-Bold";
+  margin: 0;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 27px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #03002b;
 }
 
-.course__module__element__title{
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.02em;
-    color: #000000;
+.discovery__box__info__inside__save {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #ff3f31;
+  margin: 10px 0 0 10px;
 }
 
-.course__module__element__title--help__center{
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 13px;
-    line-height: 148.3%;
-    letter-spacing: -0.02em;
-    color: #000000;
-    padding: 20px 0px 0px 30px;
-}
-.course__module__element__title--teacher{
-    padding: 15px 0px 0px 30px;
+.discovery__box__info__inside__before {
+  font-family: "Mont-Light";
+  font-style: normal;
+  width: auto;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 135.3%;
+  letter-spacing: -0.03em;
+  color: #828282;
+  margin: 10px 0 0 0;
 }
 
-.course__module__element__inside{
-    width: 659px;
-    background: #E0E0E0;
-    margin: 3px 0 0 0;
+.discovery__box__info__inside__before i {
+  text-decoration: line-through;
+  font-style: normal;
+  margin-right: 5px;
 }
 
-.course__module__element__inside--teacher{
-    width: auto;
+.discovery__box__info__inside__percentage {
+  font-family: "Mont-Regular";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 135.3%;
+  letter-spacing: -0.03em;
+  color: #03002b;
+  margin: 10px 0 0 0;
 }
 
-.course__module__element__inside--help__center{
-    margin: 3px 140px 30px 0;
-    padding: 20px 0px 0px 20px;
+.discovery__box__info__inside__shopping {
+  position: relative;
+  top: 9px;
 }
 
-.course__module__element__inside p{
-    font-family: Judson;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 143.3%;
-    letter-spacing: -0.03em;
-    color: #000000;
-    margin: 2px 0 20px 0;
-    padding: 20px 80px 20px 30px;
-    user-select: none; 
+.discovery__box__info__inside__buttons {
+  margin: 15px 0 0 0;
 }
 
-.course__module__element__inside__icon{
-    margin: 0px 20px 0 35px;
-    position: relative;
-    bottom: 7px;
+.couse__about h1 {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #03002b;
 }
 
-.course__module__element__inside__right{
-    margin: 10px 0 16px 0;
+.course__info__title {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #03002b;
+  margin: 40px 0 27px 0;
 }
 
-.course__module__element__inside__right h5{
-    font-family: 'Mont-Semi-Bold';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.02em;
-    color: #000000;
-    margin: 10px 0 -5px 0;
+.course__about p {
+  width: 661px;
+  font-family: Buenard;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 151.3%;
+  color: #000000;
+  margin: 28px 0 30px 0px;
+}
+.couse__about img {
+  width: 574px;
+  height: 290px;
 }
 
-.course__module__element__inside__right i{
-    margin: 0px 0px 0px 0px;
-    font-family: Mont-Light;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 14px;
-    letter-spacing: -0.02em;
-    color: #828282;
+.course__inclusive {
+  height: 342px;
+  background: #e0e0e0;
 }
 
-
-.course__module__sub__title{
-    font-family: 'Mont-Semi-Bold';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.02em;
-    color: #000000;
-    position: relative;
-    bottom: 13px;
-    left: 60px;
-    width: 330px;
+.course__inclusive__inside {
+  margin: 0px 0 0 200px;
+  padding: 9px 0 0 0;
 }
 
-.course__module li strong{
-    font-family: "Mont-Bold";
-    margin: 5px;
-    font-size: 12px;
-}
-.course__module__time{
-    margin: 0px 0px 0 30px;
-}
-.course__module__time p{
-    font-size: 12px;
-    margin: 0 0px 0px 5px;
-    color: #4F4F4F;
-}
-.course__module__reloj{
-    width: 15px;
-    filter: contrast(0.2);
+.course__inclusive__certificate {
+  color: #b38a58;
 }
 
-.course__module__play{
-    margin: 0px -15px 0 27px;
-    position: relative;
-    width: 23px;
-    top: 15px;
+.course__inclusive__diploma {
+  width: 276px;
+  height: 230px;
+  margin: 50px 0 0px 0;
+  position: absolute;
+  right: 240px;
+}
+.course__inclusive__inside h1 {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #03002b;
 }
 
-.course__module__arrow{
-    padding: 0px 0 0 0;
-    position: relative;
-    left: 90%;
-    top: 15px;
+.course__inclusive__inside li {
+  margin: 4px 0 0 0;
+}
+.course__inclusive__inside h2 {
+  font-family: "Mont-Bold";
+}
+.course__inclusive__inside p {
+  width: 429px;
+  font-family: Judson;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
 }
 
-.course__module__arrow--buyed{
-    left: 85%;
-}
-.course__module__arrow--help__center{
-    padding: 0px 0 0 0;
-    position: relative;
-    left: 90%;
-    top: -35px;
+.course__for__me {
+  margin: 52px 0 0 200px;
 }
 
-.course__recomendation{
-background: #03002B;
-margin: 92px 0 50px 0;
-padding: 0;
-color: #ffff;
+.course__for__me ul {
+  padding: 0 0 0 20px;
 }
 
-.course__recomendation__inside{
-    padding: 44px 200px 0px 200px;
-    
+.course__for__me h2 {
+  font-family: "Mont-Bold";
+  margin: 52px 0 34px 0;
+}
+.course__for__me li {
+  margin: 5px 0 0 0;
+  font-family: Judson;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
 }
 
-.course__recomendation__inside__box{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1px 1px;
-}
-.course__recomendation__inside__title{
-    font-family: 'Mont-Bold';
-font-style: normal;
-font-weight: 800;
-font-size: 26px;
-line-height: 135.3%;
-margin: 0 0 40px 0px;
-letter-spacing: -0.02em;
-/* Dorado */
-color: #B38A58;
+.course__module {
+  margin: 100px 0 0 200px;
 }
 
-.course__recomendation__inside__profile{
-    margin: 0;
+.course__module ul {
+  padding: 0;
 }
 
-.course__recomendation__inside__name{
-    margin: 8px 0 0 20px;
+.course__module h2 {
+  font-family: "Mont-Bold";
+  margin: 0 0 50px 0px;
 }
 
-.course__recomendation__inside__text{
-    width: 360px;
-    padding: 0px 0 40px 0px;
+.course__module li {
+  list-style: none;
 }
 
-.course__recomendation__arrows{
-    margin: 20px 0px 0px 45%;
-    padding: 10px 0 32px 0;
+.course__module__element {
+  width: 659px;
+  margin: 10px 0 0 0;
+  height: 55px;
+  background: #f2f2f2;
+  cursor: pointer;
+  user-select: none;
 }
 
-.course__recomendation__arrows__left{
-    background-image: url(../../static/images/svg/arrow-left.svg);
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
+.course__module__element--teacher {
+  width: 506px;
+  height: 47px;
 }
 
-.course__recomendation__arrows__left:hover{
-    background-image: url(../../static/images/svg/arrow-left-hover.svg);
-
+.course__module__element__title {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #000000;
 }
 
-.course__recomendation__arrows__right{
-    background-image: url(../../static/images/svg/arrow-right.svg);
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
+.course__module__element__title--help__center {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 148.3%;
+  letter-spacing: -0.02em;
+  color: #000000;
+  padding: 20px 0px 0px 30px;
+}
+.course__module__element__title--teacher {
+  padding: 15px 0px 0px 30px;
 }
 
-.course__recomendation__arrows__right:hover{
-    background-image: url(../../static/images/svg/arrow-right-hover.svg);
-    width: 23px;
-    height: 23px;
+.course__module__element__inside {
+  width: 659px;
+  background: #e0e0e0;
+  margin: 3px 0 0 0;
 }
 
-.course__recomendation__arrows__numb{
-    margin: 5px 35px 0 35px;
-    font-family: 'Mont-Semi-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 12px;
-    line-height: 15px;
+.course__module__element__inside--teacher {
+  width: auto;
 }
 
-.course__teach h3{
-    font-family: 'Mont-Bold';
-    margin: 70px 0 0px 22px;
-
+.course__module__element__inside--help__center {
+  margin: 3px 140px 30px 0;
+  padding: 20px 0px 0px 20px;
 }
 
-.course__teach p{
-    margin: 0px 20px 10px 20px;
-}
-.course__teach strong{
-    margin: 10px 20px 10px 20px;
-    font-family: 'Mont-Heavy';
-    font-weight: 800;
-    font-size: 13px;
-    line-height: 135.3%;
-    letter-spacing: -0.03em;
-    color: #000000;
+.course__module__element__inside p {
+  font-family: Judson;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 143.3%;
+  letter-spacing: -0.03em;
+  color: #000000;
+  margin: 2px 0 20px 0;
+  padding: 20px 80px 20px 30px;
+  user-select: none;
 }
 
-.course__teach__socials{
-    margin: 0px 0 0 0px;
-    position: relative;
-    top: -2px;
-    left: -20px;
+.course__module__element__inside__icon {
+  margin: 0px 20px 0 35px;
+  position: relative;
+  bottom: 7px;
+}
+
+.course__module__element__inside__right {
+  margin: 10px 0 16px 0;
+}
+
+.course__module__element__inside__right h5 {
+  font-family: "Mont-Semi-Bold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 10px 0 -5px 0;
+}
+
+.course__module__element__inside__right i {
+  margin: 0px 0px 0px 0px;
+  font-family: Mont-Light;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  color: #828282;
+}
+
+.course__module__sub__title {
+  font-family: "Mont-Semi-Bold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  position: relative;
+  bottom: 13px;
+  left: 60px;
+  width: 330px;
+}
+
+.course__module li strong {
+  font-family: "Mont-Bold";
+  margin: 5px;
+  font-size: 12px;
+}
+.course__module__time {
+  margin: 0px 0px 0 30px;
+}
+.course__module__time p {
+  font-size: 12px;
+  margin: 0 0px 0px 5px;
+  color: #4f4f4f;
+}
+.course__module__reloj {
+  width: 15px;
+  filter: contrast(0.2);
+}
+
+.course__module__play {
+  margin: 0px -15px 0 27px;
+  position: relative;
+  width: 23px;
+  top: 15px;
+}
+
+.course__module__arrow {
+  padding: 0px 0 0 0;
+  position: relative;
+  left: 90%;
+  top: 15px;
+}
+
+.course__module__arrow--buyed {
+  left: 85%;
+}
+.course__module__arrow--help__center {
+  padding: 0px 0 0 0;
+  position: relative;
+  left: 90%;
+  top: -35px;
+}
+
+.course__recomendation {
+  background: #03002b;
+  margin: 92px 0 50px 0;
+  padding: 0;
+  color: #ffff;
+}
+
+.course__recomendation__inside {
+  padding: 44px 200px 0px 200px;
+}
+
+.course__recomendation__inside__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px 1px;
+}
+.course__recomendation__inside__title {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 135.3%;
+  margin: 0 0 40px 0px;
+  letter-spacing: -0.02em;
+  /* Dorado */
+  color: #b38a58;
+}
+
+.course__recomendation__inside__profile {
+  margin: 0;
+}
+
+.course__recomendation__inside__name {
+  margin: 8px 0 0 20px;
+}
+
+.course__recomendation__inside__text {
+  width: 360px;
+  padding: 0px 0 40px 0px;
+}
+
+.course__recomendation__arrows {
+  margin: 20px 0px 0px 45%;
+  padding: 10px 0 32px 0;
+}
+
+.course__recomendation__arrows__left {
+  background-image: url(../../static/images/svg/arrow-left.svg);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.course__recomendation__arrows__left:hover {
+  background-image: url(../../static/images/svg/arrow-left-hover.svg);
+}
+
+.course__recomendation__arrows__right {
+  background-image: url(../../static/images/svg/arrow-right.svg);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.course__recomendation__arrows__right:hover {
+  background-image: url(../../static/images/svg/arrow-right-hover.svg);
+  width: 23px;
+  height: 23px;
+}
+
+.course__recomendation__arrows__numb {
+  margin: 5px 35px 0 35px;
+  font-family: "Mont-Semi-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.course__teach h3 {
+  font-family: "Mont-Bold";
+  margin: 70px 0 0px 22px;
+}
+
+.course__teach p {
+  margin: 0px 20px 10px 20px;
+}
+.course__teach strong {
+  margin: 10px 20px 10px 20px;
+  font-family: "Mont-Heavy";
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 135.3%;
+  letter-spacing: -0.03em;
+  color: #000000;
+}
+
+.course__teach__socials {
+  margin: 0px 0 0 0px;
+  position: relative;
+  top: -2px;
+  left: -20px;
 }
 
 .course__teach__socials img {
-    margin: 0px 0px 0px 10px;
+  margin: 22px 0px 0px 10px;
 }
 
-.course__teach__info{
-    width: 637px;
-    font-family: Judson;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 152.3%;
-    color: #000000;
-    margin: 40px 100px 0px 0px;
+.course__teach__info {
+  width: 637px;
+  font-family: Judson;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 152.3%;
+  color: #000000;
+  margin: 40px 100px 0px 0px;
 }
 
-.course__certificate{
-    width: 819px;
-    height: 311px;
-    background: #F2F2F2;
-    margin: 0px 0 72px 0;
+.course__certificate {
+  width: 819px;
+  height: 311px;
+  background: #f2f2f2;
+  margin: 0px 0 72px 0;
 }
 
-.course__certificate__img{
-    width: 292px;
-    height: 245px;
-    margin: 28px 50px 0 77px;
+.course__certificate__img {
+  width: 292px;
+  height: 245px;
+  margin: 28px 50px 0 77px;
 }
 
-.course__certificate__left{
-    margin: 60px 0 0 0;
+.course__certificate__left {
+  margin: 60px 0 0 0;
 }
 
-.course__certificate h2{
-    width: 315px;
-    height: 54px;
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 19px;
-    line-height: 109.3%;
-    color: #03002B;
+.course__certificate h2 {
+  width: 315px;
+  height: 54px;
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 109.3%;
+  color: #03002b;
 }
-.course__certificate p{
-    width: 365px;
-    height: 73px;
-    font-family: Judson;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 130.3%;
-    color: #000000;
+.course__certificate p {
+  width: 365px;
+  height: 73px;
+  font-family: Judson;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130.3%;
+  color: #000000;
 }
 
 @media screen and (max-width: 1300px) {
-    .course__inclusive__diploma{
-        right: 130px;
-    }
-    .discovery__box__info{
-        display: none;
-    }
+  .course__inclusive__diploma {
+    right: 130px;
+  }
+  .discovery__box__info {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1130px) {
-    .course__inclusive__diploma{
-        right: 30px;
-    }
+  .course__inclusive__diploma {
+    right: 30px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .course {
+    margin: 40px 0px 0px 10%;
+  }
 
-    .course {
-        margin: 40px 0px 0px 10%;
-    }
-    
-    .course__img__video{
-        width: 414px;
-    }
-    
-    .course__recomendation__inside {
-        padding: 44px 0px 0px 10%;
-    }
-    
-    .course__recomendation__inside__box{
-        display: block;
-    }
-    
-    .course__recomendation {
-        background: none;
-        margin:0;
-        
-    }
-    
-    .course__recomendation__inside__title {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 19px;
-        line-height: 135.3%;
-        letter-spacing: -0.02em;
-        color: #03002B;
-    }
-    
-    .course__recomendation__inside__text{
-        padding: 0px 0 20px 0px;
-        border-bottom: 1px solid #E0E0E0;
-        font-family: Judson;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 19px;
-        line-height: 128.3%;
-        color: #000000;
-        width: 80vw;
-        border-bottom: 1px solid;
-    }
-    
-    .course__module{
-        margin: 100px 0 0 10%;
-    }
-    
-    .course__for__me{
-        margin: 52px 0 0 10%;
-    }
-    
-    .course__recomendation__inside__name{
-        font-style: normal;
-        font-family: Mont-Bold;
-        font-weight: 800;
-        font-size: 15px;
-        line-height: 113.3%;
-        color: #03002B;
-    }
-    
-    .course__teach__info{
-        margin: 40px 0px 0px 0px;
-        width: auto;
-    }
-    
-    .course__about h1{
-        font-family: 'Mont-Bold';
-        font-style: normal;
-        font-weight: 800;
-        font-size: 26px;
-        line-height: 135.3%;
-        letter-spacing: -0.02em;
-        color: #03002B;
-    }
-    .course__about p{
-        width: auto;
-    }
-    
-    .course__module li{
-        width: 80vw;
-    }
+  .course__img__video {
+    width: 414px;
+  }
 
-    
-    .course__module li strong{
-        font-size: 12px;
-    }
-    .course__logo__mobile{
-        width: 18px;
-        height: 18px;
-    }
+  .course__recomendation__inside {
+    padding: 44px 0px 0px 10%;
+  }
 
-    .course__information__text__width{
-        margin: 0 0 0 10px;
-        width: auto;
-    }
+  .course__recomendation__inside__box {
+    display: block;
+  }
 
-    .course__information__students--fix{
-        margin: 0 0 0 10px;
-    }
+  .course__recomendation {
+    background: none;
+    margin: 0;
+  }
 
-    .course__logo__mobile__margin{
-        margin: 0 0 5px 0 ;
-    }
+  .course__recomendation__inside__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #03002b;
+  }
 
-    .course__recomendation__arrows{
-        margin: 20px 0px 0px 23%;
-        padding: 10px 0 32px 0;
-    }
+  .course__recomendation__inside__text {
+    padding: 0px 0 20px 0px;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: Judson;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 128.3%;
+    color: #000000;
+    width: 80vw;
+    border-bottom: 1px solid;
+  }
 
-    .course__recomendation__arrows__numb{
-        color: #000;
-    }
+  .course__module {
+    margin: 100px 0 0 10%;
+  }
 
-    .course__about__img{
-        width: 80vw;
-    }
+  .course__for__me {
+    margin: 52px 0 0 10%;
+  }
 
-    .course__teach h3{
-        margin: 10px 0 0px 0px;
-    }
+  .course__recomendation__inside__name {
+    font-style: normal;
+    font-family: Mont-Bold;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 113.3%;
+    color: #03002b;
+  }
 
-    .course__teach p {
-        margin: 0px 0px 10px 0px;
-    }
+  .course__teach__info {
+    margin: 40px 0px 0px 0px;
+    width: auto;
+  }
 
-    .course__teach strong {
-        margin: 10px 20px 10px 0px;
-    }
+  .course__about h1 {
+    font-family: "Mont-Bold";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #03002b;
+  }
+  .course__about p {
+    width: auto;
+  }
 
-    .course__module__element{
-        width: auto;
-    }
-    .course__module__element__inside{
-        width: auto;
-    }
-    .course__module__element__inside--help__center{
-        margin: 3px 0px 30px 0;
-        padding: 20px 0px 0px 20px;
-    }
+  .course__module li {
+    width: 80vw;
+  }
+
+  .course__module li strong {
+    font-size: 12px;
+  }
+  .course__logo__mobile {
+    width: 18px;
+    height: 18px;
+  }
+
+  .course__information__text__width {
+    margin: 0 0 0 10px;
+    width: auto;
+  }
+
+  .course__information__students--fix {
+    margin: 0 0 0 10px;
+  }
+
+  .course__logo__mobile__margin {
+    margin: 0 0 5px 0;
+  }
+
+  .course__recomendation__arrows {
+    margin: 20px 0px 0px 23%;
+    padding: 10px 0 32px 0;
+  }
+
+  .course__recomendation__arrows__numb {
+    color: #000;
+  }
+
+  .course__about__img {
+    width: 80vw;
+  }
+
+  .course__teach h3 {
+    margin: 10px 0 0px 0px;
+  }
+
+  .course__teach p {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .course__teach strong {
+    margin: 10px 20px 10px 0px;
+  }
+
+  .course__module__element {
+    width: auto;
+  }
+  .course__module__element__inside {
+    width: auto;
+  }
+  .course__module__element__inside--help__center {
+    margin: 3px 0px 30px 0;
+    padding: 20px 0px 0px 20px;
+  }
 }

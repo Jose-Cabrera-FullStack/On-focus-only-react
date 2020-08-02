@@ -17,16 +17,24 @@ import Shopping from "../assets/static/images/svg/shopping-car.svg";
 import "../assets/styles/components/Header.scss";
 
 const Header = (props) => {
-  // const { user= {} } = props;
-  // const hasUser = Object.keys(user).length  >  0;
+  const { user = {} } = props;
+  const hasUser = Object.keys(user).length > 0;
 
-  // const handleLogout = () => {
-  //   props.logoutRequest({});
-  // };
+  const handleLogout = () => {
+    document.cookie = `email=`;
+    document.cookie = `name=`;
+    document.cookie = `id=`;
+    document.cookie = `token=`;
+    props.logoutRequest({});
+    window.location.href = "/";
+  };
+
   const [isToggled, setToggled] = useState(false);
+
   const toggleTrueFalse = () => setToggled(!isToggled);
 
   const [isToggledMenuMobile, setToggledMenuMobile] = useState(false);
+
   const toggleTrueFalseMenuMobile = () =>
     setToggledMenuMobile(!isToggledMenuMobile);
 
@@ -49,7 +57,7 @@ const Header = (props) => {
       <nav className="navbar">
         <Link to="/">
           <figure className="grid-1">
-            <img className="navbar__img" src={Logo} alt="" />
+            <img className="navbar__img" src={Logo} alt="Logo de Focus Minds" />
           </figure>
         </Link>
         <div className="display__screen__mobile">
@@ -63,12 +71,14 @@ const Header = (props) => {
             ) : (
               ""
             )}
-            <img
-              onClick={toggleTrueFalseMenuMobile}
-              className="navbar__hamburguer"
-              src={Hamburguer}
-              alt="Icono de Hamburguesa"
-            />
+            <div>
+              <img
+                onClick={toggleTrueFalseMenuMobile}
+                className="navbar__hamburguer"
+                src={Hamburguer}
+                alt="Icono de Hamburguesa"
+              />
+            </div>
           </div>
           {isToggledMenuMobile ? (
             <HamburgerMenuMobile
@@ -81,7 +91,7 @@ const Header = (props) => {
             ""
           )}
           <img
-          onClick={toggleTrueFalse}
+            onClick={toggleTrueFalse}
             className={
               notification
                 ? "navbar__hamburguer__shopping"
@@ -90,7 +100,7 @@ const Header = (props) => {
             src={Shopping}
             alt="Icono de Carrito de Compras"
           />
-          <EmergentMenu toggle={isToggled} mobile/>
+          <EmergentMenu toggle={isToggled} mobile />
         </div>
         <div className="grid-2 navbar__justify__self navbar__query">
           <div className="navbar__query"></div>
@@ -126,27 +136,40 @@ const Header = (props) => {
               />
             </li>
             <EmergentMenu toggle={isToggled} />
-            <li className="navbar__menu ">
-              <button
-                className="btn__primary btn__primary--login btn__primary--login"
-                onClick={handleOpen}
-                type="button"
-              >
-                Iniciar Sesion
-              </button>
-              <ModalLogin
-                open={open}
-                handleClose={handleClose}
-                body={<Login handleClose={handleClose} />}
-              />
-            </li>
-            <li className="navbar__menu">
-              <Link to="/registrarse">
-                <button className="btn__primary btn__primary--login">
-                  Registrarse
-                </button>
-              </Link>
-            </li>
+            {hasUser ? (
+              <>
+                <Link to="/mis-cursos" className="text-decoration">
+                  <li className="navbar__menu">Mis Cursos</li>
+                </Link>
+                <li onClick={handleLogout} className="navbar__menu">
+                  Cerrar Sesión
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="navbar__menu ">
+                  <button
+                    className="btn__primary btn__primary--login btn__primary--login"
+                    onClick={handleOpen}
+                    type="button"
+                  >
+                    Iniciar Sesion
+                  </button>
+                  <ModalLogin
+                    open={open}
+                    handleClose={handleClose}
+                    body={<Login handleClose={handleClose} />}
+                  />
+                </li>
+                <li className="navbar__menu">
+                  <Link to="/registrarse">
+                    <button className="btn__primary btn__primary--login">
+                      Registrarse
+                    </button>
+                  </Link>
+                </li>
+              </>
+            )}
           </ol>
         </div>
       </nav>
@@ -157,6 +180,7 @@ const Header = (props) => {
 const mapStateToProps = (state) => {
   return {
     shoppingcar: state.shoppingcar || {},
+    user: state.user || {},
   };
 };
 
@@ -164,4 +188,4 @@ const mapDispatchToProps = {
   logoutRequest,
 };
 
-export default connect(mapStateToProps, null)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

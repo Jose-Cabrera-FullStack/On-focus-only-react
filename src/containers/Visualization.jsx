@@ -27,7 +27,7 @@ const Visualization = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    courseVideo: state.courseVideo || {},
+    courseVideo: state.myCourses || {},
     URLvideos: state.URLvideos || {},
   };
 };

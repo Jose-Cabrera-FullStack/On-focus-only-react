@@ -26,8 +26,8 @@ const ButtonArrowRight = ({
             width
           }
         >
-          <Link to={link}>
-            <div className="flex btn__arrow__buy">
+          <Link to={link} className="text-decoration">
+            <div className="flex btn__arrow__buy" >
               <span
                 className={icon ? icon : "icon btn__arrow__buy__img"}
                 alt="Ícono de flecha a la derecha"
