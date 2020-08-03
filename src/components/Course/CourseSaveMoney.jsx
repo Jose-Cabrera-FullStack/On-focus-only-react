@@ -8,9 +8,15 @@ import YouSave from "../Course/SaveMoney/YouSave";
 
 import ButtonShopping from "../Utils/ButtonShopping";
 
-const CourseSaveMoney = ({ course, category }) => {
+const CourseSaveMoney = ({ course, category, onlyMobile }) => {
   return (
-    <div className="discovery__box__info discovery__box__info--course display__course__screen__desktop">
+    <div
+      className={
+        onlyMobile
+          ? "discovery__box__info--mobile"
+          : "discovery__box__info discovery__box__info--course display__course__screen__desktop"
+      }
+    >
       <div className="discovery__box__info__inside">
         <h2 className="discovery__box__info__inside__title">
           Lorem ipsum dolor sit amet sed diam nonummy.

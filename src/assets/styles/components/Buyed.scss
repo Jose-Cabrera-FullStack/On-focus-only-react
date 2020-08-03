@@ -295,6 +295,16 @@
     .buyed__progress h4 {
         margin: 5px 0 10px 0px;
     }
+
+    .buyed__classes{
+        height: 140%;
+        width: 100vw;
+        background: #fff;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     
 }
 @media screen and (max-width: 562px) {

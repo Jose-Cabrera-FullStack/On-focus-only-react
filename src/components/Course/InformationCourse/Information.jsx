@@ -5,7 +5,7 @@ import CapitalFirstLetter from "../../../Utils/capitalizeFirstLetter";
 import "../../../assets/styles/components/CoursePlus.scss";
 
 const CourseInfo = (props) => (
-  <div className={props.OnlyDesktop}>
+  <div className={props.OnlyDesktop ? props.OnlyDesktop: props.onlyMobile}>
     <h2 className="discovery__box__info__title course__section">
       {props.category.name
         ? CapitalFirstLetter(props.category.name)
@@ -15,7 +15,7 @@ const CourseInfo = (props) => (
       <p className="discovery__box__info__name discovery__box__info__name--course">
         {props.category.category
           ? CapitalFirstLetter(props.category.category)
-          : Marketing}
+          : "Marketing"}
       </p>
       <i className="discovery__box__info__teach course__section__tech">
         -{" "}

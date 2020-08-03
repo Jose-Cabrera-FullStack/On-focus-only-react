@@ -248,6 +248,10 @@
   left: 20px;
 }
 
+.details__inside__detail__empty{
+  padding: 0px 0 20px 0;
+}
+
 .details__inside__detail {
   margin: 20px 0 0 0;
   font-family: "Mont-Light";
@@ -535,4 +539,9 @@
   .way-to-pay__input__box--variant {
     margin: 20px 0 0 20px;
   }
+  .details__inside__edit{
+    position: absolute;
+    right: -30px;
+  }
+  
 }

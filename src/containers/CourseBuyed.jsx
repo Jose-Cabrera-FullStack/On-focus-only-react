@@ -38,7 +38,6 @@ const CourseBuyed = (props) => {
     featured_image,
     title,
     name,
-    status,
     module,
   } = props.myCourse;
 

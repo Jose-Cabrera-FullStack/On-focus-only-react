@@ -7,10 +7,10 @@ import "../../assets/styles/components/Payment.scss";
 import Course from "../Utils/EmergentMenuBox/Course";
 
 import arrowRight from "../../assets/static/images/svg/arrow-shopping-right.svg";
+import arrowUp from "../../assets/static/images/svg/arrow-shopping-up.svg";
 import arrowDown from "../../assets/static/images/svg/arrow-shopping-down.svg";
 
 const Details = ({ total, shoppingcar }) => {
-
   const [isToggle, setToggle] = useState(false);
 
   const changeisToggle = () => setToggle(!isToggle);
@@ -38,7 +38,7 @@ const Details = ({ total, shoppingcar }) => {
         <div className="flex">
           <h3 className="details__inside__title">Tu Carrito.</h3>
           <Link to="/carrito" className="details__inside__title__edit__link">
-            <div className="flex">
+            <div className="details__inside__edit flex">
               <p>Editar</p>
               <img src={arrowRight} alt="Flecha para la derecha" />
             </div>
@@ -57,7 +57,7 @@ const Details = ({ total, shoppingcar }) => {
         </div>
         <div className="details__inside__detail flex" onClick={changeisToggle}>
           <p>Ver detalles</p>
-          <img src={arrowDown} alt="Fecla para abajo" />
+          <img src={isToggle ? arrowUp : arrowDown} alt="Fecla para abajo" />
         </div>
         <div className={isToggle ? "" : "display-none"}>
           <hr />
@@ -77,7 +77,7 @@ const Details = ({ total, shoppingcar }) => {
               })}
             </>
           ) : (
-            <p>No tienes items</p>
+            <p className="details__inside__detail__empty">No tienes items</p>
           )}
 
           {/* <Course shoppingCar teacher={"David Guerra"} />

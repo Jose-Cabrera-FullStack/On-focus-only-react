@@ -142,7 +142,6 @@
 .discovery__box__info__inside__before i {
   text-decoration: line-through;
   font-style: normal;
-  margin-right: 5px;
 }
 
 .discovery__box__info__inside__percentage {
@@ -594,12 +593,29 @@
   color: #000000;
 }
 
+.discovery__box__info--mobile {
+  display: none;
+}
+
 @media screen and (max-width: 1300px) {
   .course__inclusive__diploma {
     right: 130px;
   }
   .discovery__box__info {
     display: none;
+  }
+  .discovery__box__info--mobile {
+    display: block;
+  }
+  .discovery__box__info__inside__title {
+    display: none;
+  }
+  .discovery__box__info__inside__text {
+    display: none;
+  }
+
+  .discovery__box__info__inside {
+    margin: 50px 0 0 0;
   }
 }
 
@@ -740,6 +756,7 @@
 
   .course__module__element {
     width: auto;
+    margin: 10px 20px 0 20px;
   }
   .course__module__element__inside {
     width: auto;
@@ -748,4 +765,13 @@
     margin: 3px 0px 30px 0;
     padding: 20px 0px 0px 20px;
   }
+  .course__certificate {
+    width: auto; 
+    height: auto;
+}
+}
+@media screen and (max-width: 450px) {
+  .course__module__arrow--buyed {
+    left: 75%;
+}
 }

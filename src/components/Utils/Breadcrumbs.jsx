@@ -12,25 +12,45 @@ const Beadcrumbs = ({
   icon,
   iconHover,
   link,
+  onClick,
 }) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <div
-      className={
-        "beadcrumbs" + " " + onlyMobile + " " + margin + " " + onlyDesktop
-      }
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
-    >
-      <Link to={link ? link :"/cursos"} className="flex text-decoration">
-        <img
-          src={icon ? (isHover ? iconHover : icon) : ArrowLeft}
-          alt="Fecha a la izquierda"
-        />
-        <h5 className="beadcrumbs__text">Volver a los cursos</h5>
-      </Link>
-    </div>
+    <>
+      {onClick ? (
+        <div
+          onClick={onClick}
+          className={
+            "beadcrumbs flex" + " " + onlyMobile + " " + margin + " " + onlyDesktop
+          }
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+        >
+          <img
+            src={icon ? (isHover ? iconHover : icon) : ArrowLeft}
+            alt="Fecha a la izquierda"
+          />
+          <h5 className="beadcrumbs__text">Volver a los cursos</h5>
+        </div>
+      ) : (
+        <div
+          className={
+            "beadcrumbs" + " " + onlyMobile + " " + margin + " " + onlyDesktop
+          }
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+        >
+          <Link to={link ? link : "/cursos"} className="flex text-decoration">
+            <img
+              src={icon ? (isHover ? iconHover : icon) : ArrowLeft}
+              alt="Fecha a la izquierda"
+            />
+            <h5 className="beadcrumbs__text">Volver a los cursos</h5>
+          </Link>
+        </div>
+      )}
+    </>
   );
 };
 export default Beadcrumbs;

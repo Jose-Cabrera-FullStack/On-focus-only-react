@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
 import "../../assets/styles/components/CoursePlus.scss";
 import CourseInfoOnlyInfo from "../../components/Course/CourseInfoOnlyInfo";
@@ -8,7 +7,18 @@ import CourseCertificate from "../../components/Course/AboutCourse/CourseCertifi
 import CourseTeacherInfoVariant from "../../components/Course/AboutCourse/CourseTeacherInfoVariant";
 import BuyedCourse from "../../components/Course/Mobile/BuyedCourse";
 
+import Classes from "./Mobile/Classes";
+import Information from "./Mobile/Information";
+
 const CourseAboutCourse = (props) => {
+  const [isClasses, setIsClasses] = useState(false);
+  const ClickSetIsClasses = () => setIsClasses(!isClasses);
+
+  const [isInformation, setIsInformation] = useState(false);
+  const ClickSetIsInformation = () => setIsInformation(!isInformation);
+
+  console.log(isClasses);
+
   return (
     <div>
       <CourseInfoOnlyInfo
@@ -28,15 +38,27 @@ const CourseAboutCourse = (props) => {
       />
       <p className="buyed_see__more display__screen__desktop">Ver más+</p>
       <CourseCertificate onlyDesktop={"display__screen__desktop"} />
-
       <p className="buyed__teacher__tittle display__screen__desktop">
         Sobre el profesor
       </p>
+      <BuyedCourse
+        onlyMobile={"display__screen__mobile"}
+        description={"Están todos los modulos."}
+        title={"Clases"}
+        onClick={ClickSetIsClasses}
+        classes
+      />
 
-      <BuyedCourse onlyMobile={"display__screen__mobile"} />
+      {isClasses ? <Classes onClick={ClickSetIsClasses} /> : ""}
 
-      <BuyedCourse onlyMobile={"display__screen__mobile"} />
-
+      <BuyedCourse
+        onlyMobile={"display__screen__mobile"}
+        description={"Está toda la información de este curso."}
+        title={"Sobre el curso"}
+        onClick={ClickSetIsInformation}
+        information
+      />
+      {isInformation ? <Information onClick={ClickSetIsInformation} /> : ""}
       <CourseTeacherInfoVariant
         onlyDesktop={"display__screen__desktop"}
         teacher={props.teacher}

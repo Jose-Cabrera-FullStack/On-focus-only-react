@@ -15,21 +15,30 @@ const CourseProgress = ({
   module,
   name,
   category,
-  image
+  image,
 }) => {
-  let urls = [];
+  let urlsFalse = [];
+  let urlsTrue = [];
   let totalVideoNum = 0;
   let totalVideoFinishNum = 0;
   let totalVideo = module.map((item) => item.videos);
   totalVideo.map((element) => {
     element.forEach((element) => {
       if (element.status === true) totalVideoFinishNum += 1;
-      if (element.status === false) urls.push(element.url);
+      if (element.status === false) urlsFalse.push(element.url);
+      if (element.status === true) urlsTrue.push(element.url);
       totalVideoNum += 1;
     });
   });
 
-  const url = `/cursos/${category}/${name}/${urls[0]}`;
+  let url = "";
+
+  if (urlsFalse.length < 1) {
+    url = `/cursos/${category}/${name}/${urlsTrue[0]}`;
+  }
+  if (urlsFalse.length > 1) {
+    url = `/cursos/${category}/${name}/${urlsFalse[0]}`;
+  }
 
   return (
     <section className="buyed__progress">
