@@ -1,212 +1,235 @@
-.visualization{
-    background: #03002B;
-    color: #F2F2F2;
+.visualization {
+  background: #03002b;
+  color: #f2f2f2;
 }
 
-.visualization__navbar{
-    padding: 5px 0 20px 70px;
-    margin: 0;
-    border-bottom: 1px solid;
+.visualization__navbar {
+  padding: 5px 0 20px 70px;
+  margin: 0;
+  border-bottom: 1px solid;
 }
-.visualization__navbar h5{
-    height: 20px;
-    font-family: 'Mont-Regular';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 135.3%;
-    letter-spacing: -0.02em;
-    color: #F2F2F2;
-}
-
-.visualization__grid{
-    display: grid;
-    grid-template-columns: 415px 1fr;
-    gap: 1px 1px;
-    padding-bottom: 2%;
+.visualization__navbar h5 {
+  height: 20px;
+  font-family: "Mont-Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #f2f2f2;
 }
 
-.visualization__sidebar{
-    margin: 25px;
-    height: 485px;
-    overflow: overlay;
+.visualization__grid {
+  display: grid;
+  grid-template-columns: 415px 1fr;
+  gap: 1px 1px;
+  padding-bottom: 2%;
 }
 
-.visualization__sidebar::-webkit-scrollbar{
-    width: 1px;
+.visualization__sidebar {
+  margin: 25px;
+  height: 485px;
+  overflow: overlay;
 }
-.visualization__sidebar::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-.visualization__sidebar::-webkit-scrollbar-thumb{
-    background-color: darkgrey;
 
+.visualization__sidebar::-webkit-scrollbar {
+  width: 1px;
+}
+.visualization__sidebar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.visualization__sidebar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
 }
 
 .visualization__sidebar ol {
-    padding: 0;
+  padding: 0;
 }
 
-.visualization__sidebar__list{
-    margin: 0 0 5px 0px;
-    height: 52px;
-    border: 1px solid #393758;
-    list-style: none;
-    width: 350px;
-    cursor: pointer;
-    user-select: none;
+.visualization__sidebar__list {
+  margin: 0 0 5px 0px;
+  height: 52px;
+  border: 1px solid #393758;
+  list-style: none;
+  width: 350px;
+  cursor: pointer;
+  user-select: none;
 }
 
-.visualization__sidebar__list:hover{
-    background: #b38a58;
+.visualization__sidebar__list:hover {
+  background: #b38a58;
 }
 
-.visualization__sidebar__list__box{
-    margin: 10px 0px 0px 65px;
+.visualization__sidebar__list__box {
+  margin: 10px 0px 0px 65px;
 }
 
-.visualization__sidebar__title{
-    font-family: 'Mont-Regular';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.02em;
-    color: #FFFFFF;
-    margin: 0;
+.visualization__sidebar__title {
+  font-family: "Mont-Regular";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
 }
 
-.visualization__sidebar__arrow{
-    margin: 5px 0 0 0px;
+.visualization__sidebar__status {
+  position: relative;
+  right: 30px;
+}
+
+.visualization__sidebar__inside__status {
+  margin: 20px 0 0 0;
+  position: relative;
+  left: 35px;
+  bottom: 60px;
+}
+
+.visualization__sidebar__arrow {
+  margin: 5px 0 0 0px;
+  position: relative;
+  left: 180px;
+  width: 29px;
+}
+
+.visualization__sidebar__arrow--up {
+  margin: 5px 0 0 0px;
+  position: relative;
+  left: 180px;
+  width: 24px;
+}
+
+.visualization__sidebar__text {
+  font-family: "Mont-Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #f2f2f2;
+  margin: 0;
+}
+
+.visualization__sidebar__inside {
+  margin: 5px 0 5px 0;
+  height: 62px;
+  width: 352px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+
+.visualization__sidebar__inside:hover {
+  background: #b38a58;
+}
+
+.visualization__sidebar__inside--watching {
+  background: #5e5c75;
+  cursor: context-menu;
+}
+
+.visualization__sidebar__inside--watching:hover {
+  background: #5e5c75;
+}
+
+.visualization__sidebar__inside__title {
+  width: 223px;
+  padding-top: 16px;
+  font-family: "Mont-Semi-Bold";
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  position: relative;
+  margin: 0 0 3px 60px;
+  bottom: 100px;
+}
+
+.visualization__sidebar__inside__text {
+  font-family: "Mont-Regular";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  color: #f2f2f2;
+  margin: 0px 0 20px 60px;
+  position: relative;
+  bottom: 100px;
+}
+
+.visualization__sidebar__inside__text--watching {
+  color: #03002b;
+}
+
+.visualization__sidebar__absolute {
+  position: absolute;
+}
+.visualization__vertical__line {
+    border-left: 3px solid #b38a58;
+    height: 67px;
     position: relative;
-    left: 180px;
-    width: 29px;
+    width: 0;
+    left: 41px;
 }
 
-.visualization__sidebar__arrow--up{
-    margin: 5px 0 0 0px;
-    position: relative;
-    left: 180px;
-    width: 24px;
+.visualization__video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 50px;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.visualization__sidebar__text{
-    font-family: 'Mont-Regular';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.02em;
-    color: #F2F2F2;
-    margin: 0;
-}
-
-.visualization__sidebar__inside{
-    margin: 5px 0 5px 0;
-    height: 62px;
-    width: 352px;
-    cursor: pointer;
-    user-select: none;
-    text-decoration: none;
-}
-
-.visualization__sidebar__inside:hover{
-    background: #b38a58;
-}
-
-.visualization__sidebar__inside--watching{
-    background: #5e5c75;
-    cursor: context-menu;
-    margin: 0;
-}
-
-.visualization__sidebar__inside--watching:hover{
-    background: #5e5c75;
-}
-
-.visualization__sidebar__inside__title{
-    width: 223px;
-    padding-top: 16px;
-    font-family: 'Mont-Semi-Bold';
-    font-size: 14px;
-    line-height: 14px;
-    letter-spacing: -0.02em;
-    color: #FFFFFF;
-    margin: 0 0 3px 60px;
-}
-
-.visualization__sidebar__inside__text{
-    font-family: 'Mont-Regular';
-    font-style: normal;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: -0.02em;
-    color: #F2F2F2;
-    margin: 0px 0 20px 60px;
-}
-
-.visualization__sidebar__inside__text--watching{
-    color: #03002B;
-    font-size: 14px;
-}
-
-.visualization__video{
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 0;
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 50px;
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-}
-
-.visualization__mobile{
-    width: 100vw;
-    margin: 20px 0 20px 0;
+.visualization__mobile {
+  width: 100vw;
+  margin: 20px 0 20px 0;
 }
 
 @media screen and (max-width: 1024px) {
-    .visualization__grid{
-        display: block;
-        height: auto;
-    }
+  .visualization__grid {
+    display: block;
+    height: auto;
+  }
 
-    .visualization__sidebar {
-        margin: 25px 25px 0 0px;
-        height: auto;
-        padding: 0px 0 10px 0;
-    }
+  .visualization__sidebar {
+    margin: 25px 25px 0 0px;
+    height: auto;
+    padding: 0px 0 10px 0;
+  }
 
-    .visualization__sidebar__arrow{
-        position: absolute;
-        right: 50px;
-    }
+  .visualization__sidebar__arrow {
+    position: absolute;
+    right: 50px;
+  }
 
-    .visualization__sidebar__arrow--up{
-        position: absolute;
-        right: 50px;
-    }
-    .visualization__sidebar ol {
-        padding: 0 0 0 20px;
-    }
-    .visualization__sidebar__list{
-        width: auto;
-    }
+  .visualization__sidebar__arrow--up {
+    position: absolute;
+    right: 50px;
+  }
+  .visualization__sidebar ol {
+    padding: 0 0 0 20px;
+  }
+  .visualization__sidebar__list {
+    width: auto;
+  }
 
-    .visualization__sidebar__inside{
-
-        width: auto;
-    }
+  .visualization__sidebar__inside {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 445px) {
-    .visualization__navbar {
-        padding: 5px 0 20px 10px;
-    }
+  .visualization__navbar {
+    padding: 5px 0 20px 10px;
+  }
 }

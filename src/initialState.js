@@ -24,7 +24,6 @@ export default {
       },
       students: 5,
       duration: 5400,
-      featured_image: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
       description:
         "pellentesque at nulla suspendisse potenti cras in purus eu magna",
       module: [

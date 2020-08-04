@@ -14,13 +14,27 @@ const CourseList = (props) => {
       <ol>
         {module.map((item, index) => {
           return (
-            <Course
-              key={index}
-              text={item.text}
-              title={item.name}
-              videos={item.videos}
-              path={props.url}
-            />
+            <div key={index}>
+              {/* <div className="visualization__sidebar__absolute">
+                {index === 0 ? (
+                  <div className="visualization__vertical__line--first"></div>
+                ) : index + 1 === module.length ? (
+                  <div className="visualization__vertical__line--last"></div>
+                ) : (
+                  <div className="visualization__vertical__line"></div>
+                )}
+                {index + 1 === module.length ? console.log("es el ultimo") : ""}
+              </div> */}
+
+              <Course
+                key={index}
+                text={item.text}
+                title={item.name}
+                videos={item.videos}
+                path={props.url}
+                last={index + 1 === module.length ? true : false}
+              />
+            </div>
           );
         })}
       </ol>
