@@ -10,7 +10,7 @@ import IncompleteIcon from "../../../assets/static/images/svg/icon-video-incompl
 import WatchingIcon from "../../../assets/static/images/svg/icon-video-watching.svg";
 
 const CourseInside = ({ title, status, url, path, last }) => {
-  console.log("last:", last);
+
   return (
     <>
       {path.params.video_id === url ? (
@@ -18,8 +18,8 @@ const CourseInside = ({ title, status, url, path, last }) => {
           className={
             "visualization__sidebar__inside visualization__sidebar__inside--watching"
           }
-          >
-          <div className="visualization__vertical__line"></div>
+        >
+          <div className={last}></div>
           <img
             className="visualization__sidebar__inside__status"
             src={status === false ? WatchingIcon : CompleteIcon}
@@ -39,7 +39,7 @@ const CourseInside = ({ title, status, url, path, last }) => {
         >
           <div>
             <div className={"visualization__sidebar__inside"}>
-            <div className="visualization__vertical__line"></div>
+              <div className={last}></div>
               <img
                 className="visualization__sidebar__inside__status"
                 src={status === false ? IncompleteIcon : CompleteIcon}

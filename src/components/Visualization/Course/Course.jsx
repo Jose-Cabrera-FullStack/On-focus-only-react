@@ -11,7 +11,7 @@ import ArrowDown from "../../../assets/static/images/svg/arrow-down-gold.svg";
 import CompleteIcon from "../../../assets/static/images/svg/icon-video-complete.svg";
 import IncompleteIcon from "../../../assets/static/images/svg/icon-video-incomplete.svg";
 
-const Course = ({ title, text, videos, path, last }) => {
+const Course = ({ title, text, videos, path, position }) => {
   const [isToggle, setToggled] = useState(false);
 
   const changeToggle = () => setToggled(!isToggle);
@@ -28,6 +28,7 @@ const Course = ({ title, text, videos, path, last }) => {
     <>
       <li className="visualization__sidebar__list" onClick={changeToggle}>
         <div className="visualization__sidebar__list__box flex">
+          <div className={position}></div>
           <img
             className="visualization__sidebar__status"
             src={isStarted ? CompleteIcon : IncompleteIcon}
@@ -55,6 +56,10 @@ const Course = ({ title, text, videos, path, last }) => {
       {isToggle ? (
         <>
           {videos.map((item, index) => {
+            const last =
+              index + 1 === videos.length
+                ? "visualization__vertical__line visualization__vertical__line--last"
+                : "visualization__vertical__line";
             return (
               <CourseInside
                 key={index}

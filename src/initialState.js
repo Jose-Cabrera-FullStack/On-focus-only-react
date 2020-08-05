@@ -136,7 +136,7 @@ export default {
           module_id: 1,
           text: "texto 4",
           category: "marketing",
-          name: "Module 4",
+          name: "Module 1",
           videos: [
             {
               video_id: 1,
@@ -165,9 +165,55 @@ export default {
           name: "Module 2",
           videos: [
             {
+              video_id: 1,
+              name: "video1",
+              url: "84351224",
+              status: false,
+            },
+            {
               video_id: 2,
               name: "video2",
-              url: "84351224",
+              url: "94957294",
+              status: false,
+            },
+          ],
+        },
+        {
+          module_id: 3,
+          text: "texto 2",
+          category: "marketing",
+          name: "Module 3",
+          videos: [
+            {
+              video_id: 1,
+              name: "video1",
+              url: "437219229",
+              status: false,
+            },
+            {
+              video_id: 2,
+              name: "video2",
+              url: "429262440",
+              status: false,
+            },
+          ],
+        },
+        {
+          module_id: 4,
+          text: "texto 2",
+          category: "marketing",
+          name: "Module 4",
+          videos: [
+            {
+              video_id: 1,
+              name: "video1",
+              url: "440460140",
+              status: false,
+            },
+            {
+              video_id: 2,
+              name: "video2",
+              url: "148198462",
               status: false,
             },
           ],
