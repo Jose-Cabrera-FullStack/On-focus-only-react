@@ -18,11 +18,14 @@ const Course = ({
   students,
   price,
   course,
+  displayNone,
 }) => {
-  let priceWithDiscount = price - (price * ( priceOff / 100));
+  let priceWithDiscount = price - price * (priceOff / 100);
+
+  console.log(displayNone);
 
   return (
-    <div className="discovery__box ">
+    <div className={"discovery__box " + " " + displayNone}>
       <div className="discovery__box__img">
         <div>
           <img
@@ -68,8 +71,7 @@ const Course = ({
               AR$ {priceWithDiscount ? parseInt(priceWithDiscount) : "490"}
             </h2>
             <i className="discovery__box__info__price__before">
-              Antes{" "}
-              <strong>AR$ {price ? parseInt(price) : "699"}</strong>
+              Antes <strong>AR$ {price ? parseInt(price) : "699"}</strong>
             </i>
           </div>
           <div className="flex">
@@ -84,7 +86,7 @@ const Course = ({
                 </div>
               </button>
             </Link>
-            <Shopping course={course}/>
+            <Shopping course={course} />
           </div>
         </div>
       </div>

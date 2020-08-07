@@ -118,14 +118,6 @@
   width: 304px;
 }
 
-.way-to-pay__box__card--mercado__pago__text__btn {
-  margin: 45px;
-}
-
-.way-to-pay__box__card--mercado__pago__text__btn:hover {
-  background-color: #03002b;
-}
-
 .way-to-pay__box__card--button__paypal {
   margin: 50px 0px 50px 20px;
 }
@@ -135,6 +127,53 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.way-to-pay__input--check--initial {
+  position: absolute;
+  position: absolute;
+  margin: 5px 0 0px 10px;
+  z-index: 2;
+}
+.way-to-pay__input--check--initial--correct {
+  filter: sepia(181);
+}
+.way-to-pay__input--check {
+  position: relative;
+  top: 5px;
+  right: -10px;
+}
+
+.way-to-pay__input--error {
+  font-family: "Mont-Light";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 135.3%;
+  letter-spacing: -0.03em;
+  color: #4f4f4f;
+  position: relative;
+  top: -10px;
+}
+
+.way-to-pay__input--error--variation {
+  position: absolute;
+  margin: 50px 0 0 0;
+  top: auto;
+}
+
+.way-to-pay__input--error--variation--segurity {
+  position: absolute;
+  margin: 13px 0px 0 190px;
+  top: auto;
+}
+
+.way-to-pay__input--check--correct {
+  filter: sepia(181);
+}
+
+.way-to-pay__input__btn {
+  margin: 50px 0 20px 0;
 }
 
 .way-to-visa {
@@ -163,6 +202,13 @@
   transition: all 0.2s ease-in-out;
 }
 
+.way-to-pay__box__card--mercado__pago__text__btn {
+  margin: 45px;
+}
+
+.way-to-pay__box__card--mercado__pago__text__btn:hover {
+  background-color: #03002b;
+}
 .details {
   width: 468px;
   background: #f2f2f2;
@@ -183,13 +229,13 @@
 }
 
 .details__inside__title__edit__link {
-    margin: 25px 10px 0 0px;
-    text-decoration: none;
-    color: black;
-    position: relative;
-    cursor: pointer;
-    left: 180px;
-    top: 10px;
+  margin: 25px 10px 0 0px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  cursor: pointer;
+  left: 180px;
+  top: 10px;
 }
 
 .details__inside__title__edit__link p {
@@ -198,7 +244,7 @@
 
 .details__inside__title__edit__link:hover {
   color: #b38a58;
-  font-family: 'Mont-Bold';
+  font-family: "Mont-Bold";
 }
 
 .details__inside__title__edit__link img {
@@ -248,7 +294,7 @@
   left: 20px;
 }
 
-.details__inside__detail__empty{
+.details__inside__detail__empty {
   padding: 0px 0 20px 0;
 }
 
@@ -444,7 +490,17 @@
   }
 
   .details {
+    position: relative;
+    top: -80px;
     width: 100vw;
+  }
+
+  .way-to-pay__input--email {
+    width: 60vw;
+  }
+
+  .way-to-pay__tex__email {
+    margin: 10px 0 -20px 0;
   }
 
   .way-to-pay__box {
@@ -489,6 +545,10 @@
 
   .way-to-pay__input__box {
     margin: 20px 0 0 30px;
+  }
+
+  .details__inside {
+    margin: 30px 30px -70px 43px;
   }
 }
 
@@ -539,9 +599,18 @@
   .way-to-pay__input__box--variant {
     margin: 20px 0 0 20px;
   }
-  .details__inside__edit{
+  .details__inside__edit {
     position: absolute;
     right: -30px;
   }
-  
+  .way-to-pay__text {
+    margin: -10px 0 10px 23px;
+  }
+  .way-to-pay__input--email {
+    margin: 3px 0px 31px 20px;
+  }
+  .way-to-pay__input--card {
+    width: 61vw;
+    margin: 0px 0 16px 0px;
+  }
 }

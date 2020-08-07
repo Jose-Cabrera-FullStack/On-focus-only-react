@@ -12,7 +12,9 @@ const MercadoPago = ({ modal, onClick }) => (
     </p>
     <ButtonArrowRight
       onClick={onClick}
-      margin={"way-to-pay__box__card--mercado__pago__text__btn"}
+      margin={
+        "btn__secundary--way-to-pay way-to-pay__box__card--mercado__pago__text__btn"
+      }
     />
     {modal}
   </div>

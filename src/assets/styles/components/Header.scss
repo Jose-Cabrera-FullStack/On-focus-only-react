@@ -30,9 +30,9 @@
 
 .navbar__menu__shopping__cart__notification {
   background: #b38a58;
-  position: relative;
-  left: 37px;
-  bottom: 10px;
+  position: absolute;
+  top: 10px;
+  right: 324px;
   z-index: 3;
   border-radius: 50%;
   height: 15px;
@@ -40,13 +40,13 @@
 }
 .navbar__menu__shopping__cart__notification--mobile {
   background: #b38a58;
-    position: absolute;
-    right: 97px;
-    top: 10px;
-    z-index: 3;
-    border-radius: 50%;
-    height: 15px;
-    width: 15px;
+  position: absolute;
+  right: 82px;
+  top: 10px;
+  z-index: 3;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
 }
 
 .navbar__menu__shopping__cart__number {
@@ -127,6 +127,22 @@
 
 .navbar__menu img {
   z-index: 2;
+  position: relative;
+  top: -5px;
+  left: 5px;
+}
+
+.navbar__hamburguer__shopping__img__desktop--toggle {
+  filter: invert(0.5) sepia(9);
+}
+
+.navbar__hamburguer__shopping__img {
+  position: absolute;
+  right: 85px;
+  top: 10px;
+}
+.navbar__hamburguer__shopping__img--toggle {
+  filter: invert(0.5) sepia(9);
 }
 
 .navbar__menu img:hover {
@@ -142,6 +158,13 @@
 }
 
 /* <-------MEDIA-------> */
+
+@media screen and (max-width: 1250px) {
+  .navbar__menu__shopping__cart__notification {
+    right: 316px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .navbar__query {
     display: none;

@@ -42,13 +42,13 @@ const Price = (props) => {
               props.onlyMobile
             }
           >
-            Eliminar
+            Elimina
           </p>
         </div>
         <p
           onClick={() => handleDeleteShopping(props.course_id)}
           className={
-            "hero__view__promo__price__delete hero__view__promo__price__delete--shopping__car" +
+            "hero__view__promo__price__delete hero__view__promo__price__delete--shopping__car--mobile hero__view__promo__price__delete--shopping__car" +
             " " +
             props.onlyDesktop
           }

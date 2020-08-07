@@ -18,17 +18,22 @@ const Course = ({
   teacher,
   deleteFavorite,
   mobile,
+  desktop,
 }) => {
   const handleDeleteShopping = (course_id) => {
     deleteFavorite(course_id);
   };
 
+  console.log("shoppingCar:", shoppingCar);
+
   return (
     <div className={"flex" + " " + margin}>
       <img
         className={
-          shoppingCar
+          desktop
             ? "hero__view__promo__img--shopping__car"
+            : shoppingCar
+            ? "hero__view__promo__img--details"
             : mobile
             ? "hero__view__promo__img--mobile"
             : "hero__view__promo__img"
@@ -39,8 +44,10 @@ const Course = ({
       <div>
         <h3
           className={
-            shoppingCar
+            desktop
               ? "hero__view__promo__title--shopping__car"
+              : shoppingCar
+              ? "hero__view__promo__title--details"
               : "hero__view__promo__title"
           }
         >
@@ -61,7 +68,13 @@ const Course = ({
           </p>
         </div>
         {teacher ? (
-          <p className="hero__view__promo__teacher--shopping__car">
+          <p
+            className={
+              shoppingCar
+                ? "hero__view__promo__teacher--shopping__car hero__view__promo__teacher--shopping__car--details"
+                : "hero__view__promo__teacher--shopping__car"
+            }
+          >
             Por {teacher ? capitalizeFirstLetter(teacher) : "Juan Pablo Laco"}
           </p>
         ) : (

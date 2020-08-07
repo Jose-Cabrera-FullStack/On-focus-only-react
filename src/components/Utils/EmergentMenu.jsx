@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import "../../assets/styles/components/ShoppingCar.scss";
 
@@ -7,7 +8,7 @@ import Course from "./EmergentMenuBox/Course";
 
 import ButtonArrowRight from "./ButtonArrowRight";
 
-const EmergentMenu = ({ toggle, total, shoppingcar, mobile }) => {
+const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
   return mobile ? (
     <div className={toggle ? "hero__view__promo" : "display-none"}>
       {shoppingcar.length > 0 ? (
@@ -50,7 +51,13 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile }) => {
           </div>
         </>
       ) : (
-        <p className="hero__view__promo__empty">No hay elementos escogidos</p>
+        <p className="hero__view__promo__empty">
+          {" "}
+          No hay cursos cargados en tu carrito.{" "}
+          <Link className="text-decoration text-decoration--navbar" to={"/cursos"}>
+            Buscar cursos
+          </Link>
+        </p>
       )}
     </div>
   ) : (
@@ -66,6 +73,7 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile }) => {
                   title={item.name}
                   price={item.price - item.price * (item.discount / 100)}
                   priceBefore={item.price}
+                  desktop={desktop}
                 />
               </div>
             );
@@ -94,7 +102,12 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile }) => {
           </div>
         </>
       ) : (
-        <p className="hero__view__promo__empty">No hay elementos escogidos</p>
+        <p className="hero__view__promo__empty">
+          No hay cursos cargados en tu carrito. <br />
+          <Link className="text-decoration text-decoration--navbar" to={"/cursos"}>
+            Buscar cursos
+          </Link>
+        </p>
       )}
     </div>
   );

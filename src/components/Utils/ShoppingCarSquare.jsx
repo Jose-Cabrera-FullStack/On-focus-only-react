@@ -84,6 +84,7 @@ const ShoppingCarSquare = (props) => {
           alt="Shopping Car"
         >
           <img
+            className="shopping__car__icon__squad--select"
             src={ShoppingCarSelected}
             alt="Ícono de Carrito de compra seleccionado"
           />
@@ -95,6 +96,7 @@ const ShoppingCarSquare = (props) => {
           alt="Shopping Car"
         >
           <img
+            className="shopping__car__icon__squad"
             src={ShoppingCar}
             alt="Ícono de Carrito de compra seleccionado"
           />

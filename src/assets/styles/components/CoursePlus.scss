@@ -50,6 +50,12 @@
   width: 130px;
 }
 
+.hero__view__promo__img--details {
+  width: 81px;
+  height: 81px;
+  margin: 0px 10px 20px 0px;
+}
+
 .hero__view__promo__traingle {
   position: relative;
 }
@@ -62,10 +68,23 @@
   text-align: initial;
 }
 
+.hero__view__promo__title--details {
+  font-family: "Mont-Bold";
+  font-size: 19px;
+  margin: 5px 0px 0 0;
+  color: #03002b;
+  text-align: initial;
+}
+
 .hero__view__promo__price {
   font-family: "Mont-Bold";
   font-size: 24px;
   color: #b38a58;
+  margin: 5px 20px 0px 0;
+}
+
+.hero__view__promo__price--shopping__car {
+  width: 120px;
   margin: 10px 20px 0px 0;
 }
 
@@ -74,6 +93,13 @@
   text-decoration: line-through;
   color: #828282;
   font-weight: 700;
+  margin: 10px 0 0 0;
+  font-family: "Mont-Light";
+}
+
+.hero__view__promo__price__before--shopping__car {
+  width: 70px;
+  margin: 15px 0 0 0;
 }
 
 .hero__view__promo__price__delete {
@@ -84,7 +110,23 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #03002b;
-  margin: 20px 40px 0px 30px;
+  margin: 15px 55px 0px 30px;
+}
+
+.hero__view__promo__price__delete--shopping__car--desktop {
+  margin: 20px 55px 0px 30px;
+}
+
+.hero__view__promo__price__delete--shopping__car {
+  position: absolute;
+  left: 48.5vw;
+  margin: 20px 0 0 0;
+}
+
+.hero__view__promo__price__delete--shopping__car--mobile {
+  position: relative;
+  left: 0vw;
+  margin: 20px 0 0px 0;
 }
 
 .hero__view__promo__price__delete:hover {
@@ -99,16 +141,17 @@
 .hero__view__promo__total h2 {
   font-family: "Mont-Bold";
   font-size: 17px;
+  margin-left: 30px;
   color: #03002b;
 }
 
 .hero__view__promo__total__ar {
   position: absolute;
-  right: 50px;
+  right: 80px;
 }
 
 .hero__view__promo__margin__btn {
-  margin: 0px 0 10px 80px;
+  margin: 0px 0 24px 70px;
 }
 
 .btn__secundary--promo {

@@ -6,12 +6,12 @@ const Details = (props) => (
     <section className={"payment__footer"+" " + props.onlyDesktop}>
         <div className="flex">
             <h5>
-            @OnFocus2019 - All Rights Reserved
+            @OnFocus2020 - All Rights Reserved
             </h5>
             <ul className="flex">
-                <li>Políticas de Cookie</li>
-                <li>Centro de Ayuda</li>
-                <li>Términos y condiciones</li>
+                <Link to="/politicas" className="text-decoration"><li>Políticas de Cookie</li></Link>
+                <Link to="/politicas" className="text-decoration"><li>Centro de Ayuda</li></Link>
+                <Link to="/politicas" className="text-decoration"><li>Términos y condiciones</li></Link>
             </ul>
         </div>
     </section>

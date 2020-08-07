@@ -17,7 +17,8 @@ const CourseAboutCourse = (props) => {
   const [isInformation, setIsInformation] = useState(false);
   const ClickSetIsInformation = () => setIsInformation(!isInformation);
 
-  console.log(isClasses);
+  const [isToggle, setIsToggle] = useState(false);
+  const ClickSetIsToggle = () => setIsToggle(!isToggle);
 
   return (
     <div>
@@ -36,7 +37,13 @@ const CourseAboutCourse = (props) => {
         font={"buyed__font"}
         onlyDesktop={"display__screen__desktop"}
       />
-      <p className="buyed_see__more display__screen__desktop">Ver más+</p>
+      <p
+        className="buyed_see__more display__screen__desktop"
+        onClick={ClickSetIsToggle}
+      >
+        Ver más {isToggle ? "-" : "+"}
+      </p>
+      {isToggle ? <p>more items</p> : ""}
       <CourseCertificate onlyDesktop={"display__screen__desktop"} />
       <p className="buyed__teacher__tittle display__screen__desktop">
         Sobre el profesor

@@ -4,36 +4,36 @@
 @import "./Button.scss";
 @import "./Grid.scss";
 
-*{
+* {
   transition: all 0.2s ease-in-out;
 }
 
 body {
   margin: 0;
-  font-family: 'Mont-Regular', Roboto;
+  font-family: "Mont-Regular", Roboto;
 }
 
-input[type="text"]{
+input[type="text"] {
   padding: 0px 0px 0 10px;
   font-family: Mont-Regular;
   font-size: 12px;
 }
 
-input[type="password"]{
+input[type="password"] {
   padding: 0px 0px 0 10px;
   font-family: Mont-Regular;
   font-size: 12px;
 }
 
-input:focus{
+input:focus {
   outline: solid 1px #b38a58;
 }
 
-textarea:focus{
+textarea:focus {
   outline: solid 1px #b38a58;
 }
 
-.display-none{
+.display-none {
   display: none;
 }
 
@@ -41,7 +41,7 @@ textarea:focus{
   display: flex;
 }
 
-.display__util__screen__mobile{
+.display__util__screen__mobile {
   display: none;
 }
 
@@ -60,46 +60,51 @@ textarea:focus{
 .grid-4 {
   grid-column: 5;
 }
-.grid-column-2--fix{
+.grid-column-2--fix {
   grid-template-columns: 1fr 1.7fr;
   margin: 0 0 100px 0;
 }
-.grid-column-2{
+.grid-column-2 {
   grid-template-columns: 1fr 1fr;
   margin: 0 0 100px 0;
 }
-.grid-column-3{
+.grid-column-3 {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: '. . . .';
+  grid-template-areas: ". . . .";
   margin: 0px 0 70px 0px;
 }
 
-.text-decoration{
+.text-decoration {
   text-decoration: none;
 }
-.display__screen__mobile__flex{
+
+.text-decoration--navbar {
+  color: #b38a58;
+}
+.text-decoration--navbar:hover {
+  color: #03002bd6;
+}
+.display__screen__mobile__flex {
   display: none;
 }
 
-.display__screen__mobile{
+.display__screen__mobile {
   display: none;
 }
-
 
 @media screen and (max-width: 1024px) {
-  
-  .display__screen__mobile{
+  .display__screen__mobile {
     display: block;
   }
-  
-  .display__screen__mobile__flex{
+
+  .display__screen__mobile__flex {
     display: flex;
   }
-  .display__screen__desktop{
+  .display__screen__desktop {
     display: none;
   }
-  .display__screen__mobile__without__flex{
+  .display__screen__mobile__without__flex {
     display: block;
   }
 }

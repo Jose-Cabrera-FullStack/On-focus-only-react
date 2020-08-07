@@ -80,8 +80,6 @@ const Details = ({ total, shoppingcar }) => {
             <p className="details__inside__detail__empty">No tienes items</p>
           )}
 
-          {/* <Course shoppingCar teacher={"David Guerra"} />
-          <Course shoppingCar teacher={"David Guerra"} /> */}
         </div>
       </div>
     </section>

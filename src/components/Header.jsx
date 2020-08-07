@@ -98,6 +98,11 @@ const Header = (props) => {
                 : "navbar__hamburguer__shopping"
             }
             src={Shopping}
+            className={
+              isToggled
+                ? "navbar__hamburguer__shopping__img navbar__hamburguer__shopping__img--toggle"
+                : "navbar__hamburguer__shopping__img"
+            }
             alt="Icono de Carrito de Compras"
           />
           <EmergentMenu toggle={isToggled} mobile />
@@ -128,18 +133,21 @@ const Header = (props) => {
               <img
                 src={Shopping}
                 className={
-                  notification
-                    ? "navbar__menu__shopping__cart"
-                    : "navbar__menu__shopping__cart navbar__menu__shopping__cart--fix"
+                  isToggled
+                    ? "navbar__hamburguer__shopping__img__desktop--toggle"
+                    : ""
                 }
                 alt="Carrito de compras"
               />
             </li>
-            <EmergentMenu toggle={isToggled} />
+            <EmergentMenu toggle={isToggled} desktop />
             {hasUser ? (
               <>
                 <Link to="/mis-cursos" className="text-decoration">
                   <li className="navbar__menu">Mis Cursos</li>
+                </Link>
+                <Link to="/mi-perfil" className="text-decoration">
+                  <li className="navbar__menu">Mi Perfil</li>
                 </Link>
                 <li onClick={handleLogout} className="navbar__menu">
                   Cerrar Sesión

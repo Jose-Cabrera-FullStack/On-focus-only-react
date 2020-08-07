@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 
 import "../../assets/styles/components/ShoppingCar.scss";
 
@@ -65,16 +66,24 @@ const Pay = (props) => {
     }
   };
 
+  const { user = {} } = props;
+  const hasUser = Object.keys(user).length > 0;
+
+  console.log("hasUser:", hasUser);
   return (
     <section className="way-to-pay">
-      <div className={props.onlyDesktop}>
-        <p className="way-to-pay__text">Ingresá tu correo electrónico.</p>
-        <input
-          type="text"
-          placeholder="E-mail"
-          className="way-to-pay__input way-to-pay__input--email"
-        />
-      </div>
+      {hasUser ? (
+        ""
+      ) : (
+        <div className={"way-to-pay__tex__email"}>
+          <p className="way-to-pay__text">Ingresá tu correo electrónico.</p>
+          <input
+            type="text"
+            placeholder="E-mail"
+            className="way-to-pay__input way-to-pay__input--email"
+          />
+        </div>
+      )}
       <div className="way-to-pay__box">
         <div className="flex">
           <CreditCard isSwitch={isSwitch} method={PayMethodSwitchCreditCar} />
@@ -89,4 +98,11 @@ const Pay = (props) => {
     </section>
   );
 };
-export default Pay;
+const mapStateToProps = (state) => {
+  return {
+    shoppingcar: state.shoppingcar || {},
+    user: state.user || {},
+  };
+};
+
+export default connect(mapStateToProps, null)(Pay);

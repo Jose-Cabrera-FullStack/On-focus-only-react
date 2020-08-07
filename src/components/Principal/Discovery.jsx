@@ -25,22 +25,29 @@ const Discovery = (props) => {
             <>
               {props.onlyThree ? (
                 <>
-                {course.slice(course.length - 3,course.length).map((item) => {
-                    return (
-                      <div key={item.course_id}>
-                        <Course
-                          priceOff={item.discount}
-                          category={item.category}
-                          title={item.name}
-                          teacher={item.teacher}
-                          students={item.students}
-                          price={item.price}
-                          img={item.featured_image}
-                          course={item}
-                        />
-                      </div>
-                    );
-                  })}
+                  {course
+                    .slice(course.length - 3, course.length)
+                    .map((item, index) => {
+                      return (
+                        <div key={index}>
+                          <Course
+                            priceOff={item.discount}
+                            category={item.category}
+                            title={item.name}
+                            teacher={item.teacher}
+                            students={item.students}
+                            price={item.price}
+                            img={item.featured_image}
+                            course={item}
+                            displayNone={
+                              item.course_id === course.length
+                                ? "shopping-none"
+                                : ""
+                            }
+                          />
+                        </div>
+                      );
+                    })}
                 </>
               ) : (
                 <>

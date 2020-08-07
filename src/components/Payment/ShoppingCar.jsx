@@ -14,34 +14,39 @@ const ShoppingCar = (props) => (
     <h1>Tu carrito de compras está listo.</h1>
     <div className={"flex" + " " + props.onlyMobile}>
       <div>
-          {props.shoppingcar.length > 0 ? 
+        {props.shoppingcar.length > 0 ? (
           <>
             {props.shoppingcar.map((item) => {
-            return (
+              return (
                 <div key={item.course_id}>
-                <Course
+                  <Course
                     onlyMobile={"display__screen__desktop"}
                     onlyDesktop={"display__screen__mobile"}
                     course_id={item.course_id}
                     src={item.featured_image}
                     title={item.name}
-                    price={item.price - (item.price*(item.discount / 100))}
+                    price={item.price - item.price * (item.discount / 100)}
                     priceBefore={item.price}
                     inShopping={item.inShopping}
                     teacher={item.teacher}
-                />
-                <hr className="shopping__car__line" />
+                  />
+                  <hr className="shopping__car__line" />
                 </div>
-            );
+              );
             })}
           </>
-          :
-          <p>no hay elementos</p>}
+        ) : (
+          <p>no hay elementos</p>
+        )}
       </div>
-      <ShoppingBox
-        onlyDesktop={"display__screen__desktop"}
-        onlyMobile={"display__screen__mobile"}
-      />
+      {props.shoppingcar.length > 0 ? (
+        <ShoppingBox
+          onlyDesktop={"display__screen__desktop"}
+          onlyMobile={"display__screen__mobile"}
+        />
+      ) : (
+        ""
+      )}
     </div>
   </section>
 );
