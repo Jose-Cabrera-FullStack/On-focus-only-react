@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { loginUser } from "../actions";
@@ -12,6 +13,7 @@ import Google from "../assets/static/images/svg/google-icon-button.svg";
 import Button from "../components/Utils/ButtonArrowRight";
 
 const Login = (props) => {
+  const { register, errors, handleSubmit } = useForm();
   const [form, setValues] = useState({
     email: "",
     password: "",
@@ -24,13 +26,9 @@ const Login = (props) => {
     });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const onSubmit = (event) => {
     props.loginUser(form, "/mis-cursos");
   };
-
-  console.log("Email:",form.email)
-  console.log("Password:",form.password)
 
   // getModalStyle is not a pure function, we roll the style only on the first render
   return (
@@ -65,7 +63,10 @@ const Login = (props) => {
             Continuá con Google
           </button>
 
-          <form action="" className="login__inside__form" onSubmit={handleSubmit}>
+          <form
+            className="login__inside__form"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <label className="login__inside__form__label">
               O iniciá sesión con tu correo electrónico
             </label>
@@ -75,7 +76,31 @@ const Login = (props) => {
               type="text"
               placeholder="Correo"
               onChange={handleInput}
+              ref={register({
+                required: {
+                  value: true,
+                  message: "Este campo es requerido",
+                },
+                pattern: {
+                  value: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+                  message: "Debe ser un email",
+                },
+                maxLength: {
+                  value: 25,
+                  message: "No puede tener mas de 25 caracteres",
+                },
+                minLength: {
+                  value: 5,
+                  message: "No puede tener menos de 5 caracteres",
+                },
+              })}
             />
+
+            <span className="way-to-pay__input--error">
+              {errors.email && errors.email.message}
+            </span>
+
+            <br />
 
             <label className="login__inside__form__label">Contraseña</label>
             <input
@@ -84,12 +109,30 @@ const Login = (props) => {
               type="password"
               placeholder="Contraseña"
               onChange={handleInput}
+              ref={register({
+                required: {
+                  value: true,
+                  message: "Este campo es requerido",
+                },
+                maxLength: {
+                  value: 20,
+                  message: "No puede tener mas de 20 caracteres",
+                },
+                minLength: {
+                  value: 6,
+                  message: "No puede tener menos de 6 caracteres",
+                },
+              })}
             />
-              <Button
-                text={"Iniciar Sesión"}
-                width={"btn__secundary--login__modal"}
-                onClick={handleSubmit}
-              />
+
+            <span className="way-to-pay__input--error">
+              {errors.password && errors.password.message}
+            </span>
+            <Button
+              text={"Iniciar Sesión"}
+              width={"btn__secundary--login__modal"}
+              onClick={handleSubmit}
+            />
           </form>
           <p className="login__inside__text">
             ¿No eres miembro? <Link to="/registrarse">Registrate</Link>

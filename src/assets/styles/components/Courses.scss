@@ -61,7 +61,9 @@
   top: 70px;
   z-index: 1;
   right: 50px;
+  user-select: none;
 }
+
 .discovery__box__info__course {
   background-image: linear-gradient(to top, #dad9d99e, #f2f2f2);
   margin: -4px 0 0 0;

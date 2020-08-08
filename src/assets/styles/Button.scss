@@ -47,8 +47,8 @@
   width: 199px;
   font-family: "Mont-Bold", Roboto;
   height: 38px;
+  color: #b38a58;
   background-color: initial;
-  background: #b38a58;
   border: 2.5px solid #b38a58;
   margin: 0px 20px 24px 0;
 }
@@ -223,10 +223,10 @@ button {
 }
 .btn__secundary--buy:hover {
   fill: #fff;
-  background-color: #03002b;
+  background-color: #b38a58;
   color: #ffffff;
   transition: all 0.2s ease-in-out;
-  border: 2.5px solid #03002b;
+  border: 2.5px solid #b38a58;
 }
 
 .btn__primary--login:hover {

@@ -14,7 +14,7 @@ const CourseInfo = ({ category }) => {
   const [isToggle, setIsToggle] = useState(false);
   const isToggleFalse = () => setIsToggle(!isToggle);
   return (
-    <section className="course">
+    <div className="course">
       <Information OnlyDesktop={"display__screen__desktop"} />
       <div className="flex">
         <SmallVideo
@@ -54,7 +54,7 @@ const CourseInfo = ({ category }) => {
           <CourseAbout />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

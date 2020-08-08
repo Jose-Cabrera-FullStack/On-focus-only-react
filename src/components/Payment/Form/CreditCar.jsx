@@ -28,8 +28,6 @@ const CreditCard = (props) => {
     console.log(data);
   };
 
-  // console.log("creditNumber:", form.creditNumber);
-
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="way-to-pay__input__box">
       <p className="way-to-pay__input__box__title">

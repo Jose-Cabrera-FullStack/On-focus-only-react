@@ -38,6 +38,9 @@
   height: 15px;
   width: 15px;
 }
+.navbar__menu__shopping__cart__notification--user {
+  right: 348px;
+}
 .navbar__menu__shopping__cart__notification--mobile {
   background: #b38a58;
   position: absolute;
@@ -162,6 +165,10 @@
 @media screen and (max-width: 1250px) {
   .navbar__menu__shopping__cart__notification {
     right: 316px;
+  }
+
+  .navbar__menu__shopping__cart__notification--user {
+    right: 346px;
   }
 }
 

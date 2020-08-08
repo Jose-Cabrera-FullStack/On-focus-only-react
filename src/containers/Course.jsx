@@ -16,6 +16,8 @@ import CourseTeacher from "../components/Course/CourseTeacher";
 import HowWeTeach from "../components/Principal/HowWeTeach";
 import NotFound from "../containers/NotFound";
 
+import CourseSaveMoney from "../components/Course/CourseSaveMoney";
+
 import { getCourseCategory } from "../actions";
 
 import "../assets/styles/App.scss";
@@ -44,13 +46,15 @@ const Course = (props) => {
         width
       />
       <HeroCoursePlus />
-      <CourseInfo course={props.category} />
-      <CourseInclusive />
-      <CourseForMe />
-      <CourseModule />
-      <CourseRecomendation />
-      <CourseTeacher />
-      <HowWeTeach grid={grid} />
+      <section>
+        <CourseInfo course={props.category} />
+        <CourseInclusive />
+        <CourseForMe />
+        <CourseModule />
+        <CourseRecomendation />
+        <CourseTeacher />
+        <HowWeTeach grid={grid} />
+      </section>
       <Footer />
     </div>
   );

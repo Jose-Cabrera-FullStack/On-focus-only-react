@@ -14,6 +14,8 @@ import Logo from "../assets/static/images/svg/logo-small.svg";
 import Hamburguer from "../assets/static/images/svg/icon-hamburguer.svg";
 import Shopping from "../assets/static/images/svg/shopping-car.svg";
 
+import { makeAnimationSlideUpDown } from "../Utils/animatedVisibility";
+
 import "../assets/styles/components/Header.scss";
 
 const Header = (props) => {
@@ -60,6 +62,7 @@ const Header = (props) => {
             <img className="navbar__img" src={Logo} alt="Logo de Focus Minds" />
           </figure>
         </Link>
+        {/* MOBILE */}
         <div className="display__screen__mobile">
           <div className="" onClick={toggleTrueFalse}>
             {notification ? (
@@ -107,6 +110,7 @@ const Header = (props) => {
           />
           <EmergentMenu toggle={isToggled} mobile />
         </div>
+        {/* MOBILE */}
         <div className="grid-2 navbar__justify__self navbar__query">
           <div className="navbar__query"></div>
           <ol className="navbar__element__list">
@@ -122,7 +126,13 @@ const Header = (props) => {
               onClick={toggleTrueFalse}
             >
               {notification ? (
-                <div className="navbar__menu__shopping__cart__notification">
+                <div
+                  className={
+                    hasUser
+                      ? "navbar__menu__shopping__cart__notification navbar__menu__shopping__cart__notification--user"
+                      : "navbar__menu__shopping__cart__notification"
+                  }
+                >
                   <strong className="navbar__menu__shopping__cart__number">
                     {shoppingcar.length}
                   </strong>
