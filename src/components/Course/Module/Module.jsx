@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "../../../assets/styles/components/Buyed.scss";
+import "../../../assets/styles/components/Principal.scss";
 
 import ModuleInside from "./ModuleInside";
 
@@ -25,7 +26,10 @@ const Module = ({
   const toggleTrueFalse = () => setToggled(!isToggled);
   return (
     <div>
-      <div className="course__module__element" onClick={toggleTrueFalse}>
+      <div
+        className="course__module__element slide-in-top"
+        onClick={toggleTrueFalse}
+      >
         {helpCenter ? (
           <div>
             <h3 className="course__module__element__title--help__center">
@@ -35,9 +39,11 @@ const Module = ({
               className={
                 buyed
                   ? "course__module__arrow course__module__arrow--buyed"
-                  : "course__module__arrow--help__center"
+                  : isToggled
+                  ? "course__module__arrow--help__center arrow-rotation-up"
+                  : "course__module__arrow--help__center arrow-rotation-down"
               }
-              src={isToggled ? ArrowUp : ArrowDown}
+              src={ArrowDown}
               alt="Flecha hacia abajo"
             />
           </div>
@@ -51,19 +57,21 @@ const Module = ({
             <img
               className={
                 buyed
-                  ? "course__module__arrow course__module__arrow--buyed"
-                  : "course__module__arrow"
+                  ? isToggled
+                    ? "course__module__arrow course__module__arrow--buyed arrow-rotation-up"
+                    : "course__module__arrow course__module__arrow--buyed arrow-rotation-down"
+                  : isToggled
+                  ? "course__module__arrow arrow-rotation-up"
+                  : "course__module__arrow arrow-rotation-down"
               }
-              src={isToggled ? ArrowUp : ArrowDown}
+              src={ArrowDown}
               alt="Flecha hacia abajo"
             />
             <strong className="course__module__element__title">
               Módulo {id} - {title ? title : duration}{" "}
             </strong>
             {buyed ? (
-              <p className="course__module__sub__title">
-                {text}
-              </p>
+              <p className="course__module__sub__title">{text}</p>
             ) : (
               <div className="flex course__module__time">
                 <img

@@ -22,8 +22,6 @@ const Course = ({
 }) => {
   let priceWithDiscount = price - price * (priceOff / 100);
 
-  console.log(displayNone);
-
   return (
     <div className={"discovery__box " + " " + displayNone}>
       <div className="discovery__box__img">

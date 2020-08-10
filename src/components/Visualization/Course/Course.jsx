@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 import "../../../assets/styles/components/Visualization.scss";
 import "../../../assets/styles/components/Course.scss";
 
 import CourseInside from "./CourseInside";
 
-import ArrowUp from "../../../assets/static/images/svg/arrow-up.svg";
 import ArrowDown from "../../../assets/static/images/svg/arrow-down-gold.svg";
 import CompleteIcon from "../../../assets/static/images/svg/icon-video-complete.svg";
 import IncompleteIcon from "../../../assets/static/images/svg/icon-video-incomplete.svg";
@@ -26,8 +24,11 @@ const Course = ({ title, text, videos, path, position }) => {
 
   return (
     <>
-      <li className="visualization__sidebar__list" onClick={changeToggle}>
-        <div className="visualization__sidebar__list__box flex">
+      <li
+        className="visualization__sidebar__list slide-in-top"
+        onClick={changeToggle}
+      >
+        <div className="visualization__sidebar__list__box  flex">
           <div className={position}></div>
           <img
             className="visualization__sidebar__status"
@@ -45,10 +46,10 @@ const Course = ({ title, text, videos, path, position }) => {
           <img
             className={
               isToggle
-                ? "visualization__sidebar__arrow--up"
-                : "visualization__sidebar__arrow"
+                ? "visualization__sidebar__arrow visualization__sidebar__arrow--up arrow-rotation-up"
+                : "visualization__sidebar__arrow arrow-rotation-down"
             }
-            src={isToggle ? ArrowUp : ArrowDown}
+            src={ArrowDown}
             alt="Flecha hacia arriba"
           />
         </div>

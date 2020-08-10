@@ -22,8 +22,8 @@ const ModuleInside = ({
         className={
           isToggled
             ? helpCenter
-              ? "course__module__element__inside--help__center"
-              : "course__module__element__inside"
+              ? "course__module__element__inside--help__center slide-in-top"
+              : "course__module__element__inside slide-in-top"
             : "display-none"
         }
       >

@@ -12,15 +12,16 @@ import CourseTeacher from "../../../components/Course/CourseTeacher";
 import Breadcrumbs from "../../Utils/Breadcrumbs";
 
 const Information = (props) => {
-  console.log(props)
   return (
     <div className="buyed__classes">
-      <Breadcrumbs onClick={props.onClick}/>
-      <CourseAbout />
-      <CourseInclusive />
-      <CourseForMe />
-      <CourseCertificate mobile />
-      <CourseTeacher />
+      <div className="buyed__classes__breadcrumbs__mobile">
+        <Breadcrumbs onClick={props.onClick} />
+        <CourseAbout />
+        <CourseInclusive />
+        <CourseForMe />
+        <CourseCertificate mobile />
+        <CourseTeacher />
+      </div>
     </div>
   );
 };

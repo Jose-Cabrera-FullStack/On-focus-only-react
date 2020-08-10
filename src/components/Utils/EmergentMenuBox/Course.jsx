@@ -24,8 +24,6 @@ const Course = ({
     deleteFavorite(course_id);
   };
 
-  console.log("shoppingCar:", shoppingCar);
-
   return (
     <div className={"flex" + " " + margin}>
       <img

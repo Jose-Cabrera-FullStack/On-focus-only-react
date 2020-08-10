@@ -86,8 +86,8 @@ const Login = (props) => {
                   message: "Debe ser un email",
                 },
                 maxLength: {
-                  value: 25,
-                  message: "No puede tener mas de 25 caracteres",
+                  value: 50,
+                  message: "No puede tener mas de 50 caracteres",
                 },
                 minLength: {
                   value: 5,

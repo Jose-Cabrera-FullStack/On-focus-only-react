@@ -10,13 +10,12 @@ import IncompleteIcon from "../../../assets/static/images/svg/icon-video-incompl
 import WatchingIcon from "../../../assets/static/images/svg/icon-video-watching.svg";
 
 const CourseInside = ({ title, status, url, path, last }) => {
-
   return (
     <>
       {path.params.video_id === url ? (
         <div
           className={
-            "visualization__sidebar__inside visualization__sidebar__inside--watching"
+            "visualization__sidebar__inside visualization__sidebar__inside--watching slide-in-top"
           }
         >
           <div className={last}></div>
@@ -34,11 +33,11 @@ const CourseInside = ({ title, status, url, path, last }) => {
         </div>
       ) : (
         <Link
-          className={"visualization__sidebar__inside"}
+          className={"visualization__sidebar__inside "}
           to={`/cursos/${path.params.slugcategory}/${path.params.slugname}/${url}`}
         >
           <div>
-            <div className={"visualization__sidebar__inside"}>
+            <div className={"visualization__sidebar__inside slide-in-top"}>
               <div className={last}></div>
               <img
                 className="visualization__sidebar__inside__status"

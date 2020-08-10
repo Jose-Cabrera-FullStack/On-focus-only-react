@@ -58,7 +58,8 @@
   font-size: 16px;
   line-height: 135.3%;
   letter-spacing: -0.02em;
-  left: 82%;
+  left: 75%;
+  width: 70px;
   top: -19px;
   z-index: 20;
   margin: 0;
@@ -280,6 +281,12 @@
   margin: 28px 0px 0 10px;
 }
 
+@media screen and (max-width: 1150px) {
+  .buyed {
+    margin: 15px 50px 40px 100px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .buyed {
     margin: 15px 100px 40px 100px;
@@ -300,10 +307,17 @@
     height: 140%;
     width: 100vw;
     background: #fff;
-    z-index: 3;
+    z-index: 50;
     position: absolute;
     top: 0;
     left: 0;
+  }
+  .buyed__progress__bar h1 {
+    left: 85%;
+  }
+
+  .buyed__classes__breadcrumbs__mobile{
+    margin: 20px
   }
 }
 @media screen and (max-width: 562px) {

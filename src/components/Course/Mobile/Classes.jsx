@@ -11,7 +11,9 @@ const Classes = (props) => {
   const { category, name } = props.myCourse;
   return (
     <div className="buyed__classes">
-      <Breadcrumbs onClick={props.onClick}/>
+      <div className="buyed__classes__breadcrumbs__mobile">
+        <Breadcrumbs onClick={props.onClick} />
+      </div>
       {props.myCourse.module.map((item, index) => {
         return (
           <Module

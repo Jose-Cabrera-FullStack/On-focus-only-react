@@ -30,8 +30,8 @@ const CourseInfo = ({ category }) => {
           Ocultar información {isToggle ? "-" : "+"}
         </h2>
         {isToggle ? (
-          <>
-            <h1 className="course__info__title">Informacion</h1>
+          <div className="slide-in-top">
+            <h1 className="course__info__title ">Informacion</h1>
             <CourseInfoOnlyInfo
               onlyMobile={"display__screen__mobile__without__flex"}
               width={"course__information__text__width"}
@@ -39,7 +39,7 @@ const CourseInfo = ({ category }) => {
               margin={"course__logo__mobile__margin"}
             />
             <CourseAbout />
-          </>
+          </div>
         ) : (
           ""
         )}

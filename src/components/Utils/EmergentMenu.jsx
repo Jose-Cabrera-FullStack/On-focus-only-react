@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import "../../assets/styles/components/ShoppingCar.scss";
+import "../../assets/styles/components/Principal.scss";
 
 import Course from "./EmergentMenuBox/Course";
 
@@ -10,7 +11,7 @@ import ButtonArrowRight from "./ButtonArrowRight";
 
 const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
   return mobile ? (
-    <div className={toggle ? "hero__view__promo" : "display-none"}>
+    <div className={toggle ? "hero__view__promo slide-in-top" : "display-none"}>
       {shoppingcar.length > 0 ? (
         <>
           {shoppingcar.map((item) => {
@@ -54,14 +55,17 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
         <p className="hero__view__promo__empty">
           {" "}
           No hay cursos cargados en tu carrito.{" "}
-          <Link className="text-decoration text-decoration--navbar" to={"/cursos"}>
+          <Link
+            className="text-decoration text-decoration--navbar"
+            to={"/cursos"}
+          >
             Buscar cursos
           </Link>
         </p>
       )}
     </div>
   ) : (
-    <div className={toggle ? "hero__view__promo" : "display-none"}>
+    <div className={toggle ? "hero__view__promo slide-in-top" : "display-none"}>
       {shoppingcar.length > 0 ? (
         <>
           {shoppingcar.map((item) => {
@@ -104,7 +108,10 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
       ) : (
         <p className="hero__view__promo__empty">
           No hay cursos cargados en tu carrito. <br />
-          <Link className="text-decoration text-decoration--navbar" to={"/cursos"}>
+          <Link
+            className="text-decoration text-decoration--navbar"
+            to={"/cursos"}
+          >
             Buscar cursos
           </Link>
         </p>
