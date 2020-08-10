@@ -333,6 +333,7 @@
 .course__module__element__inside--help__center {
   margin: 3px 140px 30px 0;
   padding: 20px 0px 0px 20px;
+  width: 0;
 }
 
 .course__module__element__inside p {
@@ -780,9 +781,15 @@
     width: auto;
     height: auto;
   }
+  .course__module__element__inside--help__center {
+    width: auto;
+  }
 }
 @media screen and (max-width: 450px) {
   .course__module__arrow--buyed {
     left: 75%;
   }
+  .course__module__arrow--help__center {
+    left: 85%;
+}
 }

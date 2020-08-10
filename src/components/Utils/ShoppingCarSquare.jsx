@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import { setFavorite, deleteFavorite, totalShopping } from "../../actions";
 import ShoppingCar from "../../assets/static/images/svg/shopping-car-squad.svg";
+import ShoppingCarHover from "../../assets/static/images/svg/shopping-car-squad-hover.svg";
 import ShoppingCarSelected from "../../assets/static/images/svg/shopping-car-squad-black.svg";
 
 import "../../assets/styles/components/Utils.scss";
@@ -55,6 +56,9 @@ const ShoppingCarSquare = (props) => {
     setIsToggle(!isToggle);
     props.deleteFavorite(course_id);
   };
+
+  const [isHover, setIsHover] = useState(false);
+  const HoverHandle = () => setIsHover(!isHover);
   // <----------Se debe refactorizar mas adelante----------->
 
   let totalWithOutDiscount = 0;
@@ -94,12 +98,22 @@ const ShoppingCarSquare = (props) => {
           onClick={handleShopping}
           className={" discovery__box__info__icon" + " " + props.class}
           alt="Shopping Car"
+          onMouseEnter={HoverHandle}
+          onMouseLeave={HoverHandle}
         >
-          <img
-            className="shopping__car__icon__squad"
-            src={ShoppingCar}
-            alt="Ícono de Carrito de compra seleccionado"
-          />
+          {isHover ? (
+            <img
+              className="shopping__car__icon__squad"
+              src={ShoppingCarHover}
+              alt="Ícono de Carrito de compra seleccionado"
+            />
+          ) : (
+            <img
+              className="shopping__car__icon__squad"
+              src={ShoppingCar}
+              alt="Ícono de Carrito de compra seleccionado"
+            />
+          )}
         </div>
       )}
     </>

@@ -1,6 +1,5 @@
 .data {
   margin: 42px 200px 50px 200px;
-  height: 680px;
 }
 
 .data h4 {
@@ -184,6 +183,7 @@
   line-height: 143.3%;
   letter-spacing: -0.03em;
   color: #000000;
+  width: 610px;
 }
 
 .contact__socials--youtube {
@@ -281,7 +281,7 @@
 
 @media screen and (max-width: 1024px) {
   .data {
-    margin: 42px 100px 50px 100px;
+    margin: 42px 100px 50px 60px;
     height: auto;
   }
 
@@ -295,6 +295,26 @@
 
   .politicy__inside__right {
     margin: 30px 0 0 0;
+  }
+  .politicy__inside__right__text--help__center {
+    width: auto;
+    margin: 0px 50px 0 20px;
+  }
+  .btn__secundary--politicy--select {
+    color: white;
+    border: 2px solid #b38a58;
+    width: 90vw;
+  }
+  .btn__secundary--politicy {
+    width: 90vw;
+  }
+  .btn__secundary--politicy__text {
+    position: relative;
+    width: auto;
+    bottom: 5px;
+    font-family: "Mont-Regular";
+    text-align: center;
+    font-size: 12px;
   }
 }
 
