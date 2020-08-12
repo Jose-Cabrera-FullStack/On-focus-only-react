@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import "../../assets/styles/components/Principal.scss";
 
@@ -42,9 +43,18 @@ const Principal = () => {
           Bienvenido a On Focus
         </h3>
       </div>
-      <button onClick={scrollFirstCourse} className="btn__primary btn__primary--fix btn__primary--media">
-        Descubrí más
-      </button>
+      <Link
+        activeClass="active"
+        to="discovery"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={800}
+      >
+        <button className="btn__primary btn__primary--fix btn__primary--media">
+          Descubrí más
+        </button>
+      </Link>
     </section>
   );
 };

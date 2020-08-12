@@ -1,6 +1,6 @@
 /* <-------ABOUT US-------> */
 .about__us {
-  margin: 100px 200px 0 193px;
+  margin: 100px 130px 0 193px;
 }
 .about__us__title {
   width: 351px;
@@ -336,7 +336,7 @@
 }
 
 .slide--course {
-  width: 98%;
+  width: 1070px;
 }
 
 /* <-------ANIMATION-------> */
@@ -348,6 +348,14 @@
 /* <-------ANIMATION-------> */
 
 /* <-------MEDIA-------> */
+@media screen and (max-width: 1350px) {
+  .slide{
+    width: 665px;
+  }
+  .slide--course{
+    width: 710px;
+  }
+}
 @media screen and (max-width: 1325px) {
   .none {
     display: none;

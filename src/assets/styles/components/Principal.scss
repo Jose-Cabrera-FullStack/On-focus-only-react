@@ -37,6 +37,7 @@
   font-weight: 300;
   line-height: 118.3%;
   margin: 0;
+  font-family: "Mont-Light";
 }
 
 .display__screen__mobile {
@@ -86,6 +87,7 @@
 @media screen and (max-width: 1024px) {
   .home__view {
     background-position: -20px;
+    height: 100vh;
   }
 
   .display__screen__mobile {
@@ -100,17 +102,27 @@
 
   .home__view h1 {
     font-size: 20px;
-    padding: 0px 0 0 23%;
+    padding: 0px 0 0 43px;
   }
 
   .home__view h3 {
     font-size: 16px;
-    padding: 0px 0 0 23%;
+    padding: 0px 0 0 43px;
   }
 
   .home__view__figure {
     margin: 0;
     padding: 2% 0 0 10%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .home__view__img {
+    width: 219px;
+    height: 219px;
+    margin: 70px 0px 8% 13%;
+  }
+  .home__view {
+    background-position: -130px;
   }
 }
 /* <-------MEDIA-------> */

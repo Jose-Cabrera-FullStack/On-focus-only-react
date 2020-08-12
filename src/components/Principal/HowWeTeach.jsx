@@ -12,7 +12,13 @@ import Human6 from "../../assets/static/images/img/human-happy-6.png";
 
 const HowWeTeach = (props) => {
   return (
-    <section className="how__we__tech">
+    <section
+      className={
+        props.onlyDesktop
+          ? `how__we__tech ${props.onlyDesktop}`
+          : "how__we__tech"
+      }
+    >
       <h1 className="how__we__tech__title">
         Ut wisi enim ad minim exerci tation ullamcorper.
       </h1>

@@ -640,6 +640,16 @@
   .course {
     margin: 40px 0px 0px 10%;
   }
+  .course__hidden__information {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #4f4f4f;
+    cursor: context-menu;
+    user-select: none;
+  }
 
   .course__img__video {
     width: 414px;
@@ -681,7 +691,7 @@
   }
 
   .course__module {
-    margin: 100px 0 0 10%;
+    margin: 0;
   }
 
   .course__for__me {
@@ -784,6 +794,10 @@
   .course__module__element__inside--help__center {
     width: auto;
   }
+  
+  .discovery__box__info__inside {
+    margin: -20px 0 0 0;
+  }
 }
 @media screen and (max-width: 450px) {
   .course__module__arrow--buyed {
@@ -791,5 +805,5 @@
   }
   .course__module__arrow--help__center {
     left: 85%;
-}
+  }
 }

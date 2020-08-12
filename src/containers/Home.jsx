@@ -14,7 +14,7 @@ const Home = () => {
     <div className="App">
       <Header />
       <Principal />
-      <Discovery ref={""}/>
+      <Discovery />
       <HowWeTeach />
       <AboutUs />
       <Footer />

@@ -49,11 +49,11 @@ const Course = (props) => {
       <section>
         <CourseInfo course={props.category} />
         <CourseInclusive />
-        <CourseForMe />
-        <CourseModule />
-        <CourseRecomendation />
-        <CourseTeacher />
-        <HowWeTeach grid={grid} />
+        <CourseForMe onlyDesktop={"display__screen__desktop"} />
+        <CourseModule onlyDesktop={"display__screen__desktop"} infoHidden/>
+        <CourseRecomendation onlyDesktop={"display__screen__desktop"} infoHidden />
+        <CourseTeacher onlyDesktop={"display__screen__desktop"} infoHidden/>
+        <HowWeTeach grid={grid} onlyDesktop={"display__screen__desktop"} infoHidden/>
       </section>
       <Footer />
     </div>
