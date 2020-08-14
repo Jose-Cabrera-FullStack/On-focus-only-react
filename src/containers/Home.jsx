@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 
 import Principal from "../components/Principal/Principal";
@@ -14,7 +14,7 @@ const Home = () => {
     <div className="App">
       <Header />
       <Principal />
-      <Discovery />
+      <Discovery onlyFour/>
       <HowWeTeach />
       <AboutUs />
       <Footer />

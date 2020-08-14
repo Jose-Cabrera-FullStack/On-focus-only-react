@@ -1,80 +1,98 @@
 /* <-------HOW WE TEACH-------> */
 .how__we__tech {
-    margin: 0px 200px 0px 193px;
+  margin: 0px 200px 0px 193px;
+
+}
+
+.how__we__tech__title {
+  font-style: normal;
+  font-weight: 800;
+  font-family: "Mont-Bold", Roboto;
+  font-size: 25px;
+  color: #03002b;
+  margin: 110px 0 60px 0px;
+}
+
+.how__we__tech__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+}
+
+.how__we__tech__info {
+  margin: 0px 0 0 0px;
+  animation-name: visible;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes how__we__tech__info {
+  0% {
+    opacity: 0.5;
   }
-  
-  .how__we__tech__title {
-    font-style: normal;
-    font-weight: 800;
-    font-family: 'Mont-Bold', Roboto;
-    font-size: 25px;
-    color: #03002b;
-    margin: 110px 0 60px 0px;
+  50% {
+    opacity: 0.7;
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+}
+
+.how__we__tech__info__img {
+  width: 188px;
+}
+.how__we__tech__info__img--2 {
+  width: 188px;
+  margin: -10px;
+}
+
+.how__we__tech__info__title {
+  font-family: "Mont-Bold", Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  color: #03002b;
+  margin: 0;
+}
+
+.how__we__tech__info__text {
+  font-family: "Mont-Light";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  width: 330px;
+  margin: 0 20px 0 0px;
+}
+/* <-------MEDIA-------> */
+
+@media screen and (max-width: 1325px) {
   .how__we__tech__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1px 1px;
+    gap: 1px 100px;
   }
-  
-  .how__we__tech__info {
-    margin: 0px 0 0 0px;
+}
+
+@media screen and (max-width: 1024px) {
+  .how__we__tech__container {
+    gap: 1px 40px;
   }
-  
-  .how__we__tech__info__img {
-    width: 188px;
+  .how__we__tech {
+    margin: 0px 0px 0 10%;
   }
-  .how__we__tech__info__img--2 {
-    width: 188px;
-    margin: -10px;
-  }
-  
-  .how__we__tech__info__title {
-    font-family: 'Mont-Bold', Roboto;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 15px;
-    color: #03002b;
-    margin: 0;
-  }
-  
   .how__we__tech__info__text {
-    font-family: 'Mont-Light';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    width: 330px;
-    margin: 0 20px 0 0px;
+    width: auto;
   }
-  /* <-------MEDIA-------> */
-  
-  @media screen and (max-width: 1325px) {
-    .how__we__tech__container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 1px 100px;
-    }
-  }
+}
 
-  @media screen and (max-width: 1024px) {
-    .how__we__tech__container {
-      gap: 1px 40px;
-    }
-    .how__we__tech {
-      margin: 0px 0px 0 10%;
+@media screen and (max-width: 917px) {
+  .how__we__tech__container {
+    display: block;
   }
-    .how__we__tech__info__text{
-      width: auto;
-    }
-  }
+}
 
-  @media screen and (max-width: 917px) {
-    .how__we__tech__container {
-      display: block;
-    }
-  }
-
-  /* <-------MEDIA-------> */
+/* <-------MEDIA-------> */

@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 
 import "../../../assets/styles/components/ShoppingCar.scss";
 import capitalizeFirstLetter from "../../../Utils/capitalizeFirstLetter";
+import formatHourMinute from "../../../Utils/formatHourMinute";
 
 import Shopping from "../../Utils/ShoppingCarSquare";
 
 import Promo from "../../../assets/static/images/svg/rectangle-promo.svg";
 import User from "../../../assets/static/images/svg/user.svg";
+import Reloj from "../../../assets/static/images/svg/reloj.svg";
+import Play from "../../../assets/static/images/svg/icon-play-black.svg";
 
 const Course = ({
   img,
@@ -19,11 +22,13 @@ const Course = ({
   price,
   course,
   displayNone,
+  duration,
+  module,
 }) => {
   let priceWithDiscount = price - price * (priceOff / 100);
 
   return (
-    <div className={"discovery__box " + " " + displayNone}>
+    <div className={"discovery__box slide-in-top" + " " + displayNone}>
       <div className="discovery__box__img">
         <div>
           <img
@@ -59,10 +64,41 @@ const Course = ({
             </i>
           </div>
           <div className="flex discovery__box__info--fix">
-            <img src={User} alt="user" />
-            <p className="discovery__box__info__student">
-              {students ? students : "150"} alumnos
-            </p>
+            <div className="flex">
+              <img src={User} alt="user" />
+              <p className="discovery__box__info__student">
+                {students ? students : "150"} alumnos.
+              </p>
+            </div>
+            {duration ? (
+              <div className="flex">
+                <img
+                  src={Reloj}
+                  alt="user"
+                  className="discovery__box__info__hours__icon"
+                />
+                <p className="discovery__box__info__student">
+                  {duration ? formatHourMinute(duration) : "150"}
+                </p>
+              </div>
+            ) : (
+              ""
+            )}
+
+            {module ? (
+              <div className="flex">
+                <img
+                  src={Play}
+                  alt="user"
+                  className="discovery__box__info__hours__icon"
+                />
+                <p className="discovery__box__info__student">
+                  {module ? module : "150"} Modulos.
+                </p>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
           <div className="flex">
             <h2 className="discovery__box__info__price">

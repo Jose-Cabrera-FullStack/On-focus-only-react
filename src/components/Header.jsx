@@ -6,9 +6,10 @@ import { logoutRequest } from "../actions";
 
 import EmergentMenu from "./Utils/EmergentMenu";
 import HamburgerMenuMobile from "./Utils/HamburgerMenuMobile";
-import ModalLogin from "./Utils/Modal";
+import Modal from "./Utils/Modal";
 
 import Login from "../containers/Login";
+import Register from "../containers/Register";
 
 import Logo from "../assets/static/images/svg/logo-small.svg";
 import Hamburguer from "../assets/static/images/svg/icon-hamburguer.svg";
@@ -48,6 +49,15 @@ const Header = (props) => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+  const [openRegister, setOpenRegister] = useState(false);
+
+  const handleOpenRegister = () => {
+    setOpenRegister(true);
+  };
+
+  const handleCloseRegister = () => {
+    setOpenRegister(false);
   };
 
   const shoppingcar = props.shoppingcar;
@@ -173,19 +183,25 @@ const Header = (props) => {
                   >
                     Iniciar Sesion
                   </button>
-                  <ModalLogin
-                    open={open}
-                    handleClose={handleClose}
-                    body={<Login handleClose={handleClose} />}
-                  />
                 </li>
+                <Modal
+                  open={open}
+                  handleClose={handleClose}
+                  body={<Login handleClose={handleClose} />}
+                />
                 <li className="navbar__menu">
-                  <Link to="/registrarse">
-                    <button className="btn__primary btn__primary--login">
-                      Registrarse
-                    </button>
-                  </Link>
+                  <button
+                    className="btn__primary btn__primary--login"
+                    onClick={handleOpenRegister}
+                  >
+                    Registrarse
+                  </button>
                 </li>
+                <Modal
+                  open={openRegister}
+                  handleClose={handleCloseRegister}
+                  body={<Register handleClose={handleCloseRegister} />}
+                />
               </>
             )}
           </ol>

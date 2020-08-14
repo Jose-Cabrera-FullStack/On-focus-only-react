@@ -23,7 +23,6 @@ const AboutUs = () => {
         <Future icon={Logo}/> 
         <Map/> 
         <Knowledge/> 
-        <Tweets/> 
         <Phrase/> 
         <HeroDown/> 
         <Footer/> 

@@ -42,7 +42,7 @@ const Login = (props) => {
           ></span>
           <h1 className="login__inside__title">
             Hola <br />
-            Lorem ipsum dolor sit amet.
+            Iniciar Sesión
           </h1>
 
           <button className="facebook__button">

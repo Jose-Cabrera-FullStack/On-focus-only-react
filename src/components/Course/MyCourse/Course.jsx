@@ -12,7 +12,7 @@ import Button from "../../Utils/ButtonArrowRight";
 
 const MyCourse = ({ progress, title, category, src, url }) => {
   return (
-    <div className="discovery__box">
+    <div className="discovery__box slide-in-top">
       <div className="discovery__box__img">
         <img
           src={src ? src : Class1}

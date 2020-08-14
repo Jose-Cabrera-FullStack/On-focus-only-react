@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 
 import "../../assets/styles/components/Course.scss";
@@ -7,10 +7,21 @@ import "../../assets/styles/components/Courses.scss";
 import Course from "./Course/Course";
 import Diploma from "./Diploma/Diploma";
 
+import Pagination from "../Utils/Pagination";
+
 import { getCourseCategory } from "../../actions";
 
 const Discovery = (props) => {
   let course = props.course;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(4);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = course.slice(indexOfFirstPost, indexOfLastPost);
+
+  let coursePage = false;
+
   return (
     <section className="discovery">
       <div className="discovery__container">
@@ -49,9 +60,31 @@ const Discovery = (props) => {
                       );
                     })}
                 </>
+              ) : props.onlyFour ? (
+                <>
+                  {course
+                    .slice(course.length - 4, course.length)
+                    .map((item) => {
+                      return (
+                        <div key={item.course_id}>
+                          <Course
+                            priceOff={item.discount}
+                            category={item.category}
+                            title={item.name}
+                            teacher={item.teacher}
+                            students={item.students}
+                            price={item.price}
+                            img={item.featured_image}
+                            course={item}
+                          />
+                        </div>
+                      );
+                    })}
+                </>
               ) : (
                 <>
-                  {course.map((item) => {
+                  {currentPosts.map((item) => {
+                    coursePage = true;
                     return (
                       <div key={item.course_id}>
                         <Course
@@ -63,6 +96,8 @@ const Discovery = (props) => {
                           price={item.price}
                           img={item.featured_image}
                           course={item}
+                          duration={item.duration}
+                          module={item.module}
                         />
                       </div>
                     );
@@ -75,6 +110,17 @@ const Discovery = (props) => {
           <Diploma none={props.none} />
         </div>
       </div>
+      {coursePage ? (
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={course.length}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          indexOfLastPost={indexOfLastPost}
+        />
+      ) : (
+        ""
+      )}
     </section>
   );
 };

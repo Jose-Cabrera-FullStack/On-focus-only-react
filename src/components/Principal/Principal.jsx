@@ -1,14 +1,11 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 import "../../assets/styles/components/Principal.scss";
 
 import Logo from "../../assets/static/images/svg/logo.svg";
 
 const Principal = () => {
-  const scrollFirstCourse = () => {
-    window.scrollTo({ top: 1000, behavior: "smooth" });
-  };
 
   return (
     <section className="home__view ">

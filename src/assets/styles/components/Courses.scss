@@ -75,7 +75,7 @@
 }
 
 .discovery__box__info__padding {
-  padding: 10px 30px 0px 21px;
+  padding: 10px 0px 0px 21px;
 }
 
 .discovery__box__info__title {
@@ -87,6 +87,24 @@
   letter-spacing: -0.02em;
   color: #03002b;
   margin: 0;
+}
+
+.pagination {
+  list-style: none;
+  place-content: center;
+  margin: 40px 0 0 0;
+}
+
+.pagination p {
+  padding: 0 40px 0 40px;
+}
+.pagination img{
+  padding: 0 5px 0 5px;
+  cursor: pointer;
+  user-select: none;
+}
+.pagination img:hover{
+  filter: sepia(9);
 }
 
 .discovery__box__info__name {
@@ -128,7 +146,13 @@
 }
 
 .discovery__box__info__student {
-  margin: 0px 0px 0px 5px;
+  margin: 2px 0px 0px 5px;
+  font-size: 12px;
+}
+.discovery__box__info__hours__icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
 }
 
 .discovery__box__info__price__before {
