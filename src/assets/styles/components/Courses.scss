@@ -97,13 +97,15 @@
 
 .pagination p {
   padding: 0 40px 0 40px;
+  position: relative;
+  bottom: 15px;
 }
-.pagination img{
+.pagination img {
   padding: 0 5px 0 5px;
   cursor: pointer;
   user-select: none;
 }
-.pagination img:hover{
+.pagination img:hover {
   filter: sepia(9);
 }
 

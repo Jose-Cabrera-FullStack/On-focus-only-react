@@ -68,6 +68,7 @@
     "react-select": "3.0.8",
     "react-spinkit": "3.0.0",
     "react-transition-group": "^4.4.1",
+    "react-visibility-sensor": "^5.1.1",
     "redux": "4.0.4",
     "redux-thunk": "2.3.0",
     "style-loader": "^1.1.3",

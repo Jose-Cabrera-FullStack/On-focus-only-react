@@ -1,7 +1,6 @@
 /* <-------HOW WE TEACH-------> */
 .how__we__tech {
   margin: 0px 200px 0px 193px;
-
 }
 
 .how__we__tech__title {
@@ -20,12 +19,15 @@
   gap: 1px 1px;
 }
 
-.how__we__tech__info {
-  margin: 0px 0 0 0px;
-  animation-name: visible;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+.how__we__tech__container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+ .visible {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 @keyframes how__we__tech__info {

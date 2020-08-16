@@ -89,16 +89,19 @@
   line-height: 135.3%;
   letter-spacing: -0.02em;
   color: #4f4f4f;
+  cursor: pointer;
+  user-select: none;
 }
 
 .buyed__bar__text:hover {
-  color: #03002b;
+  color: #b38a58;
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
+
 }
 
 .buyed__bar--select {
-  color: #03002b;
+  color: #b38a58;
+  cursor: context-menu;
 }
 
 .buyed__text {

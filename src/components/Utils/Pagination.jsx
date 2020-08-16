@@ -34,32 +34,41 @@ const Pagination = ({
   }
   return (
     <nav>
-      <Link
-        activeClass="active"
-        to="discovery"
-        spy={true}
-        smooth={true}
-        offset={0}
-        duration={800}
-      >
-        <ul className="pagination flex">
+      <ul className="pagination flex">
+        <Link
+          activeClass="active"
+          to="discovery"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={800}
+        >
           <img
             onClick={first}
             src={ArrowLeftLastItem}
             alt="Flecha a izquierda"
           />
           <img onClick={prev} src={ArrowLeft} alt="Flecha a izquierda" />
-          <p>
-            {currentPage} / {pageNumbers.length}
-          </p>
+        </Link>
+        <p>
+          {currentPage} / {pageNumbers.length}
+        </p>
+        <Link
+          activeClass="active"
+          to="discovery"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={800}
+        >
           <img onClick={next} src={ArrowRight} alt="Flecha a la derecha" />
           <img
             onClick={last}
             src={ArrowRightFirstItem}
             alt="Flecha a la derecha"
           />
-        </ul>
-      </Link>
+        </Link>
+      </ul>
     </nav>
   );
 };
