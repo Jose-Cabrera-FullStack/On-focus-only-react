@@ -56,12 +56,16 @@
 
 .discovery__box__info {
   background-image: linear-gradient(to top, #dad9d9f2, #f2f2f2);
-  margin: -4px 0 0 28px;
-  position: fixed;
+  margin: 20px 0 20px 28px;
+  position: sticky;
   top: 70px;
   z-index: 1;
   right: 50px;
   user-select: none;
+}
+
+.discovery__box__info__in__course__width{
+  width: 880px;
 }
 
 .discovery__box__info__course {

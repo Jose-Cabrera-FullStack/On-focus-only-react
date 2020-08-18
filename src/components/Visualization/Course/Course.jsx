@@ -57,9 +57,14 @@ const Course = ({ title, text, videos, path, position }) => {
       {isToggle ? (
         <>
           {videos.map((item, index) => {
+            console.log("item:", item);
             const last =
               index + 1 === videos.length
-                ? "visualization__vertical__line visualization__vertical__line--last"
+                ? item.status === false
+                  ? "visualization__vertical__line visualization__vertical__line--inside--incomplete"
+                  : "visualization__vertical__line visualization__vertical__line--last"
+                : item.status === false
+                ? "visualization__vertical__line visualization__vertical__line--inside--incomplete"
                 : "visualization__vertical__line";
             return (
               <CourseInside

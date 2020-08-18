@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
 import "../../../assets/styles/components/Visualization.scss";
 import "../../../assets/styles/components/Course.scss";
@@ -17,7 +16,11 @@ const CourseList = (props) => {
             index === 0
               ? "visualization__vertical__line--module visualization__vertical__line--module--first"
               : index + 1 === module.length
-              ? "visualization__vertical__line--module visualization__vertical__line--module--last"
+              ? item.status === false
+                ? "visualization__vertical__line visualization__vertical__line--incomplete"
+                : "visualization__vertical__line--module visualization__vertical__line--module--last"
+              : item.status === false
+              ? "visualization__vertical__line visualization__vertical__line--incomplete"
               : "visualization__vertical__line--module";
           return (
             <Course

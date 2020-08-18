@@ -14,7 +14,7 @@ export default {
       teacher: {
         name: "Luis Alvarez",
         profesion: "Profesor",
-        photo:"http://dummyimage.com/222x221.bmp/cc0000/ffffff",
+        photo: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         linkedin: "http://linkedin.com",
@@ -31,6 +31,7 @@ export default {
           module_id: 1,
           name: "Module 1",
           text: "texto 1",
+          status: true,
           videos: [
             {
               video_id: 2,
@@ -63,6 +64,7 @@ export default {
           text: "texto 2",
           category: "diseño-web",
           name: "Module 2",
+          status: true,
           videos: [
             {
               video_id: 2,
@@ -83,6 +85,7 @@ export default {
           text: "texto 3",
           category: "diseño-web",
           name: "Module 3",
+          status: true,
           videos: [
             {
               video_id: 3,
@@ -97,6 +100,7 @@ export default {
           text: "texto 4",
           category: "diseño-web",
           name: "Module 4",
+          status: true,
           videos: [
             {
               video_id: 4,
@@ -117,7 +121,7 @@ export default {
       status: false,
       teacher: {
         name: "José Silvarez",
-        photo:"http://dummyimage.com/222x221.bmp/cc0000/ffffff",
+        photo: "http://dummyimage.com/222x221.bmp/cc0000/ffffff",
         profesion: "Profesor",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -137,6 +141,7 @@ export default {
           text: "texto 4",
           category: "marketing",
           name: "Module 1",
+          status: false,
           videos: [
             {
               video_id: 1,
@@ -163,6 +168,7 @@ export default {
           text: "texto 2",
           category: "marketing",
           name: "Module 2",
+          status: false,
           videos: [
             {
               video_id: 1,
@@ -183,6 +189,7 @@ export default {
           text: "texto 2",
           category: "marketing",
           name: "Module 3",
+          status: false,
           videos: [
             {
               video_id: 1,
@@ -203,6 +210,7 @@ export default {
           text: "texto 2",
           category: "marketing",
           name: "Module 4",
+          status: false,
           videos: [
             {
               video_id: 1,

@@ -103,7 +103,8 @@
 .btn__arrow__buy__img {
   width: 19px;
   height: 19px;
-  background-image: url(../static/images/svg/arrow-right.svg);
+  position: relative;
+  top: 17px;
 }
 
 .btn__arrow__black {
@@ -136,6 +137,10 @@
   font-family: "Mont-Bold";
   font-size: 15px;
   margin: 17px 0 0 5px;
+}
+
+.btn__arrow__buy p:hover {
+  transition: none;
 }
 
 button {
@@ -225,7 +230,7 @@ button {
   fill: #fff;
   background-color: #b38a58;
   color: #ffffff;
-  transition: all 0.2s ease-in-out;
+  transition: none;
   border: 2.5px solid #b38a58;
 }
 
@@ -251,6 +256,5 @@ button {
     top: 0;
     left: 0;
   }
-
 }
 /* <-------MEDIA-------> */

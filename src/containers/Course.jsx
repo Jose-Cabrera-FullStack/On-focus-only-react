@@ -47,13 +47,37 @@ const Course = (props) => {
       />
       <HeroCoursePlus />
       <section>
-        <CourseInfo course={props.category} />
+        <div className="flex">
+          <CourseInfo course={props.category} />
+          <CourseSaveMoney />
+        </div>
+
         <CourseInclusive />
-        <CourseForMe onlyDesktop={"display__screen__desktop"} />
-        <CourseModule onlyDesktop={"display__screen__desktop"} infoHidden/>
-        <CourseRecomendation onlyDesktop={"display__screen__desktop"} infoHidden />
-        <CourseTeacher onlyDesktop={"display__screen__desktop"} infoHidden/>
-        <HowWeTeach grid={grid} onlyDesktop={"display__screen__desktop"} infoHidden/>
+        <div className="flex">
+          <div>
+            <CourseForMe onlyDesktop={"display__screen__desktop"} />
+            <CourseModule onlyDesktop={"display__screen__desktop"} infoHidden />
+          </div>
+          <CourseSaveMoney />
+        </div>
+        <CourseRecomendation
+          onlyDesktop={"display__screen__desktop"}
+          infoHidden
+        />
+        <div className="flex">
+          <div className="discovery__box__info__in__course__width">
+            <CourseTeacher
+              onlyDesktop={"display__screen__desktop"}
+              infoHidden
+            />
+            <HowWeTeach
+              grid={grid}
+              onlyDesktop={"display__screen__desktop"}
+              infoHidden
+            />
+          </div>
+          <CourseSaveMoney />
+        </div>
       </section>
       <Footer />
     </div>

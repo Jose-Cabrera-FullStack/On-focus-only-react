@@ -31,7 +31,7 @@ const ButtonShopping = (props) => {
     video_intro,
   } = categoryPay;
 
-  const total = price - (price * discount/100)
+  const total = price - (price * discount) / 100;
 
   const handleShopping = () => {
     props.setFavorite({
@@ -50,14 +50,14 @@ const ButtonShopping = (props) => {
       students,
       teacher,
       video_intro,
-      total
-    })
-  }
+      total,
+    });
+  };
 
   return (
     <div className="discovery__box__info__inside__buttons flex">
       <Link to="/pago">
-        <ButtonArrowRight onClick={handleShopping}/>
+        <ButtonArrowRight onClick={handleShopping} />
       </Link>
       <Shopping course={props.category} />
     </div>

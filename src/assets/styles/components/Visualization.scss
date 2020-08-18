@@ -78,7 +78,7 @@
 .visualization__sidebar__status {
   position: relative;
   right: 34px;
-  z-index: 3;
+  z-index: 10;
   bottom: 18px;
 }
 
@@ -87,7 +87,7 @@
   position: relative;
   left: 35px;
   bottom: 60px;
-  z-index: 3;
+  z-index: 11;
 }
 
 .visualization__sidebar__arrow {
@@ -175,6 +175,15 @@
   width: 0;
   top: -30px;
   left: 41px;
+}
+.visualization__vertical__line--incomplete {
+  border-left: 3px solid #fff;
+  left: -25px;
+  top: -45px;
+}
+
+.visualization__vertical__line--inside--incomplete {
+  border-left: 3px solid #fff;
 }
 
 .visualization__vertical__line--last {

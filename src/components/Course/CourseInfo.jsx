@@ -27,7 +27,6 @@ const CourseInfo = ({ category }) => {
           OnlyDesktop={"display__screen__desktop"}
           video_id={category.video_intro}
         />
-        <CourseSaveMoney />
       </div>
       <div>
         <Information onlyMobile={"display__screen__mobile"} />

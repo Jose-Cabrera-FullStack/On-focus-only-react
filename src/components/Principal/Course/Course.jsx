@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../../../assets/styles/components/ShoppingCar.scss";
@@ -7,6 +7,8 @@ import formatHourMinute from "../../../Utils/formatHourMinute";
 
 import Shopping from "../../Utils/ShoppingCarSquare";
 
+import Arrow from "../../../assets/static/images/svg/arrow-right.svg";
+import ArrowHover from "../../../assets/static/images/svg/arrow-right-hover-button.svg";
 import Promo from "../../../assets/static/images/svg/rectangle-promo.svg";
 import User from "../../../assets/static/images/svg/user.svg";
 import Reloj from "../../../assets/static/images/svg/reloj.svg";
@@ -27,6 +29,9 @@ const Course = ({
 }) => {
   let priceWithDiscount = price - price * (priceOff / 100);
 
+  const [isHover, setIsHover] = useState(false);
+
+  const changeIsHover = () => setIsHover(!isHover);
   return (
     <div className={"discovery__box slide-in-top" + " " + displayNone}>
       <div className="discovery__box__img">
@@ -110,12 +115,17 @@ const Course = ({
           </div>
           <div className="flex">
             <Link to={`/cursos/${category}`}>
-              <button className="btn__secundary btn__secundary--buy discovery__box__position">
+              <button
+                onMouseEnter={changeIsHover}
+                onMouseLeave={changeIsHover}
+                className="btn__secundary btn__secundary--buy discovery__box__position"
+              >
                 <div className="flex btn__arrow__buy">
-                  <span
-                    className="icon btn__arrow__buy__img"
-                    alt="Ícono de flecha a la derecha"
-                  ></span>
+                  <img
+                    className="btn__arrow__buy__img"
+                    src={isHover ? ArrowHover : Arrow}
+                    alt="Ícono de Flecha"
+                  />
                   <p>Comprarlo ahora</p>
                 </div>
               </button>

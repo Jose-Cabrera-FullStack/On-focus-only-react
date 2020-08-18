@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../../assets/styles/components/Utils.scss";
+import Arrow from "../../assets/static/images/svg/arrow-right.svg";
+import ArrowHover from "../../assets/static/images/svg/arrow-right-hover-button.svg";
 
 const ButtonArrowRight = ({
   margin,
@@ -12,6 +14,8 @@ const ButtonArrowRight = ({
   onClick,
   link,
 }) => {
+  const [isHover, setIsHover] = useState(false);
+  const changeIsHover = () => setIsHover(!isHover);
   return (
     <div>
       {link ? (
@@ -38,6 +42,8 @@ const ButtonArrowRight = ({
         </Link>
       ) : (
         <button
+          onMouseEnter={changeIsHover}
+          onMouseLeave={changeIsHover}
           onClick={onClick}
           className={
             "btn__secundary btn__secundary--buy discovery__box__position" +
@@ -50,10 +56,11 @@ const ButtonArrowRight = ({
           }
         >
           <div className="flex btn__arrow__buy">
-            <span
-              className={icon ? icon : "icon btn__arrow__buy__img"}
-              alt="Ícono de flecha a la derecha"
-            ></span>
+            <img
+              className="btn__arrow__buy__img"
+              src={isHover ? ArrowHover : Arrow}
+              alt="Ícono de Felcha"
+            />
             <p>{text ? text : "Comprarlo ahora"}</p>
           </div>
         </button>

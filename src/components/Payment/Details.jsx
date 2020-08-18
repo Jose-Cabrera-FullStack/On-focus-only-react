@@ -59,7 +59,7 @@ const Details = ({ total, shoppingcar }) => {
           <p>Ver detalles</p>
           <img src={isToggle ? arrowUp : arrowDown} alt="Fecla para abajo" />
         </div>
-        <div className={isToggle ? "" : "display-none"}>
+        <div className={isToggle ? "slide-in-top" : "display-none"}>
           <hr />
           {shoppingcar.length > 0 ? (
             <>
