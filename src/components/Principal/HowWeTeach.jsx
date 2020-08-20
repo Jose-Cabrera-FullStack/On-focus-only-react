@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import VisibilitySensor from "react-visibility-sensor";
 
 import "../../assets/styles/components/HowWeTeach.scss";

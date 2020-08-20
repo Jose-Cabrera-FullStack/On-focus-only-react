@@ -10,6 +10,7 @@ import "../assets/styles/components/Login.scss";
 import Facebook from "../assets/static/images/svg/facebook-icon-button.svg";
 import Google from "../assets/static/images/svg/google-icon-button.svg";
 
+import Arrow from "../assets/static/images/svg/arrow-visualization-black.svg";
 import Button from "../components/Utils/ButtonArrowRight";
 
 const Login = (props) => {
@@ -30,7 +31,6 @@ const Login = (props) => {
     props.loginUser(form, "/mis-cursos");
   };
 
-  // getModalStyle is not a pure function, we roll the style only on the first render
   return (
     <>
       <section className="login">
@@ -40,6 +40,15 @@ const Login = (props) => {
             className="congratulation__exit--login"
             alt="Ícono para salir"
           ></span>
+          <div
+            className="login__inside__go__back__button"
+            onClick={props.handleClose}
+          >
+            <div className="flex">
+              <img src={Arrow} alt="" />
+              <h1>Volver</h1>
+            </div>
+          </div>
           <h1 className="login__inside__title">
             Hola <br />
             Iniciar Sesión

@@ -40,6 +40,9 @@ const Footer = (props) => {
             </ol>
             <div className="footer__socials__network">
               <ol className="footer__container__left--fix">
+                <li className="s4">
+                  <a href="#" className="iconbtn footer__socials--youtube"></a>
+                </li>
                 <li>
                   <a href={`https://www.youtube.com/`}>
                     <span

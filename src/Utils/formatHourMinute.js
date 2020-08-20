@@ -7,7 +7,7 @@ export default function formatHourMinute(durationInSeconds) {
   let minutes = dateObj.getUTCMinutes();
 
   return (timeString =
-    (hours > 0 ? hours.toString().padStart(1, "0") + " horas " : "") +
+    (hours > 0 ? hours.toString().padStart(1, "0") + " hr " : "") +
     minutes.toString().padStart(1, "0") +
-    " minutos.");
+    " min.");
 }

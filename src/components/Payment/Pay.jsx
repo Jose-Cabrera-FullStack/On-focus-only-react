@@ -69,7 +69,6 @@ const Pay = (props) => {
   const { user = {} } = props;
   const hasUser = Object.keys(user).length > 0;
 
-  console.log("hasUser:", hasUser);
   return (
     <section className="way-to-pay">
       {hasUser ? (

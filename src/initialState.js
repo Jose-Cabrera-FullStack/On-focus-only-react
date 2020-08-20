@@ -1,5 +1,9 @@
+import { loadState } from "./Utils/localStorage";
+
+const persistedState = loadState();
+
 export default {
-  shoppingcar: [],
+  shoppingcar:persistedState.shoppingcar || [],
   URLvideos: [],
   user: {},
   total: 0,

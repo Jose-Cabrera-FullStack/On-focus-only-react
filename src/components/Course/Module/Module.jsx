@@ -5,7 +5,6 @@ import "../../../assets/styles/components/Principal.scss";
 
 import ModuleInside from "./ModuleInside";
 
-import ArrowUp from "../../../assets/static/images/svg/arrow-up-black.svg";
 import ArrowDown from "../../../assets/static/images/svg/arrow-down-black.svg";
 import Reloj from "../../../assets/static/images/svg/reloj.svg";
 

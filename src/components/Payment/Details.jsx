@@ -15,22 +15,18 @@ const Details = ({ total, shoppingcar }) => {
 
   const changeisToggle = () => setToggle(!isToggle);
 
-  // <--------se debe refactorizar---------->
   let totalWithOutDiscount = 0;
   let totalDiscount = 0;
-  let totalIndivudual = 0;
-  const totalWithOutDiscountshoppingcar = shoppingcar.map(
-    (item) => (totalWithOutDiscount += item.price)
-  );
 
-  const discount = shoppingcar.map(
+  shoppingcar.map((item) => (totalWithOutDiscount += item.price));
+
+  shoppingcar.map(
     (item) => (totalDiscount += item.discount / shoppingcar.length)
   );
 
-  const totalShopping = shoppingcar.map(
-    (item) => (totalIndivudual += item.total)
-  );
-  // <--------se debe refactorizar---------->
+  const totalShopping = totalWithOutDiscount * (totalDiscount / 100);
+
+  const finalTotal = totalWithOutDiscount - totalShopping;
 
   return (
     <section className="details">
@@ -48,7 +44,7 @@ const Details = ({ total, shoppingcar }) => {
           <div className="flex">
             <div className="details__inside__total">
               <p>Tu total es de</p>
-              <strong>AR$ {total ? total : parseInt(totalIndivudual)}</strong>
+              <strong>AR$ {finalTotal ? parseInt(finalTotal) : "0"}</strong>
             </div>
             <i className="details__inside__total__before">
               ARS {totalWithOutDiscount ? totalWithOutDiscount : "0"}
@@ -79,7 +75,6 @@ const Details = ({ total, shoppingcar }) => {
           ) : (
             <p className="details__inside__detail__empty">No tienes items</p>
           )}
-
         </div>
       </div>
     </section>

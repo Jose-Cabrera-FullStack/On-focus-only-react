@@ -397,26 +397,12 @@
   background-image: url(../../static/images/svg/icon-x.svg);
 }
 
-.congratulation__exit--login {
-  cursor: pointer;
-  display: block;
-  width: 14px;
-  height: 16px;
-  position: relative;
-  top: 20px;
-  z-index: 1;
-  left: 420px;
-  background-size: cover;
-  background-image: url(../../static/images/svg/icon-x.svg);
-}
+
 
 .congratulation__exit:hover {
   filter: sepia(181);
 }
 
-.congratulation__exit--login:hover {
-  filter: sepia(181);
-}
 
 .congratulation__box__inside {
   padding: 80px 0 0 150px;

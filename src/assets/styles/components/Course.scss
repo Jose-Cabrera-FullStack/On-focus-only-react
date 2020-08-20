@@ -626,7 +626,10 @@
   }
 
   .discovery__box__info__inside {
-    margin: 50px 0 0 0;
+    margin: 50px 0px 0px 0px;
+    background: #f2f2f2;
+    padding: 30px 0px 0px 60px;
+    width: 320px;
   }
 }
 
@@ -794,9 +797,12 @@
   .course__module__element__inside--help__center {
     width: auto;
   }
-  
+
   .discovery__box__info__inside {
     margin: -20px 0 0 0;
+    width: auto;
+    background: none;
+    padding: 0;
   }
 }
 @media screen and (max-width: 450px) {

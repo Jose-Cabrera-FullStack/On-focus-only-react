@@ -118,7 +118,7 @@ const Course = ({
               <button
                 onMouseEnter={changeIsHover}
                 onMouseLeave={changeIsHover}
-                className="btn__secundary btn__secundary--buy discovery__box__position"
+                className="btn__secundary btn__secundary--buy btn__secundary--buy--course discovery__box__position"
               >
                 <div className="flex btn__arrow__buy">
                   <img
@@ -126,7 +126,7 @@ const Course = ({
                     src={isHover ? ArrowHover : Arrow}
                     alt="Ícono de Flecha"
                   />
-                  <p>Comprarlo ahora</p>
+                  <p>Ver Detalles del curso</p>
                 </div>
               </button>
             </Link>

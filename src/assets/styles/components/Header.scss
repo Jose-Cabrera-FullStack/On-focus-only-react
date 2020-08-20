@@ -195,6 +195,7 @@
     left: 0;
     top: 0;
     width: 100vw;
+    height: 100vh;
     z-index: 300;
   }
   .navbar__hamburguer__toggle__logo {
@@ -214,17 +215,26 @@
     font-size: 20px;
     width: 350px;
     position: relative;
-    top: 50%;
     left: 50%;
     transform: translate(-55%, 30%);
     margin-bottom: 100px;
+    text-align: left;
   }
+
+  .navbar__hamburguer__toggle__menu__arrow{
+    margin: 20px 0px 0px 20px;
+  }
+
   .navbar__hamburguer__toggle__menu__list li {
     list-style: none;
     font-family: "Mont-Bold";
     font-size: 20px;
     color: #fff;
     margin: 20px 0 0 0;
+  }
+
+  .navbar__menu__mobile__buttons {
+    margin: 150px 0 0 0;
   }
 }
 /* <-------MEDIA-------> */

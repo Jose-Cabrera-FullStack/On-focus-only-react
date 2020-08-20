@@ -6,13 +6,19 @@ import "../../assets/styles/components/Header.scss";
 
 import Logo from "../../assets/static/images/svg/logo-small.svg";
 import Arrow from "../../assets/static/images/svg/arrow-right-hamburger-mobile.svg";
+import ArrowInside from "../../assets/static/images/svg/arrow-right-hamburger-mobile-inside.svg";
 
 import Login from "../../containers/Login";
 
 import ModalLogin from "./Modal";
 
-const HamburgerMenuMobile = ({ onClick, handleOpen, handleClose, open, user }) => {
-  
+const HamburgerMenuMobile = ({
+  onClick,
+  handleOpen,
+  handleClose,
+  open,
+  user,
+}) => {
   const hasUser = Object.keys(user).length > 0;
   return (
     <>
@@ -34,16 +40,35 @@ const HamburgerMenuMobile = ({ onClick, handleOpen, handleClose, open, user }) =
         </div>
         <div className="navbar__hamburguer__toggle__menu">
           <ol className="navbar__hamburguer__toggle__menu__list">
-            <Link to="/cursos" className="text-decoration">
-              <li>Descubrir</li>
+            <Link to="/cursos" className="text-decoration flex">
+              <li>Estudiá</li>
+              <img
+                className="navbar__hamburguer__toggle__menu__arrow"
+                src={ArrowInside}
+                alt="Ícono de Flecha"
+              />
             </Link>
-            <Link to="/sobre-nosotros" className="text-decoration">
-              <li>About On Focus</li>
+            <Link to="/sobre-nosotros" className="text-decoration flex">
+              <li>Inspirate</li>
+              <img
+                className="navbar__hamburguer__toggle__menu__arrow"
+                src={ArrowInside}
+                alt="Ícono de Flecha"
+              />
+            </Link>
+            <Link to="/sobre-nosotros" className="text-decoration flex">
+              <li>Acerca de On Focus</li>
+            </Link>
+            <Link to="/contactanos" className="text-decoration flex">
+              <li>Contacto</li>
+            </Link>
+            <Link to="/enseña" className="text-decoration flex">
+              <li>Quiero dar un curso</li>
             </Link>
             {hasUser ? (
               ""
             ) : (
-              <>
+              <div className="navbar__menu__mobile__buttons">
                 <li className="navbar__menu ">
                   <button
                     className="btn__primary btn__primary--login btn__primary--login"
@@ -65,7 +90,7 @@ const HamburgerMenuMobile = ({ onClick, handleOpen, handleClose, open, user }) =
                     </button>
                   </Link>
                 </li>
-              </>
+              </div>
             )}
           </ol>
         </div>
