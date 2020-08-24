@@ -15,7 +15,6 @@
 
 .register__box{
   width: 520px;
-  height: 621px;
   background: #FFFFFF;
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -72,6 +71,18 @@
   background: #FFFFFF;
   border: 1px solid #BDBDBD;
   box-sizing: border-box;
+}
+
+.register__box__inside--error {
+  font-family: "Mont-Light";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 135.3%;
+  letter-spacing: -0.03em;
+  color: #4f4f4f;
+  position: relative;
+  top: 5px;
 }
 
 .btn__secundary--register{

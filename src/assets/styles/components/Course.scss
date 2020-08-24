@@ -641,7 +641,7 @@
 
 @media screen and (max-width: 1024px) {
   .course {
-    margin: 40px 0px 0px 10%;
+    margin: 40px 0px 0px 23px;
   }
   .course__hidden__information {
     font-style: normal;
@@ -659,7 +659,7 @@
   }
 
   .course__recomendation__inside {
-    padding: 44px 0px 0px 10%;
+    padding: 44px 0px 0px 0;
   }
 
   .course__recomendation__inside__box {
@@ -780,11 +780,9 @@
 
   .course__module__element {
     width: auto;
-    margin: 10px 20px 0 20px;
   }
   .course__module__element__inside {
     width: auto;
-    margin: 2px 20px 0 20px;
   }
   .course__module__element__inside--help__center {
     margin: 3px 0px 30px 0;
@@ -804,6 +802,7 @@
     background: none;
     padding: 0;
   }
+
 }
 @media screen and (max-width: 450px) {
   .course__module__arrow--buyed {

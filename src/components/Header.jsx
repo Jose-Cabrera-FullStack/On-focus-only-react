@@ -50,15 +50,6 @@ const Header = (props) => {
   const handleClose = () => {
     setOpen(false);
   };
-  const [openRegister, setOpenRegister] = useState(false);
-
-  const handleOpenRegister = () => {
-    setOpenRegister(true);
-  };
-
-  const handleCloseRegister = () => {
-    setOpenRegister(false);
-  };
 
   const shoppingcar = props.shoppingcar;
 
@@ -190,18 +181,14 @@ const Header = (props) => {
                   body={<Login handleClose={handleClose} />}
                 />
                 <li className="navbar__menu">
-                  <button
-                    className="btn__primary btn__primary--login"
-                    onClick={handleOpenRegister}
-                  >
-                    Registrarse
-                  </button>
+                  <Link to="/registrarse" className="text-decoration">
+                    <button
+                      className="btn__primary btn__primary--login"
+                    >
+                      Registrarse
+                    </button>
+                  </Link>
                 </li>
-                <Modal
-                  open={openRegister}
-                  handleClose={handleCloseRegister}
-                  body={<Register handleClose={handleCloseRegister} />}
-                />
               </>
             )}
           </ol>

@@ -21,7 +21,7 @@ import MyProfile from "../containers/MyProfile";
 import ContactUs from "../containers/ContactUs";
 import Politicy from "../containers/Politicy";
 import Teacher from "../containers/Teacher";
-import Register from "../containers/RegisterWithPay";
+import Register from "../containers/RegisterDefault";
 import Login from "../containers/Login";
 import AboutUs from "../containers/AboutUs";
 import Podcast from "../containers/Podcast";
@@ -52,7 +52,7 @@ const App = () => (
           <Route exact path="/contactanos" component={ContactUs} />
           <Route exact path="/politicas" component={Politicy} />
           <Route exact path="/enseña" component={Teacher} />
-          {/* <Route exact path="/registrarse" component={Register} /> */}
+          <Route exact path="/registrarse" component={Register} />
           <Route exact path="/iniciar-sesion" component={Login} />
           <Route exact path="/sobre-nosotros" component={AboutUs} />
           <Route exact path="/podcast" component={Podcast} />

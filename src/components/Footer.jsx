@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import "../assets/styles/components/Footer.scss";
@@ -41,31 +41,22 @@ const Footer = (props) => {
             <div className="footer__socials__network">
               <ol className="footer__container__left--fix">
                 <li className="s4">
-                  <a href="#" className="iconbtn footer__socials--youtube"></a>
+                  <a
+                    href={`https://www.youtube.com/`}
+                    className="iconbtn iconbtn--youtube footer__socials--youtube"
+                  ></a>
                 </li>
-                <li>
-                  <a href={`https://www.youtube.com/`}>
-                    <span
-                      className="footer__socials--youtube"
-                      alt="Youtube"
-                    ></span>
-                  </a>
+                <li className="s4">
+                  <a
+                    href={`https://www.facebook.com/`}
+                    className="iconbtn iconbtn--facebook footer__socials--facebook"
+                  ></a>
                 </li>
-                <li>
-                  <a href={`https://www.facebook.com/`}>
-                    <span
-                      className="footer__socials--facebook"
-                      alt="Facebook"
-                    ></span>
-                  </a>
-                </li>
-                <li>
-                  <a href={`https://www.instagram.com/`}>
-                    <span
-                      className="footer__socials--instagram"
-                      alt="Instagram"
-                    ></span>
-                  </a>
+                <li className="s4">
+                  <a
+                    href={`https://www.instagram.com/`}
+                    className="iconbtn iconbtn--instagram footer__socials--instagram"
+                  ></a>
                 </li>
               </ol>
             </div>
