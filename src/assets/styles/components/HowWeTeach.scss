@@ -10,6 +10,9 @@
   font-size: 25px;
   color: #03002b;
   margin: 110px 0 60px 0px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .how__we__tech__container {
@@ -17,15 +20,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1px 1px;
-}
-
-.how__we__tech__container {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
- .visible {
+.visible {
   opacity: 1;
   transform: translateY(0px);
 }

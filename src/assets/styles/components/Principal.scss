@@ -46,30 +46,30 @@
 /* <-------ANIMATION-------> */
 
 .slide-in-bottom-1 {
-  animation: slide-in-bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: slide-in-bottom 0.5s cubic-bezier(0,0,.58,1) both;
 }
 .slide-in-bottom-2 {
-  animation: slide-in-bottom 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: slide-in-bottom 1s cubic-bezier(0,0,.58,1) both;
 }
 .slide-in-bottom-3 {
-  animation: slide-in-bottom 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: slide-in-bottom 1.5s cubic-bezier(0,0,.58,1) both;
 }
 .slide-in-bottom-4 {
-  animation: slide-in-bottom 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: slide-in-bottom 2s cubic-bezier(0,0,.58,1) both;
 }
 .slide-in-bottom-5 {
-  animation: slide-in-bottom 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: slide-in-bottom 2.5s cubic-bezier(0,0,.58,1) both;
 }
 .slide-in-bottom-6 {
-  animation: slide-in-bottom 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: slide-in-bottom 3s cubic-bezier(0,0,.58,1) both;
 }
 .slide-in-bottom-7 {
-  animation: slide-in-bottom 3.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: slide-in-bottom 3.5s cubic-bezier(0,0,.58,1) both;
 }
 
 @keyframes slide-in-bottom {
   0% {
-    transform: translateY(1000px);
+    transform: translateY(200px);
     opacity: 0;
   }
   50% {

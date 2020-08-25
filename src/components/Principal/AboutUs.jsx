@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import VisibilitySensor from "react-visibility-sensor";
 
 import "../../assets/styles/components/AboutUs.scss";
 
@@ -7,6 +7,11 @@ import Teacher from "./Teachers/Teacher";
 import Arrows from "./Teachers/Arrows";
 
 const AboutUs = () => {
+  const [isVisible, setVisibility] = useState(false);
+
+  const onChange = (visiblity) => {
+    setVisibility(visiblity);
+  };
   const text =
     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.";
 
@@ -61,22 +66,32 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="about__us none-second">
+    <section
+      className={
+        isVisible ? "about__us none-second visible" : "about__us none-second"
+      }
+    >
       <h1 className="about__us__title">
         Ut wisi enim ad minim exerci tation ullamcorper.
       </h1>
-      <div className="flex">
-        <div className="slide">
-          {sliderArr.map((item, index) => {
-            return (
-              <div key={index} className="slider">
-                {item}
-              </div>
-            );
-          })}
+      <VisibilitySensor
+        partialVisibility
+        offset={{ top: 600 }}
+        onChange={onChange}
+      >
+        <div className="flex">
+          <div className="slide">
+            {sliderArr.map((item, index) => {
+              return (
+                <div key={index} className="slider">
+                  {item}
+                </div>
+              );
+            })}
+          </div>
+          <Arrows goRight={goRight} goLeft={goLeft} />
         </div>
-        <Arrows goRight={goRight} goLeft={goLeft} />
-      </div>
+      </VisibilitySensor>
     </section>
   );
 };

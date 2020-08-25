@@ -1,7 +1,11 @@
 /* <-------ABOUT US-------> */
 .about__us {
   margin: 100px 130px 0 193px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
 .about__us__title {
   width: 351px;
   font-family: "Mont-Bold", Roboto;
@@ -73,6 +77,9 @@
 
 .about__us__focus__future {
   margin: 50px 200px 50px 200px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .about__us__focus__future__img {
@@ -339,20 +346,21 @@
   width: 1070px;
 }
 
-/* <-------ANIMATION-------> */
+.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
 .about__us__arrow:hover {
   filter: invert(0.5) sepia(9);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-/* <-------ANIMATION-------> */
-
 /* <-------MEDIA-------> */
 @media screen and (max-width: 1350px) {
-  .slide{
+  .slide {
     width: 665px;
   }
-  .slide--course{
+  .slide--course {
     width: 710px;
   }
 }

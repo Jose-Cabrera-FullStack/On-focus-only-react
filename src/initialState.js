@@ -3,7 +3,7 @@ import { loadState } from "./Utils/localStorage";
 const persistedState = loadState();
 
 export default {
-  shoppingcar:persistedState.shoppingcar || [],
+  shoppingcar: persistedState ? persistedState.shoppingcar : [],
   URLvideos: [],
   user: {},
   total: 0,

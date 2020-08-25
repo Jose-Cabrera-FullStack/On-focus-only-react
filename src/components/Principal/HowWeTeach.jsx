@@ -24,7 +24,11 @@ const HowWeTeach = (props) => {
           : "how__we__tech"
       }
     >
-      <h1 className="how__we__tech__title">
+      <h1
+        className={
+          isVisible ? "how__we__tech__title visible" : "how__we__tech__title"
+        }
+      >
         Ut wisi enim ad minim exerci tation ullamcorper.
       </h1>
       <VisibilitySensor

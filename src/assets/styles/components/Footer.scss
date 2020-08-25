@@ -130,7 +130,8 @@
 }
 
 .footer__arrow:hover {
-  filter: invert(0.5) sepia(9);
+  filter: invert(59%) sepia(40%) saturate(410%) hue-rotate(353deg)
+    brightness(88%) contrast(97%);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -142,8 +143,8 @@
   width: 38px;
   height: 28px;
   background-repeat: no-repeat;
-  background-position: 4px;
-  background-size: 30px 30px;
+  background-position: 7px;
+  background-size: 24px 24px;
   background-image: url(../../static/images/svg/youtube.svg);
 }
 .footer__socials--facebook {
@@ -193,15 +194,15 @@
   z-index: 0;
 }
 .s4 .iconbtn {
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   color: #34495e;
 }
 .s4 .iconbtn--youtube::after {
   background: none;
   transition: 0.4s;
   background-repeat: no-repeat;
-  background-position: 4px;
-  background-size: 30px 30px;
+  background-position: 7px;
+  background-size: 24px 24px;
   background-image: url(../../static/images/svg/youtube.svg);
 }
 .s4 .iconbtn--facebook::after {
@@ -226,16 +227,16 @@
 }
 .s4 .iconbtn--youtube:hover {
   color: #b38a58;
-  border: 2px solid #b38a58;
+  border: 1px solid #b38a58;
   background: #b38a58;
   background-repeat: no-repeat;
-  background-position: 4px;
-  background-size: 30px 30px;
+  background-position: 7px;
+  background-size: 24px 24px;
   background-image: url(../../static/images/svg/youtube.svg);
 }
 .s4 .iconbtn--facebook:hover {
   color: #b38a58;
-  border: 2px solid #b38a58;
+  border: 1px solid #b38a58;
   background: #b38a58;
   background-repeat: no-repeat;
   background-position: 4px 7px;
@@ -244,7 +245,7 @@
 }
 .s4 .iconbtn--instagram:hover {
   color: #b38a58;
-  border: 2px solid #b38a58;
+  border: 1px solid #b38a58;
   background: #b38a58;
   background-repeat: no-repeat;
   background-position: 4px;

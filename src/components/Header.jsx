@@ -15,8 +15,6 @@ import Logo from "../assets/static/images/svg/logo-small.svg";
 import Hamburguer from "../assets/static/images/svg/icon-hamburguer.svg";
 import Shopping from "../assets/static/images/svg/shopping-car.svg";
 
-import { makeAnimationSlideUpDown } from "../Utils/animatedVisibility";
-
 import "../assets/styles/components/Header.scss";
 
 const Header = (props) => {
