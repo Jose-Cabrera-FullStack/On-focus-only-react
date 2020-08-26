@@ -9,7 +9,7 @@ import DiplomaImg from '../../../assets/static/images/img/diploma.png'
 
 const Diploma = ({display, none}) => {
     return(
-        <div className={"discovery__diploma"+ " " + display + " " + none}>
+        <div className={"discovery__diploma slide-in-top"+ " " + display + " " + none}>
         <img
           className="discovery__diploma__star"
           src={Star}

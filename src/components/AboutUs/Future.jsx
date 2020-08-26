@@ -16,6 +16,7 @@ const Future = (props) => {
       partialVisibility
       offset={{ top: 200 }}
       onChange={onChange}
+      active={!isVisible} 
     >
       <section
         className={

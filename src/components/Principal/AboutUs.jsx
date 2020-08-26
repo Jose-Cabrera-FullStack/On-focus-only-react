@@ -78,6 +78,7 @@ const AboutUs = () => {
         partialVisibility
         offset={{ top: 600 }}
         onChange={onChange}
+        active={!isVisible} 
       >
         <div className="flex">
           <div className="slide">

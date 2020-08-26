@@ -20,6 +20,7 @@ const Points = (props) => {
       partialVisibility
       offset={{ top: 0 }}
       onChange={onChange}
+      active={!isVisible} 
     >
       <section className="teacher__points">
         <div

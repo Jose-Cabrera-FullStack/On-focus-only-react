@@ -35,6 +35,7 @@ const HowWeTeach = (props) => {
         partialVisibility
         offset={{ top: 200 }}
         onChange={onChange}
+        active={!isVisible} 
       >
         <div
           className={

@@ -6,7 +6,6 @@ import "../../assets/styles/components/Principal.scss";
 import Logo from "../../assets/static/images/svg/logo.svg";
 
 const Principal = () => {
-
   return (
     <section className="home__view ">
       <figure className=" home__view__figure">
