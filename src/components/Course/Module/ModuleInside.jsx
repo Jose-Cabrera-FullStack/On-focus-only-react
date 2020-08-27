@@ -24,7 +24,7 @@ const ModuleInside = ({
             ? helpCenter
               ? "course__module__element__inside--help__center slide-in-top"
               : "course__module__element__inside slide-in-top"
-            : "display-none"
+            : "display-none slide-in-top"
         }
       >
         {buyed ? (
