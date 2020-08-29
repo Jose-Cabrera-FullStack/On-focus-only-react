@@ -32,6 +32,7 @@ const Finish = ({ myCourses }) => {
               src={item.featured_image}
               category={item.category}
               url={url}
+              myCourseModule
             />
           );
         })

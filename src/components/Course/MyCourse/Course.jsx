@@ -10,7 +10,8 @@ import ProgressBar from "../../Utils/ProgressBar";
 
 import Button from "../../Utils/ButtonArrowRight";
 
-const MyCourse = ({ progress, title, category, src, url }) => {
+const MyCourse = ({ progress, title, category, src, url, myCourseModule }) => {
+
   return (
     <div className="discovery__box slide-in-top">
       <div className="discovery__box__img">
@@ -30,7 +31,7 @@ const MyCourse = ({ progress, title, category, src, url }) => {
               {category ? capitalizeFirstLetter(category) : "Marketing"}
             </p>
           </div>
-          <ProgressBar progress={progress} />
+          <ProgressBar myCourseModule={myCourseModule} progress={progress} />
           <div>
             <Link to={url ? url : "/cursos"}>
               <Button text={"Continuar"} margin={"btn__secundary--my-course"} />

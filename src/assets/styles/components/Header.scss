@@ -32,7 +32,7 @@
   background: #b38a58;
   position: absolute;
   top: 10px;
-  right: 314px;
+  right: 324px;
   z-index: 3;
   border-radius: 50%;
   height: 15px;
@@ -74,6 +74,7 @@
   font-size: 15px;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .navbar__menu:hover {
@@ -164,7 +165,7 @@
 
 @media screen and (max-width: 1250px) {
   .navbar__menu__shopping__cart__notification {
-    right: 306px;
+    right: 320px;
   }
 
   .navbar__menu__shopping__cart__notification--user {
@@ -221,7 +222,7 @@
     text-align: left;
   }
 
-  .navbar__hamburguer__toggle__menu__arrow{
+  .navbar__hamburguer__toggle__menu__arrow {
     margin: 20px 0px 0px 20px;
   }
 

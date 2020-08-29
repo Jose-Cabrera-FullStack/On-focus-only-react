@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import "babel-polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
 import throttle from "lodash/throttle";
@@ -9,6 +9,7 @@ import { Router } from "react-router";
 import { createBrowserHistory } from "history";
 import { saveState } from "./Utils/localStorage";
 import reducer from "./reducers";
+import { loadState } from "./Utils/localStorage";
 
 import initialState from "./initialState";
 
@@ -26,16 +27,20 @@ const store = createStore(
 
 store.subscribe(
   throttle(() => {
-    saveState({ shoppingcar: store.getState().shoppingcar });
+    saveState({
+      shoppingcar: store.getState().shoppingcar,
+      user: store.getState().user,
+    });
   }, 1000)
 );
 
 const history = createBrowserHistory();
+const persistedState = loadState();
 
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <App />
+      <App isLogged={(persistedState.user)}/>
     </Router>
   </Provider>,
 

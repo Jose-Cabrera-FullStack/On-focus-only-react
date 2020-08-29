@@ -27,7 +27,6 @@ const Header = (props) => {
     document.cookie = `id=`;
     document.cookie = `token=`;
     props.logoutRequest({});
-    window.location.href = "/";
   };
 
   const [isToggled, setToggled] = useState(false);

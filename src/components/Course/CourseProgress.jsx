@@ -44,7 +44,7 @@ const CourseProgress = ({
     <section className="buyed__progress">
       <div className="flex">
         <div>
-          <h1>{title ? title : "Aprendé a ser mejor lider."}</h1>
+          <h1 className="buyed__progress__title">{title ? title : "Aprendé a ser mejor lider."}</h1>
           <h4>Por {teacher ? teacher : "Juan Pablo Laco"}</h4>
           <ProgressBar progress={(totalVideoFinishNum / totalVideoNum) * 100} />
           <br />

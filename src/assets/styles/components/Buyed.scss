@@ -6,7 +6,7 @@
   margin: 50px 0 20px 0;
 }
 
-.buyed__progress h1 {
+.buyed__progress__title {
   font-family: "Mont-Bold";
   font-style: normal;
   font-weight: 800;
@@ -50,7 +50,55 @@
   border-radius: 0px 50px 50px 0px;
 }
 
-.buyed__progress__bar h1 {
+.buyed__progress__bar__completed--incomplete {
+  height: 20px;
+  background: #03002b;
+}
+
+.buyed__progress__bar__number {
+  color: #f2f2f2;
+  position: relative;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  left: 85%;
+  width: 70px;
+  top: -19px;
+  z-index: 20;
+  margin: 0;
+}
+.buyed__progress__bar__number--my-course {
+  color: #f2f2f2;
+  position: relative;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  left: 80%;
+  width: 70px;
+  top: -19px;
+  z-index: 20;
+  margin: 0;
+}
+.buyed__progress__bar__number--my-course--incompleted {
+  color: #f2f2f2;
+  position: relative;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  left: 85%;
+  width: 70px;
+  top: -19px;
+  z-index: 20;
+  margin: 0;
+}
+
+.buyed__progress__bar__number--completed {
   color: #f2f2f2;
   position: relative;
   font-style: normal;
@@ -96,7 +144,6 @@
 .buyed__bar__text:hover {
   color: #b38a58;
   transition: all 0.2s ease-in-out;
-
 }
 
 .buyed__bar--select {
@@ -134,6 +181,8 @@
   letter-spacing: -0.51px;
   color: #b38a58;
   margin: 0 0 40px 0;
+  user-select: none;
+  width: 100px;
 }
 
 .buyed_see__more:hover {
@@ -284,6 +333,14 @@
   margin: 28px 0px 0 10px;
 }
 
+@media screen and (max-width: 1400px) {
+  .buyed__progress__bar__number {
+    left: 75%;
+  }
+  .buyed__progress__bar__number--completed {
+    left: 70%;
+  }
+}
 @media screen and (max-width: 1150px) {
   .buyed {
     margin: 15px 50px 40px 100px;
@@ -315,12 +372,16 @@
     top: 0;
     left: 0;
   }
-  .buyed__progress__bar h1 {
+  .buyed__progress__bar__number {
     left: 85%;
   }
 
-  .buyed__classes__breadcrumbs__mobile{
-    margin: 20px
+  .buyed__progress__bar__number--completed {
+    left: 80%;
+  }
+
+  .buyed__classes__breadcrumbs__mobile {
+    margin: 20px;
   }
 }
 @media screen and (max-width: 562px) {

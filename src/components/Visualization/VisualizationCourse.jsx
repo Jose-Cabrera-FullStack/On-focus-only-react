@@ -12,23 +12,23 @@ import ArrowLeft from "../../assets/static/images/svg/arrow-visualization.svg";
 import ArrowLeftHover from "../../assets/static/images/svg/arrow-visualization-black-hover.svg";
 
 const VisualizationCourse = (props) => {
+  return (
+    <section className="visualization">
+      <Breadcrumbs
+        icon={ArrowLeft}
+        iconHover={ArrowLeftHover}
+        onlyMobile={"visualization__navbar"}
+        link={`/mis-cursos/${props.url.params.slugname}`}
+      />
 
-  return(
-  <section className="visualization">
-    <Breadcrumbs
-      icon={ArrowLeft}
-      iconHover={ArrowLeftHover}
-      onlyMobile={"visualization__navbar"}
-      link={"/mis-cursos"}
-    />
+      <Video video={props.video} display={"display__screen__mobile"} />
 
-    <Video video={props.video} display={"display__screen__mobile"} />
+      <div className="visualization__grid">
+        <CoursesList url={props.url} />
 
-    <div className="visualization__grid">
-      <CoursesList url={props.url}/>
-
-      <Video video={props.video} display={"display__screen__desktop"} />
-    </div>
-  </section>
-)};
+        <Video video={props.video} display={"display__screen__desktop"} />
+      </div>
+    </section>
+  );
+};
 export default VisualizationCourse;

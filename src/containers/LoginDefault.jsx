@@ -44,7 +44,7 @@ const Register = (props) => {
           <h2>Lorem ipsum dolor sit amet.</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
-              <h5>O registrate con tu correo electrónico</h5>
+              <h5>O Inicia Sesión con tu correo electrónico</h5>
               <input
                 name="email"
                 type="text"
@@ -101,7 +101,7 @@ const Register = (props) => {
                 {errors.password && errors.password.message}
               </span>
             </div>
-            <Button margin={"btn__secundary--register"} text={"Registrarme"} />
+            <Button margin={"btn__secundary--register"} text={"Iniciar Sesión"} />
           </form>
         </div>
       </div>

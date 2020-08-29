@@ -41,6 +41,7 @@ const InProgress = ({ myCourses }) => {
               category={item.category}
               src={item.featured_image}
               url={url}
+              myCourseModule
             />
           );
         })

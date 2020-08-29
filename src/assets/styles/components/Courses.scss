@@ -62,9 +62,17 @@
   z-index: 1;
   right: 50px;
   user-select: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.discovery__box__info__in__course__width{
+.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.discovery__box__info__in__course__width {
   width: 880px;
 }
 

@@ -8,6 +8,7 @@ import ArrowHover from "../../assets/static/images/svg/arrow-right-hover-button.
 const ButtonArrowRight = ({
   margin,
   icon,
+  iconHover,
   text,
   background,
   width,
@@ -30,10 +31,18 @@ const ButtonArrowRight = ({
               " " +
               width
             }
+            onMouseEnter={changeIsHover}
+            onMouseLeave={changeIsHover}
           >
             <div className="flex btn__arrow__buy">
               <span
-                className={icon ? icon : "icon btn__arrow__buy__img"}
+                className={
+                  icon
+                    ? isHover
+                      ? icon + " " + iconHover
+                      : icon
+                    : "icon btn__arrow__buy__img"
+                }
                 alt="Ícono de flecha a la derecha"
               ></span>
               <p>{text ? text : "Comprarlo ahora"}</p>

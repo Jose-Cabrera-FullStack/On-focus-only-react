@@ -8,7 +8,6 @@ import { deleteFavorite } from "../../../actions";
 import UI from "../../../assets/static/images/img/ui-design.png";
 
 const Price = (props) => {
-
   const handleDeleteShopping = (course_id) => {
     props.deleteFavorite(course_id);
   };
@@ -42,7 +41,7 @@ const Price = (props) => {
               props.onlyMobile
             }
           >
-            Elimina
+            Eliminar
           </p>
         </div>
         <p

@@ -41,7 +41,7 @@ const CourseAboutCourse = (props) => {
         className="buyed_see__more display__screen__desktop"
         onClick={ClickSetIsToggle}
       >
-        Ver más {isToggle ? "-" : "+"}
+        Ver {isToggle ? "menos":"más"} {isToggle ? "-" : "+"}
       </p>
       {isToggle ? <p>more items</p> : ""}
       <CourseCertificate onlyDesktop={"display__screen__desktop"} />

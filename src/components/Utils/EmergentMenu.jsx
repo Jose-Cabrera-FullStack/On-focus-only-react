@@ -41,6 +41,7 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
               link={"/pago"}
               text="Comprar"
               icon={"btn__arrow__black"}
+              iconHover={"btn__arrow__white"}
               width={"btn__secundary--emergent"}
             />
             <ButtonArrowRight
@@ -95,12 +96,14 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
               link={"/pago"}
               text="Comprar"
               icon={"btn__arrow__black"}
+              iconHover={"btn__arrow__white"}
               width={"btn__secundary--emergent"}
-            />
+              />
             <ButtonArrowRight
               link={"/carrito"}
               text="Ir al carrito"
               icon={"btn__arrow__buy__shopping"}
+              iconHover={"btn__arrow__buy__shopping--white"}
               width={"btn__secundary--emergent__shopping"}
             />
           </div>

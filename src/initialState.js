@@ -5,7 +5,7 @@ const persistedState = loadState();
 export default {
   shoppingcar: persistedState ? persistedState.shoppingcar : [],
   URLvideos: [],
-  user: {},
+  user: persistedState ? persistedState.user : {},
   total: 0,
   myCourses: [
     {
