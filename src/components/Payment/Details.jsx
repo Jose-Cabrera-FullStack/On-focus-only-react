@@ -53,7 +53,7 @@ const Details = ({ total, shoppingcar }) => {
         </div>
         <div className="details__inside__detail flex" onClick={changeisToggle}>
           <p>Ver detalles</p>
-          <img src={isToggle ? arrowUp : arrowDown} alt="Fecla para abajo" />
+          <img src={isToggle ? arrowUp : arrowDown} alt="Flecha para abajo" />
         </div>
         <div className={isToggle ? "slide-in-top" : "display-none"}>
           <hr />
@@ -67,6 +67,7 @@ const Details = ({ total, shoppingcar }) => {
                       course_id={item.course_id}
                       src={item.featured_image}
                       teacher={item.teacher}
+                      title={item.name}
                     />
                   </div>
                 );

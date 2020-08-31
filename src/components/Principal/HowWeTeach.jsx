@@ -21,7 +21,7 @@ const HowWeTeach = (props) => {
       className={
         props.onlyDesktop
           ? `how__we__tech ${props.onlyDesktop}`
-          : "how__we__tech"
+          : `how__we__tech ${props.margin}`
       }
     >
       <h1
@@ -35,7 +35,7 @@ const HowWeTeach = (props) => {
         partialVisibility
         offset={{ top: 200 }}
         onChange={onChange}
-        active={!isVisible} 
+        active={!isVisible}
       >
         <div
           className={

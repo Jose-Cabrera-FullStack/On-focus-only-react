@@ -35,10 +35,10 @@ const CourseInfo = ({ category }) => {
           onClick={isToggleFalse}
           className="course__hidden__information display__screen__mobile"
         >
-          {isToggle ? "Ocultar":"Mostrar"} información {isToggle ? "-" : "+"}
+          {isToggle ? "Ocultar" : "Mostrar"} información {isToggle ? "-" : "+"}
         </h2>
         {isToggle ? (
-          <div className="slide-in-top">
+          <div className="display__screen__mobile slide-in-top">
             <h1 className="course__info__title ">Información</h1>
             <CourseInfoOnlyInfo
               onlyMobile={"display__screen__mobile__without__flex"}
@@ -49,8 +49,8 @@ const CourseInfo = ({ category }) => {
             <CourseAbout />
             <CourseModule />
             <CourseRecomendation />
-            <CourseTeacher />
-            <HowWeTeach grid={grid} />
+            <CourseTeacher margin={"discovery__box__info__mobile"} />
+            <HowWeTeach grid={grid} margin={"how__we__tech__mobile"} />
           </div>
         ) : (
           ""

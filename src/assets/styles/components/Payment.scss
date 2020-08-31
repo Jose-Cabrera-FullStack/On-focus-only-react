@@ -204,7 +204,7 @@
 }
 
 .btn__secundary--way-to-pay {
-  margin: 40px 0px 50px 97px;
+  margin: 41px 0px 50px 20%;
 }
 
 .btn__secundary--way-to-pay:hover {
@@ -316,11 +316,12 @@
   font-size: 16px;
   cursor: pointer;
   padding: 0px 0 20px 0;
+  width: 130px;
 }
 
 .details__inside__detail p {
   margin: 0 10px 0 0px;
-  font-family: Mont-Regular;
+  font-family: "Mont-Regular";
   font-size: 16px;
 }
 
@@ -347,7 +348,9 @@
 
 .secure__pay__img {
   width: 73.35px;
+  position: relative;
   height: 86.3px;
+  top: 20px;
 }
 
 .secure__pay__inside {
@@ -397,12 +400,9 @@
   background-image: url(../../static/images/svg/icon-x.svg);
 }
 
-
-
 .congratulation__exit:hover {
   filter: sepia(181);
 }
-
 
 .congratulation__box__inside {
   padding: 80px 0 0 150px;
@@ -483,6 +483,10 @@
     margin: 50px 200px 0 0px;
   }
 
+  .way-to-pay {
+    margin: -70px 0 0px 0;
+  }
+
   .way-to-pay__box {
     border: none;
   }
@@ -548,6 +552,14 @@
   .details__inside {
     margin: 30px 30px -70px 43px;
   }
+
+  .details hr {
+    display: none;
+  }
+
+  .btn__secundary--way-to-pay {
+    margin: 0px 0px 50px 20%;
+  }
 }
 
 @media screen and (max-width: 445px) {
@@ -555,7 +567,7 @@
     padding: 15px 0 0px 10px;
   }
   .details__inside {
-    margin: 30px 0px 0px 10px;
+    margin: 30px 0px 0px 50px;
   }
 
   .way-to-pay__box__card {
@@ -565,7 +577,7 @@
     background: #ffffff;
     box-shadow: 0px 0px 9px rgba(6, 0, 37, 0.2);
     display: inline-block;
-    margin: 14px 10px 33px 0px;
+    margin: 14px -10px 10px 20px;
   }
 
   .way-to-pay__box__card__img {
@@ -586,6 +598,7 @@
   }
   .secure__pay__inside p {
     width: auto;
+    padding: 0 50px 0 0px;
   }
 
   .congratulation__box__inside {
@@ -599,7 +612,7 @@
   }
   .details__inside__edit {
     position: absolute;
-    right: -30px;
+    right: 10px;
   }
   .way-to-pay__text {
     margin: -10px 0 10px 23px;
@@ -608,7 +621,7 @@
     margin: 3px 0px 31px 20px;
   }
   .way-to-pay__input--card {
-    width: 61vw;
+    width: 68vw;
     margin: 0px 0 16px 0px;
   }
 }

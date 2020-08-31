@@ -88,6 +88,8 @@
   .home__view {
     background-position: -20px;
     height: 100vh;
+    background-image: linear-gradient(to bottom, #1c1b5233, #03002bd6),
+    url(../../static/images/img/principal-image.png);
   }
 
   .display__screen__mobile {
@@ -97,7 +99,7 @@
   .home__view__img {
     width: 219px;
     height: 219px;
-    margin: 20px 0px 8% 13%;
+    margin: 165px 0px 40px 50px;
   }
 
   .home__view h1 {
@@ -107,7 +109,7 @@
 
   .home__view h3 {
     font-size: 16px;
-    padding: 0px 0 0 43px;
+    padding: 5px 0 0 43px;
   }
 
   .home__view__figure {
@@ -116,11 +118,7 @@
   }
 }
 @media screen and (max-width: 550px) {
-  .home__view__img {
-    width: 219px;
-    height: 219px;
-    margin: 70px 0px 8% 13%;
-  }
+
   .home__view {
     background-position: -250px;
   }
