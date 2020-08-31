@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
+import { logoutRequest } from "../../actions";
+
 import "../../assets/styles/components/Header.scss";
 
 import Logo from "../../assets/static/images/svg/logo-small.svg";
@@ -18,7 +20,15 @@ const HamburgerMenuMobile = ({
   handleClose,
   open,
   user,
+  logoutRequest
 }) => {
+  const handleLogout = () => {
+    document.cookie = `email=`;
+    document.cookie = `name=`;
+    document.cookie = `id=`;
+    document.cookie = `token=`;
+    logoutRequest({});
+  };
   const hasUser = Object.keys(user).length > 0;
   return (
     <>
@@ -66,7 +76,17 @@ const HamburgerMenuMobile = ({
               <li>Quiero dar un curso</li>
             </Link>
             {hasUser ? (
-              ""
+              <div className="navbar__menu__mobile__profile">
+                <Link to="/mi-perfil" className="text-decoration flex">
+                  <li>Mi Perfil</li>
+                </Link>
+                <Link to="/mis-cursos" className="text-decoration flex">
+                  <li>Mis Cursos</li>
+                </Link>
+                <Link onClick={handleLogout} className="text-decoration flex">
+                  <li>Cerrar Sesión</li>
+                </Link>
+              </div>
             ) : (
               <div className="navbar__menu__mobile__buttons">
                 <li className="navbar__menu ">
@@ -105,4 +125,11 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(HamburgerMenuMobile);
+const mapDispatchToProps = {
+  logoutRequest,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HamburgerMenuMobile);

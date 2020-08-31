@@ -35,7 +35,7 @@ const CourseInfo = ({ category }) => {
           onClick={isToggleFalse}
           className="course__hidden__information display__screen__mobile"
         >
-          Ocultar información {isToggle ? "-" : "+"}
+          {isToggle ? "Ocultar":"Mostrar"} información {isToggle ? "-" : "+"}
         </h2>
         {isToggle ? (
           <div className="slide-in-top">

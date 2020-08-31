@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import "../../../assets/styles/components/ShoppingCar.scss";
 import ButtonArrowRight from "../../Utils/ButtonArrowRight";
@@ -70,7 +70,10 @@ const ShoppingBox = (props) => {
               <br /> Estás ahorrando{" "}
             </p>
             <i className="shopping__car__box__inside__promo shopping__car__box__inside__promo--red">
-              AR$ {totalWithOutDiscount ? props.total : 0}
+              AR${" "}
+              {totalWithOutDiscountshoppingcar
+                ? parseInt((totalWithOutDiscount * totalDiscount) / 100)
+                : 0}
             </i>
           </div>
         </div>

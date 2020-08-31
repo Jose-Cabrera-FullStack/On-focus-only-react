@@ -285,7 +285,9 @@
 }
 @media screen and (max-width: 1024px) {
   .hero__view__promo__img {
-    margin: 29px 10px 0 0px;
+    margin: 29px 10px 0 25px;
+    width: 81px;
+    height: 81px;
   }
   .hero__view__promo__img--mobile {
     height: 100px;
@@ -311,6 +313,10 @@
     top: 50px;
     z-index: 2;
     right: 0;
+  }
+
+  .hero__view__promo__title {
+    margin: 27px 40px 0 0;
   }
 }
 

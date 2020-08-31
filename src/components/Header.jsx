@@ -9,7 +9,6 @@ import HamburgerMenuMobile from "./Utils/HamburgerMenuMobile";
 import Modal from "./Utils/Modal";
 
 import Login from "../containers/Login";
-import Register from "../containers/Register";
 
 import Logo from "../assets/static/images/svg/logo-small.svg";
 import Hamburguer from "../assets/static/images/svg/icon-hamburguer.svg";
@@ -91,22 +90,19 @@ const Header = (props) => {
           ) : (
             ""
           )}
-          <img
-            onClick={toggleTrueFalse}
-            className={
-              notification
-                ? "navbar__hamburguer__shopping"
-                : "navbar__hamburguer__shopping"
-            }
-            src={Shopping}
-            className={
-              isToggled
-                ? "navbar__hamburguer__shopping__img navbar__hamburguer__shopping__img--toggle"
-                : "navbar__hamburguer__shopping__img"
-            }
-            alt="Icono de Carrito de Compras"
-          />
-          <EmergentMenu toggle={isToggled} mobile />
+          <Link to="/carrito">
+            <img
+              onClick={toggleTrueFalse}
+              className={
+                notification
+                  ? "navbar__hamburguer__shopping"
+                  : "navbar__hamburguer__shopping"
+              }
+              src={Shopping}
+              className={"navbar__hamburguer__shopping__img"}
+              alt="Icono de Carrito de Compras"
+            />
+          </Link>
         </div>
         {/* MOBILE */}
         <div className="grid-2 navbar__justify__self navbar__query">
@@ -179,9 +175,7 @@ const Header = (props) => {
                 />
                 <li className="navbar__menu">
                   <Link to="/registrarse" className="text-decoration">
-                    <button
-                      className="btn__primary btn__primary--login"
-                    >
+                    <button className="btn__primary btn__primary--login">
                       Registrarse
                     </button>
                   </Link>

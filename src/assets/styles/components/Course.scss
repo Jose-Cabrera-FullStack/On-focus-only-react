@@ -724,9 +724,11 @@
     line-height: 135.3%;
     letter-spacing: -0.02em;
     color: #03002b;
+    margin: 20px 0 0 0;
   }
   .course__about p {
     width: auto;
+    margin: 10px 0 10px 0;
   }
 
   .course__module li {
@@ -803,7 +805,6 @@
     background: none;
     padding: 0;
   }
-
 }
 @media screen and (max-width: 450px) {
   .course__module__arrow--buyed {

@@ -1,195 +1,204 @@
-.teacher__hero{
-    height: 350px;
-    background-image: linear-gradient(to bottom, #1c1b5200, #03002bd6),
-      url(../../static/images/img/hero-teacher.png);
-    background-size: cover;
-    margin: 0;
+.teacher__hero {
+  height: 350px;
+  background-image: linear-gradient(to bottom, #1c1b5200, #03002bd6),
+    url(../../static/images/img/hero-teacher.png);
+  background-size: cover;
+  margin: 0;
 }
 
-.teacher__hero__title{
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 111.3%;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #F2F2F2;
-    position: relative;
-    float: left;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -160%);    
+.teacher__hero__title {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 111.3%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #f2f2f2;
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -160%);
 }
 
-.btn__primary--teacher{
-    position: relative;
-    float: left;
-    top: 50%;
-    left: 50%;
-    transform: translate(-330%, 130%);  
+.btn__primary--teacher {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-330%, 130%);
 }
 
-.teacher__points{
-    margin: 50px 270px 0 400px;
+.teacher__points {
+  margin: 50px 270px 0 400px;
 }
 
-.teacher__points__img--1{
-    width: 257px;
-    height: 204px;
+.teacher__points__img--1 {
+  width: 257px;
+  height: 204px;
 }
 
-.teacher__points__img--2{
-    width: 190px;
-    height: 210px;
+.teacher__points__img--2 {
+  width: 190px;
+  height: 210px;
 }
 
-.teacher__points__img--3{
-    width: 205px;
-    height: 198px;
+.teacher__points__img--3 {
+  width: 205px;
+  height: 198px;
 }
 
-.teacher__points__img--4{
-    width: 244px;
-    height: 200px;
+.teacher__points__img--4 {
+  width: 244px;
+  height: 200px;
 }
 
-.teacher__points__text{
-    margin: 10px 0 0 0;
-    width: 330px;
-    font-size: 14px;
+.teacher__points__text {
+  margin: 10px 0 0 0;
+  width: 330px;
+  font-size: 14px;
 }
 
-.teacher__faq{
-    margin: 0 200px 74px 200px;
+.teacher__faq {
+  margin: 0 200px 74px 200px;
 }
 
-.teacher__faq h1{
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 22px;
-    line-height: 135.3%;
-    letter-spacing: -0.03em;
-    color: #03002B;
+.teacher__faq h1 {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 135.3%;
+  letter-spacing: -0.03em;
+  color: #03002b;
 }
 
-.teacher__faq ul{
-padding: 0;
+.teacher__faq ul {
+  padding: 0;
 }
 
-.teacher__faq__box__right{
-    margin: 0 0 0 30px;
+.teacher__faq__box__right {
+  margin: 0 0 0 30px;
 }
 
-.teacher__faq__box{
-    width: 506px;
-    height: 43px;
-    background: #F2F2F2;
-    list-style: none;
-    margin: 10px 0 10px 0;
+.teacher__faq__box {
+  width: 506px;
+  height: 43px;
+  background: #f2f2f2;
+  list-style: none;
+  margin: 10px 0 10px 0;
 }
 
-.teacher__course{
-    margin: 0 200px 20px 200px;
-    left: 200px;
-    top: 1452px;
-    background: linear-gradient(180deg, #E5E5E5 -49.6%, rgba(255, 255, 255, 0) 100%);
+.teacher__course {
+  margin: 0 200px 20px 200px;
+  left: 200px;
+  top: 1452px;
+  background: linear-gradient(
+    180deg,
+    #e5e5e5 -49.6%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
-.teacher__faq__box p{
-    width: 320px;
-    height: 35px;
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 13px;
-    line-height: 148.3%;
-    letter-spacing: -0.02em;
-    color: #000000;
-    margin: 15px 110px 0px 30px;
+.teacher__faq__box p {
+  width: 320px;
+  height: 35px;
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 148.3%;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 15px 110px 0px 30px;
 }
 
-.teacher__course h1{
-    width: 376px;
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 123.3%;
-    letter-spacing: -0.03em;
-    color: #03002B;
-    position: relative;
-    top: 60px;
+.teacher__course h1 {
+  width: 376px;
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 123.3%;
+  letter-spacing: -0.03em;
+  color: #03002b;
+  position: relative;
+  top: 60px;
 }
 
-.btn__secundary--teacher{
-    width: 243px;
-    position: relative;
-    top: 120px;
-    left: 50px;
+.btn__secundary--teacher {
+  width: 243px;
+  position: relative;
+  top: 120px;
+  left: 50px;
 }
 
 @media screen and (max-width: 1260px) {
-    .teacher__course{
-        margin: 0 50px 20px 50px;
-    }
-    .teacher__points{
-        margin: 50px 170px 0 200px;
-    }
-    .teacher__faq{
-        margin: 0 100px 74px 100px;
-    }
-    
-    .display__screen__mobile__without__flex--FAQ__teacher{
-        display: block;
-    }
+  .teacher__course {
+    margin: 0 50px 20px 50px;
+  }
+  .teacher__points {
+    margin: 50px 170px 0 200px;
+  }
+  .teacher__faq {
+    margin: 0 100px 74px 100px;
+  }
 
-    .teacher__faq__box__right {
-        margin: 0 0 0 0px;
-    }
+  .display__screen__mobile__without__flex--FAQ__teacher {
+    display: block;
+  }
 
-
+  .teacher__faq__box__right {
+    margin: 0 0 0 0px;
+  }
 }
 @media screen and (max-width: 1024px) {
-    .teacher__course{
-        margin: 0;
-    }
+  .teacher__course {
+    margin: 0;
+  }
 
-    .teacher__course h1{
-        position: relative;
-        top: 30px;
-        width: auto;
-        font-size: 20px;
-        margin: 30px 0 100px 0;
-    }
+  .teacher__course h1 {
+    position: relative;
+    top: 30px;
+    width: auto;
+    font-size: 20px;
+    margin: 30px 0 100px 0;
+  }
 
-    .teacher__course__mobile{
-        position: relative;
-        right: 50px;
-    }
-    .teacher__points {
-        margin: 50px 170px 0 100px;
-    }
+  .teacher__course__mobile {
+    position: relative;
+    right: 50px;
+  }
+  .teacher__points {
+    margin: 50px 170px 0 100px;
+  }
 }
 @media screen and (max-width: 974px) {
-    
-    .btn__primary--teacher {
-        transform: translate(-120%, -100%);
-    }
+  .btn__primary--teacher {
+    transform: translate(-105%, -100%);
+    margin: 0px 0px 8% 153px;
+  }
 }
 @media screen and (max-width: 615px) {
-    .teacher__faq {
-        margin: 0 10px 74px 10px;
-    }
-    .teacher__faq__box {
-        width: 360px;
-    }
+  .teacher__faq {
+    margin: 0 10px 74px 10px;
+  }
+  .teacher__faq__box {
+    width: 360px;
+  }
 
-    .teacher__faq__box p{
-        margin: 15px -30px 0px 30px;
-    }
-    .teacher__points {
-        margin: 50px 10px 0 30px;
-    }
+  .teacher__faq__box p {
+    margin: 15px -30px 0px 30px;
+  }
+  .teacher__points {
+    margin: 50px 10px 0 30px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .btn__primary--teacher {
+    transform: translate(-90%, -100%);
+    margin: 0px 0px 8% 100px;
+  }
 }

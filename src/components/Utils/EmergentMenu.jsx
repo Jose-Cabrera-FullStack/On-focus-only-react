@@ -14,9 +14,9 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
     <div className={toggle ? "hero__view__promo slide-in-top" : "display-none"}>
       {shoppingcar.length > 0 ? (
         <>
-          {shoppingcar.map((item) => {
+          {shoppingcar.map((item, index) => {
             return (
-              <div key={item.course_id}>
+              <div key={index}>
                 <Course
                   course_id={item.course_id}
                   src={item.featured_image}
@@ -98,7 +98,7 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
               icon={"btn__arrow__black"}
               iconHover={"btn__arrow__white"}
               width={"btn__secundary--emergent"}
-              />
+            />
             <ButtonArrowRight
               link={"/carrito"}
               text="Ir al carrito"
