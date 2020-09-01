@@ -47,6 +47,16 @@ const Header = (props) => {
     setOpen(false);
   };
 
+  const [openHamburguer, setOpenHamburguer] = useState(false);
+
+  const handleOpenHamburguer = () => {
+    setOpenHamburguer(true);
+  };
+
+  const handleCloseHamburguer = () => {
+    setOpenHamburguer(false);
+  };
+
   const shoppingcar = props.shoppingcar;
 
   const notification = shoppingcar.length > 0;
@@ -73,14 +83,26 @@ const Header = (props) => {
             )}
             <div>
               <img
-                onClick={toggleTrueFalseMenuMobile}
+                onClick={handleOpenHamburguer}
                 className="navbar__hamburguer"
                 src={Hamburguer}
                 alt="Icono de Hamburguesa"
               />
             </div>
           </div>
-          {isToggledMenuMobile ? (
+          <Modal
+            open={openHamburguer}
+            handleClose={handleCloseHamburguer}
+            body={
+              <HamburgerMenuMobile
+                onClick={handleCloseHamburguer}
+                handleOpen={handleOpenHamburguer}
+                handleClose={handleCloseHamburguer}
+                open={openHamburguer}
+              />
+            }
+          />
+          {/* {isToggledMenuMobile ? (
             <HamburgerMenuMobile
               onClick={toggleTrueFalseMenuMobile}
               handleOpen={handleOpen}
@@ -89,7 +111,7 @@ const Header = (props) => {
             />
           ) : (
             ""
-          )}
+          )} */}
           <Link to="/carrito">
             <img
               onClick={toggleTrueFalse}

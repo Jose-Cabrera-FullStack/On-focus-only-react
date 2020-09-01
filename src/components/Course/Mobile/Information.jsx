@@ -15,10 +15,10 @@ const Information = (props) => {
   return (
     <div className="buyed__classes">
       <div className="buyed__classes__breadcrumbs__mobile">
-        <Breadcrumbs onClick={props.onClick} />
+        <Breadcrumbs onClick={props.onClick} margin={"beadcrumbs--my-course__mobile"}/>
         <CourseAbout />
         <CourseInclusive />
-        <CourseForMe />
+        <CourseForMe margin={"course__for__me--my-courses__information"} />
         <CourseCertificate mobile />
         <CourseTeacher />
       </div>

@@ -4,7 +4,13 @@ import "../../assets/styles/components/Course.scss";
 
 const CourseForMe = (props) => {
   return (
-    <section className={props.onlyDesktop ? `course__for__me ${props.onlyDesktop}` : "course__for__me"}>
+    <section
+      className={
+        props.onlyDesktop
+          ? `course__for__me ${props.onlyDesktop}`
+          : `course__for__me ${props.margin}`
+      }
+    >
       <div>
         <h2>¿Este Curso es para mi?</h2>
         <ul>

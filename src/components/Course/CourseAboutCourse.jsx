@@ -7,18 +7,34 @@ import CourseCertificate from "../../components/Course/AboutCourse/CourseCertifi
 import CourseTeacherInfoVariant from "../../components/Course/AboutCourse/CourseTeacherInfoVariant";
 import BuyedCourse from "../../components/Course/Mobile/BuyedCourse";
 
+import Modal from "../Utils/Modal";
+
 import Classes from "./Mobile/Classes";
 import Information from "./Mobile/Information";
 
 const CourseAboutCourse = (props) => {
-  const [isClasses, setIsClasses] = useState(false);
-  const ClickSetIsClasses = () => setIsClasses(!isClasses);
-
-  const [isInformation, setIsInformation] = useState(false);
-  const ClickSetIsInformation = () => setIsInformation(!isInformation);
-
   const [isToggle, setIsToggle] = useState(false);
   const ClickSetIsToggle = () => setIsToggle(!isToggle);
+
+  const [openCourse, setOpenCourse] = useState(false);
+
+  const handleOpenCourse = () => {
+    setOpenCourse(true);
+  };
+
+  const handleCloseCourse = () => {
+    setOpenCourse(false);
+  };
+
+  const [openInformation, setOpenInformation] = useState(false);
+
+  const handleOpenInformation = () => {
+    setOpenInformation(true);
+  };
+
+  const handleCloseInformation = () => {
+    setOpenInformation(false);
+  };
 
   return (
     <div>
@@ -41,7 +57,7 @@ const CourseAboutCourse = (props) => {
         className="buyed_see__more display__screen__desktop"
         onClick={ClickSetIsToggle}
       >
-        Ver {isToggle ? "menos":"más"} {isToggle ? "-" : "+"}
+        Ver {isToggle ? "menos" : "más"} {isToggle ? "-" : "+"}
       </p>
       {isToggle ? <p>more items</p> : ""}
       <CourseCertificate onlyDesktop={"display__screen__desktop"} />
@@ -52,20 +68,32 @@ const CourseAboutCourse = (props) => {
         onlyMobile={"display__screen__mobile"}
         description={"Están todos los modulos."}
         title={"Clases"}
-        onClick={ClickSetIsClasses}
+        onClick={handleOpenCourse}
         classes
       />
-
-      {isClasses ? <Classes onClick={ClickSetIsClasses} /> : ""}
+      <Modal
+        open={openCourse}
+        handleClose={handleCloseCourse}
+        body={
+          <Classes
+            onClick={handleCloseCourse}
+            margin={"course__module__element--my-courses__mobile"}
+          />
+        }
+      />
 
       <BuyedCourse
         onlyMobile={"display__screen__mobile"}
         description={"Está toda la información de este curso."}
         title={"Sobre el curso"}
-        onClick={ClickSetIsInformation}
+        onClick={handleOpenInformation}
         information
       />
-      {isInformation ? <Information onClick={ClickSetIsInformation} /> : ""}
+      <Modal
+        open={openInformation}
+        handleClose={handleCloseInformation}
+        body={<Information onClick={handleCloseInformation} />}
+      />
       <CourseTeacherInfoVariant
         onlyDesktop={"display__screen__desktop"}
         teacher={props.teacher}

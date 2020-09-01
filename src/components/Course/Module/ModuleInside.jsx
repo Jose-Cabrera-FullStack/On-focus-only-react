@@ -15,6 +15,7 @@ const ModuleInside = ({
   url,
   title,
   status,
+  myCourse,
 }) => {
   return (
     <Link to={url} className="text-decoration">
@@ -23,7 +24,7 @@ const ModuleInside = ({
           isToggled
             ? helpCenter
               ? "course__module__element__inside--help__center slide-in-top"
-              : "course__module__element__inside slide-in-top"
+              : `course__module__element__inside slide-in-top ${myCourse}`
             : "display-none slide-in-top"
         }
       >
@@ -35,7 +36,9 @@ const ModuleInside = ({
               alt="Ícono de Curso incompleto"
             />
             <div className="course__module__element__inside__right">
-              <h5>Video {id + 1} - {title}</h5>
+              <h5>
+                Video {id + 1} - {title}
+              </h5>
               <i>{status ? "Completa" : "Aun no se ha visto"}</i>
             </div>
           </div>

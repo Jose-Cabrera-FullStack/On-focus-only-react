@@ -8,20 +8,20 @@ const CourseCertificate = (props) => (
   <>
     {props.mobile ? (
       <div className={"course__certificate" + " " + props.onlyDesktop}>
-      <div className="course__certificate__left">
-        <img src={Star} alt="Icono de Estrella" />
-        <h2>Obtenés un certificado al terminar el curso.</h2>
-      <img
-        className="course__certificate__img"
-        src={Human}
-        alt="Estudiante con su certificado"
-      />
-        <p>
-          Lorem ipsum dolor sit amet, consecter adipiscing elit, sed diam
-          nonummymagna aliquam erat.
-        </p>
+        <div className="course__certificate__left">
+          <img src={Star} alt="Icono de Estrella" className="course__certificate__star" />
+          <h2>Obtenés un certificado al terminar el curso.</h2>
+          <img
+            className="course__certificate__img"
+            src={Human}
+            alt="Estudiante con su certificado"
+          />
+          <p>
+            Lorem ipsum dolor sit amet, consecter adipiscing elit, sed diam
+            nonummymagna aliquam erat.
+          </p>
+        </div>
       </div>
-    </div>
     ) : (
       <div className={"course__certificate flex" + " " + props.onlyDesktop}>
         <img

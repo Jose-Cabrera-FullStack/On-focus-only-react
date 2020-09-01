@@ -19,6 +19,8 @@ const Module = ({
   helpCenter,
   item,
   urlData,
+  margin,
+  myCourse
 }) => {
   const [isToggled, setToggled] = useState(false);
 
@@ -26,7 +28,9 @@ const Module = ({
   return (
     <div>
       <div
-        className="course__module__element slide-in-top"
+        className={
+          "course__module__element" + " " + margin + " " + " slide-in-top"
+        }
         onClick={toggleTrueFalse}
       >
         {helpCenter ? (
@@ -98,6 +102,7 @@ const Module = ({
               url={url}
               title={item.name}
               status={item.status}
+              myCourse={myCourse}
             />
           );
         })

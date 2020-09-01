@@ -12,7 +12,10 @@ const Classes = (props) => {
   return (
     <div className="buyed__classes">
       <div className="buyed__classes__breadcrumbs__mobile">
-        <Breadcrumbs onClick={props.onClick} />
+        <Breadcrumbs
+          onClick={props.onClick}
+          margin={"beadcrumbs--my-course__mobile"}
+        />
       </div>
       {props.myCourse.module.map((item, index) => {
         return (
@@ -24,6 +27,8 @@ const Classes = (props) => {
             duration={"45 min"}
             item={item}
             urlData={[category, name]}
+            margin={props.margin}
+            myCourse={"course__module__element__inside--my-course__mobile"}
           />
         );
       })}

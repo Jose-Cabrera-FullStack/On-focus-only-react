@@ -234,24 +234,30 @@
 
   .visualization__sidebar {
     margin: 25px 25px 0 0px;
-    height: auto;
+    width: 95vw;
     padding: 0px 0 10px 0;
   }
 
   .visualization__sidebar__arrow {
     position: absolute;
-    right: 50px;
+    right: 20px;
+    left: auto;
+    bottom: auto;
+    width: auto;
   }
 
   .visualization__sidebar__arrow--up {
     position: absolute;
-    right: 50px;
+    right: 20px;
+    left: auto;
+    bottom: 14px;
+    width: auto;
   }
   .visualization__sidebar ol {
     padding: 0 0 0 20px;
   }
   .visualization__sidebar__list {
-    width: auto;
+    width: 85vw;
   }
 
   .visualization__sidebar__inside {

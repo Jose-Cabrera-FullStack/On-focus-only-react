@@ -579,6 +579,11 @@
   height: 245px;
   margin: 28px 50px 0 77px;
 }
+.course__certificate__star {
+  margin: 0px auto 0px auto;
+  display: flex;
+  padding: 20px 0 10px 0;
+}
 
 .course__certificate__left {
   margin: 60px 0 0 0;
@@ -701,6 +706,9 @@
   .course__for__me {
     margin: 52px 0 0 10%;
   }
+  .course__for__me--my-courses__information {
+    margin: 52px 0 0 0;
+  }
 
   .course__recomendation__inside__name {
     font-style: normal;
@@ -712,7 +720,7 @@
   }
 
   .course__teach__info {
-    margin: 40px 0px 0px 0px;
+    margin: 40px 0px 20px 0px;
     width: auto;
   }
 
@@ -784,8 +792,24 @@
   .course__module__element {
     width: 90vw;
   }
+  .course__module__element--my-courses__mobile {
+    width: 85vw;
+    margin: -6px 0px 10px 20px;
+  }
+
+  .course__certificate__img {
+    width: 220px;
+    height: 185px;
+    margin: 10px auto 17px auto;
+    display: flex;
+  }
   .course__module__element__inside {
     width: 90vw;
+  }
+
+  .course__module__element__inside--my-course__mobile {
+    width: 85vw;
+    margin: 3px 0 0px 20px;
   }
   .course__module__element__inside--help__center {
     margin: 3px 0px 30px 0;
@@ -794,6 +818,12 @@
   .course__certificate {
     width: auto;
     height: auto;
+    margin: 0px -30px 72px -20px;
+  }
+  .course__certificate p {
+    text-align: center;
+    width: auto;
+    margin: 20px;
   }
   .course__module__element__inside--help__center {
     width: auto;
@@ -809,6 +839,12 @@
     left: 87%;
   }
 
+  .course__certificate h2 {
+    text-align-last: center;
+    margin: 0px 70px 0 70px;
+    width: auto;
+    height: auto;
+  }
 }
 @media screen and (max-width: 450px) {
   .course__module__arrow--buyed {

@@ -23,7 +23,7 @@ const Pay = ({ handleClose }) => (
         <h1>¡Felicitaciones!</h1>
         <h4>Adquiriste tu curso con éxito.</h4>
         <ButtonArrowRight
-          background={"btn__secundary--way-to-pay"}
+          background={"btn__secundary--way-to-pay btn__secundary--way-to-pay--mobile"}
           margin={"btn__secundary--congratulation"}
         />
       </div>
