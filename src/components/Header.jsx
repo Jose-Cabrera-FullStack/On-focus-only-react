@@ -32,11 +32,6 @@ const Header = (props) => {
 
   const toggleTrueFalse = () => setToggled(!isToggled);
 
-  const [isToggledMenuMobile, setToggledMenuMobile] = useState(false);
-
-  const toggleTrueFalseMenuMobile = () =>
-    setToggledMenuMobile(!isToggledMenuMobile);
-
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -93,14 +88,7 @@ const Header = (props) => {
           <Modal
             open={openHamburguer}
             handleClose={handleCloseHamburguer}
-            body={
-              <HamburgerMenuMobile
-                onClick={handleCloseHamburguer}
-                handleOpen={handleOpenHamburguer}
-                handleClose={handleCloseHamburguer}
-                open={openHamburguer}
-              />
-            }
+            body={<HamburgerMenuMobile onClick={handleCloseHamburguer} />}
           />
           {/* {isToggledMenuMobile ? (
             <HamburgerMenuMobile

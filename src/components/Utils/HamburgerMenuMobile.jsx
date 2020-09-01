@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -14,14 +14,7 @@ import Login from "../../containers/Login";
 
 import ModalLogin from "./Modal";
 
-const HamburgerMenuMobile = ({
-  onClick,
-  handleOpen,
-  handleClose,
-  open,
-  user,
-  logoutRequest
-}) => {
+const HamburgerMenuMobile = ({ onClick, user, logoutRequest }) => {
   const handleLogout = () => {
     document.cookie = `email=`;
     document.cookie = `name=`;
@@ -30,6 +23,16 @@ const HamburgerMenuMobile = ({
     logoutRequest({});
   };
   const hasUser = Object.keys(user).length > 0;
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <>
       <div className="navbar__hamburguer__toggle">
