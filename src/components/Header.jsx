@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Redirect   } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { logoutRequest } from "../actions";
@@ -22,7 +22,6 @@ const Header = (props) => {
 
   const handleLogout = () => {
     props.logoutRequest({});
-    return <Redirect to="/home" />
   };
 
   const [isToggled, setToggled] = useState(false);

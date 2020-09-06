@@ -40,7 +40,7 @@ const persistedState = loadState();
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <App isLogged={(persistedState.user)}/>
+      <App />
     </Router>
   </Provider>,
 

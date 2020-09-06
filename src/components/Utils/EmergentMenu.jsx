@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-
+import createHistory from "history/createBrowserHistory";
 import "../../assets/styles/components/ShoppingCar.scss";
 import "../../assets/styles/components/Principal.scss";
 
@@ -9,7 +9,19 @@ import Course from "./EmergentMenuBox/Course";
 
 import ButtonArrowRight from "./ButtonArrowRight";
 
+const history = createHistory();
+
 const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
+  let isCourseLink = false;
+
+  window.location.href
+    .split("/")
+    .map((item) => (item === "cursos" ? (isCourseLink = true) : ""));
+
+  const reload = () => {
+    window.location.reload();
+  };
+
   return mobile ? (
     <div className={toggle ? "hero__view__promo slide-in-top" : "display-none"}>
       {shoppingcar.length > 0 ? (
@@ -111,12 +123,16 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
       ) : (
         <p className="hero__view__promo__empty">
           No hay cursos cargados en tu carrito. <br />
-          <Link
-            className="text-decoration text-decoration--navbar"
-            to={"/cursos"}
-          >
-            Buscar cursos
-          </Link>
+          {isCourseLink ? (
+            <p className="text-decoration--navbar" onClick={reload}>Buscar Cursos</p>
+          ) : (
+            <Link
+              className="text-decoration text-decoration--navbar"
+              to={"/cursos"}
+            >
+              Buscar cursos
+            </Link>
+          )}
         </p>
       )}
     </div>

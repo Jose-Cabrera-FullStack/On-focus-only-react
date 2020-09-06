@@ -44,7 +44,11 @@ const App = (props) => {
             <Redirect exact from="/" to="/home" component={Home} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/cursos" component={Courses} />
-            <Route exact path="/cursos/:slug" component={Course} />
+            <Route
+              exact
+              path="/cursos/:slugcategory/:slugcourse"
+              component={Course}
+            />
             <Route
               exact
               path="/cursos/:slugcategory/:slugname/:video_id"

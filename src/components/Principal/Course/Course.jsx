@@ -14,6 +14,8 @@ import User from "../../../assets/static/images/svg/user.svg";
 import Reloj from "../../../assets/static/images/svg/reloj.svg";
 import Play from "../../../assets/static/images/svg/icon-play-black.svg";
 
+import slugify from "../../../Utils/slugChange";
+
 const Course = ({
   img,
   priceOff,
@@ -114,7 +116,7 @@ const Course = ({
             </i>
           </div>
           <div className="flex">
-            <Link to={`/cursos/${category}`}>
+            <Link to={`/cursos/${category}/${slugify(title)}`}>
               <button
                 onMouseEnter={changeIsHover}
                 onMouseLeave={changeIsHover}

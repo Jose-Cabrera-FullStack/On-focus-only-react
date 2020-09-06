@@ -18,21 +18,26 @@ import NotFound from "../containers/NotFound";
 
 import CourseSaveMoney from "../components/Course/CourseSaveMoney";
 
-import { getCourseCategory } from "../actions";
+import slugify from "../Utils/slugChange";
+
+import { getCourseCategory, getCourse } from "../actions";
 
 import "../assets/styles/App.scss";
 
 const Course = (props) => {
   let grid = "grid-column-2--fix";
 
-  const { slug } = props.match.params;
+  const { slugcategory, slugcourse } = props.match.params;
 
   useEffect(() => {
-    props.getCourseCategory(slug);
+    props.getCourseCategory(slugcategory);
+    props.getCourse(slugify(slugcourse));
   }, []);
   const isCategory = Object.keys(props.category).length > 0;
+  const isCourse = Object.keys(props.courseName).length > 0;
 
-  return !isCategory ? (
+
+  return !isCategory || !isCourse ? (
     <NotFound />
   ) : (
     <div className="App">
@@ -91,10 +96,12 @@ Course.propTypes = {
 const mapStateToProps = (state) => {
   return {
     category: state.category || {},
+    courseName: state.courseName || {},
   };
 };
 const mapDispatchToProps = {
   getCourseCategory,
+  getCourse,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Course);

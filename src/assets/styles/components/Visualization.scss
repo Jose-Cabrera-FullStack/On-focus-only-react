@@ -276,7 +276,7 @@
   }
 
   .visualization__sidebar__inside {
-    width: auto;
+    width: 85vw;
   }
   .visualization__navbar--visualization h5 {
     width: 135px;
@@ -285,6 +285,15 @@
   .visualization__navbar {
     border-bottom: none;
     padding: 5px 0 20px 0px;
+  }
+  .visualization__title {
+    margin: 10px 30px 10px 30px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #f2f2f2;
   }
 }
 

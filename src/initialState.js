@@ -257,7 +257,7 @@ export default {
       teacher: "Carlos Alvarez",
       price: 930,
       students: 6,
-      category: "marketing",
+      category: "matematicas",
       name: "duis bibendum felis sed",
       description:
         "non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla",

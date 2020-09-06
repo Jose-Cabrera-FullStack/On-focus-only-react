@@ -1,4 +1,5 @@
 import { findAll } from "obj-traverse/lib/obj-traverse";
+import slugify from "../Utils/slugChange";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -28,7 +29,17 @@ const reducer = (state, action) => {
       return {
         ...state,
         category:
-          state.course.find((item) => item.category === action.payload) || {},
+          state.course.find(
+            (item) => item.category === action.payload.slugcategory
+          ) || {},
+      };
+    case "GET_COURSE":
+      return {
+        ...state,
+        courseName:
+          state.course.find(
+            (item) => slugify(item.name) === action.payload.slugCourse
+          ) || {},
       };
     case "SET_FAVORITE":
       return {

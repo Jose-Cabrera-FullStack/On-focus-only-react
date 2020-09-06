@@ -8,9 +8,13 @@ export const getMyVideoName = (payload) => ({
   type: "GET_MY_VIDEO_NAME",
   payload,
 });
-export const getCourseCategory = (payload) => ({
+export const getCourseCategory = (slugcategory) => ({
   type: "GET_COURSE_CATEGORY",
-  payload,
+  payload: { slugcategory },
+});
+export const getCourse = (slugCourse) => ({
+  type: "GET_COURSE",
+  payload: { slugCourse },
 });
 export const getMyCategory = (payload) => ({
   type: "GET_MY_COURSE",

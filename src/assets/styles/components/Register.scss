@@ -1,11 +1,12 @@
-.register{
-  background-image: linear-gradient(to bottom,#03002B,#03002b80),url(../../static/images/img/log-in.png);
+.register {
+  background-image: linear-gradient(to bottom, #03002b, #03002b80),
+    url(../../static/images/img/log-in.png);
   background-size: cover;
   margin: 0;
   height: 100vh;
 }
 
-.register__img{
+.register__img {
   position: relative;
   float: left;
   top: 50%;
@@ -13,9 +14,9 @@
   transform: translate(-50%, -280%);
 }
 
-.register__box{
+.register__box {
   width: 520px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
   position: relative;
   float: left;
@@ -24,52 +25,53 @@
   transform: translate(-50%, -50%);
 }
 
-.register__box__inside{
+.register__box__inside {
   margin: 25px 75px 50px 75px;
 }
 
-.register__box__inside__img{
-  margin: 10px 0 0 90px;
+.register__box__inside__img {
+  margin: 10px 30px 20px 50px;
+  width: 134px;
+  height: 111px;
 }
 
-.register__box__inside h1{
-  font-family: 'Mont-Bold';
+.register__box__inside h1 {
+  font-family: "Mont-Bold";
   font-style: normal;
   font-weight: 800;
   font-size: 31px;
   line-height: 135.3%;
-  text-align: center;
+  text-align: initial;
   letter-spacing: -0.02em;
-  color: #03002B;
+  color: #b38a58;
   margin: 20px 0 0 0;
 }
-.register__box__inside h2{
-  font-family: 'Mont-Bold';
+.register__box__inside h2 {
+  font-family: "Mont-Bold";
   font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  line-height: 135.3%;
-  text-align: center;
-  letter-spacing: -0.02em;
-  color: #03002B;
   margin: 10px 0 20px 0px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 105.3%;
+  letter-spacing: -0.02em;
+  color: #03002b;
 }
-.register__box__inside h5{
-  font-family: 'Mont-Semi-Bold';
+.register__box__inside h5 {
+  font-family: "Mont-Semi-Bold";
   font-style: normal;
   font-weight: 800;
   font-size: 15px;
   line-height: 135.3%;
   letter-spacing: -0.02em;
-  color: #03002B;
+  color: #03002b;
   margin: 16px 0px 10px 0px;
 }
 
-.register__box__inside input{
+.register__box__inside input {
   width: 365px;
   height: 37px;
-  background: #FFFFFF;
-  border: 1px solid #BDBDBD;
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
   box-sizing: border-box;
 }
 
@@ -85,45 +87,52 @@
   top: 5px;
 }
 
-.btn__secundary--register{
+.btn__secundary--register {
   width: 169px;
   margin: 30px 0 0 100px;
+}
 
+.register__box__inside__link {
+  margin: 50px;
 }
 
 @media screen and (max-width: 686px) {
-  .register__box{
+  .register__box {
     top: 30%;
     left: 79%;
   }
-  .register__box{
-    transform: translate(-80%, -30%);
+  .register__box {
+    transform: translate(-85%, -30%);
   }
 }
 @media screen and (max-width: 518px) {
   .register__box__inside {
-    margin: 25px 35px 50px 45px;
-}
-  .register__box{
+    margin: 25px 25px 50px 25px;
+  }
+  .register__box {
     width: 360px;
   }
 
-  .register__box__inside__img{
-    margin: 0 0 0 30px;
+  .register__box__inside__img {
+    margin: 0 20px 0 0px;
+    width: 134px;
+    height: 111px;
   }
-  .register__box__inside input{
-    width: 255px;
+  .register__box__inside input {
+    width: 300px;
   }
-  .register__box__inside h1{
+  .register__box__inside h1 {
     font-size: 23px;
   }
 
   .register__box__inside h2 {
     font-size: 18px;
   }
-  .btn__secundary--register{
+  .btn__secundary--register {
     width: 169px;
-    margin: 30px 0 0 50px;
-  
+    margin: 30px 0 0 70px;
+  }
+  .register__box__inside__link {
+    margin: 40px 0px 10px 10px;
   }
 }

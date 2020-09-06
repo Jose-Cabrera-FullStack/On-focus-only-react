@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form";
 import { loginUser } from "../actions";
 
 import Button from "../components/Utils/ButtonArrowRight";
+import Facebook from "../assets/static/images/svg/facebook-icon-button.svg";
+import Google from "../assets/static/images/svg/google-icon-button.svg";
 
 import Logo from "../assets/static/images/img/logo-log-in.png";
 import Human from "../assets/static/images/svg/human-hello.svg";
@@ -35,13 +37,35 @@ const Register = (props) => {
       </Link> */}
       <div className="register__box">
         <div className="register__box__inside">
-          <img
-            className="register__box__inside__img"
-            src={Human}
-            alt="Imagen de Humano Saludando"
-          />
-          <h1>Hola!</h1>
-          <h2>Lorem ipsum dolor sit amet.</h2>
+          <div className="flex">
+            <img
+              className="register__box__inside__img"
+              src={Human}
+              alt="Imagen de Humano Saludando"
+            />
+            <div>
+              <h1>Hola!</h1>
+              <h2>Bienvenido de vuelta.</h2>
+            </div>
+          </div>
+
+          <button className="facebook__button facebook__button--register">
+            <img
+              className="facebook__button__img"
+              src={Facebook}
+              alt="Logo de Facebook"
+            />
+            Continuá con Facebook
+          </button>
+
+          <button className="google__button google__button--register">
+            <img
+              className="google__button__img"
+              src={Google}
+              alt="Logo de Google"
+            />
+            Continuá con Google
+          </button>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <h5>O Inicia Sesión con tu correo electrónico</h5>
@@ -101,8 +125,22 @@ const Register = (props) => {
                 {errors.password && errors.password.message}
               </span>
             </div>
-            <Button margin={"btn__secundary--register"} text={"Iniciar Sesión"} />
+            <Button
+              margin={"btn__secundary--register"}
+              text={"Iniciar Sesión"}
+            />
           </form>
+          <div className="register__box__inside__link">
+            <h2>
+              ¿No eres miembro?{" "}
+              <Link
+                to="/registrarse"
+                className="text-decoration text-decoration--navbar"
+              >
+                Registrate
+              </Link>{" "}
+            </h2>
+          </div>
         </div>
       </div>
     </section>

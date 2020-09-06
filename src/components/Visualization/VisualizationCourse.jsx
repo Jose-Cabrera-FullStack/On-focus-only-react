@@ -26,6 +26,9 @@ const VisualizationCourse = (props) => {
           {props.videoName}
         </h1>
       </div>
+        <h1 className="visualization__title display__screen__mobile">
+          {props.videoName}
+        </h1>
 
       <Video video={props.video} display={"display__screen__mobile"} />
 
