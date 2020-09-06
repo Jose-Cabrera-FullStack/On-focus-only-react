@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import "../../assets/styles/components/Visualization.scss";
 
@@ -14,12 +14,18 @@ import ArrowLeftHover from "../../assets/static/images/svg/arrow-visualization-b
 const VisualizationCourse = (props) => {
   return (
     <section className="visualization">
-      <Breadcrumbs
-        icon={ArrowLeft}
-        iconHover={ArrowLeftHover}
-        onlyMobile={"visualization__navbar"}
-        link={`/mis-cursos/${props.url.params.slugname}`}
-      />
+      <div className="flex">
+        <Breadcrumbs
+          icon={ArrowLeft}
+          iconHover={ArrowLeftHover}
+          onlyMobile={"visualization__navbar"}
+          link={`/mis-cursos/${props.url.params.slugname}`}
+          margin={"visualization__navbar--visualization"}
+        />
+        <h1 className="visualization__title display__screen__desktop">
+          {props.videoName}
+        </h1>
+      </div>
 
       <Video video={props.video} display={"display__screen__mobile"} />
 
@@ -31,4 +37,9 @@ const VisualizationCourse = (props) => {
     </section>
   );
 };
-export default VisualizationCourse;
+const mapStateToProps = (state) => {
+  return {
+    videoName: state.videoName,
+  };
+};
+export default connect(mapStateToProps, null)(VisualizationCourse);

@@ -29,10 +29,10 @@ const ShoppingCarSquare = (props) => {
     video_intro,
   } = course;
 
-  const [isToggle, setIsToggle] = useState(false);
+  const [isSelected, setIsSelected] = useState(false);
 
   const handleShopping = () => {
-    setIsToggle(!isToggle);
+    setIsSelected(!isSelected);
     props.setFavorite({
       category,
       course_id,
@@ -52,8 +52,14 @@ const ShoppingCarSquare = (props) => {
     });
   };
 
+  let isSelectedInShoppingCar = false;
+
+  props.shoppingcar.map((item) =>
+    item.course_id === course_id ? (isSelectedInShoppingCar = true) : ""
+  );
+
   const handleDeleteShopping = (course_id) => {
-    setIsToggle(!isToggle);
+    setIsSelected(!isSelected);
     props.deleteFavorite(course_id);
   };
 
@@ -81,7 +87,19 @@ const ShoppingCarSquare = (props) => {
 
   return (
     <>
-      {isToggle ? (
+      {isSelected ? (
+        <div
+          onClick={() => handleDeleteShopping(course_id)}
+          className={" discovery__box__info__icon" + " " + props.class}
+          alt="Shopping Car"
+        >
+          <img
+            className="shopping__car__icon__squad--select"
+            src={ShoppingCarSelected}
+            alt="Ícono de Carrito de compra seleccionado"
+          />
+        </div>
+      ) : isSelectedInShoppingCar ? (
         <div
           onClick={() => handleDeleteShopping(course_id)}
           className={" discovery__box__info__icon" + " " + props.class}

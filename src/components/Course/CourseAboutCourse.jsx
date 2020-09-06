@@ -13,9 +13,6 @@ import Classes from "./Mobile/Classes";
 import Information from "./Mobile/Information";
 
 const CourseAboutCourse = (props) => {
-  const [isToggle, setIsToggle] = useState(false);
-  const ClickSetIsToggle = () => setIsToggle(!isToggle);
-
   const [openCourse, setOpenCourse] = useState(false);
 
   const handleOpenCourse = () => {
@@ -53,13 +50,7 @@ const CourseAboutCourse = (props) => {
         font={"buyed__font"}
         onlyDesktop={"display__screen__desktop"}
       />
-      <p
-        className="buyed_see__more display__screen__desktop"
-        onClick={ClickSetIsToggle}
-      >
-        Ver {isToggle ? "menos" : "más"} {isToggle ? "-" : "+"}
-      </p>
-      {isToggle ? <p>more items</p> : ""}
+
       <CourseCertificate onlyDesktop={"display__screen__desktop"} />
       <p className="buyed__teacher__tittle display__screen__desktop">
         Sobre el profesor

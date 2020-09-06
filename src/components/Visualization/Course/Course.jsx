@@ -15,13 +15,12 @@ const Course = ({ title, text, videos, path, position }) => {
   const changeToggle = () => setToggled(!isToggle);
 
   let videosComplete = [];
-
+  let open = false;
   videos.map((item) => {
     if (item.status === true) videosComplete.push(item.status);
+    if (item.url === path.params.video_id) open = true;
   });
-
   const isStarted = videosComplete.length > 0;
-
   return (
     <>
       <li
@@ -57,7 +56,29 @@ const Course = ({ title, text, videos, path, position }) => {
       {isToggle ? (
         <>
           {videos.map((item, index) => {
-            console.log("item:", item);
+            const last =
+              index + 1 === videos.length
+                ? item.status === false
+                  ? "visualization__vertical__line visualization__vertical__line--inside--incomplete"
+                  : "visualization__vertical__line visualization__vertical__line--last"
+                : item.status === false
+                ? "visualization__vertical__line visualization__vertical__line--inside--incomplete"
+                : "visualization__vertical__line";
+            return (
+              <CourseInside
+                key={index}
+                title={item.name}
+                status={item.status}
+                url={item.url}
+                path={path}
+                last={last}
+              />
+            );
+          })}
+        </>
+      ) : open ? (
+        <>
+          {videos.map((item, index) => {
             const last =
               index + 1 === videos.length
                 ? item.status === false

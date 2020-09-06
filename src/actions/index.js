@@ -4,6 +4,10 @@ export const getCourseVideo = (slugcategory, slugname, video_id) => ({
   type: "GET_COURSE_VIDEO",
   payload: { slugcategory, slugname, video_id },
 });
+export const getMyVideoName = (payload) => ({
+  type: "GET_MY_VIDEO_NAME",
+  payload,
+});
 export const getCourseCategory = (payload) => ({
   type: "GET_COURSE_CATEGORY",
   payload,
@@ -47,7 +51,7 @@ export const registerRequest = (payload) => ({
   payload,
 });
 
-export const loginUser = (payload,redirectUrl) => ({
+export const loginUser = (payload, redirectUrl) => ({
   type: "LOGIN_REQUEST",
   payload,
 });

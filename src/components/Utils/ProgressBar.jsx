@@ -6,7 +6,6 @@ const ProgressBar = ({ progress, myCourseModule }) => {
   const width = progress || 10;
 
   let number = Math.round(progress);
-  console.log(myCourseModule);
 
   return (
     <div className="buyed__progress__bar">

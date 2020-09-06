@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect   } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { logoutRequest } from "../actions";
@@ -21,11 +21,8 @@ const Header = (props) => {
   const hasUser = Object.keys(user).length > 0;
 
   const handleLogout = () => {
-    document.cookie = `email=`;
-    document.cookie = `name=`;
-    document.cookie = `id=`;
-    document.cookie = `token=`;
     props.logoutRequest({});
+    return <Redirect to="/home" />
   };
 
   const [isToggled, setToggled] = useState(false);
@@ -90,16 +87,6 @@ const Header = (props) => {
             handleClose={handleCloseHamburguer}
             body={<HamburgerMenuMobile onClick={handleCloseHamburguer} />}
           />
-          {/* {isToggledMenuMobile ? (
-            <HamburgerMenuMobile
-              onClick={toggleTrueFalseMenuMobile}
-              handleOpen={handleOpen}
-              handleClose={handleClose}
-              open={open}
-            />
-          ) : (
-            ""
-          )} */}
           <Link to="/carrito">
             <img
               onClick={toggleTrueFalse}
@@ -114,7 +101,6 @@ const Header = (props) => {
             />
           </Link>
         </div>
-        {/* MOBILE */}
         <div className="grid-2 navbar__justify__self navbar__query">
           <div className="navbar__query"></div>
           <ol className="navbar__element__list">

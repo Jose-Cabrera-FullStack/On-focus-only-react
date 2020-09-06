@@ -19,6 +19,21 @@
   color: #f2f2f2;
 }
 
+.visualization__navbar--visualization h5 {
+  margin: 20px 169px 0 10px;
+}
+
+.visualization__title {
+  font-family: "Mont-Regular";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: #f2f2f2;
+  margin: auto 0 auto 0;
+}
+
 .visualization__grid {
   display: grid;
   grid-template-columns: 415px 1fr;
@@ -262,6 +277,14 @@
 
   .visualization__sidebar__inside {
     width: auto;
+  }
+  .visualization__navbar--visualization h5 {
+    width: 135px;
+    margin: 20px 9px 0 10px;
+  }
+  .visualization__navbar {
+    border-bottom: none;
+    padding: 5px 0 20px 0px;
   }
 }
 

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../../../assets/styles/components/CoursePlus.scss";
 import Course from "../../../assets/static/images/img/about-this-course.png";
 
 const CourseAbout = (props) => {
+  const [isToggle, setIsToggle] = useState(false);
+  const ClickSetIsToggle = () => setIsToggle(!isToggle);
+
   return (
     <div className={"course__about" + " " + props.onlyDesktop}>
       <h1 className={"course__info__title" + " " + props.font}>
@@ -30,6 +33,20 @@ const CourseAbout = (props) => {
             </li>
             <li> Ut wisi enim ad minim veniam... </li>
           </ul>
+          <div className="buyed_see__more__box display__screen__desktop">
+            <i className="buyed_see__more" onClick={ClickSetIsToggle}>
+              Ver {isToggle ? "menos" : "más"} {isToggle ? "-" : "+"}
+            </i>
+            {isToggle ? (
+              <ul>
+                <li> Ut wisi enim ad minim veniam... </li>
+                <li> Ut wisi enim ad minim veniam... </li>
+                <li>more items</li>
+              </ul>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       ) : (
         <p>

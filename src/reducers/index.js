@@ -13,13 +13,16 @@ const reducer = (state, action) => {
               item.category === action.payload.slugcategory
           ) || {},
       };
+    case "GET_MY_VIDEO_NAME":
+      return {
+        ...state,
+        videoName: action.payload,
+      };
     case "GET_MY_COURSE":
       return {
         ...state,
         myCourse:
-          state.myCourses.find((item) =>
-            item.name === action.payload
-          ) || {},
+          state.myCourses.find((item) => item.name === action.payload) || {},
       };
     case "GET_COURSE_CATEGORY":
       return {

@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import "../../../assets/styles/components/Visualization.scss";
 import "../../../assets/styles/components/Course.scss";
+
+import { getMyVideoName } from "../../../actions";
 
 import CompleteIcon from "../../../assets/static/images/svg/icon-video-complete.svg";
 import IncompleteIcon from "../../../assets/static/images/svg/icon-video-incomplete.svg";
 import WatchingIcon from "../../../assets/static/images/svg/icon-video-watching.svg";
 
-const CourseInside = ({ title, status, url, path, last }) => {
+const CourseInside = ({ title, status, url, path, last, getMyVideoName }) => {
+  if (path.params.video_id === url) {
+    useEffect(() => {
+      getMyVideoName(title);
+    }, []);
+  }
   return (
     <>
       {path.params.video_id === url ? (
@@ -56,4 +64,7 @@ const CourseInside = ({ title, status, url, path, last }) => {
     </>
   );
 };
-export default CourseInside;
+const mapDispatchToProps = {
+  getMyVideoName,
+};
+export default connect(null, mapDispatchToProps)(CourseInside);
