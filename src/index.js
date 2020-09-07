@@ -28,14 +28,13 @@ const store = createStore(
 store.subscribe(
   throttle(() => {
     saveState({
-      shoppingcar: store.getState().shoppingcar,
+      shoppingcar: store.getState().shoppingcar,  
       user: store.getState().user,
     });
   }, 1000)
 );
 
 const history = createBrowserHistory();
-const persistedState = loadState();
 
 ReactDOM.render(
   <Provider store={store}>

@@ -124,7 +124,7 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
         <p className="hero__view__promo__empty">
           No hay cursos cargados en tu carrito. <br />
           {isCourseLink ? (
-            <p className="text-decoration--navbar" onClick={reload}>Buscar Cursos</p>
+            <p className="text-decoration--navbar hero__view__promo__empty__text" onClick={reload}>Buscar cursos</p>
           ) : (
             <Link
               className="text-decoration text-decoration--navbar"
