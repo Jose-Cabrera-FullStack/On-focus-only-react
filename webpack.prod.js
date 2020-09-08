@@ -16,19 +16,19 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx|jss)$/,
         exclude: /(node_modules[\/\\])(?!mqtt)/,
-        use: [
-          {
-            loader: "babel-loader",
-          },
-        ],
+        use: [{
+          loader: "babel-loader",
+        }, ],
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(["css-loader", "sass-loader"]),
+        loader: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: ["css-loader", "sass-loader"]
+        }),
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -64,7 +64,7 @@ module.exports = {
       filename: "./index.html",
     }),
     new MiniCssExtractPlugin({
-      filename: "assets/[name].css",
+      filename: "dist/[name].css",
     }),
     new ExtractTextPlugin({
       filename: "bundle.css",
