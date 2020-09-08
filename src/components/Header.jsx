@@ -28,16 +28,6 @@ const Header = (props) => {
 
   const toggleTrueFalse = () => setToggled(!isToggled);
 
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   const [openHamburguer, setOpenHamburguer] = useState(false);
 
   const handleOpenHamburguer = () => {
@@ -155,19 +145,13 @@ const Header = (props) => {
             ) : (
               <>
                 <li className="navbar__menu ">
-                  <button
-                    className="btn__primary btn__primary--login btn__primary--login"
-                    onClick={handleOpen}
-                    type="button"
-                  >
-                    Iniciar Sesion
-                  </button>
+                  <Link to="/iniciar-sesion">
+                    <button className="btn__primary btn__primary--login btn__primary--login">
+                      Iniciar Sesion
+                    </button>
+                  </Link>
                 </li>
-                <Modal
-                  open={open}
-                  handleClose={handleClose}
-                  body={<Login handleClose={handleClose} />}
-                />
+
                 <li className="navbar__menu">
                   <Link to="/registrarse" className="text-decoration">
                     <button className="btn__primary btn__primary--login">

@@ -13,6 +13,7 @@ const Beadcrumbs = ({
   iconHover,
   link,
   onClick,
+  text,
 }) => {
   const [isHover, setIsHover] = useState(false);
 
@@ -22,7 +23,13 @@ const Beadcrumbs = ({
         <div
           onClick={onClick}
           className={
-            "beadcrumbs flex" + " " + onlyMobile + " " + margin + " " + onlyDesktop
+            "beadcrumbs flex" +
+            " " +
+            onlyMobile +
+            " " +
+            margin +
+            " " +
+            onlyDesktop
           }
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
@@ -46,7 +53,9 @@ const Beadcrumbs = ({
               src={icon ? (isHover ? iconHover : icon) : ArrowLeft}
               alt="Fecha a la izquierda"
             />
-            <h5 className="beadcrumbs__text">Volver a los cursos</h5>
+            <h5 className="beadcrumbs__text">
+              {text ? text : "Volver a los cursos"}
+            </h5>
           </Link>
         </div>
       )}

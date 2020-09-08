@@ -191,6 +191,10 @@
     margin: 30px 0px 30px 30px;
   }
 
+  .shopping__car__empty {
+    margin: 30px;
+  }
+
   .shopping__car__box__inside {
     margin: 50px 0 0 0;
     padding: 13px 40px 0 15%;
@@ -205,7 +209,6 @@
   }
   .shopping__car__box__inside__total--price {
     font-family: "Mont-Bold";
-    left: 20%;
     font-size: 22px;
   }
 
@@ -214,7 +217,7 @@
   }
 
   .shopping__car__box__inside__text {
-    margin: 0px 26% 10px 0;
+    margin: 0px 86px 10px 0;
   }
 
   .shopping__car__box__inside__mobile {

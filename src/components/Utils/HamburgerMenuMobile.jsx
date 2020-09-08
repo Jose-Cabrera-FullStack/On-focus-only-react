@@ -24,15 +24,6 @@ const HamburgerMenuMobile = ({ onClick, user, logoutRequest }) => {
   };
   const hasUser = Object.keys(user).length > 0;
 
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
   return (
     <>
       <div className="navbar__hamburguer__toggle">
@@ -62,14 +53,6 @@ const HamburgerMenuMobile = ({ onClick, user, logoutRequest }) => {
               />
             </Link>
             <Link to="/sobre-nosotros" className="text-decoration flex">
-              <li>Inspirate</li>
-              <img
-                className="navbar__hamburguer__toggle__menu__arrow"
-                src={ArrowInside}
-                alt="Ícono de Flecha"
-              />
-            </Link>
-            <Link to="/sobre-nosotros" className="text-decoration flex">
               <li>Acerca de On Focus</li>
             </Link>
             <Link to="/contactanos" className="text-decoration flex">
@@ -92,20 +75,13 @@ const HamburgerMenuMobile = ({ onClick, user, logoutRequest }) => {
               </div>
             ) : (
               <div className="navbar__menu__mobile__buttons">
-                <li className="navbar__menu ">
-                  <button
-                    className="btn__primary btn__primary--login btn__primary--login"
-                    onClick={handleOpen}
-                    type="button"
-                  >
-                    Iniciar Sesion
-                  </button>
-                  <ModalLogin
-                    open={open}
-                    handleClose={handleClose}
-                    body={<Login handleClose={handleClose} />}
-                  />
-                </li>
+                <Link to="/iniciar-sesion">
+                  <li className="navbar__menu ">
+                    <button className="btn__primary btn__primary--login btn__primary--login">
+                      Iniciar Sesion
+                    </button>
+                  </li>
+                </Link>
                 <li>
                   <Link to="/registrarse">
                     <button className="btn__primary btn__primary--login">

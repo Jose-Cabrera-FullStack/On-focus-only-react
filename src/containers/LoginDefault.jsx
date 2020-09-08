@@ -32,9 +32,6 @@ const Register = (props) => {
 
   return (
     <section className="register">
-      {/* <Link to="/home">
-        <img className="register__img" src={Logo} alt="Logo de On Focus" />
-      </Link> */}
       <div className="register__box">
         <div className="register__box__inside">
           <div className="flex">

@@ -93,7 +93,10 @@
 }
 
 .register__box__inside__link {
-  margin: 50px;
+  margin: 30px 0px -20px 45px;
+}
+.register__box__inside__link--register {
+  margin: 40px 0px 0px 30px;
 }
 
 @media screen and (max-width: 686px) {
@@ -102,7 +105,7 @@
     left: 79%;
   }
   .register__box {
-    transform: translate(-85%, -30%);
+    transform: translate(-80%, -30%);
   }
 }
 @media screen and (max-width: 518px) {

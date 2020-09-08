@@ -34,11 +34,8 @@ const CourseAbout = (props) => {
             <li> Ut wisi enim ad minim veniam... </li>
           </ul>
           <div className="buyed_see__more__box display__screen__desktop">
-            <i className="buyed_see__more" onClick={ClickSetIsToggle}>
-              Ver {isToggle ? "menos" : "más"} {isToggle ? "-" : "+"}
-            </i>
             {isToggle ? (
-              <ul>
+              <ul className="slide-in-top">
                 <li> Ut wisi enim ad minim veniam... </li>
                 <li> Ut wisi enim ad minim veniam... </li>
                 <li>more items</li>
@@ -46,6 +43,9 @@ const CourseAbout = (props) => {
             ) : (
               ""
             )}
+            <i className="buyed_see__more" onClick={ClickSetIsToggle}>
+              Ver {isToggle ? "menos" : "más"} {isToggle ? "-" : "+"}
+            </i>
           </div>
         </div>
       ) : (

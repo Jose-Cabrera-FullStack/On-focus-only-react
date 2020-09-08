@@ -24,10 +24,10 @@
 }
 
 .visualization__title {
-  font-family: "Mont-Regular";
+  font-family: "Mont-Bold";
   font-style: normal;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 18px;
   letter-spacing: -0.02em;
   color: #f2f2f2;
@@ -248,7 +248,7 @@
   }
 
   .visualization__sidebar {
-    margin: 25px 25px 0 0px;
+    margin: -45px 25px 0 0px;
     width: 95vw;
     padding: 0px 0 10px 0;
   }
@@ -287,10 +287,10 @@
     padding: 5px 0 20px 0px;
   }
   .visualization__title {
-    margin: 10px 30px 10px 30px;
+    margin: 10px 0px 20px 40px;
     font-style: normal;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 20px;
     letter-spacing: -0.02em;
     color: #f2f2f2;

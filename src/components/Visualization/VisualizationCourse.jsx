@@ -21,14 +21,15 @@ const VisualizationCourse = (props) => {
           onlyMobile={"visualization__navbar"}
           link={`/mis-cursos/${props.url.params.slugname}`}
           margin={"visualization__navbar--visualization"}
+          text={"Volver al curso"}
         />
         <h1 className="visualization__title display__screen__desktop">
           {props.videoName}
         </h1>
       </div>
-        <h1 className="visualization__title display__screen__mobile">
-          {props.videoName}
-        </h1>
+      <h1 className="visualization__title display__screen__mobile">
+        {props.videoName}
+      </h1>
 
       <Video video={props.video} display={"display__screen__mobile"} />
 

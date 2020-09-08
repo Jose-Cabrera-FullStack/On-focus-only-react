@@ -75,7 +75,7 @@ const CourseAboutCourse = (props) => {
 
       <BuyedCourse
         onlyMobile={"display__screen__mobile"}
-        description={"Está toda la información de este curso."}
+        description={"Está toda la información del curso."}
         title={"Sobre el curso"}
         onClick={handleOpenInformation}
         information

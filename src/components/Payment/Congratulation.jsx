@@ -23,8 +23,14 @@ const Pay = ({ handleClose }) => (
         <h1>¡Felicitaciones!</h1>
         <h4>Adquiriste tu curso con éxito.</h4>
         <ButtonArrowRight
-          background={"btn__secundary--way-to-pay btn__secundary--way-to-pay--mobile"}
+          background={
+            "btn__secundary--way-to-pay btn__secundary--way-to-pay--mobile"
+          }
           margin={"btn__secundary--congratulation"}
+          text={"Ir a mis cursos"}
+          icon={"btn__arrow__gold"}
+          iconHover={"btn__arrow__white"}
+          link="/mis-cursos"
         />
       </div>
     </div>

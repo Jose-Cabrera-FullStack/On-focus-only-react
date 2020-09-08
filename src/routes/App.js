@@ -52,28 +52,24 @@ const App = (props) => {
             <Route
               exact
               path="/cursos/:slugcategory/:slugname/:video_id"
-              component={hasUser ? Visualization : LoginDefault}
+              component={hasUser ? Visualization : Register}
             />
             <Route exact path="/carrito" component={ShoppingCar} />
-            <Route
-              exact
-              path="/pago"
-              component={hasUser ? Pay : LoginDefault}
-            />
+            <Route exact path="/pago" component={hasUser ? Pay : Register} />
             <Route
               exact
               path="/mis-cursos"
-              component={hasUser ? MyCourse : LoginDefault}
+              component={hasUser ? MyCourse : Register}
             />
             <Route
               exact
               path="/mis-cursos/:slug"
-              component={hasUser ? CourseBuyed : LoginDefault}
+              component={hasUser ? CourseBuyed : Register}
             />
             <Route
               exact
               path="/mi-perfil"
-              component={hasUser ? MyProfile : LoginDefault}
+              component={hasUser ? MyProfile : Register}
             />
             <Route exact path="/contactanos" component={ContactUs} />
             <Route exact path="/politicas" component={Politicy} />
@@ -86,7 +82,7 @@ const App = (props) => {
             <Route
               exact
               path="/iniciar-sesion"
-              component={hasUser ? MyCourse : LoginDefault}
+              component={hasUser ? MyCourse : Register}
             />
             <Route exact path="/sobre-nosotros" component={AboutUs} />
             <Route exact path="/podcast" component={Podcast} />

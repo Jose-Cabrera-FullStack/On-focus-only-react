@@ -45,7 +45,7 @@ const Register = (props) => {
             />
             <div>
               <h1>Hola!</h1>
-              <h2>Bienvenido de vuelta.</h2>
+              <h2>Bienvenido/a</h2>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ const Register = (props) => {
               src={Facebook}
               alt="Logo de Facebook"
             />
-            Continuá con Facebook
+            Registrate con Facebook
           </button>
 
           <button className="google__button google__button--register">
@@ -64,11 +64,11 @@ const Register = (props) => {
               src={Google}
               alt="Logo de Google"
             />
-            Continuá con Google
+            Registrate con Google
           </button>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
-              <h5>O Inicia Sesión con tu correo electrónico</h5>
+              <h5>Registrate con tu correo electrónico</h5>
               <input
                 name="email"
                 type="text"
@@ -130,13 +130,14 @@ const Register = (props) => {
               text={"Iniciar Sesión"}
             />
           </form>
-          <div className="register__box__inside__link">
+          <div className="register__box__inside__link register__box__inside__link--register">
             <h2>
-              ¿No eres miembro?{" "}
+              ¿Tenés una cuenta?{""}
               <Link
                 to="/iniciar-sesion"
                 className="text-decoration text-decoration--navbar"
               >
+                {" "}
                 Iniciar Sesión
               </Link>{" "}
             </h2>

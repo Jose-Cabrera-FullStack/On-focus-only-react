@@ -218,12 +218,12 @@
     position: relative;
     left: 50%;
     transform: translate(-55%, 30%);
-    margin-bottom: 100px;
+    margin-top: 35px;
     text-align: left;
   }
 
   .navbar__hamburguer__toggle__menu__arrow {
-    margin: 20px 0px 0px 20px;
+    margin: 15px 0px 0px 20px;
   }
 
   .navbar__hamburguer__toggle__menu__list li {
@@ -235,9 +235,10 @@
   }
 
   .navbar__menu__mobile__buttons {
-    margin: 150px 0 0 0;
+    position: absolute;
+    top: 50vh;
   }
-  .navbar__menu__mobile__profile{
+  .navbar__menu__mobile__profile {
     margin-top: 60px;
   }
 }

@@ -19,12 +19,10 @@ const AboutUs = () => {
 
   const goLeft = () => {
     ValueX === 0 ? setX(-100 * (sliderArr.length - 3)) : setX(ValueX + 100);
-    // setX(ValueX - 100)
   };
 
   const goRight = () => {
     ValueX === -100 * (sliderArr.length - 3) ? setX(0) : setX(ValueX - 100);
-    // setX(ValueX + 100)
   };
 
   let sliderArr = [
@@ -78,7 +76,7 @@ const AboutUs = () => {
         partialVisibility
         offset={{ top: 600 }}
         onChange={onChange}
-        active={!isVisible} 
+        active={!isVisible}
       >
         <div className="flex">
           <div className="slide">
