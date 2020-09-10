@@ -2,31 +2,18 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { logoutRequest } from "../../actions";
-
 import "../../assets/styles/components/Header.scss";
 
 import Logo from "../../assets/static/images/svg/logo-small.svg";
 import Arrow from "../../assets/static/images/svg/arrow-right-hamburger-mobile.svg";
 import ArrowInside from "../../assets/static/images/svg/arrow-right-hamburger-mobile-inside.svg";
 
-import Login from "../../containers/Login";
-
-import ModalLogin from "./Modal";
-
-const HamburgerMenuMobile = ({ onClick, user, logoutRequest }) => {
-  const handleLogout = () => {
-    document.cookie = `email=`;
-    document.cookie = `name=`;
-    document.cookie = `id=`;
-    document.cookie = `token=`;
-    logoutRequest({});
-  };
+const HamburgerMenuMobile = ({ onClick, user, handleLogout }) => {
   const hasUser = Object.keys(user).length > 0;
 
   return (
     <>
-      <div className="navbar__hamburguer__toggle">
+      <div className="navbar__hamburguer__toggle opacity-animation">
         <div>
           <Link to="/">
             <img
@@ -69,8 +56,8 @@ const HamburgerMenuMobile = ({ onClick, user, logoutRequest }) => {
                 <Link to="/mis-cursos" className="text-decoration flex">
                   <li>Mis Cursos</li>
                 </Link>
-                <Link onClick={handleLogout} className="text-decoration flex">
-                  <li>Cerrar Sesión</li>
+                <Link className="text-decoration flex">
+                  <li onClick={handleLogout}>Cerrar Sesión</li>
                 </Link>
               </div>
             ) : (
@@ -104,11 +91,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = {
-  logoutRequest,
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HamburgerMenuMobile);
+export default connect(mapStateToProps, null)(HamburgerMenuMobile);

@@ -45,7 +45,11 @@ const Course = ({ title, text, videos, path, position }) => {
           <img
             className={
               isToggle
-                ? "visualization__sidebar__arrow visualization__sidebar__arrow--up arrow-rotation-up"
+                ? open
+                  ? "visualization__sidebar__arrow"
+                  : "visualization__sidebar__arrow visualization__sidebar__arrow--up arrow-rotation-up"
+                : open
+                ? "visualization__sidebar__arrow"
                 : "visualization__sidebar__arrow arrow-rotation-down"
             }
             src={ArrowDown}

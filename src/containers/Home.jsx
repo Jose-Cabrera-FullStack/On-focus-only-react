@@ -9,12 +9,12 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../assets/styles/App.scss";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className="App">
-      <Header />
+      <Header history={props.history} />
       <Principal />
-      <Discovery onlyFour/>
+      <Discovery onlyFour />
       <HowWeTeach />
       <AboutUs />
       <Footer />

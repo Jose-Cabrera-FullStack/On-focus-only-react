@@ -36,7 +36,7 @@ const ShoppingCar = (props) => (
             })}
           </>
         ) : (
-          <p className="shopping__car__empty">no hay elementos</p>
+          <p className="shopping__car__empty">No hay elementos</p>
         )}
       </div>
       {props.shoppingcar.length > 0 ? (

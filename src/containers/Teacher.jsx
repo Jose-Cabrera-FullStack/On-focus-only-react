@@ -1,29 +1,28 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Hero from '../components/Teacher/Hero';
-import Points from '../components/Teacher/Points';
-import TeacherFAQ from '../components/Teacher/FAQ';
-import HeroDown from '../components/Teacher/HeroDown';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Hero from "../components/Teacher/Hero";
+import Points from "../components/Teacher/Points";
+import TeacherFAQ from "../components/Teacher/FAQ";
+import HeroDown from "../components/Teacher/HeroDown";
 
-import '../assets/styles/App.scss';
+import "../assets/styles/App.scss";
 
-const Teacher = () => {
-    let grid = 'grid-column-2'
+const Teacher = (props) => {
+  let grid = "grid-column-2";
 
-  return(
+  return (
     <div className="App">
-        <Header/>
-        <Hero/>
-        <Points grid={grid}/>
-        <TeacherFAQ/>
-        <HeroDown/>
-        <Footer/>
+      <Header history={props.history} />
+      <Hero />
+      <Points grid={grid} />
+      <TeacherFAQ />
+      <HeroDown />
+      <Footer />
     </div>
-
   );
-}
+};
 
-export default connect(null,null)(Teacher);
+export default connect(null, null)(Teacher);

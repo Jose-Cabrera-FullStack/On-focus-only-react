@@ -56,7 +56,7 @@
   letter-spacing: -0.02em;
   color: #03002b;
 }
-.register__box__inside h5 {
+.register__box__inside__label {
   font-family: "Mont-Semi-Bold";
   font-style: normal;
   font-weight: 800;
@@ -88,7 +88,7 @@
 }
 
 .btn__secundary--register {
-  width: 169px;
+  width: 156px;
   margin: 30px 0 0 100px;
 }
 
@@ -99,23 +99,33 @@
   margin: 40px 0px 0px 30px;
 }
 
-@media screen and (max-width: 686px) {
+@media screen and (max-width: 1024px) {
   .register__box {
-    top: 30%;
-    left: 79%;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: none;
   }
-  .register__box {
-    transform: translate(-80%, -30%);
-  }
-}
-@media screen and (max-width: 518px) {
   .register__box__inside {
-    margin: 25px 25px 50px 25px;
+    text-align: -webkit-center;
   }
-  .register__box {
-    width: 360px;
+  .register__box__inside h1 {
+    font-size: 23px;
+    text-align: center;
   }
-
+  .btn__secundary--register {
+    margin: 30px 0 0 0px;
+  }
+  .register__box__inside {
+    margin: 25px 35px 50px 35px;
+  }
+  .register__box__inside__label--mail {
+    position: relative;
+    left: -10px;
+  }
+  .register__box__inside__label--password {
+    position: relative;
+    left: -105px;
+  }
   .register__box__inside__img {
     margin: 0 20px 0 0px;
     width: 134px;
@@ -124,18 +134,21 @@
   .register__box__inside input {
     width: 300px;
   }
-  .register__box__inside h1 {
-    font-size: 23px;
-  }
 
   .register__box__inside h2 {
     font-size: 18px;
   }
-  .btn__secundary--register {
-    width: 169px;
-    margin: 30px 0 0 70px;
-  }
   .register__box__inside__link {
     margin: 40px 0px 10px 10px;
+  }
+  .register__box__inside__label--register {
+    position: relative;
+    left: -15px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .register__box__inside__link--register {
+    margin: 40px 0px 0px -10px;
   }
 }

@@ -82,7 +82,7 @@ const App = (props) => {
             <Route
               exact
               path="/iniciar-sesion"
-              component={hasUser ? MyCourse : Register}
+              component={hasUser ? MyCourse : LoginDefault}
             />
             <Route exact path="/sobre-nosotros" component={AboutUs} />
             <Route exact path="/podcast" component={Podcast} />

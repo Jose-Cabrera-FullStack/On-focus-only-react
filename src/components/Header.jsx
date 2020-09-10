@@ -8,8 +8,6 @@ import EmergentMenu from "./Utils/EmergentMenu";
 import HamburgerMenuMobile from "./Utils/HamburgerMenuMobile";
 import Modal from "./Utils/Modal";
 
-import Login from "../containers/Login";
-
 import Logo from "../assets/static/images/svg/logo-small.svg";
 import Hamburguer from "../assets/static/images/svg/icon-hamburguer.svg";
 import Shopping from "../assets/static/images/svg/shopping-car.svg";
@@ -22,6 +20,7 @@ const Header = (props) => {
 
   const handleLogout = () => {
     props.logoutRequest({});
+    return props.history.push("/home");
   };
 
   const [isToggled, setToggled] = useState(false);
@@ -74,7 +73,12 @@ const Header = (props) => {
           <Modal
             open={openHamburguer}
             handleClose={handleCloseHamburguer}
-            body={<HamburgerMenuMobile onClick={handleCloseHamburguer} />}
+            body={
+              <HamburgerMenuMobile
+                handleLogout={handleLogout}
+                onClick={handleCloseHamburguer}
+              />
+            }
           />
           <Link to="/carrito">
             <img

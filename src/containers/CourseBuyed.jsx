@@ -83,7 +83,7 @@ const CourseBuyed = (props) => {
     <NotFound />
   ) : (
     <div className="App">
-      <Header />
+      <Header history={props.history} />
       <img
         className="buyed__progress__img display__screen__mobile"
         src={UI}

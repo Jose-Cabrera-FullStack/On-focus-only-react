@@ -7,14 +7,14 @@ import Header from "../components/Header";
 
 import "../assets/styles/App.scss";
 
-const Course = () => {
+const Course = (props) => {
   const column = "grid-column-3";
   const none = "display-none";
   const info = "Cursos recomendados.";
 
   return (
     <div className="App">
-      <Header />
+      <Header history={props.history} />
       <ShoppingCar onlyMobile={"display__screen__mobile__without__flex"} />
       <Discovery onlyThree column={column} none={none} info={info} />
     </div>

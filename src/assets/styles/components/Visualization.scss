@@ -36,13 +36,13 @@
 
 .visualization__grid {
   display: grid;
-  grid-template-columns: 415px 1fr;
+  grid-template-columns: 387px 1fr;
   gap: 1px 1px;
   padding-bottom: 2%;
 }
 
 .visualization__sidebar {
-  margin: 25px;
+  margin: 23px;
   height: 525px;
   overflow: overlay;
 }
@@ -66,7 +66,7 @@
   height: 52px;
   border: 1px solid #393758;
   list-style: none;
-  width: 350px;
+  width: 335px;
   cursor: pointer;
   user-select: none;
 }
@@ -108,7 +108,7 @@
 .visualization__sidebar__arrow {
   margin: 5px 0 0 0px;
   position: relative;
-  left: 165px;
+  left: 150px;
   bottom: 15px;
   width: 29px;
 }
@@ -131,7 +131,7 @@
 .visualization__sidebar__inside {
   margin: 5px 0 5px 0;
   height: 62px;
-  width: 352px;
+  width: 336px;
   cursor: pointer;
   user-select: none;
   text-decoration: none;

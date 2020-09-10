@@ -9,7 +9,7 @@ import Button from "../components/Utils/ButtonArrowRight";
 import Facebook from "../assets/static/images/svg/facebook-icon-button.svg";
 import Google from "../assets/static/images/svg/google-icon-button.svg";
 
-import Logo from "../assets/static/images/img/logo-log-in.png";
+import Breadcrumbs from "../components/Utils/Breadcrumbs";
 import Human from "../assets/static/images/svg/human-hello.svg";
 import "../assets/styles/components/Register.scss";
 
@@ -34,9 +34,14 @@ const Register = (props) => {
     <section className="register">
       <div className="register__box">
         <div className="register__box__inside">
-          <div className="flex">
+          <Breadcrumbs
+            text={"Volver"}
+            link={"/home"}
+            onlyMobile={"display__screen__mobile"}
+          />
+          <div className="flex display__screen__mobile__without__flex">
             <img
-              className="register__box__inside__img"
+              className="register__box__inside__img display__screen__desktop"
               src={Human}
               alt="Imagen de Humano Saludando"
             />
@@ -65,7 +70,9 @@ const Register = (props) => {
           </button>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
-              <h5>O Inicia Sesión con tu correo electrónico</h5>
+              <h5 className="register__box__inside__label register__box__inside__label--mail">
+                Inicia Sesión con tu correo electrónico
+              </h5>
               <input
                 name="email"
                 type="text"
@@ -96,7 +103,9 @@ const Register = (props) => {
               </span>
             </div>
             <div>
-              <h5>Contraseña</h5>
+              <h5 className="register__box__inside__label register__box__inside__label--password">
+                Contraseña
+              </h5>
               <input
                 name="password"
                 type="password"

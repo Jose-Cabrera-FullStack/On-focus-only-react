@@ -162,7 +162,7 @@
   height: 38px;
   background-repeat: no-repeat;
   background-position: 4px;
-  background-size: 30px 30px;
+  background-size: 30px 25px;
   background-image: url(../../static/images/svg/instagram.svg);
 }
 
@@ -218,7 +218,7 @@
   transition: 0.4s;
   background-repeat: no-repeat;
   background-position: 4px;
-  background-size: 30px 30px;
+  background-size: 30px 25px;
   background-image: url(../../static/images/svg/instagram.svg);
 }
 .s4 .iconbtn:hover::after {
@@ -249,7 +249,7 @@
   background: #b38a58;
   background-repeat: no-repeat;
   background-position: 4px;
-  background-size: 30px 30px;
+  background-size: 30px 25px;
   background-image: url(../../static/images/svg/instagram.svg);
 }
 
@@ -341,7 +341,7 @@
 
   .footer__container__right--fix {
     position: relative;
-    top: -240px;
+    top: -40vh;
   }
 
   .footer__reserved p {

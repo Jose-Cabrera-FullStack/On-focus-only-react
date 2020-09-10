@@ -28,7 +28,7 @@ const store = createStore(
 store.subscribe(
   throttle(() => {
     saveState({
-      shoppingcar: store.getState().shoppingcar,  
+      shoppingcar: store.getState().shoppingcar,
       user: store.getState().user,
     });
   }, 1000)

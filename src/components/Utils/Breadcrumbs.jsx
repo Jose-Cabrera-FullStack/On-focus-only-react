@@ -31,8 +31,6 @@ const Beadcrumbs = ({
             " " +
             onlyDesktop
           }
-          onMouseEnter={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
         >
           <img
             src={icon ? (isHover ? iconHover : icon) : ArrowLeft}
@@ -45,8 +43,6 @@ const Beadcrumbs = ({
           className={
             "beadcrumbs" + " " + onlyMobile + " " + margin + " " + onlyDesktop
           }
-          onMouseEnter={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
         >
           <Link to={link ? link : "/cursos"} className="flex text-decoration">
             <img

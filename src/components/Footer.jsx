@@ -8,6 +8,8 @@ import Message from "../assets/static/images/svg/message.svg";
 
 import ScrollArrowUp from "./Utils/ScrollArrowUp";
 
+let year = new Date().getFullYear();
+
 const Footer = (props) => {
   return (
     <>
@@ -97,7 +99,7 @@ const Footer = (props) => {
         </div>
       </footer>
       <div className={"footer__reserved" + " " + props.onlyDesktop}>
-        <p>All Rights Reserved 2019.</p>
+        <p>All Rights Reserved {year}.</p>
         <div className="footer__help footer__help--mobile display__screen__mobile">
           <img src={Message} alt="Mensaje" />
           <p>ayuda@onfocus.com</p>

@@ -36,19 +36,18 @@ const Course = (props) => {
   const isCategory = Object.keys(props.category).length > 0;
   const isCourse = Object.keys(props.courseName).length > 0;
 
-
   return !isCategory || !isCourse ? (
     <NotFound />
   ) : (
     <div className="App">
-      <Header />
+      <Header history={props.history} />
       <Breadcrumbs
         onlyMobile={"display__screen__mobile__flex"}
         margin={"beadcrumbs__course"}
       />
       <SmallVideo
         onlyMobile={"visualization__mobile display__screen__mobile"}
-        width
+        video_id={props.category.video_intro}
       />
       <HeroCoursePlus />
       <section>

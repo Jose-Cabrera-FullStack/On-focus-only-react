@@ -291,6 +291,11 @@
 /* <-------COURSE-------> */
 
 /* <-------MEDIA-------> */
+@media screen and (max-width: 1325px) {
+  .discovery__container {
+    margin: 0px 150px 0px 150px;
+  }
+}
 @media screen and (max-width: 1315px) {
   .discovery__diploma {
     display: none;
@@ -317,7 +322,7 @@
     display: block;
   }
   .discovery__box {
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 -4px;
   }
   .pagination {
     list-style: none;
@@ -340,6 +345,12 @@
   }
   .discovery__box__info__teach {
     padding: 1px 0px 0px 0px;
+  }
+  .discovery__title {
+    padding: 0;
+  }
+  .hero__title__view {
+    font-size: 31px;
   }
 }
 

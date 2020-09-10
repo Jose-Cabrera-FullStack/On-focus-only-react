@@ -1,95 +1,114 @@
-
-.utils__hero{
-    height: 252px;
-    background-image:linear-gradient(180deg, rgba(3, 0, 43, 0) 0.52%, #03002bd9 113.6%), url(../../static/images/img/hero-course.png);
-    background-size: cover;
+.utils__hero {
+  height: 252px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(3, 0, 43, 0) 0.52%,
+      #03002bd9 113.6%
+    ),
+    url(../../static/images/img/hero-course.png);
+  background-size: cover;
 }
 
-.utils__hero__contact{
-    height: 252px;
-    background-image:linear-gradient(180deg, rgba(3, 0, 43, 0) 0.52%, #03002bd9 113.6%), url(../../static/images/img/hero-contact.png);
-    background-size: cover;
+.utils__hero__contact {
+  height: 252px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(3, 0, 43, 0) 0.52%,
+      #03002bd9 113.6%
+    ),
+    url(../../static/images/img/hero-contact.png);
+  background-size: cover;
 }
 
-.utils__hero__profile{
-    height: 254px;
-    background-image:linear-gradient(180deg, rgba(3, 0, 43, 0) 0.52%, #03002bd9 113.6%), url(../../static/images/img/hero-profile.png);
-    background-size: cover;
+.utils__hero__profile {
+  height: 254px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(3, 0, 43, 0) 0.52%,
+      #03002bd9 113.6%
+    ),
+    url(../../static/images/img/hero-profile.png);
+  background-size: cover;
 }
 
-.utils__hero__title{
-    font-family: 'Mont-Bold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 39px;
-    line-height: 113.3%;
-    color: #F2F2F2;
-    margin: 0;
-    position: relative;
-    float: left;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
+.utils__hero__title {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 39px;
+  line-height: 113.3%;
+  color: #f2f2f2;
+  margin: 0;
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.beadcrumbs{
-    margin: 20px 0 0 0px;
+.beadcrumbs {
+  margin: 20px 0 0 0px;
 }
-.beadcrumbs--my-course__mobile{
-    margin: 0px 0px 0px -30px;
-}
-
-.beadcrumbs h5{
-    margin: 20px 0px 0 10px;
-    font-family: Mont-Light;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 135.3%;
-    letter-spacing: -0.02em;
-    color: #4F4F4F;
+.beadcrumbs--my-course__mobile {
+  margin: 0px 0px 0px -30px;
 }
 
-.beadcrumbs img{
-    margin: 20px 0 0 0px;
+.beadcrumbs h5 {
+  margin: 20px 0px 0 10px;
+  font-family: Mont-Light;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #4f4f4f;
 }
 
-.beadcrumbs__course{
-    margin: 0 0 0 10%;
+.beadcrumbs img {
+  margin: 20px 0 0 0px;
 }
 
-.beadcrumbs h5:hover{
-    color: #b38a58;
-    cursor: pointer;
-    font-family: 'Mont-Bold';
+.beadcrumbs__course {
+  margin: 0 0 0 10%;
 }
 
-.modal{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    left: 20px;
-    bottom: 20px;
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    background: #FFF;
+.beadcrumbs h5:hover {
+  color: #b38a58;
+  cursor: pointer;
+  font-family: "Mont-Bold";
+}
+
+.modal {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  bottom: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: #fff;
 }
 
 @media screen and (max-width: 1024px) {
-    .utils__hero__profile{
-        background-position: -240px;
-    }
+  .utils__hero__profile {
+    background-position: -240px;
+  }
 
-    .beadcrumbs__course{
-        margin: 0 0 0 23px;
-    }
+  .beadcrumbs__course {
+    margin: 0 0 0 23px;
+  }
 
-    .beadcrumbs img{
-        margin: 20px 0 0px 30px;
-    }
+  .beadcrumbs img {
+    margin: 20px 0 0px 30px;
+  }
 }
 
 @media screen and (max-width: 730px) {
-    .utils__hero__profile{
-        background-position: -540px;
-    }
+  .utils__hero__profile {
+    background-position: -540px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .beadcrumbs {
+    margin: 20px 0 0 -10px;
+  }
 }

@@ -9,10 +9,10 @@ import Footer from "../components/Footer";
 
 import "../assets/styles/App.scss";
 
-const Courses = () => {
+const Courses = (props) => {
   return (
     <div className="App">
-      <Header />
+      <Header history={props.history} />
       <Hero />
       <Discovery />
       <AboutUs />

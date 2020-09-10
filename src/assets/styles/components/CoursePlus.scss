@@ -44,7 +44,7 @@
   margin: 0px;
 }
 
-.hero__view__promo__empty__text{
+.hero__view__promo__empty__text {
   margin: 0;
 }
 
@@ -245,6 +245,22 @@
   }
   100% {
     transform: translateY(5px);
+    opacity: 1;
+  }
+}
+
+.opacity-animation {
+  animation: opacity-animation 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
     opacity: 1;
   }
 }

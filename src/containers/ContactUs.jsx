@@ -8,10 +8,10 @@ import Contact from "../components/Profile/Contact";
 
 import "../assets/styles/App.scss";
 
-const ContactUs = () => {
+const ContactUs = (props) => {
   return (
     <div className="App">
-      <Header />
+      <Header history={props.history} />
 
       <Hero title={"Contacto"} />
       <Contact onlyMobile={"display__screen__mobile__without__flex"} />

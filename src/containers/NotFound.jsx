@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // import { connect } from 'react-redux';
 // import { loginUser } from '../actions';
-import Header from '../components/Header';
-import '../assets/styles/components/Register.scss';
+import Header from "../components/Header";
+import "../assets/styles/components/Register.scss";
 
-
-const NotFound = () => {
+const NotFound = (props) => {
   return (
     <>
-        <Header/>
-        <h1>ERROR 404</h1>
-        <h3>Not Found</h3>
-
+      <Header history={props.history} />
+      <h1>ERROR 404</h1>
+      <h3>Not Found</h3>
     </>
-      );
+  );
 };
 
 export default NotFound;
