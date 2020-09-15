@@ -59,7 +59,7 @@ const ButtonShopping = (props) => {
       <Link to="/pago">
         <ButtonArrowRight onClick={handleShopping} />
       </Link>
-      <Shopping course={props.category} />
+      <Shopping course={props.category} individualCourse />
     </div>
   );
 };

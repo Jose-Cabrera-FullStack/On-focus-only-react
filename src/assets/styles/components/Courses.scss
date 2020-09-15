@@ -192,6 +192,31 @@
   cursor: pointer;
 }
 
+.shopping__car__icon__squad--select__message {
+  position: absolute;
+  bottom: -5px;
+  right: 50px;
+  background: #bdbdbd;
+  padding: 7px;
+}
+
+.shopping__car__icon__squad--select__message--individual {
+  bottom: 5px;
+  right: 63px;
+}
+
+.shopping__car__icon__squad--select__message p {
+  font-family: "Mont-Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #03002b;
+  padding: 0;
+  margin: 0;
+}
+
 .discovery__box__position {
   position: relative;
   top: 7px;

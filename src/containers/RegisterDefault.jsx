@@ -30,6 +30,19 @@ const Register = (props) => {
     props.loginUser(form, "/cursos");
   };
 
+  const [isSwitch, setSwitch] = useState(props.location.pathname);
+
+  const Url = (isSwitch) => {
+    switch (isSwitch) {
+      case "/mi-perfil":
+        return "tu perfil";
+      case "/pago":
+        return "pagar";
+      default:
+        return "tus cursos";
+    }
+  };
+
   return (
     <section className="register">
       <div className="register__box">
@@ -47,7 +60,7 @@ const Register = (props) => {
             />
             <div>
               <h1>Hola!</h1>
-              <h2>Bienvenido/a</h2>
+              <h2>Debes registrarte para acceder a {Url(isSwitch)}</h2>
             </div>
           </div>
 

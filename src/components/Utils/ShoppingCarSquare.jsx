@@ -6,6 +6,7 @@ import ShoppingCar from "../../assets/static/images/svg/shopping-car-squad.svg";
 import ShoppingCarHover from "../../assets/static/images/svg/shopping-car-squad-hover.svg";
 import ShoppingCarSelected from "../../assets/static/images/svg/shopping-car-squad-black.svg";
 
+import MessageTimeOut from "./MessageTimeOut";
 import "../../assets/styles/components/Utils.scss";
 
 const ShoppingCarSquare = (props) => {
@@ -69,36 +70,37 @@ const ShoppingCarSquare = (props) => {
 
   let totalWithOutDiscount = 0;
   let totalDiscount = 0;
-  const totalWithOutDiscountshoppingcar = props.shoppingcar.map(
-    (item) => (totalWithOutDiscount += item.price)
-  );
-  const discountCourse = props.shoppingcar.map(
+  props.shoppingcar.map((item) => (totalWithOutDiscount += item.price));
+  props.shoppingcar.map(
     (item) => (totalDiscount += item.discount / props.shoppingcar.length)
   );
 
   let totalToPay = parseInt(
     totalWithOutDiscount - (totalWithOutDiscount * totalDiscount) / 100
   );
-
   useEffect(() => {
     props.totalShopping(totalToPay);
   });
   // <----------Se debe refactorizar mas adelante----------->
 
+  console.log(props.individualCourse);
   return (
     <>
       {isSelected ? (
-        <div
-          onClick={() => handleDeleteShopping(course_id)}
-          className={" discovery__box__info__icon" + " " + props.class}
-          alt="Shopping Car"
-        >
-          <img
-            className="shopping__car__icon__squad--select"
-            src={ShoppingCarSelected}
-            alt="Ícono de Carrito de compra seleccionado"
-          />
-        </div>
+        <>
+          <div
+            onClick={() => handleDeleteShopping(course_id)}
+            className={" discovery__box__info__icon" + " " + props.class}
+            alt="Shopping Car"
+          >
+            <img
+              className="shopping__car__icon__squad--select"
+              src={ShoppingCarSelected}
+              alt="Ícono de Carrito de compra seleccionado"
+            />
+          </div>
+          <MessageTimeOut individualCourse={props.individualCourse} />
+        </>
       ) : isSelectedInShoppingCar ? (
         <div
           onClick={() => handleDeleteShopping(course_id)}
