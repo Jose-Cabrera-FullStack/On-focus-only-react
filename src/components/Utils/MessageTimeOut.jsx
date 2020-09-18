@@ -6,7 +6,7 @@ import Check from "../../assets/static/images/svg/check-shopping-car.svg";
 const MessageTimeOut = (props) => {
   const [isShowed, setIsShowed] = useState(true);
   useEffect(() => {
-    setTimeout(() => setIsShowed(false), 2000);
+    setTimeout(() => setIsShowed(false), 1500);
   });
   return (
     <>
@@ -19,7 +19,7 @@ const MessageTimeOut = (props) => {
           }
         >
           <img src={Check} alt="Ícono de Check" />
-          <p>Agregado al carrito</p>
+          <p>{props.text ? props.text : "Agregado al carrito"}</p>
         </div>
       ) : (
         ""

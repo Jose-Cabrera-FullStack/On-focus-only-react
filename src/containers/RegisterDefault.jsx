@@ -35,23 +35,20 @@ const Register = (props) => {
   const Url = (isSwitch) => {
     switch (isSwitch) {
       case "/mi-perfil":
-        return "tu perfil";
+        return "Debes registrarte para acceder a tu perfil";
       case "/pago":
-        return "pagar";
+        return "Debes registrarte para acceder a pagar";
+      case "/mis-cursos":
+        return "Debes registrarte para acceder a pagar";
       default:
-        return "tus cursos";
+        return "Bienvenido/a";
     }
   };
-
   return (
     <section className="register">
       <div className="register__box">
         <div className="register__box__inside">
-          <Breadcrumbs
-            text={"Volver"}
-            link={"/home"}
-            onlyMobile={"display__screen__mobile"}
-          />
+          <Breadcrumbs text={"Volver"} link={"/home"} />
           <div className="flex display__screen__mobile__without__flex">
             <img
               className="register__box__inside__img display__screen__desktop"
@@ -60,7 +57,7 @@ const Register = (props) => {
             />
             <div>
               <h1>Hola!</h1>
-              <h2>Debes registrarte para acceder a {Url(isSwitch)}</h2>
+              <h2>{Url(isSwitch)}</h2>
             </div>
           </div>
 

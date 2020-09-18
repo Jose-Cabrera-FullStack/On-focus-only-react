@@ -7,6 +7,8 @@ import CourseSaveMoney from "./CourseSaveMoney";
 
 import CourseModule from "./CourseModule";
 import CourseRecomendation from "./CourseRecomendation";
+import CourseInclusive from "./CourseInclusive";
+import CourseForMe from "./CourseForMe";
 import CourseTeacher from "./CourseTeacher";
 import HowWeTeach from "../Principal/HowWeTeach";
 
@@ -47,6 +49,8 @@ const CourseInfo = ({ category }) => {
               margin={"course__logo__mobile__margin"}
             />
             <CourseAbout />
+            <CourseInclusive onlyMobile />
+            <CourseForMe />
             <CourseModule />
             <CourseRecomendation />
             <CourseTeacher margin={"discovery__box__info__mobile"} />

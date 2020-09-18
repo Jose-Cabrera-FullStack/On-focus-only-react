@@ -6,7 +6,9 @@ import CourseTeacherInfo from "./CourseTeacherInfo";
 const CourseTeacher = (props) => {
   return (
     <section
-      className={props.onlyDesktop ? `course ${props.onlyDesktop}` : `course ${props.margin}`}
+      className={`course ${
+        props.onlyDesktop ? props.onlyDesktop : props.margin
+      }`}
     >
       <h2 className="discovery__box__info__title course__section__title">
         Sobre el profesor.

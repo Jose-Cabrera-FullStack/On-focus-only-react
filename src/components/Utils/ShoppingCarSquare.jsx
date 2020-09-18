@@ -83,7 +83,6 @@ const ShoppingCarSquare = (props) => {
   });
   // <----------Se debe refactorizar mas adelante----------->
 
-  console.log(props.individualCourse);
   return (
     <>
       {isSelected ? (
@@ -99,7 +98,10 @@ const ShoppingCarSquare = (props) => {
               alt="Ícono de Carrito de compra seleccionado"
             />
           </div>
-          <MessageTimeOut individualCourse={props.individualCourse} />
+          <MessageTimeOut
+            individualCourse={props.individualCourse}
+            text={"Agregado al carrito"}
+          />
         </>
       ) : isSelectedInShoppingCar ? (
         <div
@@ -134,6 +136,10 @@ const ShoppingCarSquare = (props) => {
               alt="Ícono de Carrito de compra seleccionado"
             />
           )}
+          <MessageTimeOut
+            individualCourse={props.individualCourse}
+            text={"Se quito del carrito"}
+          />
         </div>
       )}
     </>

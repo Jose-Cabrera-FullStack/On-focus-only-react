@@ -109,6 +109,9 @@
 }
 @media screen and (max-width: 400px) {
   .beadcrumbs {
-    margin: 20px 0 0 -10px;
+    margin: 20px 0 0 -20px;
+  }
+  .beadcrumbs--shopping {
+    margin: 20px 0 0 0px;
   }
 }

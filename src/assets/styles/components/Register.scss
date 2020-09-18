@@ -30,7 +30,7 @@
 }
 
 .register__box__inside__img {
-  margin: 10px 30px 20px 50px;
+  margin: 30px 30px 20px 50px;
   width: 134px;
   height: 111px;
 }
@@ -44,7 +44,7 @@
   text-align: initial;
   letter-spacing: -0.02em;
   color: #b38a58;
-  margin: 20px 0 0 0;
+  margin: 30px 0 0 0;
 }
 .register__box__inside h2 {
   font-family: "Mont-Bold";
@@ -144,6 +144,9 @@
   .register__box__inside__label--register {
     position: relative;
     left: -15px;
+  }
+  .register__box__inside--error {
+    right: 70px;
   }
 }
 

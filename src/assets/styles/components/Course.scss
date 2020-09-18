@@ -649,6 +649,30 @@
   .course {
     margin: 40px 0px 0px 23px;
   }
+  .course--emergent__menu__mobile {
+    margin: 40px 0px 0px 0px;
+  }
+  .course__inclusive {
+    background: none;
+    height: auto;
+  }
+  .course__inclusive__inside {
+    margin: auto;
+    padding: auto;
+  }
+  .course__inclusive__inside ul {
+    padding: 0 0 0 20px;
+  }
+  .course__inclusive__inside h1 {
+    font-size: 19px;
+  }
+  .course__inclusive__inside h2 {
+    font-size: 19px;
+  }
+
+  .course__inclusive__inside li {
+    font-family: Judson;
+  }
   .course__hidden__information {
     font-style: normal;
     font-weight: 800;
@@ -658,8 +682,17 @@
     color: #4f4f4f;
     cursor: context-menu;
     user-select: none;
-    margin: 0 0 -20px 0;
+    margin: 0 0 -10px 0;
     font-family: "Mont-Bold";
+  }
+
+  .course__info__title {
+    font-size: 19px;
+    margin: 15px 0 5px 0;
+  }
+
+  .course__information__text {
+    font-size: 14px;
   }
 
   .course__img__video {
@@ -706,7 +739,7 @@
   }
 
   .course__for__me {
-    margin: 52px 0 0 10%;
+    margin: -30px 0 40px 0;
   }
   .course__for__me--my-courses__information {
     margin: 52px 0 0 0;
@@ -726,16 +759,6 @@
     width: auto;
   }
 
-  .course__about h1 {
-    font-family: "Mont-Bold";
-    font-style: normal;
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 135.3%;
-    letter-spacing: -0.02em;
-    color: #03002b;
-    margin: 20px 0 0 0;
-  }
   .course__about p {
     width: auto;
     margin: 10px 0 10px 0;
@@ -825,7 +848,7 @@
   .course__certificate p {
     text-align: center;
     width: auto;
-    margin: 20px;
+    margin: 20px 10px 0 10px;
   }
   .course__module__element__inside--help__center {
     width: auto;
@@ -843,7 +866,7 @@
 
   .course__certificate h2 {
     text-align-last: center;
-    margin: 0px 70px 0 70px;
+    margin: 0px 10px 0 10px;
     width: auto;
     height: auto;
   }

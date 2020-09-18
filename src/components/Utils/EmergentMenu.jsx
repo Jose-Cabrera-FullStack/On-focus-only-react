@@ -9,18 +9,23 @@ import Course from "./EmergentMenuBox/Course";
 
 import ButtonArrowRight from "./ButtonArrowRight";
 
-const history = createHistory();
-
-const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
+const EmergentMenu = ({
+  toggle,
+  total,
+  shoppingcar,
+  mobile,
+  desktop,
+  location,
+}) => {
   let isCourseLink = false;
-
-  window.location.href
-    .split("/")
-    .map((item) => (item === "cursos" ? (isCourseLink = true) : ""));
 
   const reload = () => {
     window.location.reload();
   };
+
+  if (location != undefined)
+    if (location.location != undefined)
+      location.location.pathname === "/cursos" ? (isCourseLink = true) : "";
 
   return mobile ? (
     <div className={toggle ? "hero__view__promo slide-in-top" : "display-none"}>
@@ -124,7 +129,12 @@ const EmergentMenu = ({ toggle, total, shoppingcar, mobile, desktop }) => {
         <p className="hero__view__promo__empty">
           No hay cursos cargados en tu carrito. <br />
           {isCourseLink ? (
-            <p className="text-decoration--navbar hero__view__promo__empty__text" onClick={reload}>Buscar cursos</p>
+            <span
+              className="text-decoration--navbar hero__view__promo__empty__text"
+              onClick={reload}
+            >
+              Buscar cursos
+            </span>
           ) : (
             <Link
               className="text-decoration text-decoration--navbar"

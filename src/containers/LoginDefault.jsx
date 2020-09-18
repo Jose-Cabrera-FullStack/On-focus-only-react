@@ -34,11 +34,7 @@ const Register = (props) => {
     <section className="register">
       <div className="register__box">
         <div className="register__box__inside">
-          <Breadcrumbs
-            text={"Volver"}
-            link={"/home"}
-            onlyMobile={"display__screen__mobile"}
-          />
+          <Breadcrumbs text={"Volver"} link={"/home"} />
           <div className="flex display__screen__mobile__without__flex">
             <img
               className="register__box__inside__img display__screen__desktop"

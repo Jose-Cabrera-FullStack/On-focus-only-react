@@ -133,7 +133,7 @@ const Header = (props) => {
                 alt="Carrito de compras"
               />
             </li>
-            <EmergentMenu toggle={isToggled} desktop />
+            <EmergentMenu toggle={isToggled} desktop location={props.history} />
             {hasUser ? (
               <>
                 <Link to="/mis-cursos" className="text-decoration">

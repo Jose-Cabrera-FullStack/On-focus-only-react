@@ -4,9 +4,11 @@ import "../../assets/styles/components/Course.scss";
 
 import Human from "../../assets/static/images/img/human-diploma.png";
 
-const CourseInclusive = () => (
-  <section className="course__inclusive none-second">
-    <div className="flex">
+const CourseInclusive = (props) => (
+  <section
+    className={`course__inclusive ${props.onlyMobile ? "" : "none-second"}`}
+  >
+    <div className={props.onlyMobile ? "" : "flex"}>
       <div className="course__inclusive__inside">
         <h1>¿Qué incluye este curso?</h1>
         <ul>
@@ -16,9 +18,11 @@ const CourseInclusive = () => (
           <li>Y además...</li>
         </ul>
 
-        <h2>Obtenés un certificado al terminar el curso.</h2>
+        <h2 className="display__screen__desktop">
+          Obtenés un certificado al terminar el curso.
+        </h2>
 
-        <p>
+        <p className="display__screen__desktop">
           <a className="course__inclusive__certificate" href="">
             {" "}
             Certificado Oficial{" "}
@@ -27,7 +31,13 @@ const CourseInclusive = () => (
           aliquam erat.
         </p>
       </div>
-      <img className="course__inclusive__diploma" src={Human} alt="" />
+      <img
+        className={
+          props.onlyMobile ? "display-none" : "course__inclusive__diploma"
+        }
+        src={Human}
+        alt=""
+      />
     </div>
   </section>
 );

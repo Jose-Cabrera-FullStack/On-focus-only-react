@@ -10,7 +10,7 @@ import "../../assets/styles/components/ShoppingCar.scss";
 
 const ShoppingCar = (props) => (
   <section className="shopping__car">
-    <Breadcrumbs />
+    <Breadcrumbs margin={"beadcrumbs--shopping"} />
     <h1>Tu carrito de compras está listo.</h1>
     <div className={"flex" + " " + props.onlyMobile}>
       <div>

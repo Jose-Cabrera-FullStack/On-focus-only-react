@@ -14,7 +14,7 @@ const CourseModule = (props) => {
           : "course__module"
       }
     >
-      <h2>Módulo del curso</h2>
+      <h2 className="course__info__title">Módulo del curso</h2>
       <div>
         <ul>
           <li>

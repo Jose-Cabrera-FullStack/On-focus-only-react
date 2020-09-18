@@ -341,12 +341,13 @@
 
   .footer__container__right--fix {
     position: relative;
-    top: -40vh;
+    top: -242px;
   }
 
   .footer__reserved p {
     position: absolute;
-    right: 30px;
+    right: 20px;
+    padding: 13px 0px 0px 20px;
   }
 
   .footer__help {
@@ -362,10 +363,6 @@
 
   .footer__help img {
     margin: -6px 0px 0px 0px;
-  }
-
-  .footer__reserved p {
-    padding: 13px 0px 0px 20px;
   }
 }
 
