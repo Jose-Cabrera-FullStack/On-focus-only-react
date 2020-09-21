@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { findFirst } from "obj-traverse/lib/obj-traverse";
 
 import "../../../assets/styles/components/CoursePlus.scss";
-import Course from "./Course";
+import Course from "./MyCourse";
 
 const InProgress = ({ myCourses }) => {
   // se debe refactorizar para la segunda instancia

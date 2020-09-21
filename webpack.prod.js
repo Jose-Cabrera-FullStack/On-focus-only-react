@@ -16,18 +16,21 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(js|jsx|jss)$/,
         exclude: /(node_modules[\/\\])(?!mqtt)/,
-        use: [{
-          loader: "babel-loader",
-        }, ],
+        use: [
+          {
+            loader: "babel-loader",
+          },
+        ],
       },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: ["css-loader", "sass-loader"]
+          use: ["css-loader", "sass-loader"],
         }),
       },
       {
@@ -43,7 +46,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpg|png|svg)$/,
+        test: /\.(jpg|png)$/,
         exclude: /node_modules/,
         loader: "file-loader",
         options: {
@@ -51,6 +54,17 @@ module.exports = {
           name: "[name].[ext]",
           publicPath: "img/",
           outputPath: "img/",
+        },
+      },
+      {
+        test: /\.(svg)$/,
+        exclude: /node_modules/,
+        loader: "svg-url-loader",
+        options: {
+          limit: 1024,
+          name: "[name].[ext]",
+          publicPath: "svg/",
+          outputPath: "svg/",
         },
       },
     ],

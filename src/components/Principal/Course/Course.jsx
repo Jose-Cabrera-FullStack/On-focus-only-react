@@ -15,6 +15,7 @@ import Reloj from "../../../assets/static/images/svg/reloj.svg";
 import Play from "../../../assets/static/images/svg/icon-play-black.svg";
 
 import slugify from "../../../Utils/slugChange";
+import priceWithDiscount from "../../../Utils/priceWithDiscount";
 
 const Course = ({
   img,
@@ -29,7 +30,7 @@ const Course = ({
   duration,
   module,
 }) => {
-  let priceWithDiscount = price - price * (priceOff / 100);
+  let totalPriceToPay = priceWithDiscount(price, priceOff);
 
   const [isHover, setIsHover] = useState(false);
 
@@ -109,7 +110,7 @@ const Course = ({
           </div>
           <div className="flex">
             <h2 className="discovery__box__info__price">
-              AR$ {priceWithDiscount ? parseInt(priceWithDiscount) : "490"}
+              AR$ {totalPriceToPay ? totalPriceToPay : "490"}
             </h2>
             <i className="discovery__box__info__price__before">
               Antes <strong>AR$ {price ? parseInt(price) : "699"}</strong>

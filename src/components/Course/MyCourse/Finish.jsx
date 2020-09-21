@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 
 import "../../../assets/styles/components/CoursePlus.scss";
-import Course from "./Course";
+import Course from "./MyCourse";
 
 const Finish = ({ myCourses }) => {
-    // se debe refactorizar para la segunda instancia
+  // se debe refactorizar para la segunda instancia
   return (
     <>
       {myCourses.some((item) => item.status === true) ? (
@@ -19,7 +19,7 @@ const Finish = ({ myCourses }) => {
             })
           );
 
-          videos.push(videos)
+          videos.push(videos);
           const url = `/mis-cursos/${item.name}`;
 
           return item.status === false ? (

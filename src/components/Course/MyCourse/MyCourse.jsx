@@ -11,7 +11,6 @@ import ProgressBar from "../../Utils/ProgressBar";
 import Button from "../../Utils/ButtonArrowRight";
 
 const MyCourse = ({ progress, title, category, src, url, myCourseModule }) => {
-
   return (
     <div className="discovery__box slide-in-top">
       <div className="discovery__box__img">

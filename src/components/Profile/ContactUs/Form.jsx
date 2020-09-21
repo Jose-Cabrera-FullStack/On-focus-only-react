@@ -66,7 +66,7 @@ const Form = (props) => {
           },
         })}
       />
-      <span className="register__box__inside--error">
+      <span className="register__box__inside--error register__box__inside--error__contact">
         {errors.email && errors.email.message}
       </span>
       <br />
@@ -94,7 +94,7 @@ const Form = (props) => {
           },
         })}
       />
-      <span className="register__box__inside--error">
+      <span className="register__box__inside--error register__box__inside--error__contact">
         {errors.phone && errors.phone.message}
       </span>
       <br />
@@ -119,7 +119,7 @@ const Form = (props) => {
           },
         })}
       ></textarea>
-      <span className="register__box__inside--error">
+      <span className="register__box__inside--error register__box__inside--error__contact">
         {errors.textarea && errors.textarea.message}
       </span>
       <br />

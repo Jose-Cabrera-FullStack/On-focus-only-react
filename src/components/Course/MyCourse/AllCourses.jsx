@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import "../../../assets/styles/components/CoursePlus.scss";
-import Course from "./Course";
+import Course from "./MyCourse";
 
 const AllCourse = ({ myCourses }) => {
   return (

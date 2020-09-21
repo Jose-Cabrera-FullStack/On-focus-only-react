@@ -100,11 +100,21 @@
   .beadcrumbs img {
     margin: 20px 0 0px 30px;
   }
+  .utils__hero__contact {
+    height: 146px;
+  }
+  .utils__hero__title {
+    font-size: 24px;
+  }
+  .utils__hero__profile {
+    background-position: 0px;
+    height: 145px;
+  }
 }
 
 @media screen and (max-width: 730px) {
   .utils__hero__profile {
-    background-position: -540px;
+    background-position: -240px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -113,5 +123,8 @@
   }
   .beadcrumbs--shopping {
     margin: 20px 0 0 0px;
+  }
+  .utils__hero__profile {
+    background-position: -300px;
   }
 }

@@ -33,7 +33,7 @@ const Data = (props) => {
   return (
     <section className="data" onSubmit={handleSubmit(onSubmit)}>
       <h4>Gestioná tus datos.</h4>
-      <h5>Cambiar contraseña.</h5>
+      <h5>Cambiar mi contraseña.</h5>
       <form action="">
         <div className="flex">
           <input

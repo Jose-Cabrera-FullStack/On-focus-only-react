@@ -21,7 +21,6 @@ const Discovery = (props) => {
   const currentPosts = course.slice(indexOfFirstPost, indexOfLastPost);
 
   let coursePage = false;
-
   return (
     <section className="discovery">
       <div className="discovery__container">

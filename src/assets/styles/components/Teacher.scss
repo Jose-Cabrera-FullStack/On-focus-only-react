@@ -27,7 +27,7 @@
   float: left;
   top: 50%;
   left: 50%;
-  transform: translate(-330%, 130%);
+  transform: translate(-360%, 130%);
 }
 
 .teacher__points {
@@ -145,7 +145,7 @@
     margin: 50px 170px 0 200px;
   }
   .teacher__faq {
-    margin: 0 100px 74px 100px;
+    margin: 0 100px 74px 50px;
   }
 
   .display__screen__mobile__without__flex--FAQ__teacher {
@@ -177,11 +177,22 @@
   .teacher__points {
     margin: 50px 170px 0 100px;
   }
-}
-@media screen and (max-width: 974px) {
+  .teacher__hero {
+    height: 180px;
+    background-position: -230px;
+  }
+  .teacher__hero__title {
+    font-size: 20px;
+    transform: translate(-50%, -270%);
+  }
   .btn__primary--teacher {
-    transform: translate(-105%, -100%);
-    margin: 0px 0px 8% 153px;
+    transform: translate(-255%, 0%);
+    width: 260px;
+  }
+}
+@media screen and (max-width: 776px) {
+  .btn__primary--teacher {
+    transform: translate(-125%, -100%);
   }
 }
 @media screen and (max-width: 615px) {
@@ -197,6 +208,9 @@
   }
   .teacher__points {
     margin: 50px 10px 0 30px;
+  }
+  .btn__primary--teacher {
+    transform: translate(-125%, -100%);
   }
 }
 
