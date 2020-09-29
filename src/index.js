@@ -9,7 +9,6 @@ import { Router } from "react-router";
 import { createBrowserHistory } from "history";
 import { saveState } from "./Utils/localStorage";
 import reducer from "./reducers";
-import { loadState } from "./Utils/localStorage";
 
 import initialState from "./initialState";
 

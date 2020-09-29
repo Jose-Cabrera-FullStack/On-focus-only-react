@@ -30,7 +30,14 @@
 }
 
 .way-to-pay__input--email {
-  margin: 3px 0px 31px 63px;
+  margin: 3px 0px 10px 63px;
+}
+
+.way-to-pay__input--email__message__down {
+  font-size: 14px;
+  line-height: 135.3%;
+  font-family: Judson;
+  margin: 0px 0px 0px 60px;
 }
 
 .way-to-pay__input__box {
@@ -82,6 +89,7 @@
   width: 550px;
   position: relative;
   padding: 15px 0 0 60px;
+  margin: 40px 0 0 0;
 }
 
 .way-to-pay__box__subtext {
@@ -533,7 +541,7 @@
     margin: 0px 0px 50px 60px;
   }
   .secure__pay__inside p {
-    width: 315px;
+    width: auto;
   }
 
   .congratulation {
@@ -644,7 +652,7 @@
   }
 
   .way-to-pay__input__box {
-    margin: 20px 0 0 10px;
+    margin: 20px 0 0 15px;
   }
   .way-to-pay__input__box--variant {
     margin: 20px 0 0 20px;
@@ -662,5 +670,11 @@
   .way-to-pay__input--card {
     width: 68vw;
     margin: 0px 0 16px 0px;
+  }
+  .way-to-pay__input--email__message__down {
+    font-size: 14px;
+    line-height: 135.3%;
+    font-family: Judson;
+    margin: 0px 0px 0px 20px;
   }
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import createHistory from "history/createBrowserHistory";
 import "../../assets/styles/components/ShoppingCar.scss";
 import "../../assets/styles/components/Principal.scss";
 

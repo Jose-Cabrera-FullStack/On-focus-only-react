@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
 import "../../assets/styles/components/Course.scss";
@@ -9,9 +9,12 @@ import Diploma from "./Diploma/Diploma";
 
 import Pagination from "../Utils/Pagination";
 
-import { getCourseCategory } from "../../actions";
+import { getAllCourse } from "../../actions";
 
 const Discovery = (props) => {
+  useEffect(() => {
+    props.getAllCourse();
+  }, []);
   let course = props.course;
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(4);
@@ -127,11 +130,12 @@ const Discovery = (props) => {
 const mapStateToProps = (state) => {
   return {
     course: state.course,
+    cursos: state.cursos,
   };
 };
 
 const mapDispatchToProps = {
-  getCourseCategory,
+  getAllCourse,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Discovery);

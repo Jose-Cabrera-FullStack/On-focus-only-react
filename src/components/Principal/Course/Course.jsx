@@ -117,7 +117,7 @@ const Course = ({
             </i>
           </div>
           <div className="flex">
-            <Link to={`/cursos/${category}/${slugify(title)}`}>
+            <Link to={`/cursos/${slugify(category)}/${slugify(title)}`}>
               <button
                 onMouseEnter={changeIsHover}
                 onMouseLeave={changeIsHover}

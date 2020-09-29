@@ -88,6 +88,40 @@
   background: #fff;
 }
 
+.step__to__pay {
+  margin: 0 0 0 60px;
+}
+.step__to__pay__inside__title {
+  font-family: "Mont-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.02em;
+  color: #828282;
+}
+.step__to__pay__inside__text {
+  font-family: "Mont-Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 136.2%;
+  letter-spacing: -0.02em;
+  color: #828282;
+  margin: 16px 20px 0px 5px;
+}
+.step__to__pay__inside__title--select {
+  color: #b38a58;
+}
+.step__to__pay__inside__text--select {
+  color: #333333;
+}
+.step__to__pay__inside img {
+  margin: 16px 10px 0 0px;
+  width: 19px;
+  height: 19px;
+}
+
 @media screen and (max-width: 1024px) {
   .utils__hero__profile {
     background-position: -240px;
@@ -115,6 +149,15 @@
 @media screen and (max-width: 730px) {
   .utils__hero__profile {
     background-position: -240px;
+  }
+}
+@media screen and (max-width: 445px) {
+  .step__to__pay {
+    margin: 10px 0 0px 20px;
+  }
+  .step__to__pay__inside__text {
+    font-size: 12px;
+    margin: 19px 20px 0px 5px;
   }
 }
 @media screen and (max-width: 400px) {

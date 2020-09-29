@@ -10,8 +10,10 @@ import Paypal from "./PayMethod/Paypal";
 import CreditCarForm from "./Form/CreditCar";
 import MercadoPagoForm from "./Form/MercadoPago";
 import PaypalForm from "./Form/Paypal";
+import EmailFormWithoutLogin from "./Form/EmailFormWithoutLogin";
 
 import Modal from "../Utils/Modal";
+import StepToPay from "../Utils/StepToPay";
 import Congratulation from "../../components/Payment/Congratulation";
 
 const Pay = (props) => {
@@ -74,14 +76,10 @@ const Pay = (props) => {
       {hasUser ? (
         ""
       ) : (
-        <div className={"way-to-pay__tex__email"}>
-          <p className="way-to-pay__text">Ingresá tu correo electrónico.</p>
-          <input
-            type="text"
-            placeholder="E-mail"
-            className="way-to-pay__input way-to-pay__input--email"
-          />
-        </div>
+        <>
+          <StepToPay step1 />
+          <EmailFormWithoutLogin />
+        </>
       )}
       <div className="way-to-pay__box">
         <div className="flex">

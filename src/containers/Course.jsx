@@ -20,7 +20,7 @@ import CourseSaveMoney from "../components/Course/CourseSaveMoney";
 
 import slugify from "../Utils/slugChange";
 
-import { getCourseCategory, getCourse } from "../actions";
+import { getCourseCategory, getCourse, getAllCourse } from "../actions";
 
 import "../assets/styles/App.scss";
 
@@ -30,9 +30,10 @@ const Course = (props) => {
   const { slugcategory, slugcourse } = props.match.params;
 
   useEffect(() => {
-    props.getCourseCategory(slugcategory);
+    props.getAllCourse();
+    props.getCourseCategory(slugify(slugcategory));
     props.getCourse(slugify(slugcourse));
-  }, []);
+  });
   const isCategory = Object.keys(props.category).length > 0;
   const isCourse = Object.keys(props.courseName).length > 0;
 
@@ -96,11 +97,13 @@ const mapStateToProps = (state) => {
   return {
     category: state.category || {},
     courseName: state.courseName || {},
+    course: state.course || {},
   };
 };
 const mapDispatchToProps = {
   getCourseCategory,
   getCourse,
+  getAllCourse,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Course);

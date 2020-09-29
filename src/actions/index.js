@@ -1,27 +1,29 @@
 import axios from "axios";
 
+const URL = "https://backend-devel.herokuapp.com/api";
+
 export const getCourseVideo = (slugcategory, slugname, video_id) => ({
   type: "GET_COURSE_VIDEO",
   payload: { slugcategory, slugname, video_id },
 });
+
 export const getMyVideoName = (payload) => ({
   type: "GET_MY_VIDEO_NAME",
   payload,
 });
+
 export const getCourseCategory = (slugcategory) => ({
   type: "GET_COURSE_CATEGORY",
   payload: { slugcategory },
 });
+
 export const getCourse = (slugCourse) => ({
   type: "GET_COURSE",
   payload: { slugCourse },
 });
+
 export const getMyCategory = (payload) => ({
   type: "GET_MY_COURSE",
-  payload,
-});
-export const getStatusCourse = (payload) => ({
-  type: "GET_STATUS_COURSE",
   payload,
 });
 
@@ -49,17 +51,38 @@ export const logoutRequest = (payload) => ({
   type: "LOGOUT_REQUEST",
   payload,
 });
-
-export const registerRequest = (payload) => ({
-  type: "REGISTER_REQUEST",
-  payload,
-});
+export const getAllCourse = () => {
+  let url = `${URL}/courses`;
+  return function (dispatch) {
+    axios.get(url).then((response) =>
+      dispatch({
+        type: "GET_ALL_COURSE",
+        payload: response.data.data,
+      })
+    );
+    // .catch((response) => dispatch({}));
+  };
+};
 
 export const loginUser = (payload, redirectUrl) => ({
   type: "LOGIN_REQUEST",
   payload,
 });
 
+export const registerRequest = (payload) => ({
+  type: "REGISTER_REQUEST",
+  payload,
+});
+
+export const registerUser = (payload) => {
+  let url = `${URL}/student`;
+  return function (dispatch) {
+    axios
+      .post(url, payload)
+      .then(({ data }) => dispatch(registerRequest(data)))
+      .catch();
+  };
+};
 // export const loginUser = ({ email, password }, redirectUrl) => {
 //   return (dispatch) => {
 //     axios({

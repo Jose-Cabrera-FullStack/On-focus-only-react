@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-// import { registerRequest } from "../actions";
+import { registerUser } from "../actions";
 import { loginUser } from "../actions";
 
 import Button from "../components/Utils/ButtonArrowRight";
@@ -27,19 +27,19 @@ const Register = (props) => {
     });
   };
   const onSubmit = (event) => {
-    props.loginUser(form, "/cursos");
+    props.registerUser(form);
   };
 
-  const [isSwitch, setSwitch] = useState(props.location.pathname);
+  const UrlPathName = props.location.pathname;
 
-  const Url = (isSwitch) => {
-    switch (isSwitch) {
+  const Url = (UrlPathName) => {
+    switch (UrlPathName) {
       case "/mi-perfil":
         return "Debes registrarte para acceder a tu perfil";
       case "/pago":
         return "Debes registrarte para acceder a pagar";
       case "/mis-cursos":
-        return "Debes registrarte para acceder a pagar";
+        return "Debes registrarte para acceder a tus cursos";
       default:
         return "Bienvenido/a";
     }
@@ -57,7 +57,7 @@ const Register = (props) => {
             />
             <div>
               <h1>Hola!</h1>
-              <h2>{Url(isSwitch)}</h2>
+              <h2>{Url(UrlPathName)}</h2>
             </div>
           </div>
 
@@ -162,7 +162,7 @@ const Register = (props) => {
 };
 
 const mapDispatchToProps = {
-  loginUser,
+  registerUser,
 };
 
 export default connect(null, mapDispatchToProps)(Register);

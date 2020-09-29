@@ -30,7 +30,7 @@ const reducer = (state, action) => {
         ...state,
         category:
           state.course.find(
-            (item) => item.category === action.payload.slugcategory
+            (item) => slugify(item.category) === action.payload.slugcategory
           ) || {},
       };
     case "GET_COURSE":
@@ -40,6 +40,11 @@ const reducer = (state, action) => {
           state.course.find(
             (item) => slugify(item.name) === action.payload.slugCourse
           ) || {},
+      };
+    case "GET_ALL_COURSE":
+      return {
+        ...state,
+        course: action.payload,
       };
     case "SET_FAVORITE":
       return {

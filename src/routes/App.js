@@ -24,6 +24,7 @@ import ContactUs from "../containers/ContactUs";
 import Politicy from "../containers/Politicy";
 import Teacher from "../containers/Teacher";
 import Register from "../containers/RegisterDefault";
+import RegisterWithoutVerification from "../containers/RegisterWithoutVerification";
 import Login from "../containers/Login";
 import LoginDefault from "../containers/LoginDefault";
 import AboutUs from "../containers/AboutUs";
@@ -55,7 +56,7 @@ const App = (props) => {
               component={hasUser ? Visualization : Register}
             />
             <Route exact path="/carrito" component={ShoppingCar} />
-            <Route exact path="/pago" component={hasUser ? Pay : Register} />
+            <Route exact path="/pago" component={Pay} />
             <Route
               exact
               path="/mis-cursos"
@@ -78,6 +79,11 @@ const App = (props) => {
               exact
               path="/registrarse"
               component={hasUser ? MyCourse : Register}
+            />
+            <Route
+              exact
+              path="/sin-confirmar-email"
+              component={RegisterWithoutVerification}
             />
             <Route
               exact
