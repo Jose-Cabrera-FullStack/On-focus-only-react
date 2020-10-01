@@ -17,22 +17,22 @@ import Play from "../../../assets/static/images/svg/icon-play-black.svg";
 import slugify from "../../../Utils/slugChange";
 import priceWithDiscount from "../../../Utils/priceWithDiscount";
 
-const Course = ({
-  img,
-  priceOff,
-  title,
-  category,
-  teacher,
-  students,
-  price,
-  course,
-  displayNone,
-  duration,
-  module,
-}) => {
+const Course = ({ courseInfo, displayNone }) => {
+  const {
+    featured_image,
+    priceOff,
+    name,
+    category,
+    teacher,
+    students,
+    price,
+    duration,
+    module,
+  } = courseInfo;
   let totalPriceToPay = priceWithDiscount(price, priceOff);
 
   const [isHover, setIsHover] = useState(false);
+  console.log("teacher:", teacher);
 
   const changeIsHover = () => setIsHover(!isHover);
   return (
@@ -50,7 +50,7 @@ const Course = ({
         </div>
 
         <img
-          src={img}
+          src={featured_image}
           className="discovery__box__img__class"
           alt="Imagen del Curso"
         />
@@ -59,16 +59,16 @@ const Course = ({
       <div className="discovery__box__info__course">
         <div className="discovery__box__info__padding">
           <h2 className="discovery__box__info__title">
-            {title
-              ? capitalizeFirstLetter(title)
-              : "Aprendé a ser mejor lider."}
+            {name ? capitalizeFirstLetter(name) : "Aprendé a ser mejor lider."}
           </h2>
           <div className="flex">
             <p className="discovery__box__info__name">
               {category ? capitalizeFirstLetter(category) : "Marketing"}
             </p>
             <i className="discovery__box__info__teach">
-              {teacher ? capitalizeFirstLetter(teacher) : "Por Juan Pablo Laco"}
+              {teacher
+                ? `Por ${capitalizeFirstLetter(teacher)}`
+                : "Por Juan Pablo Laco"}
             </i>
           </div>
           <div className="flex discovery__box__info--fix">
@@ -117,7 +117,7 @@ const Course = ({
             </i>
           </div>
           <div className="flex">
-            <Link to={`/cursos/${slugify(category)}/${slugify(title)}`}>
+            <Link to={`/cursos/${slugify(category)}/${slugify(name)}`}>
               <button
                 onMouseEnter={changeIsHover}
                 onMouseLeave={changeIsHover}
@@ -133,7 +133,7 @@ const Course = ({
                 </div>
               </button>
             </Link>
-            <Shopping course={course} />
+            <Shopping course={courseInfo} />
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import ShoppingCar from "../components/Payment/ShoppingCar";
-import CourseList from "../components/Principal/CourseList";
+import CourseAndDiploma from "../components/Principal/CourseAndDiploma";
 import Header from "../components/Header";
 
 import "../assets/styles/App.scss";
@@ -16,7 +16,7 @@ const Course = (props) => {
     <div className="App">
       <Header history={props.history} />
       <ShoppingCar onlyMobile={"display__screen__mobile__without__flex"} />
-      <CourseList onlyThree column={column} none={none} info={info} />
+      <CourseAndDiploma onlyThree column={column} none={none} info={info} />
     </div>
   );
 };

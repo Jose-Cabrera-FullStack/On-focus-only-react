@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Principal from "../components/Principal/Principal";
-import CourseList from "../components/Principal/CourseList";
+import CourseAndDiploma from "../components/Principal/CourseAndDiploma";
 import HowWeTeach from "../components/Principal/HowWeTeach";
 import AboutUs from "../components/Principal/AboutUs";
 import Header from "../components/Header";
@@ -14,7 +14,7 @@ const Home = (props) => {
     <div className="App">
       <Header history={props.history} />
       <Principal />
-      <CourseList onlyFour />
+      <CourseAndDiploma onlyFour />
       <HowWeTeach />
       <AboutUs />
       <Footer />

@@ -52,7 +52,7 @@ export const logoutRequest = (payload) => ({
   payload,
 });
 export const getAllCourse = () => {
-  let url = `${URL}/courses`;
+  let url = `${URL}/courses?limit=40`;
   return function (dispatch) {
     axios.get(url).then((response) =>
       dispatch({
