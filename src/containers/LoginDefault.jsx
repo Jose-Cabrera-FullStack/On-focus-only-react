@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-// import { registerRequest } from "../actions";
 import { loginUser } from "../actions";
 
 import Button from "../components/Utils/ButtonArrowRight";
@@ -26,8 +25,8 @@ const Register = (props) => {
       [event.target.name]: event.target.value,
     });
   };
-  const onSubmit = (event) => {
-    props.loginUser(form, "/cursos");
+  const onSubmit = () => {
+    props.loginUser(form);
   };
 
   return (
