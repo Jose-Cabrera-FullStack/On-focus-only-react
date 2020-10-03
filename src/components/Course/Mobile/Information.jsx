@@ -7,7 +7,7 @@ import CourseAbout from "../../../components/Course/AboutCourse/CourseAbout";
 import CourseCertificate from "../../../components/Course/AboutCourse/CourseCertificate";
 import WhatIncludeThisCourse from "../WhatIncludeThisCourse";
 import IsThisCourseForMe from "../IsThisCourseForMe";
-import CourseTeacher from "../../../components/Course/CourseTeacher";
+import AboutTheTeacher from "../../../components/Course/AboutTheTeacher";
 
 import Breadcrumbs from "../../Utils/Breadcrumbs";
 
@@ -25,7 +25,7 @@ const Information = (props) => {
           margin={"course__for__me--my-courses__information"}
         />
         <CourseCertificate mobile />
-        <CourseTeacher margin={"course--emergent__menu__mobile"} />
+        <AboutTheTeacher margin={"course--emergent__menu__mobile"} />
       </div>
     </div>
   );

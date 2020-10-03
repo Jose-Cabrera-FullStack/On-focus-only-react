@@ -5,19 +5,19 @@ import InformationAboutCourse from "./InformationAboutCourse";
 import CourseAbout from "./AboutCourse/CourseAbout";
 import RectangleWithPriceAndDiscount from "./RectangleWithPriceAndDiscount";
 
-import CourseModule from "./CourseModule";
+import ModuleList from "./Module/ModuleList";
 import RecomendationList from "./RecomendationList";
 import WhatIncludeThisCourse from "./WhatIncludeThisCourse";
 import IsThisCourseForMe from "./IsThisCourseForMe";
-import CourseTeacher from "./CourseTeacher";
+import AboutTheTeacher from "./AboutTheTeacher";
 import HowWeTeach from "../Principal/HowWeTeach";
 
-import Information from "../Course/InformationCourse/Information";
+import Information from "./InformationCourse/Information";
 import SmallVideo from "../Visualization/SmallVideo";
 
 import "../../assets/styles/components/CoursePlus.scss";
 
-const CourseInfo = ({ category }) => {
+const InformationAboutThisCourse = ({ category }) => {
   let grid = "grid-column-2--fix";
   const [isToggle, setIsToggle] = useState(false);
   const isToggleFalse = () => setIsToggle(!isToggle);
@@ -51,9 +51,9 @@ const CourseInfo = ({ category }) => {
             <CourseAbout />
             <WhatIncludeThisCourse onlyMobile />
             <IsThisCourseForMe />
-            <CourseModule />
+            <ModuleList />
             <RecomendationList />
-            <CourseTeacher margin={"discovery__box__info__mobile"} />
+            <AboutTheTeacher margin={"discovery__box__info__mobile"} />
             <HowWeTeach grid={grid} margin={"how__we__tech__mobile"} />
           </div>
         ) : (
@@ -80,4 +80,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(CourseInfo);
+export default connect(mapStateToProps, null)(InformationAboutThisCourse);

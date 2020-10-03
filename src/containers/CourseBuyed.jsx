@@ -5,7 +5,7 @@ import Breadcrumbs from "../components/Utils/Breadcrumbs";
 
 import ProgressInformationCourse from "../components/Course/ProgressInformationCourse";
 
-import CourseAboutCourse from "../components/Course/CourseAboutCourse";
+import AboutThisCourse from "../components/Course/AboutThisCourse";
 
 import AboutCourseAndClasses from "../components/Course/Select/AboutCourseAndClasses";
 import Module from "../components/Course/Module/Module";
@@ -69,7 +69,7 @@ const CourseBuyed = (props) => {
         );
       default:
         return (
-          <CourseAboutCourse
+          <AboutThisCourse
             students={students}
             description={description}
             duration={duration}

@@ -7,12 +7,12 @@ import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Utils/Breadcrumbs";
 import SmallVideo from "../components/Visualization/SmallVideo";
 import HeroCoursePlus from "../components/Course/HeroCoursePlus";
-import CourseInfo from "../components/Course/CourseInfo";
+import InformationAboutThisCourse from "../components/Course/InformationAboutThisCourse";
 import WhatIncludeThisCourse from "../components/Course/WhatIncludeThisCourse";
 import IsThisCourseForMe from "../components/Course/IsThisCourseForMe";
-import CourseModule from "../components/Course/CourseModule";
+import ModuleList from "../components/Course/Module/ModuleList";
 import RecomendationList from "../components/Course/RecomendationList";
-import CourseTeacher from "../components/Course/CourseTeacher";
+import AboutTheTeacher from "../components/Course/AboutTheTeacher";
 import HowWeTeach from "../components/Principal/HowWeTeach";
 import NotFound from "../containers/NotFound";
 
@@ -53,7 +53,7 @@ const Course = (props) => {
       <HeroCoursePlus />
       <section>
         <div className="flex">
-          <CourseInfo course={props.category} />
+          <InformationAboutThisCourse course={props.category} />
           <RectangleWithPriceAndDiscount />
         </div>
 
@@ -61,7 +61,7 @@ const Course = (props) => {
         <div className="flex">
           <div>
             <IsThisCourseForMe onlyDesktop={"display__screen__desktop"} />
-            <CourseModule onlyDesktop={"display__screen__desktop"} infoHidden />
+            <ModuleList onlyDesktop={"display__screen__desktop"} infoHidden />
           </div>
           <RectangleWithPriceAndDiscount />
         </div>
@@ -71,7 +71,7 @@ const Course = (props) => {
         />
         <div className="flex">
           <div className="discovery__box__info__in__course__width">
-            <CourseTeacher
+            <AboutTheTeacher
               onlyDesktop={"display__screen__desktop"}
               infoHidden
             />

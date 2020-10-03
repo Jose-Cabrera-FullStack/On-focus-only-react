@@ -1,10 +1,10 @@
 import React from "react";
 
-import "../../assets/styles/components/Course.scss";
+import "../../../assets/styles/components/Course.scss";
 
-import Module from "./Module/Module";
+import Module from "./Module";
 
-const CourseModule = (props) => {
+const ModuleList = (props) => {
   return (
     <section
       className={
@@ -61,4 +61,4 @@ const CourseModule = (props) => {
     </section>
   );
 };
-export default CourseModule;
+export default ModuleList;

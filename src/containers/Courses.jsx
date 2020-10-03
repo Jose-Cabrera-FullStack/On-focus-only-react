@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import Hero from "../components/Course/Hero";
+import Hero from "../components/Course/Hero/Hero";
 import CourseAndDiploma from "../components/Principal/CourseAndDiploma";
 import AboutUs from "../components/Principal/AboutUs";
 import Header from "../components/Header";

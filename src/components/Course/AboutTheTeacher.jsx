@@ -1,9 +1,9 @@
 import React from "react";
 
 import "../../assets/styles/components/Course.scss";
-import TeacherInformantion from "./TeacherInformantion";
+import TeacherInformantion from "./Teacher/TeacherInformantion";
 
-const CourseTeacher = (props) => {
+const AboutTheTeacher = (props) => {
   return (
     <section
       className={`course ${
@@ -21,4 +21,4 @@ const CourseTeacher = (props) => {
     </section>
   );
 };
-export default CourseTeacher;
+export default AboutTheTeacher;

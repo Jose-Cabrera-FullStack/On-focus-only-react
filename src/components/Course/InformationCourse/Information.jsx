@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import CapitalFirstLetter from "../../../Utils/capitalizeFirstLetter";
 import "../../../assets/styles/components/CoursePlus.scss";
 
-const CourseInfo = (props) => (
-  <div className={props.OnlyDesktop ? props.OnlyDesktop: props.onlyMobile}>
+const Information = (props) => (
+  <div className={props.OnlyDesktop ? props.OnlyDesktop : props.onlyMobile}>
     <h2 className="discovery__box__info__title course__section">
       {props.category.name
         ? CapitalFirstLetter(props.category.name)
@@ -32,4 +32,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(CourseInfo);
+export default connect(mapStateToProps, null)(Information);

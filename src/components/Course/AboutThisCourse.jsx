@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
 import "../../assets/styles/components/CoursePlus.scss";
-import InformationAboutCourse from "../../components/Course/InformationAboutCourse";
-import CourseAbout from "../../components/Course/AboutCourse/CourseAbout";
-import CourseCertificate from "../../components/Course/AboutCourse/CourseCertificate";
-import CourseTeacherInfoVariant from "../../components/Course/AboutCourse/CourseTeacherInfoVariant";
-import BuyedCourse from "../../components/Course/Mobile/BuyedCourse";
+import InformationAboutCourse from "./InformationAboutCourse";
+import CourseAbout from "./AboutCourse/CourseAbout";
+import CourseCertificate from "./AboutCourse/CourseCertificate";
+import CourseTeacherInfoVariant from "./AboutCourse/CourseTeacherInfoVariant";
+import BuyedCourse from "./Mobile/BuyedCourse";
 
 import Modal from "../Utils/Modal";
 
 import Classes from "./Mobile/Classes";
 import Information from "./Mobile/Information";
 
-const CourseAboutCourse = (props) => {
+const AboutThisCourse = (props) => {
   const [openCourse, setOpenCourse] = useState(false);
 
   const handleOpenCourse = () => {
@@ -92,4 +92,4 @@ const CourseAboutCourse = (props) => {
     </div>
   );
 };
-export default CourseAboutCourse;
+export default AboutThisCourse;

@@ -7,7 +7,7 @@ import Linkedin from "../../../assets/static/images/svg/linkedin-black.svg";
 import Twitter from "../../../assets/static/images/svg/twitter-black.svg";
 import Youtube from "../../../assets/static/images/svg/youtube-black.svg";
 
-const CourseTeacher = (props) => {
+const CourseTeacherInfoVariant = (props) => {
   return (
     <div className={"buyed__teacher" + " " + props.onlyDesktop}>
       <div className="flex">
@@ -42,4 +42,4 @@ const CourseTeacher = (props) => {
     </div>
   );
 };
-export default CourseTeacher;
+export default CourseTeacherInfoVariant;
