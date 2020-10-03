@@ -5,8 +5,8 @@ import "../../../assets/styles/components/Buyed.scss";
 
 import CourseAbout from "../../../components/Course/AboutCourse/CourseAbout";
 import CourseCertificate from "../../../components/Course/AboutCourse/CourseCertificate";
-import CourseInclusive from "../../../components/Course/CourseInclusive";
-import CourseForMe from "../../../components/Course/CourseForMe";
+import WhatIncludeThisCourse from "../WhatIncludeThisCourse";
+import IsThisCourseForMe from "../IsThisCourseForMe";
 import CourseTeacher from "../../../components/Course/CourseTeacher";
 
 import Breadcrumbs from "../../Utils/Breadcrumbs";
@@ -20,8 +20,10 @@ const Information = (props) => {
           margin={"beadcrumbs--my-course__mobile"}
         />
         <CourseAbout />
-        <CourseInclusive />
-        <CourseForMe margin={"course__for__me--my-courses__information"} />
+        <WhatIncludeThisCourse />
+        <IsThisCourseForMe
+          margin={"course__for__me--my-courses__information"}
+        />
         <CourseCertificate mobile />
         <CourseTeacher margin={"course--emergent__menu__mobile"} />
       </div>

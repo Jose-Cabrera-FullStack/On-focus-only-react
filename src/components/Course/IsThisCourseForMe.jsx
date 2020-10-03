@@ -2,7 +2,7 @@ import React from "react";
 
 import "../../assets/styles/components/Course.scss";
 
-const CourseForMe = (props) => {
+const IsThisCourseForMe = (props) => {
   return (
     <section
       className={
@@ -37,4 +37,4 @@ const CourseForMe = (props) => {
     </section>
   );
 };
-export default CourseForMe;
+export default IsThisCourseForMe;

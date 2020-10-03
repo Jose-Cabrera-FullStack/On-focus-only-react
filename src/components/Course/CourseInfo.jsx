@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-import CourseInfoOnlyInfo from "./CourseInfoOnlyInfo";
+import InformationAboutCourse from "./InformationAboutCourse";
 import CourseAbout from "./AboutCourse/CourseAbout";
-import CourseSaveMoney from "./CourseSaveMoney";
+import RectangleWithPriceAndDiscount from "./RectangleWithPriceAndDiscount";
 
 import CourseModule from "./CourseModule";
-import CourseRecomendation from "./CourseRecomendation";
-import CourseInclusive from "./CourseInclusive";
-import CourseForMe from "./CourseForMe";
+import RecomendationList from "./RecomendationList";
+import WhatIncludeThisCourse from "./WhatIncludeThisCourse";
+import IsThisCourseForMe from "./IsThisCourseForMe";
 import CourseTeacher from "./CourseTeacher";
 import HowWeTeach from "../Principal/HowWeTeach";
 
@@ -32,7 +32,7 @@ const CourseInfo = ({ category }) => {
       </div>
       <div>
         <Information onlyMobile={"display__screen__mobile"} />
-        <CourseSaveMoney onlyMobile />
+        <RectangleWithPriceAndDiscount onlyMobile />
         <h2
           onClick={isToggleFalse}
           className="course__hidden__information display__screen__mobile"
@@ -42,17 +42,17 @@ const CourseInfo = ({ category }) => {
         {isToggle ? (
           <div className="display__screen__mobile slide-in-top">
             <h1 className="course__info__title ">Información</h1>
-            <CourseInfoOnlyInfo
+            <InformationAboutCourse
               onlyMobile={"display__screen__mobile__without__flex"}
               width={"course__information__text__width"}
               logoMobile={"course__logo__mobile"}
               margin={"course__logo__mobile__margin"}
             />
             <CourseAbout />
-            <CourseInclusive onlyMobile />
-            <CourseForMe />
+            <WhatIncludeThisCourse onlyMobile />
+            <IsThisCourseForMe />
             <CourseModule />
-            <CourseRecomendation />
+            <RecomendationList />
             <CourseTeacher margin={"discovery__box__info__mobile"} />
             <HowWeTeach grid={grid} margin={"how__we__tech__mobile"} />
           </div>
@@ -61,7 +61,7 @@ const CourseInfo = ({ category }) => {
         )}
         <div className="display__screen__desktop">
           <h1 className="course__info__title">Informacion</h1>
-          <CourseInfoOnlyInfo
+          <InformationAboutCourse
             onlyMobile={"display__screen__mobile__without__flex"}
             width={"course__information__text__width"}
             logoMobile={"course__logo__mobile"}

@@ -42,6 +42,11 @@ export const totalShopping = (payload) => ({
   payload,
 });
 
+export const setError = (payload) => ({
+  type: "SET_ERROR",
+  payload,
+});
+
 export const logoutRequest = (payload) => ({
   type: "LOGOUT_REQUEST",
   payload,
@@ -49,20 +54,17 @@ export const logoutRequest = (payload) => ({
 export const getAllCourse = () => {
   let url = `${URL}/courses?limit=40`;
   return function (dispatch) {
-    axios.get(url).then((response) =>
-      dispatch({
-        type: "GET_ALL_COURSE",
-        payload: response.data.data,
-      })
-    );
-    // .catch((response) => dispatch({}));
+    axios
+      .get(url)
+      .then((response) =>
+        dispatch({
+          type: "GET_ALL_COURSE",
+          payload: response.data.data,
+        })
+      )
+      .catch((error) => dispatch(setError(error)));
   };
 };
-
-// export const loginUser = (payload, redirectUrl) => ({
-//   type: "LOGIN_REQUEST",
-//   payload,
-// });
 
 export const registerRequest = (payload) => ({
   type: "REGISTER_REQUEST",
@@ -94,6 +96,6 @@ export const loginUser = (payload) => {
         document.cookie = `token=${data.token}`;
         dispatch(loginRequest(data));
       })
-      .catch();
+      .catch((error) => dispatch(setError(error)));
   };
 };

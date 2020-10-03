@@ -10,7 +10,7 @@ import Media from "../../assets/static/images/svg/media.svg";
 import Check from "../../assets/static/images/svg/check.svg";
 import Calendary from "../../assets/static/images/svg/calendary.svg";
 
-const CourseInfoOnlyInfo = (props) => {
+const InformationAboutCourse = (props) => {
   const category = props.category;
   const myCourse = props.myCourse;
   return (
@@ -74,4 +74,4 @@ const mapStateToProps = (state) => {
     myCourse: state.myCourse || {},
   };
 };
-export default connect(mapStateToProps, null)(CourseInfoOnlyInfo);
+export default connect(mapStateToProps, null)(InformationAboutCourse);

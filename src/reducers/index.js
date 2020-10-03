@@ -78,17 +78,14 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload,
       };
+    case "SET_ERROR":
+      return {
+        ...state,
+        error: action.payload,
+      };
     default:
       return state;
   }
 };
 
 export default reducer;
-
-// courseVideo:
-// state.courseVideo.find(
-//   (item) =>
-//     item.module.video === action.id &&
-//     item.name === action.slugname &&
-//     item.category === action.slugcategory
-// ) || {},

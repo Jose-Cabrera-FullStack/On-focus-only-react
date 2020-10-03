@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import Breadcrumbs from "../components/Utils/Breadcrumbs";
 
-import CourseProgress from "../components/Course/CourseProgress";
+import ProgressInformationCourse from "../components/Course/ProgressInformationCourse";
 
 import CourseAboutCourse from "../components/Course/CourseAboutCourse";
 
@@ -95,7 +95,7 @@ const CourseBuyed = (props) => {
           onlyDesktop={"display__screen__desktop"}
           link={"/mis-cursos"}
         />
-        <CourseProgress
+        <ProgressInformationCourse
           onlyDesktop={"display__screen__desktop"}
           title={title}
           teacher={teacher.name}

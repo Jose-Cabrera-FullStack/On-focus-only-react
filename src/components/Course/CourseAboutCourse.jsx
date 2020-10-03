@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "../../assets/styles/components/CoursePlus.scss";
-import CourseInfoOnlyInfo from "../../components/Course/CourseInfoOnlyInfo";
+import InformationAboutCourse from "../../components/Course/InformationAboutCourse";
 import CourseAbout from "../../components/Course/AboutCourse/CourseAbout";
 import CourseCertificate from "../../components/Course/AboutCourse/CourseCertificate";
 import CourseTeacherInfoVariant from "../../components/Course/AboutCourse/CourseTeacherInfoVariant";
@@ -35,7 +35,7 @@ const CourseAboutCourse = (props) => {
 
   return (
     <div>
-      <CourseInfoOnlyInfo
+      <InformationAboutCourse
         width={"course__information__text__width"}
         onlyDesktop={"display__screen__desktop"}
       />

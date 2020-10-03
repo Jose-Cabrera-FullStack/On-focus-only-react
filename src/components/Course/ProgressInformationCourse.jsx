@@ -2,13 +2,13 @@ import React from "react";
 import { findFirst } from "obj-traverse/lib/obj-traverse";
 
 import "../../assets/styles/components/Course.scss";
-import Button from "../../components/Utils/ButtonArrowRight";
+import Button from "../Utils/ButtonArrowRight";
 
 import UI from "../../assets/static/images/img/buyed-image.png";
 
 import ProgressBar from "../Utils/ProgressBar";
 
-const CourseProgress = ({
+const ProgressInformationCourse = ({
   onlyDesktop,
   title,
   teacher,
@@ -44,7 +44,9 @@ const CourseProgress = ({
     <section className="buyed__progress">
       <div className="flex">
         <div>
-          <h1 className="buyed__progress__title">{title ? title : "Aprendé a ser mejor lider."}</h1>
+          <h1 className="buyed__progress__title">
+            {title ? title : "Aprendé a ser mejor lider."}
+          </h1>
           <h4>Por {teacher ? teacher : "Juan Pablo Laco"}</h4>
           <ProgressBar progress={(totalVideoFinishNum / totalVideoNum) * 100} />
           <br />
@@ -66,4 +68,4 @@ const CourseProgress = ({
     </section>
   );
 };
-export default CourseProgress;
+export default ProgressInformationCourse;

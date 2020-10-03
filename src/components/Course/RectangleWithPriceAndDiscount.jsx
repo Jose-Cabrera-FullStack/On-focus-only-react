@@ -4,12 +4,12 @@ import VisibilitySensor from "react-visibility-sensor";
 
 import "../../assets/styles/components/Course.scss";
 
-import Discount from "../Course/SaveMoney/Discount";
-import YouSave from "../Course/SaveMoney/YouSave";
+import Discount from "./SaveMoney/Discount";
+import YouSave from "./SaveMoney/YouSave";
 
 import ButtonShopping from "../Utils/ButtonShopping";
 
-const CourseSaveMoney = ({ course, category, onlyMobile }) => {
+const RectangleWithPriceAndDiscount = ({ course, category, onlyMobile }) => {
   const [isVisible, setVisibility] = useState(false);
 
   const onChange = (visiblity) => {
@@ -53,4 +53,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(CourseSaveMoney);
+export default connect(mapStateToProps, null)(RectangleWithPriceAndDiscount);

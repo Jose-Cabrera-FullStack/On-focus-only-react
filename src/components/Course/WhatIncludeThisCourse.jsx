@@ -4,7 +4,7 @@ import "../../assets/styles/components/Course.scss";
 
 import Human from "../../assets/static/images/img/human-diploma.png";
 
-const CourseInclusive = (props) => (
+const WhatIncludeThisCourse = (props) => (
   <section
     className={`course__inclusive ${props.onlyMobile ? "" : "none-second"}`}
   >
@@ -41,4 +41,4 @@ const CourseInclusive = (props) => (
     </div>
   </section>
 );
-export default CourseInclusive;
+export default WhatIncludeThisCourse;

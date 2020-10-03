@@ -8,15 +8,15 @@ import Breadcrumbs from "../components/Utils/Breadcrumbs";
 import SmallVideo from "../components/Visualization/SmallVideo";
 import HeroCoursePlus from "../components/Course/HeroCoursePlus";
 import CourseInfo from "../components/Course/CourseInfo";
-import CourseInclusive from "../components/Course/CourseInclusive";
-import CourseForMe from "../components/Course/CourseForMe";
+import WhatIncludeThisCourse from "../components/Course/WhatIncludeThisCourse";
+import IsThisCourseForMe from "../components/Course/IsThisCourseForMe";
 import CourseModule from "../components/Course/CourseModule";
-import CourseRecomendation from "../components/Course/CourseRecomendation";
+import RecomendationList from "../components/Course/RecomendationList";
 import CourseTeacher from "../components/Course/CourseTeacher";
 import HowWeTeach from "../components/Principal/HowWeTeach";
 import NotFound from "../containers/NotFound";
 
-import CourseSaveMoney from "../components/Course/CourseSaveMoney";
+import RectangleWithPriceAndDiscount from "../components/Course/RectangleWithPriceAndDiscount";
 
 import slugify from "../Utils/slugChange";
 
@@ -54,18 +54,18 @@ const Course = (props) => {
       <section>
         <div className="flex">
           <CourseInfo course={props.category} />
-          <CourseSaveMoney />
+          <RectangleWithPriceAndDiscount />
         </div>
 
-        <CourseInclusive />
+        <WhatIncludeThisCourse />
         <div className="flex">
           <div>
-            <CourseForMe onlyDesktop={"display__screen__desktop"} />
+            <IsThisCourseForMe onlyDesktop={"display__screen__desktop"} />
             <CourseModule onlyDesktop={"display__screen__desktop"} infoHidden />
           </div>
-          <CourseSaveMoney />
+          <RectangleWithPriceAndDiscount />
         </div>
-        <CourseRecomendation
+        <RecomendationList
           onlyDesktop={"display__screen__desktop"}
           infoHidden
         />
@@ -81,7 +81,7 @@ const Course = (props) => {
               infoHidden
             />
           </div>
-          <CourseSaveMoney />
+          <RectangleWithPriceAndDiscount />
         </div>
       </section>
       <Footer />

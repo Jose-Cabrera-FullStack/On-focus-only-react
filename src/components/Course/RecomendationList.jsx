@@ -7,7 +7,7 @@ import "../../assets/styles/components/AboutUs.scss";
 import Recomendation from "./Recomendation/Recomendation";
 import Arrows from "./Recomendation/Arrows";
 
-const CourseRecomendation = (props) => {
+const RecomendationList = (props) => {
   const text =
     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.";
 
@@ -64,4 +64,4 @@ const CourseRecomendation = (props) => {
     </section>
   );
 };
-export default CourseRecomendation;
+export default RecomendationList;

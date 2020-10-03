@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../../assets/styles/components/Course.scss";
-import CourseTeacherInfo from "./CourseTeacherInfo";
+import TeacherInformantion from "./TeacherInformantion";
 
 const CourseTeacher = (props) => {
   return (
@@ -14,7 +14,7 @@ const CourseTeacher = (props) => {
         Sobre el profesor.
       </h2>
       <div className="flex">
-        <CourseTeacherInfo
+        <TeacherInformantion
           onlyMobile={"display__screen__mobile__without__flex"}
         />
       </div>
