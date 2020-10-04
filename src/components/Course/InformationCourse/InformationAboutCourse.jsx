@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import "../../assets/styles/components/CoursePlus.scss";
-import formatHourMinute from "../../Utils/formatHourMinute";
+import "../../../assets/styles/components/CoursePlus.scss";
+import formatHourMinute from "../../../Utils/formatHourMinute";
 
-import Perfil from "../../assets/static/images/svg/perfil.svg";
-import Reloj from "../../assets/static/images/svg/reloj.svg";
-import Media from "../../assets/static/images/svg/media.svg";
-import Check from "../../assets/static/images/svg/check.svg";
-import Calendary from "../../assets/static/images/svg/calendary.svg";
+import Perfil from "../../../assets/static/images/svg/perfil.svg";
+import Reloj from "../../../assets/static/images/svg/reloj.svg";
+import Media from "../../../assets/static/images/svg/media.svg";
+import Check from "../../../assets/static/images/svg/check.svg";
+import Calendary from "../../../assets/static/images/svg/calendary.svg";
 
 const InformationAboutCourse = (props) => {
   const category = props.category;

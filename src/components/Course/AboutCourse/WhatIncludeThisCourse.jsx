@@ -1,8 +1,8 @@
 import React from "react";
 
-import "../../assets/styles/components/Course.scss";
+import "../../../assets/styles/components/Course.scss";
 
-import Human from "../../assets/static/images/img/human-diploma.png";
+import Human from "../../../assets/static/images/img/human-diploma.png";
 
 const WhatIncludeThisCourse = (props) => (
   <section

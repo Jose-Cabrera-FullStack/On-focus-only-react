@@ -1,5 +1,4 @@
 import React from "react";
-import { findFirst } from "obj-traverse/lib/obj-traverse";
 
 import "../../assets/styles/components/Course.scss";
 import Button from "../Utils/ButtonArrowRight";

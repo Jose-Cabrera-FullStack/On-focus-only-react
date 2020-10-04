@@ -5,8 +5,8 @@ import "../../../assets/styles/components/Buyed.scss";
 
 import CourseAbout from "../../../components/Course/AboutCourse/CourseAbout";
 import CourseCertificate from "../../../components/Course/AboutCourse/CourseCertificate";
-import WhatIncludeThisCourse from "../WhatIncludeThisCourse";
-import IsThisCourseForMe from "../IsThisCourseForMe";
+import WhatIncludeThisCourse from "../AboutCourse/WhatIncludeThisCourse";
+import IsThisCourseForMe from "../AboutCourse/IsThisCourseForMe";
 import AboutTheTeacher from "../../../components/Course/AboutTheTeacher";
 
 import Breadcrumbs from "../../Utils/Breadcrumbs";

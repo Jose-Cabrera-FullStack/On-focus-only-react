@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-import InformationAboutCourse from "./InformationAboutCourse";
-import CourseAbout from "./AboutCourse/CourseAbout";
-import RectangleWithPriceAndDiscount from "./RectangleWithPriceAndDiscount";
+import InformationAboutCourse from "../InformationCourse/InformationAboutCourse";
+import CourseAbout from "../AboutCourse/CourseAbout";
+import RectangleWithPriceAndDiscount from "../RectangleWithPriceAndDiscount";
 
-import ModuleList from "./Module/ModuleList";
-import RecomendationList from "./RecomendationList";
-import WhatIncludeThisCourse from "./WhatIncludeThisCourse";
-import IsThisCourseForMe from "./IsThisCourseForMe";
-import AboutTheTeacher from "./AboutTheTeacher";
-import HowWeTeach from "../Principal/HowWeTeach";
+import ModuleList from "../Module/ModuleList";
+import RecomendationList from "../RecomendationList";
+import WhatIncludeThisCourse from "../AboutCourse/WhatIncludeThisCourse";
+import IsThisCourseForMe from "../AboutCourse/IsThisCourseForMe";
+import AboutTheTeacher from "../AboutTheTeacher";
+import HowWeTeach from "../../Principal/HowWeTeach";
 
-import Information from "./InformationCourse/Information";
-import SmallVideo from "../Visualization/SmallVideo";
+import Information from "./Information";
+import SmallVideo from "../../Visualization/SmallVideo";
 
-import "../../assets/styles/components/CoursePlus.scss";
+import "../../../assets/styles/components/CoursePlus.scss";
 
 const InformationAboutThisCourse = ({ category }) => {
   let grid = "grid-column-2--fix";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "../../assets/styles/components/CoursePlus.scss";
-import InformationAboutCourse from "./InformationAboutCourse";
+import InformationAboutCourse from "./InformationCourse/InformationAboutCourse";
 import CourseAbout from "./AboutCourse/CourseAbout";
 import CourseCertificate from "./AboutCourse/CourseCertificate";
 import CourseTeacherInfoVariant from "./AboutCourse/CourseTeacherInfoVariant";

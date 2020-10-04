@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../assets/styles/components/CoursePlus.scss";
+import "../../../assets/styles/components/CoursePlus.scss";
 
 const HeroCoursePlus = () => (
   <section className="hero__view--courses__plus display__course__screen__desktop">
