@@ -11,7 +11,7 @@ const ProgressInformationCourse = ({
   onlyDesktop,
   title,
   teacher,
-  module,
+  modules,
   name,
   category,
   image,
@@ -20,7 +20,7 @@ const ProgressInformationCourse = ({
   let urlsTrue = [];
   let totalVideoNum = 0;
   let totalVideoFinishNum = 0;
-  let totalVideo = module.map((item) => item.videos);
+  let totalVideo = modules.map((item) => item.videos);
   totalVideo.map((element) => {
     element.forEach((element) => {
       if (element.status === true) totalVideoFinishNum += 1;

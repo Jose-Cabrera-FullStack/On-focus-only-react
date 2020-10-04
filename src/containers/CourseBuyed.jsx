@@ -14,7 +14,7 @@ import NotFound from "../containers/NotFound";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import { getMyCategory } from "../actions";
+import { getMyCourseCategory } from "../actions";
 
 import "../assets/styles/App.scss";
 import "../assets/styles/components/Buyed.scss";
@@ -24,7 +24,7 @@ import UI from "../assets/static/images/img/buyed-image.png";
 const CourseBuyed = (props) => {
   const [isSwitch, setSwitch] = useState("");
 
-  const AboutThisCourse = () => setSwitch("");
+  const AboutThisCourseInformation = () => setSwitch("");
 
   const CourseClasses = () => setSwitch("Classes");
 
@@ -38,11 +38,11 @@ const CourseBuyed = (props) => {
     featured_image,
     title,
     name,
-    module,
+    modules,
   } = props.myCourse;
 
   useEffect(() => {
-    props.getMyCategory(slug);
+    props.getMyCourseCategory(slug);
   }, []);
 
   const isMyCourse = Object.keys(props.myCourse).length > 0;
@@ -52,7 +52,7 @@ const CourseBuyed = (props) => {
       case "Classes":
         return (
           <div>
-            {props.myCourse.module.map((item, index) => {
+            {props.myCourse.modules.map((item, index) => {
               return (
                 <Module
                   key={index}
@@ -99,7 +99,7 @@ const CourseBuyed = (props) => {
           onlyDesktop={"display__screen__desktop"}
           title={title}
           teacher={teacher.name}
-          module={module}
+          modules={modules}
           name={name}
           category={category}
           image={featured_image}
@@ -107,7 +107,7 @@ const CourseBuyed = (props) => {
 
         <AboutCourseAndClasses
           isSwitch={isSwitch}
-          methodAbout={AboutThisCourse}
+          methodAbout={AboutThisCourseInformation}
           methodClasses={CourseClasses}
         />
 
@@ -121,7 +121,7 @@ const CourseBuyed = (props) => {
 };
 
 const mapDispatchToProps = {
-  getMyCategory,
+  getMyCourseCategory,
 };
 
 const mapStateToProps = (state) => {

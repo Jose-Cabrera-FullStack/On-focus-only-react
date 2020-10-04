@@ -32,7 +32,6 @@ const Course = ({ courseInfo, displayNone }) => {
   let totalPriceToPay = priceWithDiscount(price, priceOff);
 
   const [isHover, setIsHover] = useState(false);
-  console.log("teacher:", teacher);
 
   const changeIsHover = () => setIsHover(!isHover);
   return (

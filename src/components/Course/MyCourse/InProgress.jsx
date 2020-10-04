@@ -13,7 +13,7 @@ const InProgress = ({ myCourses }) => {
       {myCourses.some((item) => item.status === true) ? (
         myCourses.map((item, index) => {
           const videos = [];
-          const module = item.module.map((item) => item.videos);
+          const module = item.modules.map((item) => item.videos);
           let moduleNested = findFirst(item, "module", { module_id: index });
           let videosNested = findFirst(moduleNested, "videos", {
             status: false,

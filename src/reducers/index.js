@@ -19,11 +19,18 @@ const reducer = (state, action) => {
         ...state,
         videoName: action.payload,
       };
-    case "GET_MY_COURSE":
+    case "GET_MY_COURSES":
+      return {
+        ...state,
+        myCourses: action.payload,
+      };
+    case "GET_MY_CATEGORY":
       return {
         ...state,
         myCourse:
-          state.myCourses.find((item) => item.name === action.payload) || {},
+          state.myCourses.find(
+            (item) => slugify(item.title) === action.payload
+          ) || {},
       };
     case "GET_COURSE_CATEGORY":
       return {

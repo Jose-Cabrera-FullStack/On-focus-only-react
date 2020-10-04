@@ -11,7 +11,7 @@ const Finish = ({ myCourses }) => {
       {myCourses.some((item) => item.status === true) ? (
         myCourses.map((item, index) => {
           const videos = [];
-          const module = item.module.map((item) => item.videos);
+          const module = item.modules.map((item) => item.videos);
 
           module.forEach((item) =>
             item.map((item) => {

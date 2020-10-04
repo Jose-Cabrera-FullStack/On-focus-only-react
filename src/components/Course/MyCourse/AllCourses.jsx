@@ -4,15 +4,17 @@ import { connect } from "react-redux";
 import "../../../assets/styles/components/CoursePlus.scss";
 import Course from "./MyCourse";
 
-const AllCourse = ({ myCourses }) => {
+import slugfy from "../../../Utils/slugChange";
+
+const AllCourse = ({ myCourse }) => {
   return (
     // se debe refactorizar para la segunda instancia
     <>
-      {myCourses.map((item, index) => {
+      {myCourse.map((item, index) => {
         const videos = [];
         let url = "";
         const urlStatusFalse = [];
-        const module = item.module.map((item) => item.videos);
+        const module = item.modules.map((item) => item.videos);
         module.forEach((item) =>
           item.map((item) => {
             if (item.status === false) urlStatusFalse.push(item.url);
@@ -27,8 +29,8 @@ const AllCourse = ({ myCourses }) => {
         );
 
         videos.length === videosFinish
-          ? (url = `/mis-cursos/${item.name}`)
-          : (url = `/mis-cursos/${item.name}`);
+          ? (url = `/mis-cursos/${slugfy(item.title)}`)
+          : (url = `/mis-cursos/${slugfy(item.title)}`);
 
         return (
           <Course
@@ -48,7 +50,7 @@ const AllCourse = ({ myCourses }) => {
 
 const mapStateToProps = (state) => {
   return {
-    myCourses: state.myCourses,
+    myCourse: state.myCourses,
   };
 };
 

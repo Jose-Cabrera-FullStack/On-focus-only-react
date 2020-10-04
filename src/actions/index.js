@@ -22,8 +22,8 @@ export const getCourse = (slugCourse) => ({
   payload: { slugCourse },
 });
 
-export const getMyCategory = (payload) => ({
-  type: "GET_MY_COURSE",
+export const getMyCourseCategory = (payload) => ({
+  type: "GET_MY_CATEGORY",
   payload,
 });
 
@@ -47,6 +47,23 @@ export const setError = (payload) => ({
   payload,
 });
 
+export const getMyCourses = (payload) => {
+  let url = `${URL}/courses/me`;
+  return function (dispatch) {
+    axios
+      .get(url, {
+        headers: {
+          "access-token": payload,
+        },
+      })
+      .then((response) =>
+        dispatch({
+          type: "GET_MY_COURSES",
+          payload: response.data.myCourses,
+        })
+      );
+  };
+};
 export const logoutRequest = (payload) => ({
   type: "LOGOUT_REQUEST",
   payload,
