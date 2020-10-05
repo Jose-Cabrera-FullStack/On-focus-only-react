@@ -12,9 +12,7 @@ import "../assets/styles/App.scss";
 
 const Courses = (props) => {
   useEffect(() => {
-    props.getMyCourses(
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1aXNnYXJjZXNsZW9uQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MDE4MjgzNTcsImV4cCI6MTYzMzM2NDM1N30.kDm4zHFU2NgG-rOkzAcVOyGy0tBOoMhpJaNv-UywZdM"
-    );
+    props.getMyCourses(props.user.token);
   }, []);
   return (
     <div className="App">
@@ -30,4 +28,10 @@ const mapDispatchToProps = {
   getMyCourses,
 };
 
-export default connect(null, mapDispatchToProps)(Courses);
+const mapStateToProps = (state) => {
+  return {
+    user: state.user || {},
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Courses);

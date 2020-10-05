@@ -33,7 +33,7 @@ const CourseList = ({
           {course.slice(course.length - 4, course.length).map((item) => {
             return (
               <div key={item.course_id}>
-                <Course courseInfo={item} />
+                <Course courseInfo={item} principal />
               </div>
             );
           })}

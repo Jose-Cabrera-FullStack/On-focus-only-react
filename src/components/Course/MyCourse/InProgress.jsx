@@ -1,24 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { findFirst } from "obj-traverse/lib/obj-traverse";
 
 import "../../../assets/styles/components/CoursePlus.scss";
 import Course from "./MyCourse";
 
+import slugy from "../../../Utils/slugChange";
+
 const InProgress = ({ myCourses }) => {
-  // se debe refactorizar para la segunda instancia
   return (
     <>
-      {myCourses.some((item) => item.status === true) ? (
+      {myCourses.some((item) => item.status !== true) ? (
         myCourses.map((item, index) => {
           const videos = [];
           const module = item.modules.map((item) => item.videos);
-          let moduleNested = findFirst(item, "module", { module_id: index });
-          let videosNested = findFirst(moduleNested, "videos", {
-            status: false,
-          });
-          const url = `/mis-cursos/${item.name}`;
+          const url = `/mis-cursos/${slugy(item.title)}`;
           module.forEach((item) =>
             item.map((item) => {
               videos.push(item.status);

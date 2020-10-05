@@ -8,7 +8,6 @@ import slugfy from "../../../Utils/slugChange";
 
 const AllCourse = ({ myCourse }) => {
   return (
-    // se debe refactorizar para la segunda instancia
     <>
       {myCourse.map((item, index) => {
         const videos = [];

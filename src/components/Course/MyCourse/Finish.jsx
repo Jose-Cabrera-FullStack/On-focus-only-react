@@ -4,8 +4,9 @@ import { connect } from "react-redux";
 import "../../../assets/styles/components/CoursePlus.scss";
 import Course from "./MyCourse";
 
+import slugy from "../../../Utils/slugChange";
+
 const Finish = ({ myCourses }) => {
-  // se debe refactorizar para la segunda instancia
   return (
     <>
       {myCourses.some((item) => item.status === true) ? (
@@ -20,7 +21,7 @@ const Finish = ({ myCourses }) => {
           );
 
           videos.push(videos);
-          const url = `/mis-cursos/${item.name}`;
+          const url = `/mis-cursos/${slugy(item.title)}`;
 
           return item.status === false ? (
             ""

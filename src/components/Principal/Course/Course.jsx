@@ -17,7 +17,7 @@ import Play from "../../../assets/static/images/svg/icon-play-black.svg";
 import slugify from "../../../Utils/slugChange";
 import priceWithDiscount from "../../../Utils/priceWithDiscount";
 
-const Course = ({ courseInfo, displayNone }) => {
+const Course = ({ courseInfo, displayNone, principal }) => {
   const {
     featured_image,
     priceOff,
@@ -77,7 +77,9 @@ const Course = ({ courseInfo, displayNone }) => {
                 {students ? students : "150"} alumnos.
               </p>
             </div>
-            {duration ? (
+            {principal ? (
+              ""
+            ) : (
               <div className="flex">
                 <img
                   src={Reloj}
@@ -88,11 +90,11 @@ const Course = ({ courseInfo, displayNone }) => {
                   {duration ? formatHourMinute(duration) : "150"}
                 </p>
               </div>
-            ) : (
-              ""
             )}
 
-            {module ? (
+            {principal ? (
+              ""
+            ) : (
               <div className="flex">
                 <img
                   src={Play}
@@ -103,8 +105,6 @@ const Course = ({ courseInfo, displayNone }) => {
                   {module ? module : "150"} Modulos.
                 </p>
               </div>
-            ) : (
-              ""
             )}
           </div>
           <div className="flex">

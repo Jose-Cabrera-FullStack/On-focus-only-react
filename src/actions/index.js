@@ -107,10 +107,6 @@ export const loginUser = (payload) => {
     axios
       .post(url, payload)
       .then(({ data }) => {
-        document.cookie = `id=${data.data._id}`;
-        document.cookie = `email=${data.data.username}`;
-        document.cookie = `status=${data.data.status}`;
-        document.cookie = `token=${data.token}`;
         dispatch(loginRequest(data));
       })
       .catch((error) => dispatch(setError(error)));
