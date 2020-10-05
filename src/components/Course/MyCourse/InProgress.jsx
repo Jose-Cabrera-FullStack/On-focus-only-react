@@ -7,7 +7,10 @@ import Course from "./MyCourse";
 import slugy from "../../../Utils/slugChange";
 
 const InProgress = ({ myCourses }) => {
-  return (
+  const hasMyCourse = Object.keys(myCourses).length > 0;
+  return !hasMyCourse ? (
+    <p>No tienes cursos En curso</p>
+  ) : (
     <>
       {myCourses.some((item) => item.status !== true) ? (
         myCourses.map((item, index) => {

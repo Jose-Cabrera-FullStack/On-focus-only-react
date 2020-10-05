@@ -18,10 +18,11 @@ const Data = (props) => {
   });
 
   const onSubmit = (data, event) => {
+    const { newPassword, newPasswordConfirmation, actualPassword } = data;
     if (
-      data.newPassword === data.newPasswordConfirmation &&
-      (data.actualPassword !== data.newPassword ||
-        data.actualPassword !== data.newPasswordConfirmation)
+      newPassword === newPasswordConfirmation &&
+      (actualPassword !== newPassword ||
+        actualPassword !== newPasswordConfirmation)
     ) {
       setValues({ equalPassword: true });
       console.log("es correcto");

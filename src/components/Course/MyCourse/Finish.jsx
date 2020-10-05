@@ -6,8 +6,11 @@ import Course from "./MyCourse";
 
 import slugy from "../../../Utils/slugChange";
 
-const Finish = ({ myCourses }) => {
-  return (
+const Finish = ({ myCourses = {} }) => {
+  const hasMyCourse = Object.keys(myCourses).length > 0;
+  return !hasMyCourse ? (
+    <p>No tienes cursos Finalizados</p>
+  ) : (
     <>
       {myCourses.some((item) => item.status === true) ? (
         myCourses.map((item, index) => {
