@@ -1,31 +1,35 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { connect } from "react-redux";
 
 import "../../assets/styles/components/Data.scss";
 import Button from "../../components/Utils/ButtonArrowRight";
 import Check from "../../assets/static/images/svg/icon-check.svg";
+
+import { changeMyPassword } from "../../actions";
 
 import Success from "../Utils/SuccessMessage";
 
 const Data = (props) => {
   const { register, errors, handleSubmit } = useForm();
 
+  const { token } = props.user;
+
   const [form, setValues] = useState({
-    actualPassword: "",
+    oldPassword: "",
     newPassword: "",
-    newPasswordConfirmation: "",
+    newPasswordConfirm: "",
     equalPassword: false,
   });
 
-  const onSubmit = (data, event) => {
-    const { newPassword, newPasswordConfirmation, actualPassword } = data;
+  const onSubmit = (data) => {
+    const { newPassword, newPasswordConfirm, oldPassword } = data;
     if (
-      newPassword === newPasswordConfirmation &&
-      (actualPassword !== newPassword ||
-        actualPassword !== newPasswordConfirmation)
+      newPassword === newPasswordConfirm &&
+      (oldPassword !== newPassword || oldPassword !== newPasswordConfirm)
     ) {
       setValues({ equalPassword: true });
-      console.log("es correcto");
+      props.changeMyPassword(data, token);
     } else {
       setValues({ equalPassword: false });
     }
@@ -38,7 +42,7 @@ const Data = (props) => {
       <form action="">
         <div className="flex">
           <input
-            name="actualPassword"
+            name="oldPassword"
             className="data__input__text"
             type="password"
             placeholder="Contraseña actual"
@@ -62,7 +66,7 @@ const Data = (props) => {
         </div>
 
         <span className="way-to-pay__input--error__profile">
-          {errors.actualPassword && errors.actualPassword.message}
+          {errors.oldPassword && errors.oldPassword.message}
         </span>
 
         <div className="flex">
@@ -95,7 +99,7 @@ const Data = (props) => {
 
         <div className="flex">
           <input
-            name="newPasswordConfirmation"
+            name="newPasswordConfirm"
             className="data__input__text"
             type="password"
             placeholder="Confirmar Nueva Contraseña"
@@ -117,8 +121,7 @@ const Data = (props) => {
           <img src={Check} alt="" className="data__input__text__check" />
         </div>
         <span className="way-to-pay__input--error__profile">
-          {errors.newPasswordConfirmation &&
-            errors.newPasswordConfirmation.message}
+          {errors.newPasswordConfirm && errors.newPasswordConfirm.message}
         </span>
 
         <span className="way-to-pay__input--error__profile">
@@ -136,10 +139,30 @@ const Data = (props) => {
           text={"Guardar"}
           margin={"discovery__box__position btn__secundary--data"}
         />
-
-        <Success />
+        {props.changePassword === true ? (
+          <Success />
+        ) : props.error.success === false ? (
+          <Success
+            text={"Por favor coloque bien su contraseña para poder proceder"}
+            fail
+          />
+        ) : (
+          ""
+        )}
       </form>
     </section>
   );
 };
-export default Data;
+const mapDispatchToProps = {
+  changeMyPassword,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.user || {},
+    changePassword: state.changePassword || {},
+    error: state.error || {},
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Data);

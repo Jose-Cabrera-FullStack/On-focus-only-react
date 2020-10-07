@@ -47,6 +47,24 @@ export const setError = (payload) => ({
   payload,
 });
 
+export const changeMyPassword = (payload, token) => {
+  let url = `${URL}/changePassword`;
+  return function (dispatch) {
+    axios
+      .post(url, payload, {
+        headers: {
+          "access-token": token,
+        },
+      })
+      .then((response) =>
+        dispatch({
+          type: "CHANGE_MY_PASSWORD",
+          payload: response.data.success,
+        })
+      )
+      .catch((response) => dispatch(setError(response.response.data)));
+  };
+};
 export const getMyCourses = (payload) => {
   let url = `${URL}/courses/me`;
   return function (dispatch) {

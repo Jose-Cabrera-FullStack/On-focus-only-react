@@ -75,6 +75,11 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload,
       };
+    case "CHANGE_MY_PASSWORD":
+      return {
+        ...state,
+        changePassword: action.payload,
+      };
     case "LOGOUT_REQUEST":
       return {
         ...state,

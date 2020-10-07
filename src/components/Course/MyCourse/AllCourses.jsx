@@ -8,7 +8,6 @@ import slugfy from "../../../Utils/slugChange";
 
 const AllCourse = ({ myCourse = {} }) => {
   const hasMyCourse = Object.keys(myCourse).length > 0;
-  console.log(hasMyCourse);
   return !hasMyCourse ? (
     <p>No tienes cursos comprados</p>
   ) : (
