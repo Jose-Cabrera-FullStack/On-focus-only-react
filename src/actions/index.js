@@ -127,6 +127,6 @@ export const loginUser = (payload) => {
       .then(({ data }) => {
         dispatch(loginRequest(data));
       })
-      .catch((error) => dispatch(setError(error)));
+      .catch((error) => dispatch(setError(error.response.data)));
   };
 };

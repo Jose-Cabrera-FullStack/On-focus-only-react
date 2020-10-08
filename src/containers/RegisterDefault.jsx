@@ -30,6 +30,8 @@ const Register = (props) => {
     props.registerUser(form);
   };
 
+  const hasError = Object.keys(props.error).length > 0;
+
   const UrlPathName = props.location.pathname;
 
   const Url = (UrlPathName) => {
@@ -139,6 +141,7 @@ const Register = (props) => {
               <br />
               <span className="register__box__inside--error">
                 {errors.password && errors.password.message}
+                {hasError ? <p>Sucedio un error, intente más tarde</p> : ""}
               </span>
             </div>
             <Button margin={"btn__secundary--register"} text={"Registrarse"} />
@@ -165,4 +168,10 @@ const mapDispatchToProps = {
   registerUser,
 };
 
-export default connect(null, mapDispatchToProps)(Register);
+const mapStateToProps = (state) => {
+  return {
+    error: state.error || {},
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

@@ -29,6 +29,8 @@ const Register = (props) => {
     props.loginUser(form);
   };
 
+  const hasError = Object.keys(props.error).length > 0;
+
   return (
     <section className="register">
       <div className="register__box">
@@ -124,6 +126,7 @@ const Register = (props) => {
               <br />
               <span className="register__box__inside--error">
                 {errors.password && errors.password.message}
+                {hasError ? <p>El usuario o la contraseña es errórnea</p> : ""}
               </span>
             </div>
             <Button
@@ -152,4 +155,10 @@ const mapDispatchToProps = {
   loginUser,
 };
 
-export default connect(null, mapDispatchToProps)(Register);
+const mapStateToProps = (state) => {
+  return {
+    error: state.error || {},
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);
