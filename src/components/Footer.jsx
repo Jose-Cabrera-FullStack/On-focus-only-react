@@ -8,7 +8,7 @@ import Message from "../assets/static/images/svg/message.svg";
 
 import ScrollArrowUp from "./Utils/ScrollArrowUp";
 
-let year = new Date().getFullYear();
+const year = new Date().getFullYear();
 
 const Footer = (props) => {
   return (

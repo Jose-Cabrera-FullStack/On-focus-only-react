@@ -297,6 +297,8 @@
   .footer__container__left {
     list-style: none;
     margin: 50px 0 0 0px;
+    position: relative;
+    top: -20px;
   }
   .footer {
     height: 504px;
@@ -319,8 +321,10 @@
 
   .footer__arrow {
     margin-left: auto;
-    top: -440px;
-    right: 40px;
+    top: -18px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
   }
 
   .footer__container__right--mobile {
@@ -331,7 +335,7 @@
 
   .footer__container__left--fix {
     position: absolute;
-    right: 40px;
+    right: 90px;
   }
 
   .footer__socials__network {
@@ -367,11 +371,6 @@
 }
 
 @media screen and (max-width: 450px) {
-  .footer__arrow {
-    right: 10px;
-    width: 28px;
-    height: 28px;
-  }
   .footer__container__left {
     padding: 0 0 0 10px;
   }

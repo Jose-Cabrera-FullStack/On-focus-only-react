@@ -10,7 +10,7 @@ const Hero = () => (
     <h1 className="teacher__hero__title">Lorem ipsum dolor sit amet lorem.</h1>
     <Link
       activeClass="active"
-      to="teacher__faq"
+      to="how__we__tech__info"
       spy={true}
       smooth={true}
       offset={0}

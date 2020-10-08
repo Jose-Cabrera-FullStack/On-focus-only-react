@@ -330,14 +330,14 @@
 @media screen and (max-width: 1024px) {
   .discovery__course {
     display: block;
+    margin: auto;
   }
 
   .discovery__container {
-    margin: 0px 0px 0 10%;
+    margin: 0px 0px 0 0;
     transition: all 0.2s ease-in-out;
   }
   .hero__view {
-    background-position: -530px;
     height: 181px;
   }
 
@@ -363,7 +363,7 @@
     font-size: 19px;
     line-height: 135.3%;
     letter-spacing: -0.02em;
-    margin: 0;
+    margin: 0px 20px 0 0;
     color: #03002b;
   }
 
@@ -376,6 +376,7 @@
   .discovery__title {
     padding: 0;
     font-size: 23px;
+    margin: 20px 20px 20px 20px;
   }
   .hero__title__view {
     font-size: 24px;
@@ -390,6 +391,14 @@
   .discovery__container {
     margin: 0px 0px 0 2%;
     transition: all 0.2s ease-in-out;
+  }
+
+  .discovery__box {
+    width: 306px;
+  }
+  .discovery__box__img__class {
+    width: 306px;
+    height: 290px;
   }
 }
 

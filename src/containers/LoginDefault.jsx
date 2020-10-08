@@ -126,6 +126,8 @@ const Register = (props) => {
               <br />
               <span className="register__box__inside--error">
                 {errors.password && errors.password.message}
+              </span>
+              <span className="register__box__inside--error register__box__inside--error__server">
                 {hasError ? <p>El usuario o la contraseña es errórnea</p> : ""}
               </span>
             </div>

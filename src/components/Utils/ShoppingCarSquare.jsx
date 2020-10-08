@@ -136,10 +136,10 @@ const ShoppingCarSquare = (props) => {
               alt="Ícono de Carrito de compra seleccionado"
             />
           )}
-          <MessageTimeOut
+          {/* <MessageTimeOut
             individualCourse={props.individualCourse}
             text={"Se quito del carrito"}
-          />
+          /> */}
         </div>
       )}
     </>

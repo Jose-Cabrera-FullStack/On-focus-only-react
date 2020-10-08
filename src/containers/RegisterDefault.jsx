@@ -141,6 +141,8 @@ const Register = (props) => {
               <br />
               <span className="register__box__inside--error">
                 {errors.password && errors.password.message}
+              </span>
+              <span className="register__box__inside--error">
                 {hasError ? <p>Sucedio un error, intente más tarde</p> : ""}
               </span>
             </div>

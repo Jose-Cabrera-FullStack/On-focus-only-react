@@ -20,7 +20,7 @@ import priceWithDiscount from "../../../Utils/priceWithDiscount";
 const Course = ({ courseInfo, displayNone, principal }) => {
   const {
     featured_image,
-    priceOff,
+    discount,
     name,
     category,
     teacher,
@@ -29,7 +29,7 @@ const Course = ({ courseInfo, displayNone, principal }) => {
     duration,
     module,
   } = courseInfo;
-  let totalPriceToPay = priceWithDiscount(price, priceOff);
+  let totalPriceToPay = priceWithDiscount(price, discount);
 
   const [isHover, setIsHover] = useState(false);
 
@@ -44,7 +44,7 @@ const Course = ({ courseInfo, displayNone, principal }) => {
             alt="Precio"
           />
           <div className="discovery__box__price__off__letter">
-            <p>{priceOff ? `${priceOff}%` : "30%"}OFF</p>
+            <p>{discount ? `${discount}%` : "30%"}OFF</p>
           </div>
         </div>
 
