@@ -80,6 +80,11 @@ const reducer = (state, action) => {
         ...state,
         changePassword: action.payload,
       };
+    case "SEND_MESSAGE_EMAIL":
+      return {
+        ...state,
+        emailMessage: action.payload,
+      };
     case "LOGOUT_REQUEST":
       return {
         ...state,

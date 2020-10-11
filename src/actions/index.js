@@ -130,3 +130,18 @@ export const loginUser = (payload) => {
       .catch((error) => dispatch(setError(error.response.data)));
   };
 };
+
+export const sendMessageEmail = (payload) => {
+  let url = `${URL}/contact`;
+  return function (dispatch) {
+    axios
+      .post(url, payload)
+      .then((response) =>
+        dispatch({
+          type: "SEND_MESSAGE_EMAIL",
+          payload: response.data,
+        })
+      )
+      .catch((error) => dispatch(setError(error)));
+  };
+};

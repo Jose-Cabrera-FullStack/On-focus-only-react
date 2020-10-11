@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { connect } from "react-redux";
 
 import "../../../assets/styles/components/ShoppingCar.scss";
 import Button from "../../../components/Utils/ButtonArrowRight";
+import { sendMessageEmail } from "../../../actions";
 
 const Form = (props) => {
   const { register, errors, handleSubmit } = useForm();
@@ -12,8 +14,8 @@ const Form = (props) => {
       [event.target.name]: event.target.value,
     });
   };
-  const onSubmit = (event) => {
-    console.log("se envia al backend");
+  const onSubmit = (form) => {
+    props.sendMessageEmail(form);
   };
 
   return (
@@ -100,7 +102,7 @@ const Form = (props) => {
       <br />
       <textarea
         className="data__input__text data__input__text__area"
-        name="textarea"
+        name="message"
         cols="30"
         rows="10"
         placeholder="¿Cuál es el motivo por el cuál nos contactás?"
@@ -120,11 +122,14 @@ const Form = (props) => {
         })}
       ></textarea>
       <span className="register__box__inside--error register__box__inside--error__contact">
-        {errors.textarea && errors.textarea.message}
+        {errors.message && errors.message.message}
       </span>
       <br />
       <Button margin={"btn__secundary--data"} text={"Enviar"} />
     </form>
   );
 };
-export default Form;
+const mapDispatchToProps = {
+  sendMessageEmail,
+};
+export default connect(null, mapDispatchToProps)(Form);

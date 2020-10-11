@@ -1,11 +1,14 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import "../../assets/styles/components/Data.scss";
 import Message from "../../assets/static/images/svg/send-message.svg";
 
 import Form from "./ContactUs/Form";
+import SuccessMessage from "../Utils/SuccessMessage";
 
 const Data = (props) => {
+  const hasMessage = Object.keys(props.emailMessage).length > 0;
   return (
     <section className="data">
       <p className="data__text">
@@ -25,11 +28,20 @@ const Data = (props) => {
       <div className={"flex" + " " + props.onlyMobile}>
         <div>
           <Form />
-          {/* debe devolver un 200 y se muestra este mensaje */}
-          <div className="contact__check__message flex">
-            <img src={Message} alt="Mensaje de Confirmación" />
-            <p>Su mensaje ha sido enviado. Gracias! </p>
-          </div>
+          {hasMessage ? (
+            props.emailMessage.success === true ? (
+              <SuccessMessage text={"Su mensaje ha sido enviado. ¡Gracias!"} />
+            ) : (
+              <SuccessMessage
+                text={
+                  "No pudimos recibir su mensaje. Puede intentar nuevamente, por favor."
+                }
+                fail
+              />
+            )
+          ) : (
+            ""
+          )}
         </div>
         <div className="data__right">
           <strong className="data__right__title">Oficina de contacto.</strong>
@@ -75,4 +87,9 @@ const Data = (props) => {
     </section>
   );
 };
-export default Data;
+const mapStateToProps = (state) => {
+  return {
+    emailMessage: state.emailMessage || {},
+  };
+};
+export default connect(mapStateToProps, null)(Data);
