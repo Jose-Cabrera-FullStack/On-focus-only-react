@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
@@ -17,6 +17,8 @@ import HowWeTeach from "../components/Principal/HowWeTeach";
 import NotFound from "../containers/NotFound";
 
 import RectangleWithPriceAndDiscount from "../components/Course/RectangleWithPriceAndDiscount";
+
+import LoadingPage from "../components/Utils/LoadingPage";
 
 import slugify from "../Utils/slugChange";
 
@@ -37,8 +39,16 @@ const Course = (props) => {
   const isCategory = Object.keys(props.category).length > 0;
   const isCourse = Object.keys(props.courseName).length > 0;
 
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 5000);
+  });
   return !isCategory || !isCourse ? (
-    <NotFound />
+    isLoading ? (
+      <LoadingPage />
+    ) : (
+      <NotFound />
+    )
   ) : (
     <div className="App">
       <Header history={props.history} />

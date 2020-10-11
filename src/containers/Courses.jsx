@@ -21,14 +21,4 @@ const Courses = (props) => {
   );
 };
 
-// const mapStateToProps = state => {
-//   return {
-//     course: state.course,
-//   };
-// };
-
-// const mapDispatchToProps = {
-//   getCourseCategory,
-// };
-
 export default connect(null, null)(Courses);

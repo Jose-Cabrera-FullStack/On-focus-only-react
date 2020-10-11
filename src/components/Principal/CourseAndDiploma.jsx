@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import "../../assets/styles/components/Course.scss";
 import "../../assets/styles/components/Courses.scss";
 
+import LoadingElement from "../Utils/LoadingElement";
 import Pagination from "../Utils/Pagination";
 import CourseList from "./Course/CourseList";
 import Diploma from "./Diploma/Diploma";
@@ -24,6 +25,9 @@ const Discovery = (props) => {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = course.slice(indexOfFirstPost, indexOfLastPost);
+
+  const hasCourse = Object.keys(course).length > 0;
+
   return (
     <section className="discovery">
       <div className="discovery__container">
@@ -36,14 +40,18 @@ const Discovery = (props) => {
         <div className="flex">
           <div className={"discovery__course" + " " + props.column}>
             <>
-              <CourseList
-                course={course}
-                coursePage={coursePage}
-                onlyTree={props.onlyThree}
-                onlyFour={props.onlyFour}
-                currentPosts={currentPosts}
-                setcoursePage={setcoursePage}
-              />
+              {hasCourse ? (
+                <CourseList
+                  course={course}
+                  coursePage={coursePage}
+                  onlyTree={props.onlyThree}
+                  onlyFour={props.onlyFour}
+                  currentPosts={currentPosts}
+                  setcoursePage={setcoursePage}
+                />
+              ) : (
+                <LoadingElement />
+              )}
             </>
           </div>
 

@@ -39,7 +39,7 @@ const App = (props) => {
 
   return (
     <Router>
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         <ScrollToTop>
           <Switch>
             <Redirect exact from="/" to="/home" component={Home} />
