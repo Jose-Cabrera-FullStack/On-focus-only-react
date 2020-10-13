@@ -14,7 +14,7 @@ import NotFound from "../containers/NotFound";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import { getMyCourseCategory } from "../actions";
+import { getMyCourseCategory, getMyCourseID } from "../actions";
 
 import "../assets/styles/App.scss";
 import "../assets/styles/components/Buyed.scss";
@@ -29,6 +29,7 @@ const CourseBuyed = (props) => {
   const CourseClasses = () => setSwitch("Classes");
 
   const { slug } = props.match.params;
+  const { token } = props.user;
   const {
     teacher,
     category,
@@ -43,6 +44,7 @@ const CourseBuyed = (props) => {
 
   useEffect(() => {
     props.getMyCourseCategory(slug);
+    getMyCourseID(token);
   }, []);
 
   const isMyCourse = Object.keys(props.myCourse).length > 0;
@@ -122,11 +124,13 @@ const CourseBuyed = (props) => {
 
 const mapDispatchToProps = {
   getMyCourseCategory,
+  getMyCourseID,
 };
 
 const mapStateToProps = (state) => {
   return {
     myCourse: state.myCourse || {},
+    user: state.user,
   };
 };
 

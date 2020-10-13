@@ -8,40 +8,25 @@ import slugy from "../../../Utils/slugChange";
 
 const Finish = ({ myCourses = {} }) => {
   const hasMyCourse = Object.keys(myCourses).length > 0;
-  return !hasMyCourse ? (
+  let hasFinishCourse = true;
+  return !hasMyCourse || hasFinishCourse ? (
     <p>No tienes cursos Finalizados</p>
   ) : (
     <>
-      {myCourses.some((item) => item.status === true) ? (
-        myCourses.map((item, index) => {
-          const videos = [];
-          const module = item.modules.map((item) => item.videos);
-
-          module.forEach((item) =>
-            item.map((item) => {
-              videos.push(item.url);
-            })
-          );
-
-          videos.push(videos);
-          const url = `/mis-cursos/${slugy(item.title)}`;
-
-          return item.status === false ? (
-            ""
-          ) : (
-            <Course
-              key={index}
-              progress={100}
-              title={item.title}
-              src={item.featured_image}
-              category={item.category}
-              url={url}
-              myCourseModule
-            />
-          );
-        })
-      ) : (
-        <p>No haz completado un curso aun.</p>
+      {myCourses.map((item) =>
+        item.progress === 100 ? (
+          <MyCourse
+            key={index}
+            progress={item.progress}
+            title={item.name}
+            category={item.category}
+            src={item.featured_image}
+            url={`/mis-cursos/${item.slug}`}
+            myCourseModule
+          />
+        ) : (
+          (hasFinishCourse = false)
+        )
       )}
     </>
   );

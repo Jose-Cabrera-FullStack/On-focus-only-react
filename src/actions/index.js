@@ -65,18 +65,35 @@ export const changeMyPassword = (payload, token) => {
       .catch((response) => dispatch(setError(response.response.data)));
   };
 };
-export const getMyCourses = (payload) => {
+export const getMyCourses = (token) => {
   let url = `${URL}/courses/me`;
   return function (dispatch) {
     axios
       .get(url, {
         headers: {
-          "access-token": payload,
+          "access-token": token,
         },
       })
       .then((response) =>
         dispatch({
           type: "GET_MY_COURSES",
+          payload: response.data.myCourses,
+        })
+      );
+  };
+};
+export const getMyCourseID = (token, id) => {
+  let url = `${URL}/courses/me/${id}`;
+  return function (dispatch) {
+    axios
+      .get(url, {
+        headers: {
+          "access-token": token,
+        },
+      })
+      .then((response) =>
+        dispatch({
+          type: "GET_MY_COURSE_ID",
           payload: response.data.myCourses,
         })
       );

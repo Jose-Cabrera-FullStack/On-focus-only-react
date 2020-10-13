@@ -24,7 +24,12 @@ const reducer = (state, action) => {
         ...state,
         myCourses: action.payload,
       };
-    case "GET_MY_CATEGORY":
+    case "GET_MY_COURSE_ID":
+      return {
+        ...state,
+        myCourse: action.payload,
+      };
+    case "GET_MY_SLUG":
       return {
         ...state,
         myCourse:
