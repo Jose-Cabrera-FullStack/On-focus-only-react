@@ -10,6 +10,7 @@ import "../assets/styles/App.scss";
 const Visualization = (props) => {
   const { video_id, slugcategory, slugname } = props.match.params;
 
+  console.log(props.courseVideo);
   useEffect(() => {
     props.getCourseVideo(slugcategory, slugname, video_id);
   }, []);
@@ -20,14 +21,14 @@ const Visualization = (props) => {
     <NotFound />
   ) : (
     <div className="App">
-      <VisualizationCourse url={props.match} video={video_id}/>
+      <VisualizationCourse url={props.match} video={video_id} />
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
   return {
-    courseVideo: state.myCourses || {},
+    courseVideo: state.myCourse || {},
     URLvideos: state.URLvideos || {},
   };
 };

@@ -24,7 +24,7 @@ const reducer = (state, action) => {
         ...state,
         myCourses: action.payload,
       };
-    case "GET_MY_COURSE_ID":
+    case "GET_MY_COURSE_BY_SLUG":
       return {
         ...state,
         myCourse: action.payload,

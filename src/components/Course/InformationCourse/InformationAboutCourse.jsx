@@ -47,7 +47,7 @@ const InformationAboutCourse = (props) => {
             }
           >
             Cantidad de módulos:{" "}
-            {myCourse.module ? myCourse.module.length : category.module}.
+            {myCourse.module ? myCourse.module : category.module}.
           </p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 
 import "../../assets/styles/components/CoursePlus.scss";
 import InformationAboutCourse from "./InformationCourse/InformationAboutCourse";
@@ -13,6 +14,8 @@ import Classes from "./Mobile/Classes";
 import Information from "./Mobile/Information";
 
 const AboutThisCourse = (props) => {
+  const { myCourse = {} } = props;
+
   const [openCourse, setOpenCourse] = useState(false);
 
   const handleOpenCourse = () => {
@@ -40,15 +43,13 @@ const AboutThisCourse = (props) => {
         onlyDesktop={"display__screen__desktop"}
       />
       <p className="buyed__text display__screen__desktop">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat. Ut wisi enim ad minim veniam. Duis autem vel eum iriure dolor
-        in hendrerit in vulate velit esse molestie consequat.
+        {myCourse.about_this_course}
       </p>
       <CourseAbout
-        title={props.title}
+        title={"¿Qué incluye este curso?"}
         font={"buyed__font"}
         onlyDesktop={"display__screen__desktop"}
+        myCourse={myCourse}
       />
 
       <CourseCertificate onlyDesktop={"display__screen__desktop"} />
@@ -87,9 +88,15 @@ const AboutThisCourse = (props) => {
       />
       <CourseTeacherInfoVariant
         onlyDesktop={"display__screen__desktop"}
-        teacher={props.teacher}
+        teacher={myCourse.teacher}
       />
     </div>
   );
 };
-export default AboutThisCourse;
+
+const mapStateToProps = (state) => {
+  return {
+    myCourse: state.myCourse || {},
+  };
+};
+export default connect(mapStateToProps, null)(AboutThisCourse);

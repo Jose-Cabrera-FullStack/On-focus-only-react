@@ -3,6 +3,7 @@ import React from "react";
 import "../../../assets/styles/components/Course.scss";
 import Teacher from "../../../assets/static/images/img/profile-teach.png";
 import Facebook from "../../../assets/static/images/svg/facebook-black.svg";
+import Instagram from "../../../assets/static/images/svg/instagram-black.svg";
 import Linkedin from "../../../assets/static/images/svg/linkedin-black.svg";
 import Twitter from "../../../assets/static/images/svg/twitter-black.svg";
 import Youtube from "../../../assets/static/images/svg/youtube-black.svg";
@@ -13,27 +14,52 @@ const CourseTeacherInfoVariant = (props) => {
       <div className="flex">
         <img
           className="buyed__teacher__photo"
-          src={props.teacher.photo}
+          src={
+            props.teacher.profile_photo ? props.teacher.profile_photo : Teacher
+          }
           alt="Foto del profesor"
         />
         <div className="buyed__teacher__inside">
-          <h3>{props.teacher.name}</h3>
-          <p>{props.teacher.profesion}</p>
+          <h3>{props.teacher.full_name}</h3>
+          <p>{props.teacher.title}</p>
           <div className="flex">
             <strong>Seguir:</strong>
             <div className="flex course__teach__socials ">
-              <a href={`${props.teacher.facebook}`}>
-                <img src={Linkedin} alt="Instagram" />
-              </a>
-              <a href={`${props.teacher.facebook}`}>
-                <img src={Facebook} alt="Twitter" />
-              </a>
-              <a href={`${props.teacher.twitter}`}>
-                <img src={Twitter} alt="Facebook" />
-              </a>
-              <a href={`${props.teacher.youtube}`}>
-                <img src={Youtube} alt="LinkedIn" />
-              </a>
+              {props.teacher.socials.instagram ? (
+                <a href={`${props.teacher.socials.instagram}`}>
+                  <img src={Instagram} alt="Instagram" />
+                </a>
+              ) : (
+                ""
+              )}
+              {props.teacher.socials.facebook ? (
+                <a href={`${props.teacher.socials.facebook}`}>
+                  <img src={Facebook} alt="Facebook" />
+                </a>
+              ) : (
+                ""
+              )}
+              {props.teacher.socials.twitter ? (
+                <a href={`${props.teacher.socials.twitter}`}>
+                  <img src={Twitter} alt="Twitter" />
+                </a>
+              ) : (
+                ""
+              )}
+              {props.teacher.socials.youtube ? (
+                <a href={`${props.teacher.socials.youtube}`}>
+                  <img src={Youtube} alt="Youtube" />
+                </a>
+              ) : (
+                ""
+              )}
+              {props.teacher.socials.linkedin ? (
+                <a href={`${props.teacher.socials.linkedin}`}>
+                  <img src={Linkedin} alt="Linkedin" />
+                </a>
+              ) : (
+                ""
+              )}
             </div>
           </div>
           <h5 className="buyed__teacher__info">{props.teacher.description}</h5>

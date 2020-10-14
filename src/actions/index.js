@@ -82,8 +82,8 @@ export const getMyCourses = (token) => {
       );
   };
 };
-export const getMyCourseID = (token, id) => {
-  let url = `${URL}/courses/me/${id}`;
+export const getMyCourseBySlug = (token, slug) => {
+  let url = `${URL}/courses/me/${slug}`;
   return function (dispatch) {
     axios
       .get(url, {
@@ -93,8 +93,8 @@ export const getMyCourseID = (token, id) => {
       })
       .then((response) =>
         dispatch({
-          type: "GET_MY_COURSE_ID",
-          payload: response.data.myCourses,
+          type: "GET_MY_COURSE_BY_SLUG",
+          payload: response.data.data,
         })
       );
   };

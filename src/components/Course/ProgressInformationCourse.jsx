@@ -12,9 +12,9 @@ const ProgressInformationCourse = ({
   title,
   teacher,
   modules,
-  name,
   category,
   image,
+  slug,
 }) => {
   let urlsFalse = [];
   let urlsTrue = [];
@@ -33,11 +33,12 @@ const ProgressInformationCourse = ({
   let url = "";
 
   if (urlsFalse.length < 1) {
-    url = `/cursos/${category}/${name}/${urlsTrue[0]}`;
+    url = `/cursos/${category}/${slug}/${urlsTrue[0]}`;
   }
   if (urlsFalse.length > 1) {
-    url = `/cursos/${category}/${name}/${urlsFalse[0]}`;
+    url = `/cursos/${category}/${slug}/${urlsFalse[0]}`;
   }
+  console.log(url);
 
   return (
     <section className="buyed__progress">

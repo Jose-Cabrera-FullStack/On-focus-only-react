@@ -14,7 +14,7 @@ import NotFound from "../containers/NotFound";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import { getMyCourseCategory, getMyCourseID } from "../actions";
+import { getMyCourseCategory, getMyCourseBySlug } from "../actions";
 
 import "../assets/styles/App.scss";
 import "../assets/styles/components/Buyed.scss";
@@ -31,20 +31,17 @@ const CourseBuyed = (props) => {
   const { slug } = props.match.params;
   const { token } = props.user;
   const {
-    teacher,
     category,
-    students,
-    description,
-    duration,
+    modules,
+    slug: slg,
+    teacher,
     featured_image,
     title,
-    name,
-    modules,
   } = props.myCourse;
 
   useEffect(() => {
     props.getMyCourseCategory(slug);
-    getMyCourseID(token);
+    props.getMyCourseBySlug(token, slug);
   }, []);
 
   const isMyCourse = Object.keys(props.myCourse).length > 0;
@@ -54,7 +51,7 @@ const CourseBuyed = (props) => {
       case "Classes":
         return (
           <div>
-            {props.myCourse.modules.map((item, index) => {
+            {modules.map((item, index) => {
               return (
                 <Module
                   key={index}
@@ -63,21 +60,14 @@ const CourseBuyed = (props) => {
                   text={"Datos sobre el curso"}
                   duration={"45 min"}
                   item={item}
-                  urlData={[category, name]}
+                  urlData={[category, slg]}
                 />
               );
             })}
           </div>
         );
       default:
-        return (
-          <AboutThisCourse
-            students={students}
-            description={description}
-            duration={duration}
-            teacher={teacher}
-          />
-        );
+        return <AboutThisCourse />;
     }
   };
 
@@ -100,9 +90,9 @@ const CourseBuyed = (props) => {
         <ProgressInformationCourse
           onlyDesktop={"display__screen__desktop"}
           title={title}
-          teacher={teacher.name}
+          teacher={teacher.full_name}
           modules={modules}
-          name={name}
+          slug={slg}
           category={category}
           image={featured_image}
         />
@@ -124,7 +114,7 @@ const CourseBuyed = (props) => {
 
 const mapDispatchToProps = {
   getMyCourseCategory,
-  getMyCourseID,
+  getMyCourseBySlug,
 };
 
 const mapStateToProps = (state) => {
