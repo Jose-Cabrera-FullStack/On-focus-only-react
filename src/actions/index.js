@@ -36,6 +36,10 @@ export const deleteFavorite = (payload) => ({
   type: "DELETE_FAVORITE",
   payload,
 });
+export const emptyFavorite = (payload) => ({
+  type: "EMPTY_FAVORITE",
+  payload,
+});
 
 export const totalShopping = (payload) => ({
   type: "TOTAL_SHOPPING",
@@ -156,6 +160,25 @@ export const sendMessageEmail = (payload) => {
       .then((response) =>
         dispatch({
           type: "SEND_MESSAGE_EMAIL",
+          payload: response.data,
+        })
+      )
+      .catch((error) => dispatch(setError(error)));
+  };
+};
+export const buyCourses = (payload, token) => {
+  let url = `${URL}/courses/me/buy`;
+  console.log(token);
+  return function (dispatch) {
+    axios
+      .post(url, payload, {
+        headers: {
+          "access-token": token,
+        },
+      })
+      .then((response) =>
+        dispatch({
+          type: "BUY_COURSES",
           payload: response.data,
         })
       )

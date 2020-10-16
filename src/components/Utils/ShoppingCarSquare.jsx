@@ -15,7 +15,7 @@ const ShoppingCarSquare = (props) => {
   const {
     category,
     course_id,
-    creation_date,
+    course_id_hash,
     description,
     discount,
     duration,
@@ -37,7 +37,7 @@ const ShoppingCarSquare = (props) => {
     props.setFavorite({
       category,
       course_id,
-      creation_date,
+      course_id_hash,
       description,
       discount,
       duration,

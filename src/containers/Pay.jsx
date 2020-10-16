@@ -18,10 +18,13 @@ const Payment = (props) => {
       <div className="payment">
         <div className="display__screen__mobile">
           <Details />
-          <Pay onlyDesktop={"display__screen__desktop"} />
+          <Pay
+            history={props.history}
+            onlyDesktop={"display__screen__desktop"}
+          />
         </div>
         <div className="grid-1 display__screen__desktop">
-          <Pay />
+          <Pay history={props.history} />
         </div>
         <div className="payment__right grid-2 display__screen__desktop">
           <Details />

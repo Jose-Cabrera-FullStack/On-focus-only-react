@@ -70,6 +70,11 @@ const reducer = (state, action) => {
           (items) => items.course_id !== action.payload
         ),
       };
+    case "EMPTY_FAVORITE":
+      return {
+        ...state,
+        shoppingcar: action.payload,
+      };
     case "TOTAL_SHOPPING":
       return {
         ...state,
@@ -89,6 +94,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         emailMessage: action.payload,
+      };
+    case "BUY_COURSES":
+      return {
+        ...state,
+        coursesBuyed: action.payload,
       };
     case "LOGOUT_REQUEST":
       return {

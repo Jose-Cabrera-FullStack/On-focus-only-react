@@ -16,8 +16,10 @@ import Modal from "../Utils/Modal";
 import StepToPay from "../Utils/StepToPay";
 import Congratulation from "../../components/Payment/Congratulation";
 
+import { buyCourses, emptyFavorite } from "../../actions";
+
 const Pay = (props) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -25,6 +27,20 @@ const Pay = (props) => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+  let idFromCourse = [];
+  props.shoppingcar.filter((item) => idFromCourse.push(item.course_id_hash));
+
+  const submitPayment = () => {
+    props.emptyFavorite({});
+    props.buyCourses(
+      {
+        payment: true,
+        courses: idFromCourse,
+      },
+      props.user.token
+    );
+    return props.history.push("/mis-cursos");
   };
 
   const [isSwitch, setSwitch] = useState("");
@@ -40,7 +56,7 @@ const Pay = (props) => {
       case "MercadoPago":
         return (
           <MercadoPagoForm
-            onClick={handleOpen}
+            onClick={submitPayment}
             modal={
               <Modal
                 open={open}
@@ -102,4 +118,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(Pay);
+const mapDispatchToProps = {
+  buyCourses,
+  emptyFavorite,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Pay);
