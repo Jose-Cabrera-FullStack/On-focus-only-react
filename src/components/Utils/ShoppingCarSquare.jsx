@@ -53,6 +53,8 @@ const ShoppingCarSquare = (props) => {
     });
   };
 
+  console.log(props.shoppingcar);
+
   let isSelectedInShoppingCar = false;
 
   props.shoppingcar.map((item) =>

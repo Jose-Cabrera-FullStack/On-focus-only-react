@@ -32,7 +32,7 @@ const Pay = (props) => {
   props.shoppingcar.filter((item) => idFromCourse.push(item.course_id_hash));
 
   const submitPayment = () => {
-    props.emptyFavorite({});
+    props.emptyFavorite([]);
     props.buyCourses(
       {
         payment: true,
@@ -69,7 +69,7 @@ const Pay = (props) => {
       case "Paypal":
         return (
           <PaypalForm
-            onClick={handleOpen}
+            onClick={submitPayment}
             modal={
               <Modal
                 open={open}
