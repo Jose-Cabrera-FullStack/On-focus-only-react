@@ -50,7 +50,9 @@ const Discovery = (props) => {
                   setcoursePage={setcoursePage}
                 />
               ) : (
-                <LoadingElement />
+                <div className="discovery__container__loading">
+                  <LoadingElement />
+                </div>
               )}
             </>
           </div>

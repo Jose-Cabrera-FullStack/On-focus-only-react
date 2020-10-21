@@ -13,7 +13,7 @@ import Success from "../Utils/SuccessMessage";
 const Data = (props) => {
   const { register, errors, handleSubmit } = useForm();
 
-  const { token } = props.user;
+  const { token } = props.user.data;
 
   const [form, setValues] = useState({
     oldPassword: "",
@@ -35,6 +35,9 @@ const Data = (props) => {
     }
   };
 
+  const hasChangePassword = Object.keys(props.changePassword).length > 0;
+
+  console.log(props.changePassword);
   return (
     <section className="data" onSubmit={handleSubmit(onSubmit)}>
       <h4>Gestioná tus datos.</h4>
@@ -139,13 +142,16 @@ const Data = (props) => {
           text={"Guardar"}
           margin={"discovery__box__position btn__secundary--data"}
         />
-        {props.changePassword === true ? (
-          <Success />
-        ) : props.error.success === false ? (
-          <Success
-            text={"Por favor coloque bien su contraseña para poder proceder"}
-            fail
-          />
+        {/* esperar que la api funcione bien */}
+        {hasChangePassword ? (
+          props.changePassword.UPDATED.code === 200 ? (
+            <Success />
+          ) : (
+            <Success
+              text={"Por favor coloque bien su contraseña para poder proceder"}
+              fail
+            />
+          )
         ) : (
           ""
         )}

@@ -52,18 +52,18 @@ export const setError = (payload) => ({
 });
 
 export const changeMyPassword = (payload, token) => {
-  let url = `${URL}/changePassword`;
+  let url = `${URL}/me/password`;
   return function (dispatch) {
     axios
       .post(url, payload, {
         headers: {
-          "access-token": token,
+          token: token,
         },
       })
       .then((response) =>
         dispatch({
           type: "CHANGE_MY_PASSWORD",
-          payload: response.data.success,
+          payload: response.data,
         })
       )
       .catch((response) => dispatch(setError(response.response.data)));
@@ -141,7 +141,7 @@ export const loginRequest = (payload) => ({
   payload,
 });
 export const loginUser = (payload) => {
-  let url = `${URL}/loginSession`;
+  let url = `${URL}/login`;
   return (dispatch) => {
     axios
       .post(url, payload)

@@ -19,6 +19,13 @@
   line-height: 117.3%;
 }
 
+.discovery__container__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+}
+
 .discovery__course {
   display: grid;
   grid-template-rows: 1fr;
