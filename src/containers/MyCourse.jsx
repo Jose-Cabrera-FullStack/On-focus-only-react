@@ -12,7 +12,7 @@ import "../assets/styles/App.scss";
 
 const Courses = (props) => {
   useEffect(() => {
-    props.getMyCourses(props.user.token);
+    props.getMyCourses(props.user.data.token);
   }, []);
   return (
     <div className="App">

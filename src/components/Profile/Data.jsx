@@ -37,7 +37,6 @@ const Data = (props) => {
 
   const hasChangePassword = Object.keys(props.changePassword).length > 0;
 
-  console.log(props.changePassword);
   return (
     <section className="data" onSubmit={handleSubmit(onSubmit)}>
       <h4>Gestioná tus datos.</h4>

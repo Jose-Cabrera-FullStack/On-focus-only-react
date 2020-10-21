@@ -38,7 +38,7 @@ const Pay = (props) => {
         payment: true,
         courses: idFromCourse,
       },
-      props.user.token
+      props.user.data.token
     );
     return props.history.push("/mis-cursos");
   };

@@ -70,29 +70,29 @@ export const changeMyPassword = (payload, token) => {
   };
 };
 export const getMyCourses = (token) => {
-  let url = `${URL}/courses/me`;
+  let url = `${URL}/me/course`;
   return function (dispatch) {
     axios
       .get(url, {
         headers: {
-          "access-token": token,
+          token: token,
         },
       })
       .then((response) =>
         dispatch({
           type: "GET_MY_COURSES",
-          payload: response.data.myCourses,
+          payload: response.data,
         })
       );
   };
 };
 export const getMyCourseBySlug = (token, slug) => {
-  let url = `${URL}/courses/me/${slug}`;
+  let url = `${URL}/me/course/${slug}`;
   return function (dispatch) {
     axios
       .get(url, {
         headers: {
-          "access-token": token,
+          token: token,
         },
       })
       .then((response) =>
@@ -108,7 +108,7 @@ export const logoutRequest = (payload) => ({
   payload,
 });
 export const getAllCourse = () => {
-  let url = `${URL}/courses?limit=40`;
+  let url = `${URL}/course?limit=100`;
   return function (dispatch) {
     axios
       .get(url)
@@ -167,13 +167,12 @@ export const sendMessageEmail = (payload) => {
   };
 };
 export const buyCourses = (payload, token) => {
-  let url = `${URL}/courses/me/buy`;
-  console.log(token);
+  let url = `${URL}/me/course/buy`;
   return function (dispatch) {
     axios
       .post(url, payload, {
         headers: {
-          "access-token": token,
+          token: token,
         },
       })
       .then((response) =>

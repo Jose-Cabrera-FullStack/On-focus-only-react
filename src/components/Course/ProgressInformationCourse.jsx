@@ -38,7 +38,6 @@ const ProgressInformationCourse = ({
   if (urlsFalse.length > 1) {
     url = `/cursos/${category}/${slug}/${urlsFalse[0]}`;
   }
-  console.log(url);
 
   return (
     <section className="buyed__progress">

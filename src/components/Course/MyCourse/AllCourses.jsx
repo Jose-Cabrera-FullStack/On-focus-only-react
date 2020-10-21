@@ -12,7 +12,7 @@ const AllCourse = ({ myCourse = {} }) => {
     <p>No tienes cursos comprados</p>
   ) : (
     <>
-      {myCourse.map((item, index) => {
+      {myCourse.data.map((item, index) => {
         return (
           <MyCourse
             key={index}

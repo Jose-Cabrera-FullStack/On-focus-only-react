@@ -13,7 +13,7 @@ const Finish = ({ myCourses = {} }) => {
     <p>No tienes cursos Finalizados</p>
   ) : (
     <>
-      {myCourses.map((item) =>
+      {myCourses.data.map((item) =>
         item.progress === 100 ? (
           <MyCourse
             key={index}

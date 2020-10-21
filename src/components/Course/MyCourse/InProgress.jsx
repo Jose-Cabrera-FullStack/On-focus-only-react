@@ -11,7 +11,7 @@ const InProgress = ({ myCourses = {} }) => {
   return !hasMyCourse ? (
     <p>No tienes cursos En curso</p>
   ) : (
-    myCourses.map((item, index) =>
+    myCourses.data.map((item, index) =>
       item.progress < 100 ? (
         <MyCourse
           key={index}
