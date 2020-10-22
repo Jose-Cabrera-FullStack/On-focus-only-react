@@ -21,13 +21,14 @@ const ProgressInformationCourse = ({
   let totalVideoNum = 0;
   let totalVideoFinishNum = 0;
   let totalVideo = modules.map((item) => item.videos);
+  console.log("totalVideo", totalVideo);
   totalVideo.map((element) => {
-    element.forEach((element) => {
-      if (element.status === true) totalVideoFinishNum += 1;
-      if (element.status === false) urlsFalse.push(element.url);
-      if (element.status === true) urlsTrue.push(element.url);
-      totalVideoNum += 1;
-    });
+    // element.forEach((element) => {
+    //   if (element.status === true) totalVideoFinishNum += 1;
+    //   if (element.status === false) urlsFalse.push(element.url);
+    //   if (element.status === true) urlsTrue.push(element.url);
+    //   totalVideoNum += 1;
+    // });
   });
 
   let url = "";

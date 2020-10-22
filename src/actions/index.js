@@ -100,7 +100,8 @@ export const getMyCourseBySlug = (token, slug) => {
           type: "GET_MY_COURSE_BY_SLUG",
           payload: response.data.data,
         })
-      );
+      )
+      .catch((error) => dispatch(setError(error)));
   };
 };
 export const logoutRequest = (payload) => ({

@@ -29,7 +29,7 @@ const CourseBuyed = (props) => {
   const CourseClasses = () => setSwitch("Classes");
 
   const { slug } = props.match.params;
-  const { token } = props.user;
+  const { token } = props.user.data;
   const {
     category,
     modules,
@@ -45,6 +45,7 @@ const CourseBuyed = (props) => {
   }, []);
 
   const isMyCourse = Object.keys(props.myCourse).length > 0;
+  console.log("MyCourse", props.myCourse);
 
   const InfoMethod = (isSwitch) => {
     switch (isSwitch) {
