@@ -31,7 +31,8 @@
 }
 
 .teacher__points {
-  margin: 50px 270px 0 400px;
+  margin: auto;
+  text-align: -webkit-center;
 }
 
 .teacher__points__img--1 {
@@ -57,12 +58,12 @@
 
 .teacher__points__text {
   margin: 10px 0 0 0;
-  width: 330px;
+  text-align-last: left;
   font-size: 14px;
 }
 
 .teacher__faq {
-  margin: 0 200px 74px 200px;
+  margin: 6em;
 }
 
 .teacher__faq h1 {
@@ -92,9 +93,7 @@
 }
 
 .teacher__course {
-  margin: 0 200px 20px 200px;
-  left: 200px;
-  top: 1452px;
+  margin: auto;
   width: 1040px;
   background: linear-gradient(
     180deg,
@@ -142,10 +141,7 @@
     width: auto;
   }
   .teacher__points {
-    margin: 50px 170px 0 200px;
-  }
-  .teacher__faq {
-    margin: 0 100px 74px 50px;
+    margin: auto;
   }
 
   .display__screen__mobile__without__flex--FAQ__teacher {
@@ -174,9 +170,11 @@
     position: relative;
     right: 50px;
   }
-  .teacher__points {
-    margin: 50px 170px 0 100px;
+
+  .teacher__faq {
+    margin: 3em;
   }
+
   .teacher__hero {
     height: 180px;
     background-position: -230px;
@@ -197,7 +195,7 @@
 }
 @media screen and (max-width: 615px) {
   .teacher__faq {
-    margin: 0 10px 74px 10px;
+    margin: 2em;
   }
   .teacher__faq__box {
     width: 360px;
@@ -205,9 +203,6 @@
 
   .teacher__faq__box p {
     margin: 15px -30px 0px 30px;
-  }
-  .teacher__points {
-    margin: 50px 10px 0 30px;
   }
   .btn__primary--teacher {
     transform: translate(-125%, -100%);
@@ -218,5 +213,8 @@
   .btn__primary--teacher {
     transform: translate(-90%, -100%);
     margin: 0px 0px 8% 100px;
+  }
+  .teacher__faq {
+    margin: 1em;
   }
 }

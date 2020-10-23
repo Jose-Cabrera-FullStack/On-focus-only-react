@@ -64,7 +64,7 @@ const Footer = (props) => {
             </div>
           </div>
 
-          <div className="display__screen__desktop">
+          <div className="footer__logo__focus display__screen__desktop">
             <figure>
               <img className="footer__logo__mobile" src={Logo} alt="on focus" />
             </figure>

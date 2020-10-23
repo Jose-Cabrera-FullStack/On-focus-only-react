@@ -128,7 +128,7 @@ const Course = ({ courseInfo, displayNone, principal }) => {
                     src={isHover ? ArrowHover : Arrow}
                     alt="Ícono de Flecha"
                   />
-                  <p>Ver detalles del curso</p>
+                  <p>Ver detalles</p>
                 </div>
               </button>
             </Link>

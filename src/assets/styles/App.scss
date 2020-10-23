@@ -108,4 +108,7 @@ textarea:focus {
   .display__screen__mobile__without__flex {
     display: block;
   }
+  .grid-column-2 {
+    grid-template-columns: 1fr;
+  }
 }

@@ -45,7 +45,11 @@
 }
 .footer__logo {
   width: 250px;
-  margin: 40px 0 0 80px;
+}
+
+.footer__logo__focus {
+  justify-self: center;
+  align-self: center;
 }
 
 .footer__container__left h5 {
@@ -282,11 +286,6 @@
     margin-right: auto;
     width: 50%;
     top: 30px;
-  }
-  .footer__logo__mobile {
-    width: 200px;
-    position: relative;
-    top: 60px;
   }
 }
 @media screen and (max-width: 1024px) {

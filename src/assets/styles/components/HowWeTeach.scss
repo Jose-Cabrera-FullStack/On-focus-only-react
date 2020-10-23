@@ -59,6 +59,8 @@
   font-size: 15px;
   color: #03002b;
   margin: 0;
+  width: 21.8em;
+  text-align-last: left;
 }
 
 .how__we__tech__info__text {
@@ -66,7 +68,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
-  width: 330px;
+  width: 23em;
   margin: 0 20px 0 0px;
 }
 /* <-------MEDIA-------> */
@@ -87,15 +89,16 @@
   .how__we__tech {
     margin: 0px 0px 0 5%;
   }
-  .how__we__tech__info__text {
-    width: auto;
-  }
 
   .how__we__tech__mobile {
     margin: 0;
   }
   .how__we__tech__title {
     margin: 50px 10px 60px 10px;
+  }
+  .how__we__tech__info {
+    text-align-last: center;
+    margin: auto;
   }
 }
 
