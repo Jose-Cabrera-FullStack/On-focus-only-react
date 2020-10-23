@@ -8,11 +8,10 @@ import "../assets/styles/App.scss";
 import "../assets/styles/components/Payment.scss";
 
 const Payment = (props) => {
-  // console.log("props:", props);
   return (
     <div className="App">
       <Header history={props.history} />
-      <Politicy param={props.location} />
+      <Politicy />
       <Footer />
     </div>
   );

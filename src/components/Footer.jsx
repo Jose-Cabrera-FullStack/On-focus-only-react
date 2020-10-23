@@ -10,6 +10,19 @@ import ScrollArrowUp from "./Utils/ScrollArrowUp";
 
 const year = new Date().getFullYear();
 
+const politicy = {
+  pathname: "/politicas",
+  param: "politicy",
+};
+const term = {
+  pathname: "/politicas",
+  param: "Terminos",
+};
+const help = {
+  pathname: "/politicas",
+  param: "Centro",
+};
+
 const Footer = (props) => {
   return (
     <>
@@ -75,13 +88,13 @@ const Footer = (props) => {
               <div className="footer__container__right--fix">
                 <ol>
                   <h5>Legales</h5>
-                  <Link to="/politicas">
+                  <Link to={politicy}>
                     <li>Politicas de Cookie</li>
                   </Link>
-                  <Link to="/politicas">
+                  <Link to={term}>
                     <li>Centro de Ayuda</li>
                   </Link>
-                  <Link to="/politicas">
+                  <Link to={help}>
                     <li to="terminos-y-condiciones">
                       Términos y <br />
                       condiciones

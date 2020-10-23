@@ -7,7 +7,10 @@ import TermAndCondition from "./Politicy/TermAndCondition";
 import HelpCenter from "./Politicy/HelpCenter";
 
 const Politicy = (props) => {
-  const [isSwitch, setSwitch] = useState("");
+  console.log(props);
+  const [isSwitch, setSwitch] = useState(
+    props.param.param ? props.param.param : ""
+  );
 
   const PoliticyMethod = () => setSwitch("");
 
