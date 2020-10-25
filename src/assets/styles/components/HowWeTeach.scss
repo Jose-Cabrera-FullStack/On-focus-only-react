@@ -70,6 +70,7 @@
   font-size: 15px;
   width: 23em;
   margin: 0 20px 0 0px;
+  text-align-last: left;
 }
 /* <-------MEDIA-------> */
 
@@ -102,10 +103,19 @@
   }
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 812px) {
   .how__we__tech__container {
     display: block;
     margin: 0px 0px 0 10px;
+  }
+  .how__we__tech__info__text {
+    text-align-last: left;
+    margin: auto;
+  }
+  .how__we__tech__info__title {
+    width: 22.8em;
+    text-align-last: left;
+    margin: auto;
   }
 }
 
