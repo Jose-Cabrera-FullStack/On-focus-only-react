@@ -113,6 +113,8 @@
 }
 .footer__help img {
   margin: -27px 0px 0 0px;
+  height: 30px;
+  align-self: center;
 }
 
 .footer__help p {
@@ -279,12 +281,12 @@
 }
 @media screen and (max-width: 1150px) {
   .footer__logo {
-    height: 195px;
+    height: 12em;
     display: block;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 12em;
     top: 30px;
   }
 }
