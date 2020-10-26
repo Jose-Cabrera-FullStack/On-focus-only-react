@@ -31,6 +31,7 @@ const Course = (props) => {
 
   const { slugcategory, slugcourse } = props.match.params;
 
+  console.log(slugcourse);
   useEffect(() => {
     props.getAllCourse();
     props.getCourseCategory(slugify(slugcategory));

@@ -19,6 +19,11 @@ const reducer = (state, action) => {
         ...state,
         videoName: action.payload,
       };
+    case "GET_COURSE_BY_SLUG":
+      return {
+        ...state,
+        CourseSlug: action.payload,
+      };
     case "GET_MY_COURSES":
       return {
         ...state,

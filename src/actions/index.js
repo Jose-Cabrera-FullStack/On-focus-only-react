@@ -86,6 +86,20 @@ export const getMyCourses = (token) => {
       );
   };
 };
+export const getCourseBySlug = (slug) => {
+  let url = `${URL}/course/${slug}`;
+  return function (dispatch) {
+    axios
+      .get(url)
+      .then((response) =>
+        dispatch({
+          type: "GET_COURSE_BY_SLUG",
+          payload: response.data.data,
+        })
+      )
+      .catch((error) => dispatch(setError(error)));
+  };
+};
 export const getMyCourseBySlug = (token, slug) => {
   let url = `${URL}/me/course/${slug}`;
   return function (dispatch) {

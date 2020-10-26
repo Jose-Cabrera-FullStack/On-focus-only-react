@@ -25,7 +25,7 @@ const CourseBuyed = (props) => {
   const [isSwitch, setSwitch] = useState("");
 
   const AboutThisCourseInformation = () => setSwitch("");
-
+  console.log("slug:", slug);
   const CourseClasses = () => setSwitch("Classes");
 
   const { slug } = props.match.params;
