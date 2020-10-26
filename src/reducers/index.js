@@ -55,7 +55,7 @@ const reducer = (state, action) => {
         ...state,
         courseName:
           state.course.find(
-            (item) => slugify(item.name) === action.payload.slugCourse
+            (item) => slugify(item.title) === action.payload.slugCourse
           ) || {},
       };
     case "GET_ALL_COURSE":

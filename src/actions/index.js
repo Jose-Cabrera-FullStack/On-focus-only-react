@@ -17,9 +17,9 @@ export const getCourseCategory = (slugcategory) => ({
   payload: { slugcategory },
 });
 
-export const getCourse = (slugCourse) => ({
+export const getCourse = (payload) => ({
   type: "GET_COURSE",
-  payload: { slugCourse },
+  payload,
 });
 
 export const getMyCourseCategory = (payload) => ({

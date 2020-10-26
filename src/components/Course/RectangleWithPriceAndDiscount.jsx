@@ -50,6 +50,7 @@ const RectangleWithPriceAndDiscount = ({ course, category, onlyMobile }) => {
 const mapStateToProps = (state) => {
   return {
     category: state.category || {},
+    course:state.CourseSlug || {}
   };
 };
 

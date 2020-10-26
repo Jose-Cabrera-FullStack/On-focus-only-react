@@ -20,31 +20,25 @@ import RectangleWithPriceAndDiscount from "../components/Course/RectangleWithPri
 
 import LoadingPage from "../components/Utils/LoadingPage";
 
-import slugify from "../Utils/slugChange";
-
-import { getCourseCategory, getCourse, getAllCourse } from "../actions";
+import { getCourseBySlug } from "../actions";
 
 import "../assets/styles/App.scss";
 
 const Course = (props) => {
   let grid = "grid-column-2--fix";
 
-  const { slugcategory, slugcourse } = props.match.params;
+  const {  slugcourse } = props.match.params;
 
-  console.log(slugcourse);
   useEffect(() => {
-    props.getAllCourse();
-    props.getCourseCategory(slugify(slugcategory));
-    props.getCourse(slugify(slugcourse));
-  });
-  const isCategory = Object.keys(props.category).length > 0;
-  const isCourse = Object.keys(props.courseName).length > 0;
-
+    props.getCourseBySlug(slugcourse);
+  },{});
+  const isCourse = Object.keys(props.course).length > 0;
+  
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 5000);
   });
-  return !isCategory || !isCourse ? (
+  return !isCourse ? (
     isLoading ? (
       <LoadingPage />
     ) : (
@@ -59,12 +53,12 @@ const Course = (props) => {
       />
       <SmallVideo
         onlyMobile={"visualization__mobile display__screen__mobile"}
-        video_id={props.category.video_intro}
+        video_id={props.course.video_intro}
       />
       <HeroCoursePlus />
       <section>
         <div className="flex">
-          <InformationAboutThisCourse course={props.category} />
+          <InformationAboutThisCourse course={props.course} />
           <RectangleWithPriceAndDiscount />
         </div>
 
@@ -100,21 +94,13 @@ const Course = (props) => {
   );
 };
 
-Course.propTypes = {
-  getCourseCategory: PropTypes.func,
-};
-
 const mapStateToProps = (state) => {
   return {
-    category: state.category || {},
-    courseName: state.courseName || {},
-    course: state.course || {},
+    course: state.CourseSlug || {},
   };
 };
 const mapDispatchToProps = {
-  getCourseCategory,
-  getCourse,
-  getAllCourse,
+  getCourseBySlug
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Course);

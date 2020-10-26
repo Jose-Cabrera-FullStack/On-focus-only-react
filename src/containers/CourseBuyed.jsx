@@ -14,7 +14,7 @@ import NotFound from "../containers/NotFound";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import { getMyCourseCategory, getMyCourseBySlug } from "../actions";
+import { getMyCourseBySlug } from "../actions";
 
 import "../assets/styles/App.scss";
 import "../assets/styles/components/Buyed.scss";
@@ -25,9 +25,8 @@ const CourseBuyed = (props) => {
   const [isSwitch, setSwitch] = useState("");
 
   const AboutThisCourseInformation = () => setSwitch("");
-  console.log("slug:", slug);
   const CourseClasses = () => setSwitch("Classes");
-
+  
   const { slug } = props.match.params;
   const { token } = props.user.data;
   const {
@@ -38,14 +37,12 @@ const CourseBuyed = (props) => {
     featured_image,
     title,
   } = props.myCourse;
-
+  
   useEffect(() => {
-    props.getMyCourseCategory(slug);
     props.getMyCourseBySlug(token, slug);
   }, []);
 
   const isMyCourse = Object.keys(props.myCourse).length > 0;
-  console.log("MyCourse", props.myCourse);
 
   const InfoMethod = (isSwitch) => {
     switch (isSwitch) {
@@ -114,7 +111,6 @@ const CourseBuyed = (props) => {
 };
 
 const mapDispatchToProps = {
-  getMyCourseCategory,
   getMyCourseBySlug,
 };
 

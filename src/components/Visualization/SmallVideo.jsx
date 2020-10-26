@@ -5,6 +5,7 @@ import "../../assets/styles/components/Visualization.scss";
 import "../../assets/styles/components/Course.scss";
 
 const SmallVideo = ({ video_id, onlyMobile, OnlyDesktop }) => {
+  console.log(video_id)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const handleWindowResize = () => {

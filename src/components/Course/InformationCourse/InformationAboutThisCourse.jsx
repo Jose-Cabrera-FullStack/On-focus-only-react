@@ -76,7 +76,7 @@ const InformationAboutThisCourse = ({ category }) => {
 
 const mapStateToProps = (state) => {
   return {
-    category: state.category || {},
+    category: state.CourseSlug || {},
   };
 };
 

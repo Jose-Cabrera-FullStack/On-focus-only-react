@@ -4,31 +4,32 @@ import { connect } from "react-redux";
 import CapitalFirstLetter from "../../../Utils/capitalizeFirstLetter";
 import "../../../assets/styles/components/CoursePlus.scss";
 
-const Information = (props) => (
+const Information = (props) => {
+  return(
   <div className={props.OnlyDesktop ? props.OnlyDesktop : props.onlyMobile}>
     <h2 className="discovery__box__info__title course__section">
-      {props.category.name
-        ? CapitalFirstLetter(props.category.name)
+      {props.course.title
+        ? CapitalFirstLetter(props.course.title)
         : "Aprendé a ser mejor lider."}
     </h2>
     <div className="course__section__name flex">
       <p className="discovery__box__info__name discovery__box__info__name--course">
-        {props.category.category
-          ? CapitalFirstLetter(props.category.category)
+        {props.course.category
+          ? CapitalFirstLetter(props.course.category)
           : "Marketing"}
       </p>
       <i className="discovery__box__info__teach course__section__tech">
         -{" "}
-        {props.category.teacher
-          ? props.category.teacher
+        {props.course.teacher
+          ? props.course.teacher.full_name
           : "Por Juan Pablo Laco"}
       </i>
     </div>
   </div>
-);
+)};
 const mapStateToProps = (state) => {
   return {
-    category: state.category || {},
+    course: state.CourseSlug || {},
   };
 };
 
