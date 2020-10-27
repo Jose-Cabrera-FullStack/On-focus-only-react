@@ -29,7 +29,6 @@ const ShoppingCarSquare = (props) => {
     teacher,
     video_intro,
   } = course;
-  console.log("course:", price);
 
   const [isSelected, setIsSelected] = useState(false);
 
@@ -68,19 +67,16 @@ const ShoppingCarSquare = (props) => {
   const [isHover, setIsHover] = useState(false);
   const HoverHandle = () => setIsHover(!isHover);
   // <----------Se debe refactorizar mas adelante----------->
-
-  let totalWithOutDiscount = 0;
   let totalDiscount = 0;
-  props.shoppingcar.map((item) => (totalWithOutDiscount += item.price));
-  props.shoppingcar.map(
-    (item) => (totalDiscount += item.discount / props.shoppingcar.length)
-  );
 
-  let totalToPay = parseInt(
-    totalWithOutDiscount - (totalWithOutDiscount * totalDiscount) / 100
-  );
+  price.map((item) => {
+    if (item.country === props.country) {
+      totalDiscount = totalDiscount + parseInt(item.final_price);
+    }
+  });
+
   useEffect(() => {
-    props.totalShopping(totalToPay);
+    props.totalShopping(totalDiscount);
   });
   // <----------Se debe refactorizar mas adelante----------->
   return (
@@ -150,6 +146,7 @@ const mapStateToProps = (state) => {
   return {
     shoppingcar: state.shoppingcar || {},
     total: state.total,
+    country: state.country,
   };
 };
 

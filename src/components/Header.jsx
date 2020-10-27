@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { logoutRequest } from "../actions";
+import { logoutRequest, getCountry } from "../actions";
 
 import EmergentMenu from "./Utils/EmergentMenu";
 import HamburgerMenuMobile from "./Utils/HamburgerMenuMobile";
@@ -13,6 +13,13 @@ import Hamburguer from "../assets/static/images/svg/icon-hamburguer.svg";
 import Shopping from "../assets/static/images/svg/shopping-car.svg";
 
 import "../assets/styles/components/Header.scss";
+
+const countryList = [
+  { id: "ARG", name: "Argentina", currency: "AR$" },
+  { id: "USA", name: "EEUU", currency: "US$" },
+  { id: "SPA", name: "España", currency: "EU€" },
+  { id: "MX", name: "México", currency: "MX$" },
+];
 
 const Header = (props) => {
   const { user = {} } = props;
@@ -41,6 +48,19 @@ const Header = (props) => {
 
   const notification = shoppingcar.length > 0;
 
+  const [country, setCountry] = useState(props.country);
+
+  useEffect(() => {
+    props.getCountry(country);
+  });
+
+  const handleCountryValue = (event) => {
+    countryList.map((item) => {
+      if (item.id === event.target.value) {
+        setCountry(item);
+      }
+    });
+  };
   return (
     <header>
       <nav className="navbar">
@@ -97,6 +117,18 @@ const Header = (props) => {
         <div className="grid-2 navbar__justify__self navbar__query">
           <div className="navbar__query"></div>
           <ol className="navbar__element__list">
+            <li>
+              <select
+                value={country.id}
+                onChange={(event) => handleCountryValue(event)}
+              >
+                {countryList.map((item) => (
+                  <option key={item.id} value={item.id}>
+                    {item.name}
+                  </option>
+                ))}
+              </select>
+            </li>
             <Link to="/cursos" className="text-decoration">
               <li className="navbar__menu">Descubrir cursos</li>
             </Link>
@@ -133,6 +165,7 @@ const Header = (props) => {
                 alt="Carrito de compras"
               />
             </li>
+
             <EmergentMenu toggle={isToggled} desktop location={props.history} />
             {hasUser ? (
               <>
@@ -176,11 +209,13 @@ const mapStateToProps = (state) => {
   return {
     shoppingcar: state.shoppingcar || {},
     user: state.user || {},
+    country: state.country || { id: "ARG", name: "Argentina", currency: "AR$" },
   };
 };
 
 const mapDispatchToProps = {
   logoutRequest,
+  getCountry,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

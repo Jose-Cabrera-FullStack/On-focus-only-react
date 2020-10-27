@@ -2,6 +2,10 @@ import axios from "axios";
 
 const URL = "https://backend-devel.herokuapp.com/api";
 
+export const getCountry = (payload) => ({
+  type: "GET_COUNTRY",
+  payload,
+});
 export const getCourseVideo = (slugcategory, slugname, video_id) => ({
   type: "GET_COURSE_VIDEO",
   payload: { slugcategory, slugname, video_id },

@@ -33,7 +33,8 @@ const ShoppingBox = (props) => {
             Total en el carrito
           </p>
           <strong>
-            AR$ {totalWithOutDiscountshoppingcar ? totalWithOutDiscount : 0}
+            {props.country}{" "}
+            {totalWithOutDiscountshoppingcar ? totalWithOutDiscount : 0}
           </strong>
         </div>
         <div className={"flex" + " " + props.onlyDesktop}>
@@ -41,10 +42,10 @@ const ShoppingBox = (props) => {
             <i className="shopping__car__box__inside__discounts">
               Dcto. {discount ? parseInt(totalDiscount) : 0}%
             </i>
-            <br /> Estás ahorrando{" "}
+            <br /> Estás ahorrando
           </p>
           <i className="shopping__car__box__inside__promo shopping__car__box__inside__promo--red">
-            AR${" "}
+            {props.country}
             {totalWithOutDiscountshoppingcar
               ? parseInt((totalWithOutDiscount * totalDiscount) / 100)
               : 0}
@@ -90,6 +91,7 @@ const mapStateToProps = (state) => {
   return {
     shoppingcar: state.shoppingcar || {},
     total: state.total,
+    country: state.country,
   };
 };
 const mapDispatchToProps = {

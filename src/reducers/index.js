@@ -3,6 +3,11 @@ import slugify from "../Utils/slugChange";
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "GET_COUNTRY":
+      return {
+        ...state,
+        country: action.payload,
+      };
     case "GET_COURSE_VIDEO":
       return {
         ...state,
