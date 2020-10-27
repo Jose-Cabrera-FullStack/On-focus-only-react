@@ -22,13 +22,14 @@ const ShoppingCarSquare = (props) => {
     entity_status,
     featured_image,
     module,
-    name,
+    title,
     price,
     status,
     students,
     teacher,
     video_intro,
   } = course;
+  console.log("course:", price);
 
   const [isSelected, setIsSelected] = useState(false);
 
@@ -44,7 +45,7 @@ const ShoppingCarSquare = (props) => {
       entity_status,
       featured_image,
       module,
-      name,
+      title,
       price,
       status,
       students,
@@ -82,7 +83,6 @@ const ShoppingCarSquare = (props) => {
     props.totalShopping(totalToPay);
   });
   // <----------Se debe refactorizar mas adelante----------->
-
   return (
     <>
       {isSelected ? (

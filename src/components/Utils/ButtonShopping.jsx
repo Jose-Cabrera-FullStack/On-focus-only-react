@@ -11,7 +11,7 @@ import Shopping from "../Utils/ShoppingCarSquare";
 import { setFavorite } from "../../actions";
 
 const ButtonShopping = (props) => {
-  const categoryPay = props.category;
+  const coursePay = props.course;
 
   const {
     category,
@@ -29,7 +29,7 @@ const ButtonShopping = (props) => {
     students,
     teacher,
     video_intro,
-  } = categoryPay;
+  } = coursePay;
 
   const total = price - (price * discount) / 100;
 
@@ -59,14 +59,14 @@ const ButtonShopping = (props) => {
       <Link to="/pago">
         <ButtonArrowRight onClick={handleShopping} />
       </Link>
-      <Shopping course={props.category} individualCourse />
+      <Shopping course={coursePay} individualCourse />
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
   return {
-    category: state.category || {},
+    course: state.CourseSlug || {},
   };
 };
 

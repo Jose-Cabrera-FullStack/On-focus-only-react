@@ -40,7 +40,7 @@ const RectangleWithPriceAndDiscount = ({ course, category, onlyMobile }) => {
           </p>
           <YouSave course={course} />
           <Discount />
-          <ButtonShopping category={category} />
+          <ButtonShopping />
         </div>
       </div>
     </VisibilitySensor>
@@ -50,7 +50,7 @@ const RectangleWithPriceAndDiscount = ({ course, category, onlyMobile }) => {
 const mapStateToProps = (state) => {
   return {
     category: state.category || {},
-    course:state.CourseSlug || {}
+    course: state.CourseSlug || {},
   };
 };
 
