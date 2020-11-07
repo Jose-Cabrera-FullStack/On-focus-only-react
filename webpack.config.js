@@ -43,28 +43,27 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|svg)$/,
         exclude: /node_modules/,
         loader: "file-loader",
         options: {
-          limit: 10 * 1024,
           name: "[name].[ext]",
           publicPath: "img/",
           outputPath: "img/",
         },
       },
-      {
-        test: /\.svg$/,
-        loader: "svg-url-loader",
-        options: {
-          noquotes: true,
-        },
-      },
-      {
-        test: /\.(jpg|png|gif|svg)$/,
-        loader: "image-webpack-loader",
-        enforce: "pre",
-      },
+      // {
+      //   test: /\.svg$/,
+      //   loader: "svg-url-loader",
+      //   options: {
+      //     noquotes: true,
+      //   },
+      // },
+      // {
+      //   test: /\.(jpg|png|gif|svg)$/,
+      //   loader: "image-webpack-loader",
+      //   enforce: "pre",
+      // },
     ],
   },
   devServer: {
