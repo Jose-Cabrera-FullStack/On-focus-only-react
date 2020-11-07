@@ -73,7 +73,7 @@ const Course = ({
                 : "hero__view__promo__teacher--shopping__car"
             }
           >
-            Por {teacher ? capitalizeFirstLetter(teacher) : "Juan Pablo Laco"}
+            Por {teacher ? capitalizeFirstLetter(teacher.full_name) : "Juan Pablo Laco"}
           </p>
         ) : (
           ""

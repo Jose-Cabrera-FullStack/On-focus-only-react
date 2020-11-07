@@ -6,7 +6,7 @@ export default {
   shoppingcar: persistedState ? persistedState.shoppingcar : [],
   URLvideos: [],
   user: persistedState ? persistedState.user : {},
-  total: 0,
+  total: {},
   myCourses: [],
   course: [],
 };

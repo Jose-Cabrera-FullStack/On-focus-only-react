@@ -15,11 +15,12 @@ import Shopping from "../assets/static/images/svg/shopping-car.svg";
 import "../assets/styles/components/Header.scss";
 
 const countryList = [
-  { id: "ARG", name: "Argentina", currency: "AR$" },
-  { id: "USA", name: "EEUU", currency: "US$" },
-  { id: "SPA", name: "España", currency: "EU€" },
+  { id: "AR", name: "Argentina", currency: "AR$" },
+  { id: "US", name: "EEUU", currency: "US$" },
+  { id: "SP", name: "España", currency: "EU€" },
   { id: "MX", name: "México", currency: "MX$" },
 ];
+
 
 const Header = (props) => {
   const { user = {} } = props;
@@ -52,7 +53,7 @@ const Header = (props) => {
 
   useEffect(() => {
     props.getCountry(country);
-  });
+  },{});
 
   const handleCountryValue = (event) => {
     countryList.map((item) => {
@@ -209,7 +210,7 @@ const mapStateToProps = (state) => {
   return {
     shoppingcar: state.shoppingcar || {},
     user: state.user || {},
-    country: state.country || { id: "ARG", name: "Argentina", currency: "AR$" },
+    country: state.country || countryList[0],
   };
 };
 

@@ -48,7 +48,7 @@ const EmergentMenu = ({
             <div className="flex">
               <h2>Tu total es de:</h2>
               <h2 className="hero__view__promo__total__ar">
-                AR$ {total ? total : "987"}
+                AR$ {total ? total.total : "987"}
               </h2>
             </div>
           </div>
@@ -103,7 +103,7 @@ const EmergentMenu = ({
             <div className="flex">
               <h2>Tu total es de:</h2>
               <h2 className="hero__view__promo__total__ar">
-                AR$ {total ? total : "987"}
+                AR$ {total ? total.total : "987"}
               </h2>
             </div>
           </div>
