@@ -15,6 +15,7 @@ import Information from "./Mobile/Information";
 
 const AboutThisCourse = (props) => {
   const { myCourse = {} } = props;
+  const { Course = {} } = props;
 
   const [openCourse, setOpenCourse] = useState(false);
 
@@ -36,6 +37,8 @@ const AboutThisCourse = (props) => {
     setOpenInformation(false);
   };
 
+  // console.log("Course:",Course)
+
   return (
     <div>
       <InformationAboutCourse
@@ -50,6 +53,7 @@ const AboutThisCourse = (props) => {
         font={"buyed__font"}
         onlyDesktop={"display__screen__desktop"}
         myCourse={myCourse}
+        Course={Course}
       />
 
       <CourseCertificate onlyDesktop={"display__screen__desktop"} />
@@ -97,6 +101,7 @@ const AboutThisCourse = (props) => {
 const mapStateToProps = (state) => {
   return {
     myCourse: state.myCourse || {},
+    Course: state.CourseSlug || {},
   };
 };
 export default connect(mapStateToProps, null)(AboutThisCourse);

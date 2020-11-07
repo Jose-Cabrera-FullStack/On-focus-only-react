@@ -25,16 +25,16 @@ const InformationAboutCourse = (props) => {
                 : "course__information__students"
             }
           >
-            {myCourse.students ? myCourse.students : category.students} alumnos.
+            {myCourse.total_students ? myCourse.total_students : category.total_students} alumnos.
           </p>
         </div>
         <div className={"flex" + " " + props.margin}>
           <img className={props.logoMobile} src={Reloj} alt="perfil" />
           <p className={"course__information__text" + " " + props.width}>
             Duración del curso:{" "}
-            {myCourse.duration
-              ? formatHourMinute(myCourse.duration)
-              : formatHourMinute(props.category.duration)}{" "}
+            {myCourse.total_duration
+              ? formatHourMinute(myCourse.total_duration)
+              : formatHourMinute(props.category.total_duration)}{" "}
           </p>
         </div>
         <div className={"flex" + " " + props.margin}>
@@ -47,7 +47,7 @@ const InformationAboutCourse = (props) => {
             }
           >
             Cantidad de módulos:{" "}
-            {myCourse.module ? myCourse.module : category.module}.
+            {myCourse.total_modules ? myCourse.total_modules : category.total_modules}.
           </p>
         </div>
       </div>
@@ -70,7 +70,7 @@ const InformationAboutCourse = (props) => {
 };
 const mapStateToProps = (state) => {
   return {
-    category: state.category || {},
+    category: state.CourseSlug || {},
     myCourse: state.myCourse || {},
   };
 };
