@@ -27,16 +27,17 @@ import "../assets/styles/App.scss";
 const Course = (props) => {
   let grid = "grid-column-2--fix";
 
-  const {  slugcourse } = props.match.params;
+  const { slugcourse } = props.match.params;
 
   useEffect(() => {
     props.getCourseBySlug(slugcourse);
-  },{});
+  }, {});
   const isCourse = Object.keys(props.course).length > 0;
-  
+
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 5000);
+    console.log(props.course);
   });
   return !isCourse ? (
     isLoading ? (
@@ -62,23 +63,32 @@ const Course = (props) => {
           <RectangleWithPriceAndDiscount />
         </div>
 
-        <WhatIncludeThisCourse />
+        <WhatIncludeThisCourse datails={props.course.course_details_items} />
         <div className="flex">
           <div>
-            <IsThisCourseForMe onlyDesktop={"display__screen__desktop"} />
-            <ModuleList onlyDesktop={"display__screen__desktop"} infoHidden />
+            <IsThisCourseForMe
+              forMe={props.course.course_target_items}
+              onlyDesktop={"display__screen__desktop"}
+            />
+            <ModuleList
+              modules={props.course.modules}
+              onlyDesktop={"display__screen__desktop"}
+              infoHidden
+            />
           </div>
           <RectangleWithPriceAndDiscount />
         </div>
         <RecomendationList
           onlyDesktop={"display__screen__desktop"}
           infoHidden
+          testimonials={props.course.testimonials}
         />
         <div className="flex">
           <div className="discovery__box__info__in__course__width">
             <AboutTheTeacher
               onlyDesktop={"display__screen__desktop"}
               infoHidden
+              teacher={props.course.teacher}
             />
             <HowWeTeach
               grid={grid}
@@ -100,7 +110,7 @@ const mapStateToProps = (state) => {
   };
 };
 const mapDispatchToProps = {
-  getCourseBySlug
+  getCourseBySlug,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Course);

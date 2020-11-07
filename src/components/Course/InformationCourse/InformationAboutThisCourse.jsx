@@ -17,7 +17,7 @@ import SmallVideo from "../../Visualization/SmallVideo";
 
 import "../../../assets/styles/components/CoursePlus.scss";
 
-const InformationAboutThisCourse = ({ category }) => {
+const InformationAboutThisCourse = ({ course }) => {
   let grid = "grid-column-2--fix";
   const [isToggle, setIsToggle] = useState(false);
   const isToggleFalse = () => setIsToggle(!isToggle);
@@ -27,7 +27,7 @@ const InformationAboutThisCourse = ({ category }) => {
       <div className="flex">
         <SmallVideo
           OnlyDesktop={"display__screen__desktop"}
-          video_id={category.video_intro}
+          video_id={course.video_intro}
         />
       </div>
       <div>
@@ -48,7 +48,7 @@ const InformationAboutThisCourse = ({ category }) => {
               logoMobile={"course__logo__mobile"}
               margin={"course__logo__mobile__margin"}
             />
-            <CourseAbout />
+            <CourseAbout Course={Course}/>
             <WhatIncludeThisCourse onlyMobile />
             <IsThisCourseForMe />
             <ModuleList />
@@ -67,7 +67,7 @@ const InformationAboutThisCourse = ({ category }) => {
             logoMobile={"course__logo__mobile"}
             margin={"course__logo__mobile__margin"}
           />
-          <CourseAbout />
+          <CourseAbout course={course}/>
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@ const InformationAboutThisCourse = ({ category }) => {
 
 const mapStateToProps = (state) => {
   return {
-    category: state.CourseSlug || {},
+    course: state.CourseSlug || {},
   };
 };
 

@@ -5,7 +5,7 @@ import "../../../assets/styles/components/CoursePlus.scss";
 const CourseAbout = (props) => {
   const [isToggle, setIsToggle] = useState(false);
   const ClickSetIsToggle = () => setIsToggle(!isToggle);
-  // console.log("props:",props)
+  console.log(props);
   return (
     <div className={"course__about" + " " + props.onlyDesktop}>
       <h1 className={"course__info__title" + " " + props.font}>
@@ -20,8 +20,7 @@ const CourseAbout = (props) => {
           );
         })
       ) : (
-        ""
-      // <p>{props.myCourse.about_this_course}</p>
+        <p>{props.course.about_this_course}</p>
       )}
       {props.font ? (
         <div className="buyed__course__variant__text">
@@ -67,11 +66,7 @@ const CourseAbout = (props) => {
           )}
         </div>
       ) : (
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam.
-        </p>
+        ""
       )}
     </div>
   );

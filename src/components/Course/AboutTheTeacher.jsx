@@ -16,6 +16,7 @@ const AboutTheTeacher = (props) => {
       <div className="flex">
         <TeacherInformantion
           onlyMobile={"display__screen__mobile__without__flex"}
+          teacher={props.teacher}
         />
       </div>
     </section>

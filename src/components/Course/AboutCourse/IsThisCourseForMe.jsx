@@ -14,24 +14,9 @@ const IsThisCourseForMe = (props) => {
       <div>
         <h2>¿Este Curso es para mi?</h2>
         <ul>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          </li>
-          <li>Ut wisi enim ad minim veniam.</li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod
-          </li>
-          <li>Ut wisi enim ad minim veniam onsectet uer adipiscing.</li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          </li>
-          <li>Ut wisi enim ad minim veniam.</li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod
-          </li>
-          <li>Ut wisi enim ad minim veniam onsectet uer adipiscing.</li>
+          {props.forMe.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </div>
     </section>

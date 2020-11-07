@@ -53,7 +53,6 @@ const AboutThisCourse = (props) => {
         font={"buyed__font"}
         onlyDesktop={"display__screen__desktop"}
         myCourse={myCourse}
-        Course={Course}
       />
 
       <CourseCertificate onlyDesktop={"display__screen__desktop"} />

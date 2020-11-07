@@ -14,25 +14,13 @@ const RecomendationList = (props) => {
   const [ValueX, setX] = useState(0);
 
   const goLeft = () => {
-    ValueX === 0 ? setX(-100 * (sliderArr.length - 3)) : setX(ValueX + 100);
+    ValueX === 0 ? setX(-100 * (props.testimonials.length - 3)) : setX(ValueX + 100);
   };
 
   const goRight = () => {
-    ValueX === -100 * (sliderArr.length - 3) ? setX(0) : setX(ValueX - 100);
+    ValueX === -100 * (props.testimonials.length - 3) ? setX(0) : setX(ValueX - 100);
   };
-
-  let sliderArr = [
-    <Recomendation text={text} ValueX={ValueX} />,
-    <Recomendation text={text} ValueX={ValueX} />,
-    <Recomendation text={text} ValueX={ValueX} />,
-    <Recomendation text={text} ValueX={ValueX} />,
-    <Recomendation text={text} ValueX={ValueX} />,
-    <Recomendation text={text} ValueX={ValueX} />,
-    <Recomendation text={text} ValueX={ValueX} />,
-    <Recomendation text={text} ValueX={ValueX} />,
-    <Recomendation text={text} ValueX={ValueX} />,
-  ];
-
+  
   return (
     <section
       className={
@@ -46,17 +34,23 @@ const RecomendationList = (props) => {
           Recomendaciones
         </h5>
         <div className="course__recomendation__inside__box slide slide--course">
-          {sliderArr.map((item, index) => {
+          {props.testimonials.map((item, index) => {
             return (
               <div key={index} className="slider">
-                {item}
+                <Recomendation
+                  icon={item.profile_picture}
+                  name={item.name}
+                  text={item.testimonial}
+                  ValueX={ValueX}
+                />
+                ,
               </div>
             );
           })}
         </div>
       </div>
       <Arrows
-        total={sliderArr.length - 2}
+        total={props.testimonials.length - 2}
         goRight={goRight}
         goLeft={goLeft}
         ValueX={ValueX}
