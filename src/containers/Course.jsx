@@ -37,7 +37,6 @@ const Course = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 5000);
-    console.log(props.course);
   });
   return !isCourse ? (
     isLoading ? (

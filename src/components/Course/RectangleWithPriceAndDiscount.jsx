@@ -32,7 +32,7 @@ const RectangleWithPriceAndDiscount = ({ course, category, onlyMobile }) => {
       >
         <div className="discovery__box__info__inside">
           <h2 className="discovery__box__info__inside__title">
-            Lorem ipsum dolor sit amet sed diam nonummy.
+            Lsrem ipsum dolor sit amet sed diam nonummy.
           </h2>
           <p className="discovery__box__info__inside__text">
             Lorem ipsum dolor sit amet, consectse diam nonummy nibh euismod

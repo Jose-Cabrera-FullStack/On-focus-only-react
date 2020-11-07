@@ -43,7 +43,6 @@ const RecomendationList = (props) => {
                   text={item.testimonial}
                   ValueX={ValueX}
                 />
-                ,
               </div>
             );
           })}

@@ -5,7 +5,6 @@ import "../../../assets/styles/components/CoursePlus.scss";
 const CourseAbout = (props) => {
   const [isToggle, setIsToggle] = useState(false);
   const ClickSetIsToggle = () => setIsToggle(!isToggle);
-  console.log(props);
   return (
     <div className={"course__about" + " " + props.onlyDesktop}>
       <h1 className={"course__info__title" + " " + props.font}>
