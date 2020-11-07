@@ -141,7 +141,7 @@
     width: auto;
   }
   .teacher__points {
-    margin: auto;
+    margin: 4em auto;
   }
 
   .display__screen__mobile__without__flex--FAQ__teacher {
@@ -186,6 +186,9 @@
   .btn__primary--teacher {
     transform: translate(-255%, 0%);
     width: 260px;
+  }
+  .teacher__points__text {
+    margin: 10px 0 0 -15px;
   }
 }
 @media screen and (max-width: 776px) {

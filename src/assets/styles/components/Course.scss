@@ -662,6 +662,7 @@
 @media screen and (max-width: 1024px) {
   .course {
     margin: 40px 0px 0px 23px;
+    width: 22.8em;
   }
   .course--emergent__menu__mobile {
     margin: 40px 0px 0px 0px;
@@ -683,7 +684,9 @@
   .course__inclusive__inside h2 {
     font-size: 19px;
   }
-
+  .course__for__me li{
+    width: auto;
+  }
   .course__inclusive__inside li {
     font-family: Judson;
   }
@@ -804,8 +807,8 @@
   }
 
   .course__recomendation__arrows {
-    margin: 20px 0px 0px 23%;
-    padding: 10px 0 32px 0;
+    margin: auto;
+    place-content: center;
   }
 
   .course__recomendation__arrows__numb {

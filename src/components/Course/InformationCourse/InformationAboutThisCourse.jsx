@@ -40,7 +40,7 @@ const InformationAboutThisCourse = ({ course }) => {
           {isToggle ? "Ocultar" : "Mostrar"} información {isToggle ? "-" : "+"}
         </h2>
         {isToggle ? (
-          <div className="display__screen__mobile slide-in-top">
+          <div className="display__screen__mobile display__screen__mobile--margin slide-in-top ">
             <h1 className="course__info__title ">Información</h1>
             <InformationAboutCourse
               onlyMobile={"display__screen__mobile__without__flex"}
@@ -48,12 +48,12 @@ const InformationAboutThisCourse = ({ course }) => {
               logoMobile={"course__logo__mobile"}
               margin={"course__logo__mobile__margin"}
             />
-            <CourseAbout Course={Course}/>
-            <WhatIncludeThisCourse onlyMobile />
-            <IsThisCourseForMe />
-            <ModuleList />
-            <RecomendationList />
-            <AboutTheTeacher margin={"discovery__box__info__mobile"} />
+            <CourseAbout course={course}/>
+            <WhatIncludeThisCourse onlyMobile datails={course.course_details_items}/>
+            <IsThisCourseForMe forMe={course.course_target_items}/>
+            <ModuleList modules={course.modules}/>
+            <RecomendationList testimonials={course.testimonials}/>
+            <AboutTheTeacher teacher={course.teacher} margin={"discovery__box__info__mobile"} />
             <HowWeTeach grid={grid} margin={"how__we__tech__mobile"} />
           </div>
         ) : (

@@ -118,18 +118,6 @@ const Header = (props) => {
         <div className="grid-2 navbar__justify__self navbar__query">
           <div className="navbar__query"></div>
           <ol className="navbar__element__list">
-            <li>
-              <select
-                value={country.id}
-                onChange={(event) => handleCountryValue(event)}
-              >
-                {countryList.map((item) => (
-                  <option key={item.id} value={item.id}>
-                    {item.name}
-                  </option>
-                ))}
-              </select>
-            </li>
             <Link to="/cursos" className="text-decoration">
               <li className="navbar__menu">Descubrir cursos</li>
             </Link>
