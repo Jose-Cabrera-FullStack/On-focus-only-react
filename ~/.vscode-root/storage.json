@@ -378,7 +378,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar"
+                                    "label": "Show &&Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -582,8 +583,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1454,8 +1454,8 @@
             "backupPath": "/home/jose/Desktop/On-focus-only-react/~/.vscode-root/Backups/e0b967572062bfe3c078037bfbaae4a1",
             "uiState": {
                 "mode": 0,
-                "x": 1771,
-                "y": 769,
+                "x": 342,
+                "y": 57,
                 "width": 1024,
                 "height": 711
             }
